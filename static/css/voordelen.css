@@ -1,0 +1,630 @@
+/* ========================================
+   WAAROM WESPI
+======================================== */
+
+.voordelen {
+    position: relative;
+
+    /*
+       Bovenkant komt omhoog
+       het Diensten-blok in.
+    */
+    margin: -28px 0 -28px;
+
+    padding: 0;
+
+    /*
+       Zowel boven- als onderkant
+       worden onderdeel van dezelfde vorm.
+    */
+    overflow: hidden;
+
+    /*
+       Boven: bolling omhoog.
+       Onder: bolling naar beneden.
+    */
+    border-radius:
+        50% 50% 50% 50% /
+        28px 28px 28px 28px;
+
+    background: #ffffff;
+
+    z-index: 4;
+}
+
+
+/* ========================================
+   OUDE EXTRA OVERGANGEN UIT
+======================================== */
+
+.voordelen::before {
+    display: none;
+}
+
+.voordelen-golf {
+    display: none;
+}
+
+
+/* ========================================
+   HOOFDBLOK
+======================================== */
+
+.voordelen-blok {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        0.96fr 1.04fr;
+
+    min-height: 720px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   VISUAL LINKS
+======================================== */
+
+.voordelen-visual {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: calc(
+        (100vw - min(100vw, var(--container-breedte, 1200px))) / -2
+    );
+
+    right: 23%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+.voordelen-visual img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ========================================
+   VLOEIENDE OVERGANG VISUAL → TEKST
+======================================== */
+
+.voordelen-visual::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: -1px;
+    bottom: 0;
+
+    width: 68%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.03) 18%,
+            rgba(255, 255, 255, 0.10) 33%,
+            rgba(255, 255, 255, 0.28) 50%,
+            rgba(255, 255, 255, 0.58) 67%,
+            rgba(255, 255, 255, 0.84) 82%,
+            #ffffff 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   INHOUD RECHTS
+======================================== */
+
+.voordelen-inhoud {
+    position: relative;
+
+    z-index: 2;
+
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 64px 0 64px 42px;
+}
+
+
+/* ========================================
+   LEESBAARHEID ACHTER TEKST
+======================================== */
+
+.voordelen-inhoud::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: -1;
+
+    top: 0;
+    right: -80px;
+    bottom: 0;
+    left: -40px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.30) 20%,
+            rgba(255, 255, 255, 0.68) 43%,
+            rgba(255, 255, 255, 0.93) 69%,
+            #ffffff 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   KOP
+======================================== */
+
+.voordelen-kop {
+    max-width: 620px;
+
+    margin-bottom: 34px;
+}
+
+.voordelen-kop .sectie-bovenkop {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #222222;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+.voordelen-kop h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size:
+        clamp(42px, 4.2vw, 54px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.9px;
+}
+
+.voordelen-kop h2 span {
+    display: block;
+}
+
+.voordelen-kop p {
+    max-width: 585px;
+
+    margin: 20px 0 0;
+
+    color: #5f6164;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.voordelen-kop p strong {
+    color: var(--wespi-zwart);
+
+    font-weight: 750;
+}
+
+
+/* ========================================
+   VOORDELEN GRID
+======================================== */
+
+.voordelen-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+/* ========================================
+   BASIS KAART
+======================================== */
+
+.voordeel {
+    position: relative;
+
+    min-height: 175px;
+
+    padding: 27px 24px 25px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.06);
+
+    border-radius: 12px;
+
+    background:
+        rgba(245, 246, 247, 0.95);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* ========================================
+   LINKER KAARTEN
+======================================== */
+
+.voordeel:nth-child(odd) {
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    border-color:
+        rgba(0, 0, 0, 0.075);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.055);
+}
+
+
+/* ========================================
+   RECHTER KAARTEN
+======================================== */
+
+.voordeel:nth-child(even) {
+    background:
+        rgba(244, 245, 246, 0.96);
+}
+
+
+/* ========================================
+   SLIMMER WERKEN ACCENT
+======================================== */
+
+.voordeel:nth-child(3) {
+    border-color:
+        rgba(223, 185, 26, 0.48);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(255, 255, 255, 0.98) 62%,
+            rgba(223, 185, 26, 0.10) 100%
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.055);
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.voordeel:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(0, 0, 0, 0.13);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 32px rgba(0, 0, 0, 0.075);
+}
+
+.voordeel:nth-child(3):hover {
+    border-color:
+        rgba(223, 185, 26, 0.75);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #ffffff 55%,
+            rgba(223, 185, 26, 0.16) 100%
+        );
+}
+
+
+/* ========================================
+   GROOT VOLGNUMMER
+======================================== */
+
+.voordeel-nummer {
+    position: absolute;
+
+    top: 8px;
+    right: 14px;
+
+    color:
+        rgba(223, 185, 26, 0.25);
+
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 1;
+
+    letter-spacing: -5px;
+
+    pointer-events: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.voordeel:hover .voordeel-nummer {
+    color:
+        rgba(223, 185, 26, 0.42);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ========================================
+   TITEL
+======================================== */
+
+.voordeel strong {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    max-width: 230px;
+
+    margin: 26px 0 10px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.12;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ========================================
+   TEKST
+======================================== */
+
+.voordeel p {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 265px;
+
+    margin: 0;
+
+    color: #5f6164;
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .voordelen {
+        margin:
+            -24px 0 -24px;
+
+        border-radius:
+            50% 50% 50% 50% /
+            24px 24px 24px 24px;
+    }
+
+    .voordelen-blok {
+        grid-template-columns:
+            0.88fr 1.12fr;
+
+        min-height: 740px;
+    }
+
+    .voordelen-visual {
+        right: 16%;
+    }
+
+    .voordelen-inhoud {
+        padding-left: 30px;
+    }
+
+    .voordeel {
+        min-height: 185px;
+    }
+
+}
+
+
+/* ========================================
+   KLEINERE TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+    .voordelen {
+        margin:
+            -22px 0 -22px;
+
+        border-radius:
+            50% 50% 50% 50% /
+            22px 22px 22px 22px;
+    }
+
+    .voordelen-blok {
+        display: block;
+
+        min-height: auto;
+    }
+
+    .voordelen-visual {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        width: 100%;
+        height: 380px;
+    }
+
+    .voordelen-visual::after {
+        top: auto;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+
+        width: 100%;
+        height: 52%;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.18) 35%,
+                rgba(255, 255, 255, 0.58) 68%,
+                #ffffff 100%
+            );
+    }
+
+    .voordelen-inhoud {
+        padding: 0 0 65px;
+
+        margin-top: -30px;
+    }
+
+    .voordelen-inhoud::before {
+        display: none;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 600px) {
+
+    .voordelen {
+        margin:
+            -18px 0 -18px;
+
+        border-radius:
+            50% 50% 50% 50% /
+            18px 18px 18px 18px;
+    }
+
+    .voordelen-visual {
+        height: 300px;
+    }
+
+    .voordelen-inhoud {
+        padding-bottom: 52px;
+
+        margin-top: -15px;
+    }
+
+    .voordelen-kop {
+        margin-bottom: 30px;
+    }
+
+    .voordelen-kop h2 {
+        font-size: 38px;
+    }
+
+    .voordelen-kop p {
+        font-size: 14px;
+    }
+
+    .voordelen-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .voordeel {
+        min-height: 165px;
+
+        padding: 25px 22px;
+
+        background:
+            rgba(255, 255, 255, 0.97);
+    }
+
+    .voordeel:nth-child(even) {
+        background:
+            rgba(244, 245, 246, 0.96);
+    }
+
+    .voordeel:nth-child(3) {
+        background:
+            linear-gradient(
+                135deg,
+                #ffffff 0%,
+                #ffffff 62%,
+                rgba(223, 185, 26, 0.10) 100%
+            );
+    }
+
+    .voordeel-nummer {
+        top: 8px;
+        right: 14px;
+
+        font-size: 62px;
+    }
+
+    .voordeel strong {
+        margin-top: 24px;
+
+        font-size: 19px;
+    }
+
+    .voordeel p {
+        max-width: 100%;
+
+        font-size: 14px;
+    }
+
+}

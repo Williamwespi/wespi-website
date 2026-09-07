@@ -1,0 +1,435 @@
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    background: var(--wespi-goud);
+
+    border-bottom:
+        1px solid rgba(74, 52, 0, 0.16);
+
+    box-shadow:
+        0 3px 14px rgba(0, 0, 0, 0.04);
+
+    transition:
+        box-shadow 0.25s ease;
+}
+
+
+/* ========================================
+   ONDERRAND
+======================================== */
+
+.site-header::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    background: var(--wespi-goud-donker);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   HEADER INHOUD
+======================================== */
+
+.header-inhoud {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 26px;
+
+    transition:
+        min-height 0.25s ease;
+}
+
+
+/* ========================================
+   LOGO + PAY-OFF
+======================================== */
+
+.logo-blok {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+
+    margin-right: auto;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo-afbeelding {
+    width: 137px;
+    height: auto;
+
+    display: block;
+
+    transition:
+        width 0.25s ease;
+}
+
+
+/* ========================================
+   PAY-OFF
+======================================== */
+
+.logo-payoff {
+    position: relative;
+
+    max-width: 185px;
+
+    padding-left: 16px;
+
+    color: #17140c;
+
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.15;
+
+    letter-spacing: -0.2px;
+
+    white-space: normal;
+
+    transition:
+        font-size 0.25s ease;
+}
+
+.logo-payoff::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 2px;
+    height: 30px;
+
+    border-radius: 2px;
+
+    background:
+        rgba(52, 38, 0, 0.32);
+
+    transform:
+        translateY(-50%);
+}
+
+
+/* ========================================
+   NAVIGATIE
+======================================== */
+
+.hoofdnavigatie {
+    display: flex;
+    align-items: center;
+
+    gap: 23px;
+}
+
+.hoofdnavigatie a {
+    position: relative;
+
+    padding: 26px 0;
+
+    color:
+        rgba(20, 16, 6, 0.78);
+
+    font-size: 13px;
+    font-weight: 650;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        padding 0.25s ease;
+}
+
+.hoofdnavigatie a:hover {
+    color: #000000;
+}
+
+.hoofdnavigatie a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 100%;
+    bottom: 17px;
+
+    height: 2px;
+
+    background: #17140c;
+
+    transition:
+        right 0.2s ease,
+        bottom 0.25s ease;
+}
+
+.hoofdnavigatie a:hover::after {
+    right: 0;
+}
+
+
+/* ========================================
+   ACTIES
+======================================== */
+
+.header-acties {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   MIJN WESPI
+======================================== */
+
+.mijn-wespi {
+    min-height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 15px;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.12);
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: var(--wespi-zwart);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.06);
+
+    transition:
+        min-height 0.25s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.mijn-wespi:hover {
+    border-color:
+        rgba(0, 0, 0, 0.25);
+
+    background: #fafafa;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ========================================
+   KENNISMAKEN
+======================================== */
+
+.kennismaken-knop {
+    min-height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    border-radius: 5px;
+
+    background: #1d1b17;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.14);
+
+    transition:
+        min-height 0.25s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.kennismaken-knop:hover {
+    transform:
+        translateY(-1px);
+
+    background: #000000;
+}
+
+
+/* ========================================
+   HEADER BIJ SCROLLEN
+======================================== */
+
+.site-header.is-scrolled {
+    background: var(--wespi-goud);
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.11);
+}
+
+.site-header.is-scrolled .header-inhoud {
+    min-height: 50px;
+}
+
+.site-header.is-scrolled .logo-afbeelding {
+    width: 102px;
+}
+
+.site-header.is-scrolled .logo-payoff {
+    max-width: 155px;
+
+    font-size: 10px;
+}
+
+.site-header.is-scrolled .logo-payoff::before {
+    height: 22px;
+}
+
+.site-header.is-scrolled .hoofdnavigatie a {
+    padding: 15px 0;
+
+    font-size: 12px;
+}
+
+.site-header.is-scrolled .hoofdnavigatie a::after {
+    bottom: 8px;
+}
+
+.site-header.is-scrolled .mijn-wespi,
+.site-header.is-scrolled .kennismaken-knop {
+    min-height: 32px;
+
+    padding-left: 13px;
+    padding-right: 13px;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1120px) {
+
+    .logo-payoff {
+        display: none;
+    }
+
+    .hoofdnavigatie {
+        gap: 17px;
+    }
+
+    .hoofdnavigatie a {
+        font-size: 12px;
+    }
+
+}
+
+
+/* ========================================
+   KLEINERE SCHERMEN
+======================================== */
+
+@media (max-width: 950px) {
+
+    .hoofdnavigatie {
+        display: none;
+    }
+
+    .logo-payoff {
+        display: block;
+
+        max-width: 175px;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 620px) {
+
+    .header-inhoud {
+        min-height: 64px;
+
+        gap: 10px;
+    }
+
+    .logo-blok {
+        gap: 10px;
+    }
+
+    .logo-afbeelding {
+        width: 108px;
+    }
+
+    .logo-payoff {
+        display: none;
+    }
+
+    .mijn-wespi {
+        display: none;
+    }
+
+    .kennismaken-knop {
+        min-height: 38px;
+
+        padding: 0 13px;
+
+        font-size: 11px;
+    }
+
+    .site-header.is-scrolled .header-inhoud {
+        min-height: 56px;
+    }
+
+    .site-header.is-scrolled .logo-afbeelding {
+        width: 100px;
+    }
+
+    .site-header.is-scrolled .kennismaken-knop {
+        min-height: 34px;
+    }
+
+}

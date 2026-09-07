@@ -1,0 +1,354 @@
+/* ========================================
+   KAN HET SLIMMER?
+======================================== */
+
+.pakketten {
+    padding: 95px 0;
+
+    background: #f5f5f3;
+}
+
+
+/* ========================================
+   HOOFDBLOK
+======================================== */
+
+.slimmer-blok {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 75px;
+    align-items: center;
+
+    padding: 65px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: var(--wespi-zwart);
+
+    color: #ffffff;
+}
+
+
+/* Geel detail bovenaan */
+
+.slimmer-blok::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 65px;
+
+    width: 95px;
+    height: 4px;
+
+    background: var(--wespi-geel);
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.slimmer-intro {
+    position: relative;
+    z-index: 2;
+}
+
+.slimmer-bovenkop {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: var(--wespi-geel);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.slimmer-intro h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+}
+
+.slimmer-intro h2 span {
+    color: var(--wespi-geel);
+}
+
+.slimmer-intro-tekst {
+    max-width: 570px;
+
+    margin: 27px 0 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.slimmer-uitleg {
+    max-width: 570px;
+
+    margin: 15px 0 0;
+
+    color: #bcbcbc;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   KNOP
+======================================== */
+
+.slimmer-knop {
+    min-height: 52px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-top: 30px;
+
+    padding: 0 20px;
+
+    border-radius: 5px;
+
+    background: var(--wespi-geel);
+
+    color: var(--wespi-zwart);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.slimmer-knop:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(0.96);
+}
+
+
+/* ========================================
+   VOORBEELDEN
+======================================== */
+
+.slimmer-voorbeelden {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.slimmer-voorbeeld {
+    min-height: 84px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.voorbeeld-nummer {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(241, 203, 13, 0.12);
+
+    color: var(--wespi-geel);
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.voorbeeld-inhoud {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.voorbeeld-inhoud strong {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.voorbeeld-inhoud span {
+    color: #aaaaaa;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   RESULTAAT
+======================================== */
+
+.slimmer-resultaat {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 5px;
+
+    padding: 20px;
+
+    border-radius: 9px;
+
+    background: var(--wespi-geel);
+
+    color: var(--wespi-zwart);
+}
+
+.resultaat-icoon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--wespi-zwart);
+
+    color: var(--wespi-geel);
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.slimmer-resultaat div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.slimmer-resultaat strong {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.slimmer-resultaat div span {
+    color: rgba(0, 0, 0, 0.68);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .slimmer-blok {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 50px;
+    }
+
+    .slimmer-blok::before {
+        left: 50px;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 620px) {
+
+    .pakketten {
+        padding: 65px 0;
+    }
+
+    .slimmer-blok {
+        gap: 40px;
+
+        padding: 40px 25px;
+
+        border-radius: 14px;
+    }
+
+    .slimmer-blok::before {
+        left: 25px;
+
+        width: 70px;
+    }
+
+    .slimmer-intro h2 {
+        font-size: 42px;
+    }
+
+    .slimmer-intro-tekst {
+        font-size: 15px;
+    }
+
+    .slimmer-knop {
+        width: 100%;
+    }
+
+    .slimmer-voorbeeld {
+        min-height: 78px;
+
+        padding: 15px;
+    }
+
+    .slimmer-resultaat {
+        padding: 17px;
+    }
+
+}

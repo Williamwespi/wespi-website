@@ -1,0 +1,365 @@
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* ========================================
+   FOTO RECHTS
+======================================== */
+
+.hero-foto {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 58%;
+
+    overflow: hidden;
+}
+
+.hero-foto img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ========================================
+   ZACHTE WITTE OVERGANG LINKS
+======================================== */
+
+.hero-foto::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0.98) 7%,
+            rgba(255, 255, 255, 0.90) 15%,
+            rgba(255, 255, 255, 0.65) 25%,
+            rgba(255, 255, 255, 0.28) 36%,
+            rgba(255, 255, 255, 0.06) 47%,
+            rgba(255, 255, 255, 0) 58%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   HERO INHOUD
+======================================== */
+
+.hero-inhoud {
+    position: relative;
+
+    z-index: 5;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-tekst {
+    width: 55%;
+    max-width: 700px;
+
+    padding: 70px 0 70px;
+}
+
+
+/* ========================================
+   TEKST
+======================================== */
+
+.hero-bovenkop {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(50px, 5vw, 72px);
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+}
+
+.hero h1 span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--wespi-goud);
+}
+
+.hero p {
+    max-width: 550px;
+
+    margin: 27px 0 0;
+
+    color: #303030;
+
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   KNOPPEN
+======================================== */
+
+.hero-knoppen {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-top: 31px;
+}
+
+.knop {
+    min-height: 52px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    padding: 0 20px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.knop:hover {
+    transform: translateY(-2px);
+}
+
+.knop-geel {
+    background: var(--wespi-goud);
+
+    color: var(--wespi-zwart);
+}
+
+.knop-geel:hover {
+    background: var(--wespi-goud-licht);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.knop-licht {
+    border:
+        1px solid #9b9b9b;
+
+    background:
+        rgba(255, 255, 255, 0.80);
+
+    color: var(--wespi-zwart);
+}
+
+.knop-licht:hover {
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ========================================
+   PLUSPUNTEN
+======================================== */
+
+.hero-pluspunten {
+    max-width: 620px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 43px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.10);
+}
+
+.hero-pluspunt {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.pluspunt-icoon {
+    width: 30px;
+    height: 30px;
+
+    flex: 0 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--wespi-goud);
+
+    color: var(--wespi-zwart);
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.hero-pluspunt strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 12px;
+}
+
+.hero-pluspunt div > span {
+    display: block;
+
+    color: #777777;
+
+    font-size: 10px;
+}
+
+
+/* ========================================
+   GEEN GOLF BIJ DE HERO
+======================================== */
+
+.hero-golf {
+    display: none;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .hero-foto {
+        width: 55%;
+    }
+
+    .hero-tekst {
+        width: 60%;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 760px) {
+
+    .hero {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-inhoud {
+        order: 1;
+
+        min-height: auto;
+    }
+
+    .hero-tekst {
+        width: 100%;
+
+        padding: 50px 0 40px;
+    }
+
+    .hero-foto {
+        position: relative;
+
+        order: 2;
+
+        width: 100%;
+        height: 380px;
+    }
+
+    .hero-foto::before {
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0.6) 12%,
+                rgba(255, 255, 255, 0) 35%
+            );
+    }
+
+    .hero h1 {
+        font-size: 46px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-pluspunten {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+}
