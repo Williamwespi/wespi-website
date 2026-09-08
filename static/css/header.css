@@ -559,3 +559,42 @@
     }
 
 }
+/* =========================
+   MOBIELE HEADER
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+    }
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .header-actions .btn,
+    .header-actions a {
+        white-space: nowrap;
+    }
+
+    .header-actions .btn-primary {
+        font-size: 13px;
+        padding: 9px 12px;
+    }
+}
