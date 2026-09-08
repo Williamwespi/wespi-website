@@ -4,11 +4,8 @@
 
 .site-header {
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
-
     width: 100%;
 
     background: var(--wespi-goud);
@@ -277,6 +274,8 @@
     font-size: 12px;
     font-weight: 800;
 
+    white-space: nowrap;
+
     box-shadow:
         0 4px 12px rgba(0, 0, 0, 0.14);
 
@@ -388,12 +387,8 @@
    MOBIEL
 ======================================== */
 
-@media (max-width: 620px) {
+@media (max-width: 768px) {
 
-    /*
-       Mobiel gebruiken we bewust fixed.
-       Zo blijft de header altijd zichtbaar.
-    */
     .site-header {
         position: fixed;
 
@@ -402,30 +397,41 @@
         right: 0;
 
         width: 100%;
+
+        z-index: 99999;
+
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
     }
 
-
-    /*
-       Ruimte reserveren voor de vaste header.
-    */
     body {
         padding-top: 64px;
     }
 
-
     .header-inhoud {
+        width: 100%;
+        max-width: 100%;
+
         min-height: 64px;
+
+        box-sizing: border-box;
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+        display: flex;
+        align-items: center;
 
         gap: 8px;
     }
 
-
     .logo-blok {
+        min-width: 0;
+
         gap: 9px;
 
-        min-width: 0;
+        margin-right: auto;
     }
-
 
     .logo-afbeelding {
         width: 92px;
@@ -433,10 +439,6 @@
         flex-shrink: 0;
     }
 
-
-    /*
-       Pay-off blijft nu ook mobiel zichtbaar.
-    */
     .logo-payoff {
         display: block;
 
@@ -453,17 +455,29 @@
         letter-spacing: -0.1px;
     }
 
-
     .logo-payoff::before {
         width: 1px;
         height: 25px;
     }
 
+    .hoofdnavigatie {
+        display: none;
+    }
+
+    .header-acties {
+        display: flex;
+        align-items: center;
+
+        gap: 6px;
+
+        flex-shrink: 0;
+
+        margin-left: auto;
+    }
 
     .mijn-wespi {
         display: none;
     }
-
 
     .kennismaken-knop {
         min-height: 36px;
@@ -476,19 +490,15 @@
     }
 
 
-    /*
-       Op mobiel blijft de hoogte gelijk
-       tijdens scrollen. Dat voorkomt springen.
-    */
+    /* Mobiel niet kleiner maken tijdens scrollen */
+
     .site-header.is-scrolled .header-inhoud {
         min-height: 64px;
     }
 
-
     .site-header.is-scrolled .logo-afbeelding {
         width: 92px;
     }
-
 
     .site-header.is-scrolled .logo-payoff {
         display: block;
@@ -498,11 +508,9 @@
         font-size: 9px;
     }
 
-
     .site-header.is-scrolled .logo-payoff::before {
         height: 25px;
     }
-
 
     .site-header.is-scrolled .kennismaken-knop {
         min-height: 36px;
@@ -522,8 +530,11 @@
 
 @media (max-width: 370px) {
 
-    .container.header-inhoud {
-        width: calc(100% - 22px);
+    .header-inhoud {
+        padding-left: 9px;
+        padding-right: 9px;
+
+        gap: 5px;
     }
 
     .logo-afbeelding {
@@ -531,11 +542,20 @@
     }
 
     .logo-payoff {
-        max-width: 76px;
+        max-width: 72px;
 
         padding-left: 8px;
 
         font-size: 8px;
+    }
+
+    .kennismaken-knop {
+        min-height: 34px;
+
+        padding-left: 8px;
+        padding-right: 8px;
+
+        font-size: 9px;
     }
 
     .site-header.is-scrolled .logo-afbeelding {
@@ -543,12 +563,11 @@
     }
 
     .site-header.is-scrolled .logo-payoff {
-        max-width: 76px;
+        max-width: 72px;
 
         font-size: 8px;
     }
 
-    .kennismaken-knop,
     .site-header.is-scrolled .kennismaken-knop {
         min-height: 34px;
 
@@ -558,86 +577,4 @@
         font-size: 9px;
     }
 
-}
-/* =========================
-   MOBIELE HEADER
-   ========================= */
-
-@media (max-width: 768px) {
-
-    .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-        width: 100%;
-    }
-
-    .header-inner {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .header-actions {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-left: auto;
-        flex-shrink: 0;
-    }
-
-    .header-actions .btn,
-    .header-actions a {
-        white-space: nowrap;
-    }
-
-    .header-actions .btn-primary {
-        font-size: 13px;
-        padding: 9px 12px;
-    }
-}
-/* =========================
-   MOBIELE HEADER
-   ========================= */
-
-@media (max-width: 768px) {
-
-    .site-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 9999;
-    }
-
-    body {
-        padding-top: 78px;
-    }
-
-    .header-inhoud {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        padding-left: 12px;
-        padding-right: 12px;
-        display: flex;
-        align-items: center;
-    }
-
-    .header-acties {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin-left: auto;
-        flex-shrink: 0;
-    }
-
-    .kennismaken-knop {
-        font-size: 12px;
-        padding: 9px 10px;
-        white-space: nowrap;
-    }
 }
