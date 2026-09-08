@@ -4,24 +4,11 @@
        WESPI MERKKLEUREN
     ======================================== */
 
-    /*
-       Warm goudgeel:
-       frisser dan de vorige goudkleur,
-       maar warmer dan het oorspronkelijke geel.
-    */
     --wespi-goud: #dfb91a;
-
     --wespi-goud-licht: #edcf55;
-
     --wespi-goud-donker: #bd9410;
 
-
-    /*
-       Oorspronkelijke Wespi-geel.
-       Voorlopig behouden als extra accentkleur.
-    */
     --wespi-geel: #f1cb0d;
-
 
     --wespi-zwart: #000000;
 
@@ -55,18 +42,26 @@
    BASIS
 ======================================== */
 
-* {
-    box-sizing: border-box;
-}
-
-
 html {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
     scroll-behavior: smooth;
+
+    overflow-x: hidden;
 }
 
 
 body {
+    width: 100%;
+
     margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    overflow-x: hidden;
 
     font-family:
         Arial,
@@ -80,6 +75,29 @@ body {
 
 
 /* ========================================
+   BOX SIZING
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   HOOFDINHOUD
+======================================== */
+
+main {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: clip;
+}
+
+
+/* ========================================
    AFBEELDINGEN
 ======================================== */
 
@@ -87,6 +105,7 @@ img {
     display: block;
 
     max-width: 100%;
+    height: auto;
 }
 
 
@@ -106,7 +125,9 @@ a {
 ======================================== */
 
 button,
-input {
+input,
+textarea,
+select {
     font: inherit;
 }
 
@@ -116,12 +137,12 @@ input {
 ======================================== */
 
 .container {
-    width: min(
-        1180px,
-        calc(100% - 48px)
-    );
+    width: calc(100% - 48px);
 
-    margin: 0 auto;
+    max-width: 1180px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -132,10 +153,9 @@ input {
 @media (max-width: 600px) {
 
     .container {
-        width: min(
-            100% - 32px,
-            1180px
-        );
+        width: calc(100% - 32px);
+
+        max-width: 100%;
     }
 
 }
