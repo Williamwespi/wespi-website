@@ -6,7 +6,8 @@
     position: relative;
 
     /*
-       CTA komt omhoog over Projecten.
+       CTA-visual steekt omhoog
+       over het Projecten-blok.
     */
     margin: -28px 0 0;
 
@@ -14,10 +15,6 @@
 
     overflow: hidden;
 
-    /*
-       Alleen de BOVENKANT is gebogen.
-       De onderkant blijft recht.
-    */
     border-radius:
         50% 50% 0 0 /
         28px 28px 0 0;
@@ -29,7 +26,7 @@
 
 
 /* ========================================
-   OUDE OVERGANG VAN PROJECTEN UIT
+   GEEN LOSSE BOVENGOLF
 ======================================== */
 
 .cta::before {
@@ -315,16 +312,15 @@
 .site-footer {
     position: relative;
 
-    /*
-       Dit is de bestaande, mooie overgang:
-       footer komt iets omhoog onder CTA.
-    */
     margin-top: -18px;
 
     padding: 46px 0 24px;
 
     overflow: visible;
 
+    /*
+       Eén volledig egale kleur.
+    */
     background: #716d63;
 
     color: #ffffff;
@@ -360,32 +356,11 @@
 
 
 /* ========================================
-   SUBTIELE GLOED
+   GEEN EXTRA KLEURVLAK IN FOOTER
 ======================================== */
 
 .site-footer::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    width: 900px;
-    height: 250px;
-
-    transform:
-        translateX(-50%);
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(223, 185, 26, 0.10) 0%,
-            rgba(223, 185, 26, 0.04) 36%,
-            rgba(223, 185, 26, 0) 72%
-        );
-
-    pointer-events: none;
+    display: none;
 }
 
 
@@ -583,6 +558,25 @@
             18px 18px 0 0;
     }
 
+
+    /*
+       Op mobiel maken we het beeld achter
+       de zwarte tekst veel rustiger.
+    */
+    .cta-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.99) 0%,
+                rgba(255, 255, 255, 0.98) 38%,
+                rgba(255, 255, 255, 0.94) 58%,
+                rgba(255, 255, 255, 0.72) 72%,
+                rgba(255, 255, 255, 0.24) 88%,
+                rgba(255, 255, 255, 0.05) 100%
+            );
+    }
+
+
     .cta-inhoud {
         min-height: auto;
 
@@ -590,25 +584,42 @@
         padding-bottom: 64px;
     }
 
+
+    .cta-tekst {
+        max-width: 100%;
+    }
+
+
     .cta h2 {
         font-size: 39px;
     }
 
+
     .cta-tekst p {
+        max-width: 100%;
+
+        color: #303030;
+
         font-size: 14px;
     }
 
+
     .cta-contact {
+        width: 100%;
+
         padding: 30px 25px 27px;
     }
+
 
     .cta-contact h3 {
         font-size: 29px;
     }
 
+
     .cta-hoofdknop {
         width: 100%;
     }
+
 
     .site-footer {
         margin-top: -14px;
@@ -617,6 +628,7 @@
             42px 0 22px;
     }
 
+
     .footer-golf {
         top: -18px;
 
@@ -624,11 +636,13 @@
         height: 36px;
     }
 
+
     .footer-grid {
         grid-template-columns: 1fr;
 
         gap: 32px;
     }
+
 
     .footer-onderkant {
         align-items: flex-start;

@@ -390,46 +390,172 @@
 
 @media (max-width: 620px) {
 
+    /*
+       Mobiel gebruiken we bewust fixed.
+       Zo blijft de header altijd zichtbaar.
+    */
+    .site-header {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+    }
+
+
+    /*
+       Ruimte reserveren voor de vaste header.
+    */
+    body {
+        padding-top: 64px;
+    }
+
+
     .header-inhoud {
         min-height: 64px;
 
-        gap: 10px;
+        gap: 8px;
     }
+
 
     .logo-blok {
-        gap: 10px;
+        gap: 9px;
+
+        min-width: 0;
     }
+
 
     .logo-afbeelding {
-        width: 108px;
+        width: 92px;
+
+        flex-shrink: 0;
     }
 
+
+    /*
+       Pay-off blijft nu ook mobiel zichtbaar.
+    */
     .logo-payoff {
-        display: none;
+        display: block;
+
+        max-width: 92px;
+
+        padding-left: 10px;
+
+        color: #17140c;
+
+        font-size: 9px;
+        font-weight: 800;
+        line-height: 1.12;
+
+        letter-spacing: -0.1px;
     }
+
+
+    .logo-payoff::before {
+        width: 1px;
+        height: 25px;
+    }
+
 
     .mijn-wespi {
         display: none;
     }
 
+
     .kennismaken-knop {
-        min-height: 38px;
+        min-height: 36px;
 
-        padding: 0 13px;
+        padding: 0 10px;
 
-        font-size: 11px;
+        font-size: 10px;
+
+        white-space: nowrap;
     }
 
+
+    /*
+       Op mobiel blijft de hoogte gelijk
+       tijdens scrollen. Dat voorkomt springen.
+    */
     .site-header.is-scrolled .header-inhoud {
-        min-height: 56px;
+        min-height: 64px;
+    }
+
+
+    .site-header.is-scrolled .logo-afbeelding {
+        width: 92px;
+    }
+
+
+    .site-header.is-scrolled .logo-payoff {
+        display: block;
+
+        max-width: 92px;
+
+        font-size: 9px;
+    }
+
+
+    .site-header.is-scrolled .logo-payoff::before {
+        height: 25px;
+    }
+
+
+    .site-header.is-scrolled .kennismaken-knop {
+        min-height: 36px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* ========================================
+   ZEER KLEINE MOBIELE SCHERMEN
+======================================== */
+
+@media (max-width: 370px) {
+
+    .container.header-inhoud {
+        width: calc(100% - 22px);
+    }
+
+    .logo-afbeelding {
+        width: 84px;
+    }
+
+    .logo-payoff {
+        max-width: 76px;
+
+        padding-left: 8px;
+
+        font-size: 8px;
     }
 
     .site-header.is-scrolled .logo-afbeelding {
-        width: 100px;
+        width: 84px;
     }
 
+    .site-header.is-scrolled .logo-payoff {
+        max-width: 76px;
+
+        font-size: 8px;
+    }
+
+    .kennismaken-knop,
     .site-header.is-scrolled .kennismaken-knop {
         min-height: 34px;
+
+        padding-left: 8px;
+        padding-right: 8px;
+
+        font-size: 9px;
     }
 
 }
