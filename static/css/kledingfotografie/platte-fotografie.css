@@ -1,0 +1,559 @@
+/* ========================================
+   PLATTE FOTOGRAFIE
+======================================== */
+
+.kledingfotografie-plat {
+    position: relative;
+    overflow: hidden;
+
+    padding: 96px 0 100px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fafafa 100%
+        );
+}
+
+
+/* ========================================
+   INHOUD
+======================================== */
+
+.kledingfotografie-plat-inhoud {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
+
+    gap: 64px;
+
+    align-items: center;
+}
+
+
+/* ========================================
+   TEKST
+======================================== */
+
+.kledingfotografie-plat-tekst {
+    max-width: 580px;
+}
+
+
+/* ========================================
+   BOVENKOP
+======================================== */
+
+.platte-bovenkop {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #66686a;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.3px;
+}
+
+
+/* ========================================
+   TITEL
+======================================== */
+
+.kledingfotografie-plat h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(44px, 4.5vw, 62px);
+    font-weight: 800;
+
+    line-height: 0.98;
+
+    letter-spacing: -2.6px;
+}
+
+.kledingfotografie-plat h2 span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--wespi-goud);
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.kledingfotografie-plat .platte-intro {
+    max-width: 570px;
+
+    margin: 24px 0 0;
+
+    color: #28292a;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   PRIJSBLOK
+======================================== */
+
+.platte-prijsblok {
+    position: relative;
+
+    max-width: 580px;
+
+    margin-top: 28px;
+    padding: 22px 0 18px;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.13);
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.13);
+}
+
+
+/* ========================================
+   PRIJSKOP
+======================================== */
+
+.platte-prijs-kop {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.platte-prijs-kop > span {
+    padding-bottom: 7px;
+
+    color: #646668;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+}
+
+.platte-prijs-kop > strong {
+    position: relative;
+
+    color: #b58a16;
+
+    font-size: 40px;
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -1.8px;
+}
+
+.platte-prijs-kop > strong::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: -1;
+
+    right: -5px;
+    bottom: 1px;
+    left: -5px;
+
+    height: 9px;
+
+    background:
+        rgba(218, 190, 119, 0.20);
+}
+
+
+/* ========================================
+   PRIJSUITLEG
+======================================== */
+
+.platte-prijs-uitleg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+
+    margin-top: 20px;
+}
+
+.platte-prijs-uitleg > div {
+    min-width: 0;
+}
+
+.platte-prijs-uitleg > div + div {
+    padding-left: 24px;
+
+    border-left:
+        1px solid rgba(0, 0, 0, 0.10);
+}
+
+.platte-prijs-uitleg strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.platte-prijs-uitleg span {
+    display: block;
+
+    color: #656769;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   INBEGREPEN
+======================================== */
+
+.platte-prijs-inbegrepen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 7px 13px;
+
+    margin-top: 20px;
+
+    color: #5e6062;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.platte-prijs-inbegrepen span {
+    color: #a77f14;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+
+/* ========================================
+   EXTRA TEKST
+======================================== */
+
+.kledingfotografie-plat .platte-extra {
+    max-width: 560px;
+
+    margin: 20px 0 0;
+
+    color: #5b5d5f;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   LINK
+======================================== */
+
+.platte-fotografie-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 22px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    text-decoration: none;
+
+    border-bottom:
+        2px solid var(--wespi-goud);
+
+    padding-bottom: 4px;
+}
+
+.platte-fotografie-link span {
+    color: var(--wespi-goud);
+
+    transition: transform 0.2s ease;
+}
+
+.platte-fotografie-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   BEELDCOMPOSITIE
+======================================== */
+
+.kledingfotografie-plat-beelden {
+    position: relative;
+
+    min-height: 570px;
+}
+
+
+/* ========================================
+   ALGEMEEN BEELD
+======================================== */
+
+.plat-beeld {
+    margin: 0;
+
+    background: transparent;
+
+    border: 0;
+    border-radius: 0;
+
+    box-shadow: none;
+
+    overflow: visible;
+}
+
+.plat-beeld img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+
+    object-fit: contain;
+
+    background: transparent;
+
+    border: 0;
+
+    box-shadow: none;
+}
+
+
+/* ========================================
+   BODYWARMER - HOOFDBEELD
+======================================== */
+
+.plat-beeld-groot {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 10px;
+    right: 0;
+
+    width: 78%;
+    height: 540px;
+}
+
+
+/* ========================================
+   SOKKEN - VOOR BODYWARMER
+======================================== */
+
+.plat-beeld-klein {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 2%;
+    bottom: 28px;
+
+    width: 43%;
+    height: 300px;
+
+    transform: translateX(18%);
+}
+
+
+/* ========================================
+   SUBTIELE GLOED ACHTER BEELDEN
+======================================== */
+
+.kledingfotografie-plat-beelden::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    top: 12%;
+    right: 2%;
+
+    width: 80%;
+    height: 72%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(223, 185, 26, 0.085) 0%,
+            rgba(223, 185, 26, 0.025) 42%,
+            rgba(223, 185, 26, 0) 72%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+    .kledingfotografie-plat {
+        padding: 82px 0;
+    }
+
+    .kledingfotografie-plat-inhoud {
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+    }
+
+    .kledingfotografie-plat-tekst {
+        max-width: 650px;
+    }
+
+    .kledingfotografie-plat-beelden {
+        min-height: 530px;
+    }
+
+    .plat-beeld-groot {
+        right: 6%;
+
+        width: 70%;
+        height: 500px;
+    }
+
+    .plat-beeld-klein {
+        left: 8%;
+        bottom: 25px;
+
+        width: 37%;
+        height: 275px;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 700px) {
+
+    .kledingfotografie-plat {
+        padding: 60px 0 68px;
+    }
+
+    .kledingfotografie-plat h2 {
+        font-size: 42px;
+
+        letter-spacing: -1.8px;
+    }
+
+    .platte-prijs-kop {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .platte-prijs-kop > strong {
+        font-size: 38px;
+    }
+
+    .platte-prijs-uitleg {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .platte-prijs-uitleg > div + div {
+        padding-top: 14px;
+        padding-left: 0;
+
+        border-top:
+            1px solid rgba(0, 0, 0, 0.09);
+
+        border-left: 0;
+    }
+
+    .kledingfotografie-plat-beelden {
+        min-height: 420px;
+    }
+
+    .plat-beeld-groot {
+        top: 0;
+        right: 0;
+
+        width: 82%;
+        height: 400px;
+    }
+
+    .plat-beeld-klein {
+        left: 0;
+        bottom: 15px;
+
+        width: 46%;
+        height: 220px;
+
+        transform: translateX(12%);
+    }
+
+}
+
+
+/* ========================================
+   KLEINE TELEFOONS
+======================================== */
+
+@media (max-width: 480px) {
+
+    .kledingfotografie-plat h2 {
+        font-size: 37px;
+    }
+
+    .kledingfotografie-plat-beelden {
+        min-height: 360px;
+    }
+
+    .plat-beeld-groot {
+        width: 86%;
+        height: 345px;
+    }
+
+    .plat-beeld-klein {
+        bottom: 8px;
+
+        width: 48%;
+        height: 190px;
+
+        transform: translateX(8%);
+    }
+
+}

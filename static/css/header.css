@@ -3,9 +3,14 @@
 ======================================== */
 
 .site-header {
-    position: sticky;
+    position: fixed;
+
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+
+    z-index: 99999;
+
     width: 100%;
 
     background: var(--wespi-goud);
@@ -18,6 +23,14 @@
 
     transition:
         box-shadow 0.25s ease;
+}
+
+
+/* Omdat de header fixed staat,
+   reserveren we bovenaan ruimte */
+
+body {
+    padding-top: 72px;
 }
 
 
@@ -105,6 +118,7 @@
 
     font-size: 13px;
     font-weight: 800;
+
     line-height: 1.15;
 
     letter-spacing: -0.2px;
@@ -389,21 +403,6 @@
 
 @media (max-width: 768px) {
 
-    .site-header {
-        position: fixed;
-
-        top: 0;
-        left: 0;
-        right: 0;
-
-        width: 100%;
-
-        z-index: 99999;
-
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-    }
-
     body {
         padding-top: 64px;
     }
@@ -450,6 +449,7 @@
 
         font-size: 9px;
         font-weight: 800;
+
         line-height: 1.12;
 
         letter-spacing: -0.1px;
@@ -490,7 +490,7 @@
     }
 
 
-    /* Mobiel niet kleiner maken tijdens scrollen */
+    /* Mobiel niet kleiner maken bij scrollen */
 
     .site-header.is-scrolled .header-inhoud {
         min-height: 64px;

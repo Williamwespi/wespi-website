@@ -1,0 +1,302 @@
+/* ========================================
+   CTA
+======================================== */
+
+.kledingfotografie-cta {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 92px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f3eb 0%,
+            #f2ede3 100%
+        );
+}
+
+
+/* ========================================
+   SUBTIELE ACHTERGRONDVORM
+======================================== */
+
+.kledingfotografie-cta::before {
+    content: "";
+
+    position: absolute;
+
+    right: 5%;
+    top: -170px;
+
+    width: 460px;
+    height: 460px;
+
+    border:
+        1px solid rgba(181, 138, 22, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   INHOUD
+======================================== */
+
+.kledingfotografie-cta-inhoud {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(260px, 0.55fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* ========================================
+   TEKST
+======================================== */
+
+.kledingfotografie-cta-tekst {
+    max-width: 720px;
+}
+
+
+/* ========================================
+   BOVENKOP
+======================================== */
+
+.cta-bovenkop {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #746d62;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.3px;
+}
+
+
+/* ========================================
+   TITEL
+   ZELFDE LIJN ALS BODYFORM
+======================================== */
+
+.kledingfotografie-cta h2 {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size:
+        clamp(44px, 4.5vw, 62px);
+
+    font-weight: 800;
+
+    line-height: 0.98;
+
+    letter-spacing: -2.6px;
+}
+
+.kledingfotografie-cta h2 span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--wespi-goud);
+}
+
+
+/* ========================================
+   TEKST
+======================================== */
+
+.kledingfotografie-cta p {
+    max-width: 580px;
+
+    margin: 24px 0 0;
+
+    color: #514d46;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   ACTIES
+======================================== */
+
+.kledingfotografie-cta-acties {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+/* ========================================
+   HOOFDKNOP
+======================================== */
+
+.cta-hoofdknop {
+    min-height: 54px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 0 24px;
+
+    border-radius: 4px;
+
+    background:
+        var(--wespi-goud);
+
+    color:
+        var(--wespi-zwart);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.cta-hoofdknop span {
+    font-size: 17px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.cta-hoofdknop:hover {
+    transform:
+        translateY(-2px);
+}
+
+.cta-hoofdknop:hover span {
+    transform:
+        translateX(4px);
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.cta-contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.cta-contact > span {
+    color: #817b72;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+.cta-contact a {
+    color: var(--wespi-zwart);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    border-bottom:
+        1px solid rgba(181, 138, 22, 0.55);
+
+    padding-bottom: 3px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 850px) {
+
+    .kledingfotografie-cta {
+        padding: 72px 0;
+    }
+
+    .kledingfotografie-cta-inhoud {
+        grid-template-columns: 1fr;
+
+        gap: 36px;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 600px) {
+
+    .kledingfotografie-cta {
+        padding: 58px 0 62px;
+    }
+
+    .kledingfotografie-cta h2 {
+        font-size: 42px;
+
+        letter-spacing: -1.8px;
+    }
+
+    .kledingfotografie-cta p {
+        font-size: 13px;
+    }
+
+    .kledingfotografie-cta-acties {
+        width: 100%;
+    }
+
+    .cta-hoofdknop {
+        width: 100%;
+    }
+
+}
+
+
+/* ========================================
+   KLEINE TELEFOONS
+======================================== */
+
+@media (max-width: 480px) {
+
+    .kledingfotografie-cta h2 {
+        font-size: 37px;
+    }
+
+}

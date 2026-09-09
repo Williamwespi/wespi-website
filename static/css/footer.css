@@ -654,3 +654,18 @@
     }
 
 }
+/* ========================================
+   FOOTER - TEKST ALTIJD LICHT
+======================================== */
+
+.site-footer,
+.site-footer p,
+.site-footer span,
+.site-footer strong,
+.site-footer a {
+    color: #ffffff;
+}
+
+.site-footer a:hover {
+    color: var(--wespi-goud);
+}

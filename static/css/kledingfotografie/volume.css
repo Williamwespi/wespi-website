@@ -1,0 +1,135 @@
+/* ========================================
+   VOLUME
+======================================== */
+
+.kledingfotografie-volume {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 112px 0;
+
+    background: var(--wespi-goud);
+}
+
+.kledingfotografie-volume::after {
+    content: "100+";
+
+    position: absolute;
+    right: -20px;
+    bottom: -55px;
+
+    color: rgba(255, 255, 255, 0.13);
+
+    font-size: clamp(150px, 25vw, 360px);
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -20px;
+
+    pointer-events: none;
+}
+
+.kledingfotografie-volume-inhoud {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
+
+    gap: 90px;
+}
+
+.kledingfotografie-volume .bovenkop {
+    color: rgba(0, 0, 0, 0.58);
+}
+
+.kledingfotografie-volume h2 {
+    max-width: 570px;
+
+    font-size: clamp(42px, 5vw, 66px);
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+}
+
+.kledingfotografie-volume-tekst {
+    max-width: 580px;
+
+    padding-top: 28px;
+}
+
+.kledingfotografie-volume p {
+    margin: 0;
+
+    color: rgba(0, 0, 0, 0.65);
+
+    font-size: 16px;
+}
+
+.kledingfotografie-volume p + p {
+    margin-top: 20px;
+}
+
+.kledingfotografie-volume .volume-intro {
+    color: var(--wespi-zwart);
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.volume-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+    padding-bottom: 6px;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.35);
+
+    color: var(--wespi-zwart);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.volume-link span {
+    transition: transform 0.2s ease;
+}
+
+.volume-link:hover span {
+    transform: translateX(4px);
+}
+
+@media (max-width: 950px) {
+
+    .kledingfotografie-volume {
+        padding: 82px 0;
+    }
+
+    .kledingfotografie-volume-inhoud {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .kledingfotografie-volume-tekst {
+        padding-top: 0;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .kledingfotografie-volume {
+        padding: 66px 0;
+    }
+
+}

@@ -1,0 +1,519 @@
+/* ========================================
+   WERKWIJZE
+======================================== */
+
+.kledingfotografie-werkwijze {
+    position: relative;
+
+    min-height: 760px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f3eb 0%,
+            #f3eee5 48%,
+            #eee7da 100%
+        );
+}
+
+
+/* ========================================
+   VISUAL RECHTS
+======================================== */
+
+.werkwijze-visual {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 57%;
+
+    overflow: hidden;
+}
+
+.werkwijze-visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+}
+
+
+/* ========================================
+   FADE VAN FOTO NAAR ACHTERGROND
+======================================== */
+
+.werkwijze-visual::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 58%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f4efe6 0%,
+            rgba(244, 239, 230, 0.98) 13%,
+            rgba(244, 239, 230, 0.90) 28%,
+            rgba(244, 239, 230, 0.68) 48%,
+            rgba(244, 239, 230, 0.34) 72%,
+            rgba(244, 239, 230, 0) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   ONDERFADE
+======================================== */
+
+.werkwijze-visual::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 14%;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(238, 231, 218, 0) 0%,
+            rgba(238, 231, 218, 0.28) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   INHOUD
+======================================== */
+
+.kledingfotografie-werkwijze-inhoud {
+    position: relative;
+
+    z-index: 4;
+
+    min-height: 760px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ========================================
+   TEKSTGEBIED
+======================================== */
+
+.werkwijze-tekst {
+    width: 62%;
+    max-width: 720px;
+
+    padding: 76px 0 72px;
+}
+
+
+/* ========================================
+   BOVENKOP
+======================================== */
+
+.werkwijze-bovenkop {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #746d62;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.3px;
+}
+
+
+/* ========================================
+   TITEL
+   GELIJK AAN BODYFORM
+======================================== */
+
+.kledingfotografie-werkwijze h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size:
+        clamp(44px, 4.5vw, 62px);
+
+    font-weight: 800;
+
+    line-height: 0.98;
+
+    letter-spacing: -2.6px;
+}
+
+.kledingfotografie-werkwijze h2 span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--wespi-goud);
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.werkwijze-intro {
+    max-width: 590px;
+
+    margin: 24px 0 0;
+
+    color: #37342f;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   STAPPEN
+======================================== */
+
+.kledingfotografie-stappen {
+    position: relative;
+
+    max-width: 650px;
+
+    margin-top: 36px;
+    padding-left: 22px;
+
+    border-left:
+        1px solid rgba(157, 116, 15, 0.36);
+}
+
+
+/* ========================================
+   GOUDEN DEEL VAN DE LIJN
+======================================== */
+
+.kledingfotografie-stappen::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -1px;
+
+    width: 2px;
+    height: 25%;
+
+    background:
+        var(--wespi-goud);
+}
+
+
+/* ========================================
+   STAP
+======================================== */
+
+.werkwijze-stap {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        52px minmax(0, 1fr);
+
+    gap: 15px;
+
+    padding: 0 0 25px;
+}
+
+.werkwijze-stap:last-child {
+    padding-bottom: 2px;
+}
+
+
+/* ========================================
+   PUNT OP LIJN
+======================================== */
+
+.werkwijze-stap::before {
+    content: "";
+
+    position: absolute;
+
+    top: 5px;
+    left: -27px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background:
+        var(--wespi-goud);
+
+    box-shadow:
+        0 0 0 5px #f4efe6;
+}
+
+
+/* ========================================
+   NUMMER
+======================================== */
+
+.stap-nummer {
+    display: block;
+
+    color:
+        rgba(181, 138, 22, 0.39);
+
+    font-size: 30px;
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* ========================================
+   STAP TITEL
+======================================== */
+
+.stap-inhoud strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 13px;
+    font-weight: 900;
+
+    line-height: 1.35;
+}
+
+
+/* ========================================
+   STAP TEKST
+======================================== */
+
+.stap-inhoud p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #5d5850;
+
+    font-size: 11px;
+
+    line-height: 1.58;
+}
+
+
+/* ========================================
+   OUTPUT / PLUSPUNTEN
+======================================== */
+
+.kledingfotografie-output {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    max-width: 650px;
+
+    gap: 9px 21px;
+
+    margin-top: 28px;
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(42, 39, 34, 0.13);
+}
+
+.kledingfotografie-output span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #514d46;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.kledingfotografie-output strong {
+    color: #a77f14;
+
+    font-size: 10px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .werkwijze-visual {
+        width: 53%;
+    }
+
+    .werkwijze-tekst {
+        width: 66%;
+    }
+
+    .werkwijze-visual::before {
+        width: 68%;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 760px) {
+
+    .kledingfotografie-werkwijze {
+        min-height: auto;
+    }
+
+    .kledingfotografie-werkwijze-inhoud {
+        min-height: auto;
+
+        display: block;
+    }
+
+    .werkwijze-tekst {
+        width: 100%;
+        max-width: none;
+
+        padding: 58px 0 40px;
+    }
+
+    .kledingfotografie-werkwijze h2 {
+        font-size: 42px;
+
+        letter-spacing: -1.8px;
+    }
+
+    .werkwijze-intro {
+        max-width: 600px;
+    }
+
+    .werkwijze-visual {
+        position: relative;
+
+        width: 100%;
+        height: 440px;
+    }
+
+    .werkwijze-visual::before {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+
+        width: 100%;
+        height: 34%;
+
+        background:
+            linear-gradient(
+                180deg,
+                #eee7da 0%,
+                rgba(238, 231, 218, 0.92) 20%,
+                rgba(238, 231, 218, 0.58) 54%,
+                rgba(238, 231, 218, 0) 100%
+            );
+    }
+
+    .werkwijze-visual::after {
+        display: none;
+    }
+
+}
+
+
+/* ========================================
+   KLEINE TELEFOONS
+======================================== */
+
+@media (max-width: 500px) {
+
+    .werkwijze-tekst {
+        padding-top: 52px;
+    }
+
+    .kledingfotografie-werkwijze h2 {
+        font-size: 37px;
+    }
+
+    .werkwijze-intro {
+        font-size: 13px;
+    }
+
+    .kledingfotografie-stappen {
+        padding-left: 20px;
+    }
+
+    .werkwijze-stap {
+        grid-template-columns:
+            45px minmax(0, 1fr);
+
+        gap: 12px;
+    }
+
+    .werkwijze-stap::before {
+        left: -25px;
+    }
+
+    .stap-nummer {
+        font-size: 27px;
+    }
+
+    .kledingfotografie-output {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .werkwijze-visual {
+        height: 350px;
+    }
+
+}
