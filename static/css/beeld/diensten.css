@@ -1,0 +1,1004 @@
+/* =========================================================
+   BEELD - DIENSTEN
+   ========================================================= */
+
+.beeld-diensten {
+    position: relative;
+
+    padding: 62px 0 120px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f6f5f2 100%
+        );
+}
+
+
+.beeld-diensten::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    width: 520px;
+    height: 520px;
+
+    top: -210px;
+    right: -170px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(213, 171, 54, 0.14) 0%,
+            rgba(213, 171, 54, 0.06) 38%,
+            rgba(213, 171, 54, 0) 72%
+        );
+
+    pointer-events: none;
+}
+
+
+.beeld-diensten .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.beeld-diensten-header {
+    padding-bottom: 34px;
+}
+
+
+.beeld-diensten-header-main {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    gap: 70px;
+
+    align-items: end;
+}
+
+
+.beeld-diensten-header-tekst {
+    max-width: 720px;
+}
+
+
+.beeld-diensten-bovenkop {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #747779;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2.3px;
+}
+
+
+.beeld-diensten-header h2 {
+    max-width: 620px;
+
+    margin: 0;
+
+    color: #17191b;
+
+    font-size: clamp(30px, 3vw, 40px);
+    font-weight: 800;
+    line-height: 1.02;
+
+    letter-spacing: -1.7px;
+}
+
+
+.beeld-diensten-header h2 span {
+    color: #c79517;
+}
+
+
+.beeld-diensten-header p {
+    max-width: 610px;
+
+    margin: 17px 0 0;
+
+    color: #626568;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   OVERZICHT
+   ========================================================= */
+
+.beeld-diensten-overzicht {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding-bottom: 4px;
+}
+
+
+.beeld-diensten-overzicht-item {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 0 8px;
+
+    color: #343739;
+
+    text-decoration: none;
+
+    border-bottom:
+        1px solid
+        rgba(31, 33, 34, 0.13);
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.beeld-diensten-overzicht-item:hover {
+    color: #c79517;
+
+    border-color:
+        rgba(199, 149, 23, 0.65);
+}
+
+
+.beeld-diensten-overzicht-nummer {
+    color: #c79517;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+
+.beeld-diensten-overzicht-naam {
+    white-space: nowrap;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   ALGEMENE DIENST
+   ========================================================= */
+
+.beeld-dienst {
+    display: grid;
+
+    grid-template-columns:
+        minmax(360px, 0.82fr)
+        minmax(520px, 1.18fr);
+
+    gap: 70px;
+
+    align-items: center;
+
+    min-height: 470px;
+
+    padding: 58px 0;
+
+    border-top:
+        1px solid
+        #deddd9;
+}
+
+
+.beeld-dienst:last-child {
+    border-bottom:
+        1px solid
+        #deddd9;
+}
+
+
+/* =========================================================
+   TEKST
+   ========================================================= */
+
+.beeld-dienst-tekst {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.beeld-dienst-nummer {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #b9b9b6;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+}
+
+
+.beeld-dienst-label {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #5e6163;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.beeld-dienst h3 {
+    max-width: 540px;
+
+    margin: 0;
+
+    color: #151719;
+
+    font-size: clamp(40px, 3.7vw, 55px);
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: -2.2px;
+}
+
+
+.beeld-dienst h3 span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #c79517;
+}
+
+
+.beeld-dienst-tekst > p {
+    max-width: 525px;
+
+    margin: 24px 0 0;
+
+    color: #515456;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   TERMEN
+   ========================================================= */
+
+.beeld-dienst-termen {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 23px;
+}
+
+
+.beeld-dienst-termen span {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 31px;
+
+    padding: 7px 12px;
+
+    border:
+        1px solid
+        rgba(28, 30, 31, 0.14);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255, 255, 255, 0.58);
+
+    color: #4e5153;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   LINK
+   ========================================================= */
+
+.beeld-dienst-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 28px;
+
+    padding-bottom: 4px;
+
+    border-bottom:
+        1px solid
+        rgba(199, 149, 23, 0.5);
+
+    color: #17191b;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+
+.beeld-dienst-link > span {
+    color: #c79517;
+
+    font-size: 16px;
+}
+
+
+.beeld-dienst-link:hover {
+    gap: 14px;
+
+    color: #c79517;
+}
+
+
+/* =========================================================
+   VISUAL ALGEMEEN
+   ========================================================= */
+
+.beeld-dienst-visual {
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   01 KLEDINGFOTOGRAFIE
+   ONGEWIJZIGD
+   ========================================================= */
+
+.beeld-dienst-kleding-visual {
+    min-height: 380px;
+    height: 380px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f7f6f3 45%,
+            #eeece7 100%
+        );
+}
+
+
+.beeld-dienst-kleding-visual img {
+    position: absolute;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 18px 22px
+            rgba(20, 22, 23, 0.09)
+        );
+}
+
+
+.beeld-kleding-short {
+    z-index: 2;
+
+    width: 33%;
+    height: 54%;
+
+    left: 1%;
+    bottom: 13%;
+}
+
+
+.beeld-kleding-jurk {
+    z-index: 4;
+
+    width: 51%;
+    height: 112%;
+
+    left: 24%;
+    bottom: -7%;
+}
+
+
+.beeld-kleding-jas {
+    z-index: 3;
+
+    width: 42%;
+    height: 83%;
+
+    right: -2%;
+    bottom: 5%;
+}
+
+
+/* =========================================================
+   02 PACKSHOTFOTOGRAFIE
+   ONGEWIJZIGD
+   ========================================================= */
+
+.beeld-dienst-packshot {
+    grid-template-columns:
+        minmax(520px, 1.18fr)
+        minmax(360px, 0.82fr);
+}
+
+
+.beeld-dienst-packshot-visual {
+    min-height: 380px;
+    height: 380px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f7f6f3 45%,
+            #eeece7 100%
+        );
+}
+
+
+.beeld-dienst-packshot-visual img {
+    position: absolute;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 17px 21px
+            rgba(20, 22, 23, 0.10)
+        );
+}
+
+
+.beeld-packshot-bril {
+    z-index: 5;
+
+    width: 82%;
+    height: 58%;
+
+    left: 9%;
+    top: -2%;
+}
+
+
+.beeld-packshot-schoen {
+    z-index: 3;
+
+    width: 70%;
+    height: 60%;
+
+    left: -2%;
+    bottom: -2%;
+}
+
+
+.beeld-packshot-product {
+    z-index: 4;
+
+    width: 37%;
+    height: 64%;
+
+    right: -1%;
+    bottom: -3%;
+}
+
+
+/* =========================================================
+   03 BEELDBEWERKING
+   ========================================================= */
+
+.beeld-dienst-bewerking-visual {
+    min-height: 380px;
+    height: 380px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f7f6f3 45%,
+            #eeece7 100%
+        );
+}
+
+
+/* zachte gouden gloed */
+
+.beeldbewerking-accent {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 340px;
+    height: 340px;
+
+    right: -80px;
+    top: -90px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(210, 169, 50, 0.19) 0%,
+            rgba(210, 169, 50, 0.07) 45%,
+            rgba(210, 169, 50, 0) 72%
+        );
+}
+
+
+/* =========================================================
+   AUTO
+   ========================================================= */
+
+.beeldbewerking-auto {
+    position: absolute;
+
+    z-index: 2;
+
+    display: block;
+
+    width: 73%;
+    height: 59%;
+
+    right: -2%;
+    bottom: 6%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 18px 22px
+            rgba(20, 22, 23, 0.10)
+        );
+}
+
+
+/* =========================================================
+   BROEK
+   ========================================================= */
+
+.beeldbewerking-broek {
+    position: absolute;
+
+    z-index: 4;
+
+    display: block;
+
+    width: 47%;
+    height: 108%;
+
+    left: 1%;
+    bottom: -5%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 18px 22px
+            rgba(20, 45, 75, 0.11)
+        );
+}
+
+
+/* =========================================================
+   BEWERKINGSSTAPPEN
+   ========================================================= */
+
+.beeldbewerking-stap {
+    position: absolute;
+
+    z-index: 8;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 142px;
+
+    padding: 11px 14px;
+
+    background:
+        rgba(255, 255, 255, 0.90);
+
+    border:
+        1px solid
+        rgba(28, 30, 31, 0.08);
+
+    box-shadow:
+        0 12px 24px
+        rgba(20, 22, 23, 0.06);
+
+    backdrop-filter:
+        blur(7px);
+}
+
+
+.beeldbewerking-stap span {
+    margin-bottom: 4px;
+
+    color: #c79517;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.beeldbewerking-stap strong {
+    color: #22282c;
+
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+
+/* achtergrond verwijderen */
+
+.beeldbewerking-stap-achtergrond {
+    left: 4%;
+    top: 7%;
+}
+
+
+/* kleurcorrectie */
+
+.beeldbewerking-stap-kleur {
+    right: 4%;
+    top: 8%;
+}
+
+
+/* product verfijnen */
+
+.beeldbewerking-stap-verfijnen {
+    right: 4%;
+    bottom: 17%;
+}
+
+
+/* =========================================================
+   PUBLICATIE
+   ========================================================= */
+
+.beeldbewerking-publicatie {
+    position: absolute;
+
+    z-index: 8;
+
+    left: 4%;
+    bottom: 5%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.beeldbewerking-publicatie span {
+    color: #929596;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+}
+
+
+.beeldbewerking-publicatie strong {
+    margin-top: 3px;
+
+    color: #2a2e31;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .beeld-diensten-header-main {
+        grid-template-columns: 1fr;
+
+        gap: 26px;
+    }
+
+
+    .beeld-diensten-overzicht {
+        justify-content: flex-start;
+    }
+
+
+    .beeld-dienst {
+        grid-template-columns:
+            minmax(320px, 0.9fr)
+            minmax(420px, 1.1fr);
+
+        gap: 45px;
+    }
+
+
+    .beeld-dienst-packshot {
+        grid-template-columns:
+            minmax(420px, 1.1fr)
+            minmax(320px, 0.9fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBIEL
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .beeld-diensten {
+        padding:
+            52px 0
+            85px;
+    }
+
+
+    .beeld-diensten::before {
+        width: 350px;
+        height: 350px;
+
+        top: -140px;
+        right: -180px;
+    }
+
+
+    .beeld-diensten-header {
+        padding-bottom: 26px;
+    }
+
+
+    .beeld-diensten-header h2 {
+        font-size:
+            clamp(
+                29px,
+                8.5vw,
+                37px
+            );
+    }
+
+
+    .beeld-diensten-header p {
+        font-size: 13px;
+    }
+
+
+    .beeld-diensten-overzicht {
+        gap: 15px;
+
+        overflow-x: auto;
+
+        padding-bottom: 6px;
+    }
+
+
+    .beeld-diensten-overzicht-item {
+        flex: 0 0 auto;
+    }
+
+
+    .beeld-dienst,
+    .beeld-dienst-packshot {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+        min-height: 0;
+
+        padding:
+            48px 0;
+    }
+
+
+    .beeld-dienst-packshot .beeld-dienst-tekst {
+        order: 1;
+    }
+
+
+    .beeld-dienst-packshot .beeld-dienst-visual {
+        order: 2;
+    }
+
+
+    .beeld-dienst h3 {
+        font-size:
+            clamp(
+                36px,
+                10vw,
+                48px
+            );
+    }
+
+
+    .beeld-dienst-tekst > p {
+        font-size: 14px;
+    }
+
+
+    .beeld-dienst-visual {
+        width: 100%;
+    }
+
+
+    /* kleding */
+
+    .beeld-dienst-kleding-visual {
+        min-height: 330px;
+        height: 330px;
+    }
+
+
+    /* packshot */
+
+    .beeld-dienst-packshot-visual {
+        min-height: 330px;
+        height: 330px;
+    }
+
+
+    .beeld-packshot-bril {
+        width: 82%;
+        height: 58%;
+
+        left: 9%;
+        top: -2%;
+    }
+
+
+    .beeld-packshot-schoen {
+        width: 69%;
+        height: 57%;
+
+        left: -3%;
+        bottom: -1%;
+    }
+
+
+    .beeld-packshot-product {
+        width: 37%;
+        height: 61%;
+
+        right: -2%;
+        bottom: -2%;
+    }
+
+
+    /* beeldbewerking */
+
+    .beeld-dienst-bewerking-visual {
+        min-height: 330px;
+        height: 330px;
+    }
+
+
+    .beeldbewerking-auto {
+        width: 74%;
+        height: 55%;
+
+        right: -4%;
+        bottom: 7%;
+    }
+
+
+    .beeldbewerking-broek {
+        width: 48%;
+        height: 104%;
+
+        left: 0;
+        bottom: -3%;
+    }
+
+
+    .beeldbewerking-stap {
+        min-width: 108px;
+
+        padding: 8px 10px;
+    }
+
+
+    .beeldbewerking-stap strong {
+        font-size: 8px;
+    }
+
+
+    .beeldbewerking-stap-achtergrond {
+        left: 2%;
+        top: 6%;
+    }
+
+
+    .beeldbewerking-stap-kleur {
+        right: 2%;
+        top: 7%;
+    }
+
+
+    .beeldbewerking-stap-verfijnen {
+        right: 2%;
+        bottom: 16%;
+    }
+
+
+    .beeldbewerking-publicatie {
+        left: 2%;
+        bottom: 4%;
+    }
+
+
+    .beeldbewerking-publicatie strong {
+        font-size: 8px;
+    }
+
+}

@@ -1,43 +1,15 @@
-<section
-    class="kledingfotografie-bodyform"
-    id="bodyform"
->
+<section class="kleding-bodyform">
 
-    <div class="container kledingfotografie-bodyform-inhoud">
+    <div class="container kleding-bodyform-inhoud">
 
 
-        <!-- BEELDZIJDE -->
+        <!-- =====================================================
+             TEKST
+             ===================================================== -->
 
-        <div class="bodyform-visual">
+        <div class="kleding-bodyform-tekst">
 
-            <div class="bodyform-sfeer">
-
-                <span class="bodyform-beeldlabel">
-                    GHOST MANNEQUIN
-                </span>
-
-                <img
-                    src="{{ url_for('static', path='images/kledingfotografie/bodyform-kledingfotografie-webshop.png') }}"
-                    alt="Bodyform kledingfotografie met ghost mannequin voor webshops"
-                    loading="lazy"
-                >
-
-                <div class="bodyform-sfeer-tekst">
-                    <span>Vorm</span>
-                    <span>Pasvorm</span>
-                    <span>Detail</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- TEKSTZIJDE -->
-
-        <div class="kledingfotografie-bodyform-tekst">
-
-            <span class="bodyform-bovenkop">
+            <span class="kleding-bodyform-bovenkop">
                 BODYFORM · GHOST MANNEQUIN
             </span>
 
@@ -51,18 +23,20 @@
             </h2>
 
 
-            <p class="bodyform-intro">
-                Je kleding mooi in model, zonder dat de mannequin
-                zichtbaar blijft. Zo krijgt ieder artikel een rustige,
-                professionele uitstraling die direct klaar is voor je webshop.
+            <p class="kleding-bodyform-intro">
+                Je kleding mooi in model, zonder dat de mannequin zichtbaar
+                blijft. Zo krijgt ieder artikel een rustige, professionele
+                uitstraling die direct klaar is voor je webshop.
             </p>
 
 
-            <!-- PRIJS -->
+            <!-- =================================================
+                 PRIJS
+                 ================================================= -->
 
-            <div class="bodyform-prijsblok">
+            <div class="kleding-bodyform-prijs">
 
-                <div class="bodyform-prijs-kop">
+                <div class="kleding-bodyform-prijs-kop">
 
                     <span>
                         BODYFORMFOTOGRAFIE
@@ -75,9 +49,10 @@
                 </div>
 
 
-                <div class="bodyform-prijs-uitleg">
+                <div class="kleding-bodyform-prijs-opties">
 
-                    <div>
+                    <div class="kleding-bodyform-prijs-optie">
+
                         <strong>
                             Voor- én achterkant
                         </strong>
@@ -85,9 +60,12 @@
                         <span>
                             Beide beelden inbegrepen
                         </span>
+
                     </div>
 
-                    <div>
+
+                    <div class="kleding-bodyform-prijs-optie">
+
                         <strong>
                             Extra foto €3,49
                         </strong>
@@ -95,28 +73,35 @@
                         <span>
                             Bijvoorbeeld een detailbeeld
                         </span>
+
                     </div>
 
                 </div>
 
 
-                <div class="bodyform-prijs-inbegrepen">
+                <div class="kleding-bodyform-usps">
 
-                    <span>✓</span>
-                    Uitpakken & stomen
+                    <span>
+                        <strong>✓</strong>
+                        Uitpakken &amp; stomen
+                    </span>
 
-                    <span>✓</span>
-                    Nabewerking inbegrepen
+                    <span>
+                        <strong>✓</strong>
+                        Nabewerking inbegrepen
+                    </span>
 
-                    <span>✓</span>
-                    Geen minimum
+                    <span>
+                        <strong>✓</strong>
+                        Geen minimum
+                    </span>
 
                 </div>
 
             </div>
 
 
-            <p class="bodyform-extra">
+            <p class="kleding-bodyform-extra">
                 Geschikt voor onder andere shirts, truien, vesten,
                 broeken, jassen en kinderkleding. Ook bij een volgende
                 collectie zorgen we weer voor dezelfde uitstraling.
@@ -124,15 +109,185 @@
 
 
             <a
-                href="#contact"
-                class="bodyform-link"
+                href="/offerte?dienst=kledingfotografie"
+                class="kleding-bodyform-knop"
             >
                 Vraag een offerte aan
-                <span aria-hidden="true">→</span>
+                <span>→</span>
             </a>
 
         </div>
 
+
+        <!-- =====================================================
+             VOORBEELDEN
+             ===================================================== -->
+
+        <div class="kleding-bodyform-showcase">
+
+
+            <!-- HOOFDBEELD: BROEK -->
+
+            <figure class="bodyform-showcase-item bodyform-showcase-broek">
+
+                <button
+                    type="button"
+                    class="bodyform-afbeelding-knop"
+                    data-lightbox-src="{{ url_for('static', path='images/kledingfotografie/bodyform-broek-kledingfotografie-wespi.png') }}"
+                    data-lightbox-alt="Bodyform kledingfotografie van een damesbroek"
+                    aria-label="Vergroot bodyform kledingfotografie van een broek"
+                >
+
+                    <img
+                        src="{{ url_for('static', path='images/kledingfotografie/bodyform-broek-kledingfotografie-wespi.png') }}"
+                        alt="Bodyform kledingfotografie van een damesbroek"
+                        loading="lazy"
+                    >
+
+                </button>
+
+            </figure>
+
+
+            <!-- HOODIE -->
+
+            <figure class="bodyform-showcase-item bodyform-showcase-hoodie">
+
+                <button
+                    type="button"
+                    class="bodyform-afbeelding-knop"
+                    data-lightbox-src="{{ url_for('static', path='images/kledingfotografie/ghost-mannequin-hoodie-kledingfotografie.png') }}"
+                    data-lightbox-alt="Ghost mannequin kledingfotografie van een hoodie"
+                    aria-label="Vergroot ghost mannequin kledingfotografie van een hoodie"
+                >
+
+                    <img
+                        src="{{ url_for('static', path='images/kledingfotografie/ghost-mannequin-hoodie-kledingfotografie.png') }}"
+                        alt="Ghost mannequin kledingfotografie van een hoodie"
+                        loading="lazy"
+                    >
+
+                </button>
+
+            </figure>
+
+
+            <!-- JAS -->
+
+            <figure class="bodyform-showcase-item bodyform-showcase-jas">
+
+                <button
+                    type="button"
+                    class="bodyform-afbeelding-knop"
+                    data-lightbox-src="{{ url_for('static', path='images/kledingfotografie/ghost-mannequin-jas-kledingfotografie.png') }}"
+                    data-lightbox-alt="Ghost mannequin kledingfotografie van een jas"
+                    aria-label="Vergroot ghost mannequin kledingfotografie van een jas"
+                >
+
+                    <img
+                        src="{{ url_for('static', path='images/kledingfotografie/ghost-mannequin-jas-kledingfotografie.png') }}"
+                        alt="Ghost mannequin kledingfotografie van een jas"
+                        loading="lazy"
+                    >
+
+                </button>
+
+            </figure>
+
+
+            <!-- VEST VOORZIJDE -->
+
+            <figure class="bodyform-showcase-item bodyform-showcase-vest-voor">
+
+                <button
+                    type="button"
+                    class="bodyform-afbeelding-knop"
+                    data-lightbox-src="{{ url_for('static', path='images/kledingfotografie/bodyform-blauw-vest-kledingfotografie-wespi.png') }}"
+                    data-lightbox-alt="Voorzijde van een blauw vest met bodyform kledingfotografie"
+                    aria-label="Vergroot de voorzijde van het blauwe vest"
+                >
+
+                    <img
+                        src="{{ url_for('static', path='images/kledingfotografie/bodyform-blauw-vest-kledingfotografie-wespi.png') }}"
+                        alt="Voorzijde van een blauw vest met bodyform kledingfotografie"
+                        loading="lazy"
+                    >
+
+                </button>
+
+                <figcaption>
+                    Voorzijde
+                </figcaption>
+
+            </figure>
+
+
+            <!-- VEST ACHTERZIJDE -->
+
+            <figure class="bodyform-showcase-item bodyform-showcase-vest-achter">
+
+                <button
+                    type="button"
+                    class="bodyform-afbeelding-knop"
+                    data-lightbox-src="{{ url_for('static', path='images/kledingfotografie/bodyform-blauw-vest-achterkant-kledingfotografie.png') }}"
+                    data-lightbox-alt="Achterzijde van een blauw vest met bodyform kledingfotografie"
+                    aria-label="Vergroot de achterzijde van het blauwe vest"
+                >
+
+                    <img
+                        src="{{ url_for('static', path='images/kledingfotografie/bodyform-blauw-vest-achterkant-kledingfotografie.png') }}"
+                        alt="Achterzijde van een blauw vest met bodyform kledingfotografie"
+                        loading="lazy"
+                    >
+
+                </button>
+
+                <figcaption>
+                    Achterzijde
+                </figcaption>
+
+            </figure>
+
+        </div>
+
     </div>
+
+
+    <!-- =====================================================
+         LIGHTBOX
+         ===================================================== -->
+
+    <div
+        class="bodyform-lightbox"
+        id="bodyform-lightbox"
+        aria-hidden="true"
+    >
+
+        <button
+            type="button"
+            class="bodyform-lightbox-sluiten"
+            aria-label="Sluit afbeelding"
+        >
+            ×
+        </button>
+
+
+        <div class="bodyform-lightbox-binnen">
+
+            <img
+                class="bodyform-lightbox-afbeelding"
+                src=""
+                alt=""
+            >
+
+        </div>
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', path='js/kledingfotografie-lightbox.js') }}"
+        defer
+    ></script>
 
 </section>

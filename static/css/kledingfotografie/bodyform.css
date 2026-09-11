@@ -1,9 +1,11 @@
-/* ========================================
-   BODYFORM / GHOST MANNEQUIN
-======================================== */
+/* =========================================================
+   KLEDINGFOTOGRAFIE - BODYFORM
+   ========================================================= */
 
-.kledingfotografie-bodyform {
+.kleding-bodyform {
     position: relative;
+
+    padding: 58px 0 95px;
 
     overflow: hidden;
 
@@ -11,616 +13,818 @@
         linear-gradient(
             180deg,
             #ffffff 0%,
-            #f6f6f5 28%,
-            #f1f2f2 100%
+            #f6f5f2 100%
         );
 }
 
 
-/* ========================================
+/* =========================================================
    INHOUD
-======================================== */
+   ========================================================= */
 
-.kledingfotografie-bodyform-inhoud {
-    position: relative;
-
+.kleding-bodyform-inhoud {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        minmax(390px, 0.86fr)
+        minmax(560px, 1.14fr);
+
+    gap: 55px;
+
     align-items: center;
-
-    gap: 48px;
-
-    padding-top: 78px;
-    padding-bottom: 78px;
 }
 
 
-/* ========================================
-   VISUAL
-======================================== */
+/* =========================================================
+   TEKST
+   ========================================================= */
 
-.bodyform-visual {
-    position: relative;
-
-    min-width: 0;
-}
-
-.bodyform-sfeer {
-    position: relative;
-
-    min-height: 500px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: visible;
-}
-
-
-/* ========================================
-   SUBTIELE GOUDGLOED ACHTER PRODUCT
-======================================== */
-
-.bodyform-sfeer::before {
-    content: "";
-
-    position: absolute;
-
-    z-index: 0;
-
-    top: 50%;
-    left: 46%;
-
-    width: 72%;
-    height: 72%;
-
-    transform: translate(-50%, -50%);
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(218, 190, 119, 0.13) 0%,
-            rgba(218, 190, 119, 0.055) 38%,
-            rgba(218, 190, 119, 0) 72%
-        );
-
-    pointer-events: none;
-}
-
-
-/* ========================================
-   FADE NAAR TEKST
-======================================== */
-
-.bodyform-sfeer::after {
-    content: "";
-
-    position: absolute;
-
-    z-index: 2;
-
-    top: 0;
-    right: -20%;
-    bottom: 0;
-
-    width: 48%;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(241, 242, 242, 0) 0%,
-            rgba(241, 242, 242, 0.18) 32%,
-            rgba(241, 242, 242, 0.62) 70%,
-            #f1f2f2 100%
-        );
-
-    pointer-events: none;
-}
-
-
-/* ========================================
-   PRODUCTBEELD
-======================================== */
-
-.bodyform-sfeer img {
-    position: relative;
-
-    z-index: 1;
-
+.kleding-bodyform-bovenkop {
     display: block;
 
-    width: auto;
-    max-width: 145%;
+    margin-bottom: 15px;
 
-    height: auto;
-    max-height: 540px;
-
-    object-fit: contain;
-}
-
-
-/* ========================================
-   BEELDLABEL
-======================================== */
-
-.bodyform-beeldlabel {
-    position: absolute;
-
-    z-index: 4;
-
-    top: 24px;
-    left: 0;
-
-    padding: 8px 11px;
-
-    background: var(--wespi-goud);
-
-    color: var(--wespi-zwart);
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 1.6px;
-}
-
-
-/* ========================================
-   WOORDEN BIJ VISUAL
-======================================== */
-
-.bodyform-sfeer-tekst {
-    position: absolute;
-
-    z-index: 4;
-
-    bottom: 25px;
-    left: 0;
-
-    display: flex;
-    align-items: center;
-
-    gap: 17px;
-}
-
-.bodyform-sfeer-tekst span {
-    position: relative;
-
-    color: #626466;
+    color: #6d7072;
 
     font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.bodyform-sfeer-tekst span + span::before {
-    content: "";
-
-    position: absolute;
-
-    top: 50%;
-    left: -10px;
-
-    width: 3px;
-    height: 3px;
-
-    border-radius: 50%;
-
-    background: var(--wespi-goud);
-
-    transform: translateY(-50%);
-}
-
-
-/* ========================================
-   TEKST
-======================================== */
-
-.kledingfotografie-bodyform-tekst {
-    position: relative;
-
-    z-index: 5;
-
-    min-width: 0;
-}
-
-
-/* ========================================
-   BOVENKOP
-======================================== */
-
-.bodyform-bovenkop {
-    display: block;
-
-    margin-bottom: 16px;
-
-    color: #66686a;
-
-    font-size: 11px;
     font-weight: 800;
 
     letter-spacing: 2.3px;
 }
 
 
-/* ========================================
-   TITEL
-======================================== */
+.kleding-bodyform h2 {
+    max-width: 640px;
 
-.kledingfotografie-bodyform h2 {
     margin: 0;
 
-    color: var(--wespi-zwart);
+    color: #17191b;
 
-    font-size: clamp(44px, 4.5vw, 62px);
+    font-size: clamp(42px, 4.2vw, 60px);
     font-weight: 800;
+    line-height: 0.99;
 
-    line-height: 0.98;
-
-    letter-spacing: -2.6px;
+    letter-spacing: -2.5px;
 }
 
-.kledingfotografie-bodyform h2 span {
+
+.kleding-bodyform h2 span {
     display: block;
 
-    margin-top: 6px;
+    margin-top: 5px;
 
     color: var(--wespi-goud);
 }
 
 
-/* ========================================
-   INTRO
-======================================== */
+.kleding-bodyform-intro {
+    max-width: 560px;
 
-.kledingfotografie-bodyform .bodyform-intro {
-    max-width: 570px;
+    margin: 25px 0 0;
 
-    margin: 24px 0 0;
+    color: #202224;
 
-    color: #28292a;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    line-height: 1.65;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.75;
 }
 
 
-/* ========================================
-   PRIJSBLOK
-======================================== */
+/* =========================================================
+   PRIJS
+   ========================================================= */
 
-.bodyform-prijsblok {
-    position: relative;
-
-    max-width: 580px;
+.kleding-bodyform-prijs {
+    max-width: 565px;
 
     margin-top: 28px;
-    padding: 22px 0 18px;
 
-    border-top:
-        1px solid rgba(0, 0, 0, 0.13);
+    padding: 24px 0 19px;
 
-    border-bottom:
-        1px solid rgba(0, 0, 0, 0.13);
+    border-top: 1px solid #d3d2ce;
+    border-bottom: 1px solid #d3d2ce;
 }
 
 
-/* ========================================
-   PRIJSKOP
-======================================== */
-
-.bodyform-prijs-kop {
+.kleding-bodyform-prijs-kop {
     display: flex;
-    align-items: flex-end;
+
+    align-items: center;
     justify-content: space-between;
 
-    gap: 25px;
+    gap: 30px;
 }
 
-.bodyform-prijs-kop > span {
-    padding-bottom: 7px;
 
-    color: #646668;
+.kleding-bodyform-prijs-kop span {
+    color: #626568;
 
     font-size: 10px;
-    font-weight: 900;
+    font-weight: 800;
 
-    letter-spacing: 1.6px;
+    letter-spacing: 1.8px;
 }
 
-.bodyform-prijs-kop > strong {
+
+.kleding-bodyform-prijs-kop strong {
     position: relative;
 
-    color: #b58a16;
+    z-index: 1;
 
-    font-size: 40px;
-    font-weight: 900;
+    color: #c79517;
 
+    font-size: 42px;
+    font-weight: 800;
     line-height: 1;
 
-    letter-spacing: -1.8px;
+    letter-spacing: -1.5px;
 }
 
-.bodyform-prijs-kop > strong::after {
+
+.kleding-bodyform-prijs-kop strong::after {
     content: "";
 
     position: absolute;
 
     z-index: -1;
 
+    left: -5px;
     right: -5px;
     bottom: 1px;
-    left: -5px;
 
     height: 9px;
 
     background:
-        rgba(218, 190, 119, 0.20);
+        rgba(220, 178, 55, 0.18);
 }
 
 
-/* ========================================
-   PRIJSUITLEG
-======================================== */
+/* =========================================================
+   PRIJSOPTIES
+   ========================================================= */
 
-.bodyform-prijs-uitleg {
+.kleding-bodyform-prijs-opties {
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    gap: 24px;
+    grid-template-columns:
+        1fr
+        1fr;
 
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
-.bodyform-prijs-uitleg > div {
-    min-width: 0;
+
+.kleding-bodyform-prijs-optie {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-height: 48px;
 }
 
-.bodyform-prijs-uitleg > div + div {
+
+.kleding-bodyform-prijs-optie + .kleding-bodyform-prijs-optie {
     padding-left: 24px;
 
     border-left:
-        1px solid rgba(0, 0, 0, 0.10);
+        1px solid
+        #d7d6d2;
 }
 
-.bodyform-prijs-uitleg strong {
-    display: block;
 
-    margin-bottom: 4px;
-
-    color: var(--wespi-zwart);
+.kleding-bodyform-prijs-optie strong {
+    color: #111315;
 
     font-size: 12px;
     font-weight: 800;
 }
 
-.bodyform-prijs-uitleg span {
-    display: block;
 
-    color: #656769;
-
-    font-size: 11px;
-
-    line-height: 1.5;
-}
-
-
-/* ========================================
-   INBEGREPEN
-======================================== */
-
-.bodyform-prijs-inbegrepen {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    gap: 7px 13px;
-
-    margin-top: 20px;
-
-    color: #5e6062;
+.kleding-bodyform-prijs-optie span {
+    color: #6f7274;
 
     font-size: 10px;
-    font-weight: 700;
-
-    line-height: 1.5;
-}
-
-.bodyform-prijs-inbegrepen span {
-    color: #a77f14;
-
-    font-size: 11px;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 
-/* ========================================
+/* =========================================================
+   USP'S
+   ========================================================= */
+
+.kleding-bodyform-usps {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px 19px;
+
+    margin-top: 20px;
+}
+
+
+.kleding-bodyform-usps span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #55585a;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+.kleding-bodyform-usps strong {
+    color: #c79517;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
    EXTRA TEKST
-======================================== */
+   ========================================================= */
 
-.kledingfotografie-bodyform .bodyform-extra {
-    max-width: 560px;
+.kleding-bodyform-extra {
+    max-width: 565px;
 
     margin: 20px 0 0;
 
-    color: #5b5d5f;
+    color: #626568;
 
-    font-size: 12px;
-
-    line-height: 1.65;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.7;
 }
 
 
-/* ========================================
-   LINK
-======================================== */
+/* =========================================================
+   OFFERTE
+   ========================================================= */
 
-.bodyform-link {
+.kleding-bodyform-knop {
     display: inline-flex;
+
     align-items: center;
 
-    gap: 9px;
+    gap: 10px;
 
     margin-top: 22px;
 
-    color: var(--wespi-zwart);
+    padding-bottom: 3px;
+
+    border-bottom:
+        1px solid
+        rgba(199, 149, 23, 0.55);
+
+    color: #111315;
 
     font-size: 12px;
-    font-weight: 900;
+    font-weight: 800;
 
     text-decoration: none;
 
-    border-bottom:
-        2px solid var(--wespi-goud);
-
-    padding-bottom: 4px;
-}
-
-.bodyform-link span {
-    color: var(--wespi-goud);
-
-    transition: transform 0.2s ease;
-}
-
-.bodyform-link:hover span {
-    transform: translateX(4px);
+    transition:
+        gap 0.2s ease,
+        color 0.2s ease;
 }
 
 
-/* ========================================
+.kleding-bodyform-knop span {
+    color: #c79517;
+
+    font-size: 16px;
+}
+
+
+.kleding-bodyform-knop:hover {
+    gap: 14px;
+
+    color: #c79517;
+}
+
+
+/* =========================================================
+   SHOWCASE
+   ========================================================= */
+
+.kleding-bodyform-showcase {
+    position: relative;
+
+    min-height: 610px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8f7f4 45%,
+            #efede8 100%
+        );
+}
+
+
+/* zachte overgang links */
+
+.kleding-bodyform-showcase::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 20;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 6%;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f7f6f3 0%,
+            rgba(247, 246, 243, 0) 100%
+        );
+}
+
+
+/* =========================================================
+   PRODUCTEN ALGEMEEN
+   ========================================================= */
+
+.bodyform-showcase-item {
+    position: absolute;
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bodyform-afbeelding-knop {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: zoom-in;
+}
+
+
+.bodyform-afbeelding-knop img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 16px 18px
+            rgba(23, 25, 27, 0.09)
+        );
+
+    transition:
+        filter 0.25s ease;
+}
+
+
+.bodyform-afbeelding-knop:hover img {
+    filter:
+        drop-shadow(
+            0 21px 25px
+            rgba(23, 25, 27, 0.14)
+        );
+}
+
+
+/* =========================================================
+   BROEK
+   Groot hoofdbeeld, maar met ruimte ernaast
+   ========================================================= */
+
+.bodyform-showcase-broek {
+    z-index: 7;
+
+    width: 58%;
+    height: 115%;
+
+    left: -5%;
+    bottom: -7%;
+}
+
+
+/* =========================================================
+   GROENE HOODIE
+
+   PNG bevat meer lege transparante ruimte.
+   Daarom is alleen DIT daadwerkelijke beeld ingezoomd.
+   ========================================================= */
+
+.bodyform-showcase-hoodie {
+    z-index: 4;
+
+    width: 31%;
+    height: 40%;
+
+    left: 43%;
+    top: 6%;
+}
+
+
+.bodyform-showcase-hoodie img {
+    transform: scale(1.26);
+}
+
+
+/* =========================================================
+   BLAUW-WITTE JAS
+
+   Zelfde zichtbare doelgrootte als de groene hoodie.
+   Geen extra scale nodig.
+   ========================================================= */
+
+.bodyform-showcase-jas {
+    z-index: 5;
+
+    width: 30%;
+    height: 40%;
+
+    right: 2%;
+    top: 6%;
+}
+
+
+/* =========================================================
+   BLAUW VEST VOORZIJDE
+   ========================================================= */
+
+.bodyform-showcase-vest-voor {
+    z-index: 5;
+
+    width: 27%;
+    height: 36%;
+
+    left: 44%;
+    bottom: 8%;
+}
+
+
+/* =========================================================
+   BLAUW VEST ACHTERZIJDE
+   ========================================================= */
+
+.bodyform-showcase-vest-achter {
+    z-index: 4;
+
+    width: 27%;
+    height: 36%;
+
+    right: 3%;
+    bottom: 8%;
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.bodyform-showcase-item figcaption {
+    position: absolute;
+
+    z-index: 12;
+
+    left: 50%;
+    bottom: -5px;
+
+    transform: translateX(-50%);
+
+    padding: 5px 8px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    color: #65686a;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+.bodyform-lightbox {
+    position: fixed;
+
+    z-index: 100000;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+
+    background:
+        rgba(16, 18, 19, 0.93);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease;
+}
+
+
+.bodyform-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.bodyform-lightbox-binnen {
+    width: min(1000px, 90vw);
+    height: min(820px, 84vh);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bodyform-lightbox-afbeelding {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 35px 60px
+            rgba(0, 0, 0, 0.28)
+        );
+}
+
+
+.bodyform-lightbox-sluiten {
+    position: absolute;
+
+    z-index: 10;
+
+    top: 24px;
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    color: #ffffff;
+
+    font-size: 34px;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
    TABLET
-======================================== */
+   ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
-    .kledingfotografie-bodyform-inhoud {
-        gap: 34px;
+    .kleding-bodyform-inhoud {
+        grid-template-columns:
+            minmax(340px, 0.88fr)
+            minmax(440px, 1.12fr);
+
+        gap: 38px;
     }
 
-    .bodyform-sfeer {
-        min-height: 450px;
+
+    .kleding-bodyform-showcase {
+        min-height: 550px;
     }
 
-    .bodyform-sfeer img {
-        max-width: 135%;
-        max-height: 490px;
+
+    .bodyform-showcase-broek {
+        width: 48%;
+        height: 101%;
+    }
+
+
+    .bodyform-showcase-hoodie {
+        width: 31%;
+        height: 39%;
+    }
+
+
+    .bodyform-showcase-jas {
+        width: 30%;
+        height: 39%;
+    }
+
+
+    .bodyform-showcase-vest-voor,
+    .bodyform-showcase-vest-achter {
+        width: 27%;
+        height: 35%;
     }
 
 }
 
 
-/* ========================================
+/* =========================================================
    MOBIEL
-======================================== */
+   ========================================================= */
 
 @media (max-width: 760px) {
 
-    .kledingfotografie-bodyform-inhoud {
-        grid-template-columns: 1fr;
-
-        gap: 24px;
-
-        padding-top: 56px;
-        padding-bottom: 58px;
+    .kleding-bodyform {
+        padding: 55px 0 80px;
     }
 
-    .kledingfotografie-bodyform-tekst {
-        order: 1;
-    }
 
-    .bodyform-visual {
-        order: 2;
-    }
-
-    .kledingfotografie-bodyform h2 {
-        font-size: 42px;
-
-        letter-spacing: -1.8px;
-    }
-
-    .bodyform-sfeer {
-        min-height: 410px;
-
-        margin-top: 5px;
-    }
-
-    .bodyform-sfeer img {
-        max-width: 118%;
-        max-height: 430px;
-    }
-
-    .bodyform-sfeer::before {
-        width: 90%;
-        height: 80%;
-    }
-
-    .bodyform-sfeer::after {
-        display: none;
-    }
-
-    .bodyform-beeldlabel {
-        top: 18px;
-    }
-
-    .bodyform-sfeer-tekst {
-        bottom: 16px;
-    }
-
-}
-
-
-/* ========================================
-   KLEINE TELEFOONS
-======================================== */
-
-@media (max-width: 520px) {
-
-    .kledingfotografie-bodyform h2 {
-        font-size: 37px;
-    }
-
-    .bodyform-prijs-kop {
-        align-items: flex-start;
+    .kleding-bodyform-inhoud {
+        display: flex;
         flex-direction: column;
 
-        gap: 10px;
+        gap: 40px;
     }
 
-    .bodyform-prijs-kop > strong {
-        font-size: 38px;
+
+    .kleding-bodyform-tekst {
+        width: 100%;
     }
 
-    .bodyform-prijs-uitleg {
+
+    .kleding-bodyform h2 {
+        font-size: clamp(39px, 10.5vw, 51px);
+    }
+
+
+    .kleding-bodyform-prijs-opties {
         grid-template-columns: 1fr;
 
         gap: 14px;
     }
 
-    .bodyform-prijs-uitleg > div + div {
+
+    .kleding-bodyform-prijs-optie + .kleding-bodyform-prijs-optie {
         padding-top: 14px;
         padding-left: 0;
 
         border-top:
-            1px solid rgba(0, 0, 0, 0.09);
+            1px solid
+            #deddd9;
 
         border-left: 0;
     }
 
-    .bodyform-prijs-inbegrepen {
-        align-items: flex-start;
+
+    .kleding-bodyform-usps {
+        flex-direction: column;
+
+        gap: 8px;
     }
 
-    .bodyform-sfeer {
-        min-height: 350px;
+
+    .kleding-bodyform-showcase {
+        width: 100%;
+
+        min-height: 590px;
     }
 
-    .bodyform-sfeer img {
-        max-width: 125%;
-        max-height: 370px;
+
+    .kleding-bodyform-showcase::before {
+        display: none;
+    }
+
+
+    /* broek */
+
+    .bodyform-showcase-broek {
+        width: 54%;
+        height: 62%;
+
+        left: -2%;
+        top: 2%;
+        bottom: auto;
+    }
+
+
+    /* groen */
+
+    .bodyform-showcase-hoodie {
+        width: 42%;
+        height: 28%;
+
+        left: auto;
+        right: 3%;
+        top: 5%;
+    }
+
+
+    .bodyform-showcase-hoodie img {
+        transform: scale(1.22);
+    }
+
+
+    /* blauw-wit */
+
+    .bodyform-showcase-jas {
+        width: 40%;
+        height: 28%;
+
+        right: 4%;
+        top: 34%;
+    }
+
+
+    /* vest voor */
+
+    .bodyform-showcase-vest-voor {
+        width: 41%;
+        height: 28%;
+
+        left: 5%;
+        bottom: 4%;
+    }
+
+
+    /* vest achter */
+
+    .bodyform-showcase-vest-achter {
+        width: 41%;
+        height: 28%;
+
+        right: 5%;
+        bottom: 4%;
+    }
+
+
+    /* lightbox */
+
+    .bodyform-lightbox {
+        padding: 55px 18px 25px;
+    }
+
+
+    .bodyform-lightbox-binnen {
+        width: 100%;
+        height: 82vh;
+    }
+
+
+    .bodyform-lightbox-sluiten {
+        top: 14px;
+        right: 14px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 30px;
     }
 
 }

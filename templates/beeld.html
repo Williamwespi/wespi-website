@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Beeld | Productfotografie & beeldbewerking | Wespi
+{% endblock %}
+
+{% block meta_description %}
+Productfotografie en professionele beeldbewerking voor webshops en bedrijven. Ontdek kledingfotografie, packshotfotografie en beeldbewerking bij Wespi.
+{% endblock %}
+
+{% block canonical %}
+<link
+    rel="canonical"
+    href="https://www.wespi.nl/beeld"
+>
+{% endblock %}
+
+{% block content %}
+
+    {% include "onderdelen/beeld/hero.html" %}
+    {% include "onderdelen/beeld/diensten.html" %}
+    {% include "onderdelen/beeld/waarom-beeld.html" %}
+
+{% endblock %}

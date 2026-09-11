@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+
+{% block title %}
+Offerte aanvragen | Wespi
+{% endblock %}
+
+{% block meta_description %}
+Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfotografie, beeldbewerking, productdata en digitale oplossingen.
+{% endblock %}
+
+{% block canonical %}
+<link
+    rel="canonical"
+    href="https://www.wespi.nl/offerte"
+>
+{% endblock %}
+
+
+{% block content %}
+
+<section class="offerte-hero">
+
+    <div class="container offerte-hero-inhoud">
+
+        <span class="offerte-bovenkop">
+            OFFERTE AANVRAGEN
+        </span>
+
+        <h1>
+            Vertel ons
+
+            <span>
+                wat je nodig hebt.
+            </span>
+        </h1>
+
+        <p>
+            Geef kort aan waar we je mee kunnen helpen.
+            We bekijken je aanvraag en nemen contact met je op
+            om de mogelijkheden door te spreken.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="offerte-formulier-sectie">
+
+    <div class="container offerte-grid">
+
+        <div class="offerte-intro">
+
+            <span class="offerte-bovenkop">
+                JOUW AANVRAAG
+            </span>
+
+            <h2>
+                Even de belangrijkste informatie.
+            </h2>
+
+            <p>
+                Hoe meer we vooraf weten, hoe gerichter we kunnen
+                meedenken. Je hoeft nog niet alles precies te weten.
+            </p>
+
+            {% if geselecteerde_dienst %}
+
+                <div class="offerte-dienst-melding">
+
+                    <span>
+                        Geselecteerde dienst
+                    </span>
+
+                    <strong>
+                        {{ geselecteerde_dienst }}
+                    </strong>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <form
+            class="offerte-formulier"
+            action="mailto:info@wespi.nl"
+            method="post"
+            enctype="text/plain"
+        >
+
+            <div class="offerte-veld">
+
+                <label for="naam">
+                    Naam
+                </label>
+
+                <input
+                    type="text"
+                    id="naam"
+                    name="Naam"
+                    required
+                >
+
+            </div>
+
+
+            <div class="offerte-veld">
+
+                <label for="bedrijf">
+                    Bedrijfsnaam
+                </label>
+
+                <input
+                    type="text"
+                    id="bedrijf"
+                    name="Bedrijfsnaam"
+                >
+
+            </div>
+
+
+            <div class="offerte-rij">
+
+                <div class="offerte-veld">
+
+                    <label for="email">
+                        E-mailadres
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="E-mail"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="offerte-veld">
+
+                    <label for="telefoon">
+                        Telefoonnummer
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefoon"
+                        name="Telefoon"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="offerte-veld">
+
+                <label for="dienst">
+                    Dienst
+                </label>
+
+                <select
+                    id="dienst"
+                    name="Dienst"
+                    required
+                >
+
+                    <option
+                        value=""
+                        {% if not dienst_code %}selected{% endif %}
+                    >
+                        Kies een dienst
+                    </option>
+
+                    {% for code, naam in diensten.items() %}
+
+                        <option
+                            value="{{ naam }}"
+                            {% if code == dienst_code %}selected{% endif %}
+                        >
+                            {{ naam }}
+                        </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <div
+                class="offerte-specifiek"
+                data-dienst="kledingfotografie"
+            >
+
+                <div class="offerte-veld">
+
+                    <label for="aantal-artikelen">
+                        Ongeveer hoeveel artikelen?
+                    </label>
+
+                    <input
+                        type="text"
+                        id="aantal-artikelen"
+                        name="Aantal artikelen"
+                        placeholder="Bijvoorbeeld 50"
+                    >
+
+                </div>
+
+
+                <div class="offerte-veld">
+
+                    <label for="fotografie">
+                        Welke fotografie?
+                    </label>
+
+                    <select
+                        id="fotografie"
+                        name="Type kledingfotografie"
+                    >
+
+                        <option value="">
+                            Nog niet zeker
+                        </option>
+
+                        <option value="Bodyform">
+                            Bodyform / ghost mannequin
+                        </option>
+
+                        <option value="Platte fotografie">
+                            Platte fotografie
+                        </option>
+
+                        <option value="Combinatie">
+                            Combinatie
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="offerte-veld">
+
+                <label for="toelichting">
+                    Vertel kort over de opdracht
+                </label>
+
+                <textarea
+                    id="toelichting"
+                    name="Toelichting"
+                    rows="7"
+                    placeholder="Wat wil je laten doen, hoeveel gaat het ongeveer om en wanneer heb je het nodig?"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="offerte-knop"
+            >
+                Verstuur aanvraag
+
+                <span>
+                    →
+                </span>
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}
