@@ -1,0 +1,84 @@
+/* ========================================
+   PACKSHOTFOTOGRAFIE - ANDERE PRODUCTEN
+======================================== */
+
+
+/* Achtergrond blok */
+
+.packshot-voorbeeld--producten
+.packshot-voorbeeld__grid {
+    background: #f8fafb;
+}
+
+
+/* Accent */
+
+.packshot-voorbeeld--producten
+.packshot-voorbeeld__bovenkop {
+    position: relative;
+
+    padding-left: 15px;
+
+    color: #607985;
+}
+
+.packshot-voorbeeld--producten
+.packshot-voorbeeld__bovenkop::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 4px;
+    height: 21px;
+
+    transform: translateY(-50%);
+
+    border-radius: 4px;
+
+    background: #718995;
+}
+
+
+/* Boor */
+
+.packshot-gallery--producten
+.packshot-gallery__groot img {
+    transform: scale(1.03);
+}
+
+
+/* Klok */
+
+.packshot-gallery--producten
+.packshot-gallery__klein:nth-child(2) img {
+    transform: scale(0.88);
+}
+
+
+/* Schaal */
+
+.packshot-gallery--producten
+.packshot-gallery__klein:nth-child(3) img {
+    transform: scale(1.04);
+}
+
+
+/* Hover */
+
+.packshot-gallery--producten
+.packshot-gallery__groot:hover img {
+    transform: scale(1.06);
+}
+
+.packshot-gallery--producten
+.packshot-gallery__klein:nth-child(2):hover img {
+    transform: scale(0.91);
+}
+
+.packshot-gallery--producten
+.packshot-gallery__klein:nth-child(3):hover img {
+    transform: scale(1.07);
+}

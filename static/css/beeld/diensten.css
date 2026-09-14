@@ -1028,3 +1028,27 @@
     }
 
 }
+/* ========================================
+   KLIKBARE DIENST-VISUALS
+======================================== */
+
+.beeld-dienst-visual-link {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.beeld-dienst-visual-link
+.beeld-dienst-visual {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.beeld-dienst-visual-link:hover
+.beeld-dienst-visual {
+    transform: translateY(-3px);
+}

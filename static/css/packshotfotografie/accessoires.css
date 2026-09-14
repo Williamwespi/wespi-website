@@ -1,0 +1,84 @@
+/* ========================================
+   PACKSHOTFOTOGRAFIE - ACCESSOIRES
+======================================== */
+
+
+/* Achtergrond blok */
+
+.packshot-voorbeeld--accessoires
+.packshot-voorbeeld__grid {
+    background: #fcfaf6;
+}
+
+
+/* Accent */
+
+.packshot-voorbeeld--accessoires
+.packshot-voorbeeld__bovenkop {
+    position: relative;
+
+    padding-left: 15px;
+
+    color: #947755;
+}
+
+.packshot-voorbeeld--accessoires
+.packshot-voorbeeld__bovenkop::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 4px;
+    height: 21px;
+
+    transform: translateY(-50%);
+
+    border-radius: 4px;
+
+    background: #c4a273;
+}
+
+
+/* Tas */
+
+.packshot-gallery--accessoires
+.packshot-gallery__groot img {
+    transform: scale(1.16);
+}
+
+
+/* Zonnebril */
+
+.packshot-gallery--accessoires
+.packshot-gallery__klein:nth-child(2) img {
+    transform: scale(1.06);
+}
+
+
+/* Sok */
+
+.packshot-gallery--accessoires
+.packshot-gallery__klein:nth-child(3) img {
+    transform: scale(0.96);
+}
+
+
+/* Hover */
+
+.packshot-gallery--accessoires
+.packshot-gallery__groot:hover img {
+    transform: scale(1.19);
+}
+
+.packshot-gallery--accessoires
+.packshot-gallery__klein:nth-child(2):hover img {
+    transform: scale(1.09);
+}
+
+.packshot-gallery--accessoires
+.packshot-gallery__klein:nth-child(3):hover img {
+    transform: scale(0.99);
+}

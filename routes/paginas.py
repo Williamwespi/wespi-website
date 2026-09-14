@@ -2,11 +2,15 @@ from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
+
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
 
-@router.get("/", response_class=HTMLResponse)
+@router.get(
+    "/",
+    response_class=HTMLResponse,
+)
 def home(request: Request):
     return templates.TemplateResponse(
         request=request,
@@ -41,6 +45,20 @@ def kledingfotografie(request: Request):
         name="kledingfotografie.html",
         context={
             "actieve_pagina": "kledingfotografie",
+        },
+    )
+
+
+@router.get(
+    "/productfotografie/packshotfotografie",
+    response_class=HTMLResponse,
+)
+def packshotfotografie(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="packshotfotografie.html",
+        context={
+            "actieve_pagina": "packshotfotografie",
         },
     )
 

@@ -1,0 +1,839 @@
+/* ========================================
+   PACKSHOTFOTOGRAFIE - INHOUD
+======================================== */
+
+
+/* ========================================
+   VOORBEELDBLOKKEN
+======================================== */
+
+.packshot-voorbeeld {
+    padding: 14px 0;
+
+    background: #ffffff;
+}
+
+.packshot-voorbeeld__grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 0.95fr);
+
+    gap: 70px;
+
+    align-items: center;
+
+    padding: 54px 56px;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.07);
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.045);
+}
+
+
+/* Omgekeerde volgorde */
+
+.packshot-voorbeeld__grid--omgekeerd
+.packshot-gallery {
+    order: 2;
+}
+
+.packshot-voorbeeld__grid--omgekeerd
+.packshot-voorbeeld__content {
+    order: 1;
+}
+
+
+/* ========================================
+   GALLERY
+======================================== */
+
+.packshot-gallery {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.7fr)
+        minmax(0, 0.72fr);
+
+    grid-template-rows:
+        190px
+        190px;
+
+    gap: 16px;
+
+    align-self: center;
+}
+
+
+/* ========================================
+   GALLERY KAARTEN
+======================================== */
+
+.packshot-gallery__groot,
+.packshot-gallery__klein {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    min-height: 0;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.07);
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.055);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.packshot-gallery__groot:hover,
+.packshot-gallery__klein:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
+
+/* Groot beeld */
+
+.packshot-gallery__groot {
+    grid-row:
+        1 / span 2;
+
+    padding: 22px;
+}
+
+
+/* Kleine beelden */
+
+.packshot-gallery__klein {
+    padding: 17px;
+}
+
+
+/* Afbeeldingen */
+
+.packshot-gallery img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.packshot-voorbeeld__content {
+    max-width: 560px;
+
+    align-self: center;
+}
+
+.packshot-voorbeeld__bovenkop {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: var(--wespi-goud);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.2px;
+}
+
+.packshot-voorbeeld__content h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(36px, 4vw, 50px);
+    line-height: 1.05;
+
+    letter-spacing: -1.6px;
+}
+
+.packshot-voorbeeld__content p {
+    margin: 20px 0 0;
+
+    color: #62656a;
+
+    font-size: 16px;
+    line-height: 1.68;
+}
+
+
+/* ========================================
+   PRIJS
+======================================== */
+
+.packshot-voorbeeld__prijs {
+    display: flex;
+
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.packshot-voorbeeld__prijs > span {
+    margin-bottom: 6px;
+
+    color: #777777;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.packshot-voorbeeld__prijs strong {
+    color: var(--wespi-zwart);
+
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: -1px;
+}
+
+.packshot-voorbeeld__prijs small {
+    margin-bottom: 4px;
+
+    color: #777777;
+
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+.packshot-voorbeeld__extra {
+    margin-top: 8px !important;
+
+    color: var(--wespi-zwart) !important;
+
+    font-size: 13px !important;
+    font-weight: 700;
+
+    line-height: 1.5 !important;
+}
+
+
+/* ========================================
+   LIJST
+======================================== */
+
+.packshot-voorbeeld__lijst {
+    margin: 20px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.packshot-voorbeeld__lijst li {
+    position: relative;
+
+    margin-bottom: 7px;
+
+    padding-left: 22px;
+
+    color: #55585c;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.packshot-voorbeeld__lijst li:last-child {
+    margin-bottom: 0;
+}
+
+.packshot-voorbeeld__lijst li::before {
+    content: "✓";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    color: var(--wespi-goud);
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   PROCES / BEELDBEWERKING
+======================================== */
+
+.packshot-proces {
+    padding: 100px 0 105px;
+
+    background: #f3f4f5;
+}
+
+.packshot-proces__kop {
+    max-width: 760px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.packshot-proces__bovenkop {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--wespi-goud);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.2px;
+}
+
+.packshot-proces__kop h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(40px, 4vw, 52px);
+    line-height: 1.05;
+
+    letter-spacing: -1.7px;
+}
+
+.packshot-proces__kop p {
+    max-width: 650px;
+
+    margin: 20px auto 0;
+
+    color: #62656a;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Proces grid */
+
+.packshot-proces__grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.packshot-proces__stap {
+    min-height: 290px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.packshot-proces__nummer {
+    color: var(--wespi-goud);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.packshot-proces__stap h3 {
+    margin: 34px 0 12px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.packshot-proces__stap p {
+    margin: 0;
+
+    color: #62656a;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.packshot-proces__bewerking {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: auto;
+
+    padding-top: 18px;
+}
+
+.packshot-proces__bewerking span {
+    padding: 6px 9px;
+
+    border-radius: 4px;
+
+    background: #f3f4f5;
+
+    color: #4f5255;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   MEER FOTOGRAFIE
+======================================== */
+
+.packshot-meer {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+.packshot-meer__kop {
+    max-width: 720px;
+
+    margin: 0 auto 48px;
+
+    text-align: center;
+}
+
+.packshot-meer__bovenkop {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--wespi-goud);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.2px;
+}
+
+.packshot-meer__kop h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(38px, 4vw, 50px);
+    line-height: 1.06;
+
+    letter-spacing: -1.7px;
+}
+
+.packshot-meer__kop p {
+    max-width: 620px;
+
+    margin: 18px auto 0;
+
+    color: #62656a;
+
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.packshot-meer__grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.packshot-meer__kaart {
+    min-height: 265px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    color: var(--wespi-zwart);
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.packshot-meer__kaart:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 38px rgba(0, 0, 0, 0.09);
+}
+
+.packshot-meer__label {
+    margin-bottom: 18px;
+
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.packshot-meer__kaart h3 {
+    margin: 0 0 12px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 24px;
+    line-height: 1.15;
+}
+
+.packshot-meer__kaart p {
+    margin: 0;
+
+    color: #62656a;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.packshot-meer__link {
+    margin-top: auto;
+
+    padding-top: 24px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.packshot-cta {
+    padding: 85px 0;
+
+    background: #f3f4f5;
+}
+
+.packshot-cta__blok {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 55px 60px;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.packshot-cta__content {
+    max-width: 720px;
+}
+
+.packshot-cta__bovenkop {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--wespi-goud);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.packshot-cta h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(38px, 4vw, 50px);
+    line-height: 1.05;
+
+    letter-spacing: -1.6px;
+}
+
+.packshot-cta p {
+    max-width: 620px;
+
+    margin: 18px 0 0;
+
+    color: #62656a;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+    .packshot-voorbeeld__grid {
+        gap: 45px;
+
+        padding: 45px;
+    }
+
+    .packshot-gallery {
+        grid-template-rows:
+            175px
+            175px;
+    }
+
+    .packshot-proces__grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .packshot-meer__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .packshot-cta__blok {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 700px) {
+
+    .packshot-voorbeeld {
+        padding: 9px 0;
+    }
+
+    .packshot-voorbeeld__grid {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+
+        padding: 30px 22px;
+
+        border-radius: 12px;
+    }
+
+    .packshot-voorbeeld__grid--omgekeerd
+    .packshot-gallery,
+    .packshot-voorbeeld__grid--omgekeerd
+    .packshot-voorbeeld__content {
+        order: initial;
+    }
+
+    .packshot-gallery {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        grid-template-rows:
+            auto
+            auto;
+
+        gap: 12px;
+    }
+
+    .packshot-gallery__groot {
+        grid-column:
+            1 / -1;
+
+        grid-row: auto;
+
+        min-height: 320px;
+
+        padding: 18px;
+    }
+
+    .packshot-gallery__klein {
+        min-height: 165px;
+
+        padding: 14px;
+    }
+
+    .packshot-voorbeeld__content h2 {
+        font-size: 36px;
+    }
+
+    .packshot-voorbeeld__prijs strong {
+        font-size: 30px;
+    }
+
+    .packshot-proces,
+    .packshot-meer {
+        padding: 72px 0 78px;
+    }
+
+    .packshot-proces__kop,
+    .packshot-meer__kop {
+        text-align: left;
+    }
+
+    .packshot-proces__kop p,
+    .packshot-meer__kop p {
+        margin-left: 0;
+    }
+
+    .packshot-proces__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .packshot-cta {
+        padding: 65px 0;
+    }
+
+    .packshot-cta__blok {
+        padding: 36px 28px;
+    }
+
+}
+
+
+/* ========================================
+   LIGHTBOX
+======================================== */
+
+.packshot-gallery img {
+    cursor: zoom-in;
+}
+
+.packshot-lightbox {
+    position: fixed;
+    z-index: 99999;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px;
+
+    background: rgba(0, 0, 0, 0.82);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.packshot-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.packshot-lightbox__image {
+    max-width: 92vw;
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.packshot-lightbox__close {
+    position: absolute;
+
+    top: 24px;
+    right: 30px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}

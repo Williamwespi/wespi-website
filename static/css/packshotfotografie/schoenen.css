@@ -1,0 +1,68 @@
+/* ========================================
+   PACKSHOTFOTOGRAFIE - SCHOENEN
+======================================== */
+
+
+/* Achtergrond blok */
+
+.packshot-voorbeeld--schoenen
+.packshot-voorbeeld__grid {
+    background: #ffffff;
+}
+
+
+/* Accent */
+
+.packshot-voorbeeld--schoenen
+.packshot-voorbeeld__bovenkop {
+    position: relative;
+
+    padding-left: 15px;
+
+    color: #987514;
+}
+
+.packshot-voorbeeld--schoenen
+.packshot-voorbeeld__bovenkop::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 4px;
+    height: 21px;
+
+    transform: translateY(-50%);
+
+    border-radius: 4px;
+
+    background: var(--wespi-goud);
+}
+
+
+/* Afbeeldingen */
+
+.packshot-gallery--schoenen
+.packshot-gallery__groot img {
+    transform: scale(1.08);
+}
+
+.packshot-gallery--schoenen
+.packshot-gallery__klein img {
+    transform: scale(1.03);
+}
+
+
+/* Hover */
+
+.packshot-gallery--schoenen
+.packshot-gallery__groot:hover img {
+    transform: scale(1.11);
+}
+
+.packshot-gallery--schoenen
+.packshot-gallery__klein:hover img {
+    transform: scale(1.06);
+}
