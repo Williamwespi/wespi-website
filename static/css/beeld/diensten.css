@@ -1,351 +1,275 @@
-/* =========================================================
+/* ========================================
    BEELD - DIENSTEN
-   ========================================================= */
+======================================== */
 
 .beeld-diensten {
     position: relative;
 
-    padding: 62px 0 0;
+    padding: 100px 0 110px;
 
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #f6f5f2 100%
-        );
+    background: #ffffff;
 }
 
 
-.beeld-diensten::before {
-    content: "";
-
-    position: absolute;
-
-    z-index: 0;
-
-    width: 520px;
-    height: 520px;
-
-    top: -210px;
-    right: -170px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(213, 171, 54, 0.14) 0%,
-            rgba(213, 171, 54, 0.06) 38%,
-            rgba(213, 171, 54, 0) 72%
-        );
-
-    pointer-events: none;
-}
-
-
-.beeld-diensten .container {
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
+/* ========================================
    INTRO
-   ========================================================= */
+======================================== */
 
 .beeld-diensten-header {
-    padding-bottom: 34px;
+    margin-bottom: 72px;
 }
-
 
 .beeld-diensten-header-main {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1fr)
-        auto;
+        minmax(0, 1.25fr)
+        minmax(330px, 0.75fr);
 
-    gap: 70px;
+    gap: 80px;
 
     align-items: end;
 }
 
 
-.beeld-diensten-header-tekst {
-    max-width: 720px;
-}
+/* TEKST */
 
+.beeld-diensten-header-tekst {
+    max-width: 760px;
+}
 
 .beeld-diensten-bovenkop {
     display: block;
 
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 
-    color: #747779;
-
-    font-size: 9px;
-    font-weight: 800;
-
-    letter-spacing: 2.3px;
-}
-
-
-.beeld-diensten-header h2 {
-    max-width: 620px;
-
-    margin: 0;
-
-    color: #17191b;
-
-    font-size: clamp(30px, 3vw, 40px);
-    font-weight: 800;
-    line-height: 1.02;
-
-    letter-spacing: -1.7px;
-}
-
-
-.beeld-diensten-header h2 span {
-    color: #c79517;
-}
-
-
-.beeld-diensten-header p {
-    max-width: 610px;
-
-    margin: 17px 0 0;
-
-    color: #626568;
-
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   OVERZICHT
-   ========================================================= */
-
-.beeld-diensten-overzicht {
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-    padding-bottom: 4px;
-}
-
-
-.beeld-diensten-overzicht-item {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    padding: 0 0 8px;
-
-    color: #343739;
-
-    text-decoration: none;
-
-    border-bottom:
-        1px solid
-        rgba(31, 33, 34, 0.13);
-
-    transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-.beeld-diensten-overzicht-item:hover {
-    color: #c79517;
-
-    border-color:
-        rgba(199, 149, 23, 0.65);
-}
-
-
-.beeld-diensten-overzicht-nummer {
-    color: #c79517;
-
-    font-size: 9px;
-    font-weight: 800;
-
-    letter-spacing: 0.8px;
-}
-
-
-.beeld-diensten-overzicht-naam {
-    white-space: nowrap;
+    color: var(--wespi-goud);
 
     font-size: 10px;
     font-weight: 800;
 
-    letter-spacing: 0.6px;
+    letter-spacing: 2.2px;
+}
+
+.beeld-diensten-header h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(42px, 5vw, 60px);
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+}
+
+.beeld-diensten-header h2 span {
+    display: block;
+
+    color: var(--wespi-goud);
+}
+
+.beeld-diensten-header p {
+    max-width: 650px;
+
+    margin: 22px 0 0;
+
+    color: #67696c;
+
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 
-/* =========================================================
-   ALGEMENE DIENST
-   ========================================================= */
+/* ========================================
+   SNELNAVIGATIE
+======================================== */
+
+.beeld-diensten-overzicht {
+    display: flex;
+    flex-direction: column;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.08);
+}
+
+.beeld-diensten-overzicht-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.08);
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        padding-left 0.2s ease,
+        color 0.2s ease;
+}
+
+.beeld-diensten-overzicht-item:hover {
+    padding-left: 7px;
+}
+
+.beeld-diensten-overzicht-nummer {
+    color: var(--wespi-goud);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+.beeld-diensten-overzicht-naam {
+    color: var(--wespi-zwart);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   DIENST
+======================================== */
 
 .beeld-dienst {
     display: grid;
 
     grid-template-columns:
-        minmax(360px, 0.82fr)
-        minmax(520px, 1.18fr);
+        minmax(0, 0.88fr)
+        minmax(0, 1.12fr);
 
-    gap: 70px;
+    gap: 75px;
 
     align-items: center;
 
-    min-height: 470px;
+    min-height: 520px;
 
-    padding: 58px 0;
+    padding: 70px 0;
 
     border-top:
-        1px solid
-        #deddd9;
-}
+        1px solid rgba(0, 0, 0, 0.065);
 
+    scroll-margin-top: 100px;
+}
 
 .beeld-dienst:last-child {
     border-bottom:
-        1px solid
-        #deddd9;
+        1px solid rgba(0, 0, 0, 0.065);
 }
 
 
-/* =========================================================
+/* ========================================
    TEKST
-   ========================================================= */
+======================================== */
 
 .beeld-dienst-tekst {
-    position: relative;
-
-    z-index: 5;
+    max-width: 490px;
 }
-
 
 .beeld-dienst-nummer {
     display: block;
 
-    margin-bottom: 18px;
+    margin-bottom: 11px;
 
-    color: #b9b9b6;
+    color: #a0a0a0;
 
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 9px;
+    font-weight: 800;
 
-    letter-spacing: 1.6px;
+    letter-spacing: 1.4px;
 }
-
 
 .beeld-dienst-label {
     display: block;
 
-    margin-bottom: 13px;
+    margin-bottom: 15px;
 
-    color: #5e6163;
+    color: var(--wespi-goud);
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
 
     letter-spacing: 2px;
 }
 
-
 .beeld-dienst h3 {
-    max-width: 540px;
-
     margin: 0;
 
-    color: #151719;
+    color: var(--wespi-zwart);
 
-    font-size: clamp(40px, 3.7vw, 55px);
-    font-weight: 800;
-    line-height: 1;
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.04;
 
-    letter-spacing: -2.2px;
+    letter-spacing: -1.5px;
 }
-
 
 .beeld-dienst h3 span {
     display: block;
 
-    margin-top: 4px;
+    margin-top: 3px;
 
-    color: #c79517;
+    color: var(--wespi-goud);
 }
-
 
 .beeld-dienst-tekst > p {
-    max-width: 525px;
+    margin: 20px 0 0;
 
-    margin: 24px 0 0;
-
-    color: #515456;
+    color: #64676a;
 
     font-size: 14px;
-    font-weight: 500;
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 
-/* =========================================================
+/* ========================================
    TERMEN
-   ========================================================= */
+======================================== */
 
 .beeld-dienst-termen {
     display: flex;
+
     flex-wrap: wrap;
 
-    gap: 9px;
+    gap: 7px;
 
     margin-top: 23px;
 }
-
 
 .beeld-dienst-termen span {
     display: inline-flex;
 
     align-items: center;
 
-    min-height: 31px;
+    min-height: 29px;
 
-    padding: 7px 12px;
+    padding: 5px 11px;
 
     border:
-        1px solid
-        rgba(28, 30, 31, 0.14);
+        1px solid rgba(0, 0, 0, 0.08);
 
-    border-radius: 100px;
+    border-radius: 30px;
 
-    background:
-        rgba(255, 255, 255, 0.58);
+    background: #f6f6f6;
 
-    color: #4e5153;
+    color: #55585b;
 
     font-size: 10px;
     font-weight: 700;
-
-    letter-spacing: 0.4px;
 }
 
 
-/* =========================================================
+/* ========================================
    LINK
-   ========================================================= */
+======================================== */
 
 .beeld-dienst-link {
     display: inline-flex;
@@ -354,144 +278,162 @@
 
     gap: 10px;
 
-    margin-top: 28px;
+    margin-top: 27px;
 
-    padding-bottom: 4px;
-
-    border-bottom:
-        1px solid
-        rgba(199, 149, 23, 0.5);
-
-    color: #17191b;
+    color: var(--wespi-zwart);
 
     font-size: 12px;
     font-weight: 800;
 
     text-decoration: none;
-
-    transition:
-        color 0.2s ease,
-        gap 0.2s ease;
 }
-
 
 .beeld-dienst-link > span {
-    color: #c79517;
+    color: var(--wespi-goud);
 
-    font-size: 16px;
+    font-size: 18px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.beeld-dienst-link:hover > span {
+    transform: translateX(4px);
 }
 
 
-.beeld-dienst-link:hover {
-    gap: 14px;
-
-    color: #c79517;
-}
-
-
-/* =========================================================
-   VISUAL ALGEMEEN
-   ========================================================= */
+/* ========================================
+   ALGEMENE VISUAL
+======================================== */
 
 .beeld-dienst-visual {
     position: relative;
 
-    min-width: 0;
+    width: 100%;
+    height: 430px;
 
     overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #f3f4f5;
+
+    box-shadow:
+        0 9px 28px rgba(0, 0, 0, 0.055);
 }
 
 
-/* =========================================================
-   01 KLEDINGFOTOGRAFIE
-   ========================================================= */
+/* ========================================
+   KLIKBARE VISUAL
+======================================== */
+
+.beeld-dienst-visual-overlay {
+    position: absolute;
+
+    z-index: 50;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+
+/* ========================================
+   KLEDINGFOTOGRAFIE VISUAL
+======================================== */
 
 .beeld-dienst-kleding-visual {
-    min-height: 380px;
-    height: 380px;
-
     background:
         linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #f7f6f3 45%,
-            #eeece7 100%
+            145deg,
+            #f5f5f3 0%,
+            #eeeeeb 100%
         );
 }
-
 
 .beeld-dienst-kleding-visual img {
     position: absolute;
 
     display: block;
 
+    width: auto;
+
     object-fit: contain;
 
-    filter:
-        drop-shadow(
-            0 18px 22px
-            rgba(20, 22, 23, 0.09)
-        );
+    pointer-events: none;
 }
 
+
+/* SHORT */
 
 .beeld-kleding-short {
-    z-index: 2;
-
-    width: 33%;
-    height: 54%;
-
-    left: 1%;
-    bottom: 13%;
-}
-
-
-.beeld-kleding-jurk {
-    z-index: 4;
-
-    width: 51%;
-    height: 112%;
-
-    left: 24%;
-    bottom: -7%;
-}
-
-
-.beeld-kleding-jas {
     z-index: 3;
 
-    width: 42%;
-    height: 83%;
+    left: 5%;
+    bottom: 7%;
 
-    right: -2%;
-    bottom: 5%;
+    height: 49%;
 }
 
 
-/* =========================================================
-   02 PACKSHOTFOTOGRAFIE
-   ========================================================= */
+/* JURK */
+
+.beeld-kleding-jurk {
+    z-index: 2;
+
+    left: 34%;
+    bottom: 3%;
+
+    height: 83%;
+}
+
+
+/* JAS */
+
+.beeld-kleding-jas {
+    z-index: 1;
+
+    right: 3%;
+    bottom: 5%;
+
+    height: 70%;
+}
+
+
+/* ========================================
+   PACKSHOT
+======================================== */
 
 .beeld-dienst-packshot {
     grid-template-columns:
-        minmax(520px, 1.18fr)
-        minmax(360px, 0.82fr);
+        minmax(0, 1.12fr)
+        minmax(0, 0.88fr);
 }
 
+.beeld-dienst-packshot
+.beeld-dienst-tekst {
+    justify-self: end;
+}
 
 .beeld-dienst-packshot-visual {
-    min-height: 380px;
-    height: 380px;
-
     background:
         linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #f7f6f3 45%,
-            #eeece7 100%
+            145deg,
+            #f7f7f6 0%,
+            #eeeeec 100%
         );
 }
-
 
 .beeld-dienst-packshot-visual img {
     position: absolute;
@@ -500,371 +442,385 @@
 
     object-fit: contain;
 
-    filter:
-        drop-shadow(
-            0 17px 21px
-            rgba(20, 22, 23, 0.10)
-        );
+    pointer-events: none;
 }
 
+
+/* BRIL */
 
 .beeld-packshot-bril {
-    z-index: 5;
-
-    width: 82%;
-    height: 58%;
-
-    left: 9%;
-    top: -2%;
-}
-
-
-.beeld-packshot-schoen {
     z-index: 3;
 
-    width: 70%;
-    height: 60%;
+    top: 10%;
+    left: 6%;
 
-    left: -2%;
-    bottom: -2%;
+    width: 43%;
 }
 
+
+/* SCHOEN */
+
+.beeld-packshot-schoen {
+    z-index: 2;
+
+    right: 4%;
+    top: 26%;
+
+    width: 55%;
+}
+
+
+/* PRODUCT */
 
 .beeld-packshot-product {
-    z-index: 4;
+    z-index: 1;
 
-    width: 37%;
-    height: 64%;
+    left: 11%;
+    bottom: 4%;
 
-    right: -1%;
-    bottom: -3%;
+    width: 30%;
+    max-height: 48%;
 }
 
 
-/* =========================================================
-   03 BEELDBEWERKING
-   ========================================================= */
+/* ========================================
+   BEELDBEWERKING
+======================================== */
 
 .beeld-dienst-bewerking-visual {
-    min-height: 380px;
-    height: 380px;
+    overflow: visible;
 
     background:
         linear-gradient(
-            135deg,
-            #e8e8e5 0%,
-            #dfdfdc 48%,
-            #d4d4d0 100%
+            145deg,
+            #f2f3f3 0%,
+            #e9ebeb 100%
         );
 }
 
-
-/* WIT VLAK ACHTER AUTO */
-
-.beeld-dienst-bewerking-visual::after {
-    content: "";
-
+.beeld-dienst-bewerking-visual > img {
     position: absolute;
 
-    z-index: 2;
+    display: block;
 
-    width: 69%;
-    height: 60%;
-
-    right: 0;
-    bottom: 0;
-
-    background: #ffffff;
+    object-fit: contain;
 }
 
 
 /* BROEK */
 
 .beeldbewerking-broek {
-    position: absolute;
+    z-index: 2;
 
-    z-index: 5;
+    left: 5%;
+    top: 5%;
 
-    display: block;
-
-    width: 49%;
-    height: 111%;
-
-    left: -2%;
-    bottom: -7%;
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 18px 24px
-            rgba(18, 44, 78, 0.12)
-        );
+    width: 43%;
+    height: 58%;
 }
 
 
 /* AUTO */
 
 .beeldbewerking-auto {
-    position: absolute;
+    z-index: 2;
 
-    z-index: 4;
+    right: 2%;
+    top: 14%;
 
-    display: block;
-
-    width: 72%;
-    height: 65%;
-
-    right: -4%;
-    bottom: -2%;
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 18px 24px
-            rgba(22, 24, 26, 0.12)
-        );
+    width: 54%;
+    height: 45%;
 }
 
 
-/* =========================================================
-   KLEINE LABELS BIJ PRODUCTEN
-   ========================================================= */
+/* LABELS */
 
 .beeldbewerking-label {
     position: absolute;
 
-    z-index: 7;
+    z-index: 4;
 
-    display: flex;
+    padding: 10px 13px;
 
-    flex-direction: column;
-
-    padding: 8px 10px;
+    border-radius: 8px;
 
     background:
-        rgba(255, 255, 255, 0.84);
-
-    border-left:
-        2px solid
-        #c79517;
+        rgba(255, 255, 255, 0.94);
 
     box-shadow:
-        0 8px 18px
-        rgba(20, 22, 23, 0.05);
+        0 6px 18px rgba(0, 0, 0, 0.07);
 }
 
-
 .beeldbewerking-label span {
-    color: #929596;
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--wespi-goud);
 
     font-size: 7px;
     font-weight: 800;
 
-    letter-spacing: 1.3px;
+    letter-spacing: 1.2px;
 }
-
 
 .beeldbewerking-label strong {
-    margin-top: 3px;
+    display: block;
 
-    color: #25292b;
+    color: var(--wespi-zwart);
 
     font-size: 9px;
-    font-weight: 800;
-    line-height: 1.25;
+    line-height: 1.3;
 }
 
+
+/* LABEL BROEK */
 
 .beeldbewerking-label-broek {
-    left: 5%;
-    bottom: 5%;
+    left: 6%;
+    top: 57%;
 }
 
+
+/* LABEL AUTO */
 
 .beeldbewerking-label-auto {
-    right: 5%;
-    bottom: 5%;
+    right: 4%;
+    top: 53%;
 }
 
 
-/* =========================================================
-   MOGELIJKHEDEN
-   ========================================================= */
+/* ========================================
+   MOGELIJKHEDEN BEELDBEWERKING
+======================================== */
 
 .beeldbewerking-mogelijkheden {
     position: absolute;
 
-    z-index: 8;
+    z-index: 5;
 
-    top: 22px;
-    right: 24px;
+    right: 6%;
+    bottom: 6%;
+    left: 6%;
 
-    width: 205px;
-
-    padding: 18px 20px;
-
-    background:
-        rgba(255, 255, 255, 0.90);
+    padding: 17px 20px;
 
     border:
-        1px solid
-        rgba(31, 33, 34, 0.07);
+        1px solid rgba(0, 0, 0, 0.06);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
 
     box-shadow:
-        0 15px 28px
-        rgba(20, 22, 23, 0.07);
-
-    backdrop-filter:
-        blur(8px);
+        0 7px 20px rgba(0, 0, 0, 0.055);
 }
-
 
 .beeldbewerking-mogelijkheden-label {
     display: block;
 
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 
-    color: #c79517;
+    color: var(--wespi-goud);
 
     font-size: 8px;
     font-weight: 800;
 
-    letter-spacing: 1.8px;
+    letter-spacing: 1.5px;
 }
 
-
 .beeldbewerking-mogelijkheden ul {
-    margin: 0;
+    display: grid;
 
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 6px 16px;
+
+    margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
-
 .beeldbewerking-mogelijkheden li {
     position: relative;
 
-    margin: 0;
+    padding-left: 13px;
 
-    padding: 5px 0 5px 13px;
+    color: #5c5f62;
 
-    color: #34383a;
-
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1.25;
+    font-size: 9px;
+    line-height: 1.4;
 }
 
-
 .beeldbewerking-mogelijkheden li::before {
-    content: "";
+    content: "✓";
 
     position: absolute;
 
-    width: 4px;
-    height: 4px;
-
     left: 0;
-    top: 10px;
+    top: 0;
 
-    border-radius: 50%;
+    color: var(--wespi-goud);
 
-    background: #c79517;
+    font-weight: 800;
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* ========================================
+   HOVER VISUALS
+======================================== */
 
-@media (max-width: 1050px) {
+@media (hover: hover) {
+
+    .beeld-dienst-kleding-visual,
+    .beeld-dienst-packshot-visual {
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .beeld-dienst-kleding-visual:hover,
+    .beeld-dienst-packshot-visual:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 14px 34px rgba(0, 0, 0, 0.075);
+    }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .beeld-diensten {
+        padding: 85px 0 90px;
+    }
 
     .beeld-diensten-header-main {
         grid-template-columns: 1fr;
 
-        gap: 26px;
+        gap: 35px;
     }
-
 
     .beeld-diensten-overzicht {
-        justify-content: flex-start;
-    }
+        display: grid;
 
-
-    .beeld-dienst {
         grid-template-columns:
-            minmax(320px, 0.9fr)
-            minmax(420px, 1.1fr);
+            repeat(3, 1fr);
 
-        gap: 45px;
+        border-top: 0;
+
+        gap: 10px;
+    }
+
+    .beeld-diensten-overzicht-item {
+        justify-content: center;
+
+        padding: 13px;
+
+        border:
+            1px solid rgba(0, 0, 0, 0.08);
+
+        border-radius: 8px;
+
+        background: #fafafa;
+    }
+
+    .beeld-diensten-overzicht-item:hover {
+        padding-left: 13px;
     }
 
 
+    /* DIENSTEN */
+
+    .beeld-dienst,
     .beeld-dienst-packshot {
         grid-template-columns:
-            minmax(420px, 1.1fr)
-            minmax(320px, 0.9fr);
+            1fr
+            1fr;
+
+        gap: 40px;
+
+        min-height: 470px;
+    }
+
+    .beeld-dienst-packshot
+    .beeld-dienst-tekst {
+        justify-self: auto;
+    }
+
+    .beeld-dienst-visual {
+        height: 380px;
     }
 
 }
 
 
-/* =========================================================
+/* ========================================
    MOBIEL
-   ========================================================= */
+======================================== */
 
-@media (max-width: 760px) {
+@media (max-width: 700px) {
 
     .beeld-diensten {
-        padding: 52px 0 0;
+        padding: 65px 0 70px;
+
+        overflow: hidden;
     }
 
 
-    .beeld-diensten::before {
-        width: 350px;
-        height: 350px;
-
-        top: -140px;
-        right: -180px;
-    }
-
+    /* INTRO */
 
     .beeld-diensten-header {
-        padding-bottom: 26px;
+        margin-bottom: 45px;
     }
 
+    .beeld-diensten-header-main {
+        display: block;
+    }
 
     .beeld-diensten-header h2 {
-        font-size:
-            clamp(
-                29px,
-                8.5vw,
-                37px
-            );
-    }
+        font-size: 39px;
 
+        letter-spacing: -1.3px;
+    }
 
     .beeld-diensten-header p {
-        font-size: 13px;
+        margin-top: 17px;
+
+        font-size: 14px;
     }
 
+
+    /* SNELNAVIGATIE */
 
     .beeld-diensten-overzicht {
-        gap: 15px;
+        display: grid;
 
-        overflow-x: auto;
+        grid-template-columns: 1fr;
 
-        padding-bottom: 6px;
+        gap: 7px;
+
+        margin-top: 27px;
     }
-
 
     .beeld-diensten-overzicht-item {
-        flex: 0 0 auto;
+        justify-content: flex-start;
+
+        padding: 11px 14px;
     }
 
+
+    /* ========================================
+       DIENST
+    ======================================== */
 
     .beeld-dienst,
     .beeld-dienst-packshot {
@@ -876,179 +832,258 @@
 
         min-height: 0;
 
-        padding: 48px 0;
+        padding: 52px 0;
+
+        align-items: stretch;
     }
 
 
-    .beeld-dienst-packshot .beeld-dienst-tekst {
+    /* KLEDING:
+       eerst tekst, daarna visual
+    */
+
+    .beeld-dienst
+    .beeld-dienst-tekst {
         order: 1;
     }
 
-
-    .beeld-dienst-packshot .beeld-dienst-visual {
+    .beeld-dienst
+    .beeld-dienst-visual {
         order: 2;
     }
 
 
-    .beeld-dienst h3 {
-        font-size:
-            clamp(
-                36px,
-                10vw,
-                48px
-            );
+    /* PACKSHOT:
+       ook eerst tekst, daarna visual
+    */
+
+    .beeld-dienst-packshot
+    .beeld-dienst-tekst {
+        order: 1;
     }
 
-
-    .beeld-dienst-tekst > p {
-        font-size: 14px;
-    }
-
-
+    .beeld-dienst-packshot
     .beeld-dienst-visual {
-        width: 100%;
-    }
-
-
-    /* KLEDING */
-
-    .beeld-dienst-kleding-visual {
-        min-height: 330px;
-        height: 330px;
-    }
-
-
-    /* PACKSHOT */
-
-    .beeld-dienst-packshot-visual {
-        min-height: 330px;
-        height: 330px;
-    }
-
-
-    .beeld-packshot-bril {
-        width: 82%;
-        height: 58%;
-
-        left: 9%;
-        top: -2%;
-    }
-
-
-    .beeld-packshot-schoen {
-        width: 69%;
-        height: 57%;
-
-        left: -3%;
-        bottom: -1%;
-    }
-
-
-    .beeld-packshot-product {
-        width: 37%;
-        height: 61%;
-
-        right: -2%;
-        bottom: -2%;
+        order: 2;
     }
 
 
     /* BEELDBEWERKING */
 
-    .beeld-dienst-bewerking-visual {
-        min-height: 330px;
+    #beeldbewerking
+    .beeld-dienst-tekst {
+        order: 1;
+    }
+
+    #beeldbewerking
+    .beeld-dienst-visual {
+        order: 2;
+    }
+
+
+    /* TEKST */
+
+    .beeld-dienst-tekst {
+        max-width: none;
+    }
+
+    .beeld-dienst h3 {
+        font-size: 35px;
+
+        letter-spacing: -1px;
+    }
+
+    .beeld-dienst-tekst > p {
+        margin-top: 16px;
+
+        font-size: 13px;
+    }
+
+    .beeld-dienst-termen {
+        margin-top: 18px;
+    }
+
+    .beeld-dienst-link {
+        margin-top: 22px;
+    }
+
+
+    /* ========================================
+       VISUAL ALGEMEEN
+    ======================================== */
+
+    .beeld-dienst-visual {
+        display: block;
+
+        width: 100%;
         height: 330px;
+
+        min-height: 330px;
+
+        flex: 0 0 330px;
+
+        overflow: hidden;
+
+        border-radius: 14px;
     }
 
 
-    .beeld-dienst-bewerking-visual::after {
-        width: 70%;
-        height: 58%;
+    /* ========================================
+       KLEDING MOBIEL
+    ======================================== */
 
+    .beeld-dienst-kleding-visual {
+        display: block;
+    }
+
+    .beeld-kleding-short {
+        left: 1%;
+        bottom: 6%;
+
+        height: 43%;
+    }
+
+    .beeld-kleding-jurk {
+        left: 30%;
+        bottom: 2%;
+
+        height: 78%;
+    }
+
+    .beeld-kleding-jas {
         right: 0;
-        bottom: 0;
+        bottom: 5%;
+
+        height: 64%;
     }
 
+
+    /* ========================================
+       PACKSHOT MOBIEL
+    ======================================== */
+
+    .beeld-dienst-packshot-visual {
+        display: block;
+    }
+
+    .beeld-packshot-bril {
+        top: 9%;
+        left: 5%;
+
+        width: 42%;
+    }
+
+    .beeld-packshot-schoen {
+        top: 25%;
+        right: 2%;
+
+        width: 58%;
+    }
+
+    .beeld-packshot-product {
+        left: 8%;
+        bottom: 3%;
+
+        width: 30%;
+        max-height: 47%;
+    }
+
+
+    /* ========================================
+       BEELDBEWERKING MOBIEL
+    ======================================== */
+
+    .beeld-dienst-bewerking-visual {
+        display: block;
+
+        height: 390px;
+        min-height: 390px;
+
+        flex-basis: 390px;
+    }
 
     .beeldbewerking-broek {
-        width: 49%;
-        height: 103%;
+        left: 1%;
+        top: 3%;
 
-        left: -3%;
-        bottom: -4%;
+        width: 44%;
+        height: 51%;
     }
-
 
     .beeldbewerking-auto {
-        width: 72%;
-        height: 59%;
+        right: 0;
+        top: 11%;
 
-        right: -5%;
-        bottom: 0;
+        width: 57%;
+        height: 41%;
     }
-
-
-    .beeldbewerking-mogelijkheden {
-        top: 12px;
-        right: 12px;
-
-        width: 175px;
-
-        padding: 13px 14px;
-    }
-
-
-    .beeldbewerking-mogelijkheden li {
-        padding-top: 4px;
-        padding-bottom: 4px;
-
-        font-size: 8px;
-    }
-
-
-    .beeldbewerking-label {
-        padding: 6px 8px;
-    }
-
-
-    .beeldbewerking-label strong {
-        font-size: 7px;
-    }
-
 
     .beeldbewerking-label-broek {
         left: 3%;
-        bottom: 3%;
+        top: 47%;
     }
-
 
     .beeldbewerking-label-auto {
-        right: 3%;
-        bottom: 3%;
+        right: 2%;
+        top: 48%;
+    }
+
+    .beeldbewerking-mogelijkheden {
+        right: 4%;
+        bottom: 4%;
+        left: 4%;
+
+        padding: 14px 15px;
+    }
+
+    .beeldbewerking-mogelijkheden ul {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 5px 10px;
     }
 
 }
+
+
 /* ========================================
-   KLIKBARE DIENST-VISUALS
+   KLEINE MOBIELE SCHERMEN
 ======================================== */
 
-.beeld-dienst-visual-link {
-    display: block;
+@media (max-width: 420px) {
 
-    color: inherit;
-    text-decoration: none;
+    .beeld-diensten {
+        padding: 55px 0 60px;
+    }
 
-    cursor: pointer;
-}
+    .beeld-diensten-header h2 {
+        font-size: 35px;
+    }
 
-.beeld-dienst-visual-link
-.beeld-dienst-visual {
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
+    .beeld-dienst {
+        padding: 45px 0;
+    }
 
-.beeld-dienst-visual-link:hover
-.beeld-dienst-visual {
-    transform: translateY(-3px);
+    .beeld-dienst h3 {
+        font-size: 32px;
+    }
+
+    .beeld-dienst-visual {
+        height: 300px;
+        min-height: 300px;
+
+        flex-basis: 300px;
+    }
+
+    .beeld-dienst-bewerking-visual {
+        height: 370px;
+        min-height: 370px;
+
+        flex-basis: 370px;
+    }
+
+    .beeldbewerking-mogelijkheden li {
+        font-size: 8px;
+    }
+
 }
