@@ -64,6 +64,20 @@ def packshotfotografie(request: Request):
 
 
 @router.get(
+    "/beeldbewerking",
+    response_class=HTMLResponse,
+)
+def beeldbewerking(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="beeldbewerking.html",
+        context={
+            "actieve_pagina": "beeldbewerking",
+        },
+    )
+
+
+@router.get(
     "/offerte",
     response_class=HTMLResponse,
 )
@@ -71,7 +85,6 @@ def offerte(
     request: Request,
     dienst: str | None = None,
 ):
-
     diensten = {
         "kledingfotografie": "Kledingfotografie",
         "packshotfotografie": "Packshotfotografie",

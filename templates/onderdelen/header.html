@@ -2,7 +2,10 @@
 
     <div class="container header-inhoud">
 
-        <!-- Logo + pay-off -->
+        <!-- =====================================================
+             LOGO + PAY-OFF
+             ===================================================== -->
+
         <a href="/" class="logo-blok">
 
             <img
@@ -18,12 +21,113 @@
         </a>
 
 
-        <!-- Navigatie -->
-        <nav class="hoofdnavigatie">
+        <!-- =====================================================
+             MOBIELE MENUKNOP
+             ===================================================== -->
 
-            <a href="#diensten">
-                Diensten
-            </a>
+        <button
+            class="mobiel-menu-knop"
+            type="button"
+            aria-label="Menu openen"
+            aria-expanded="false"
+            aria-controls="hoofdnavigatie"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <!-- =====================================================
+             NAVIGATIE
+             ===================================================== -->
+
+        <nav
+            class="hoofdnavigatie"
+            id="hoofdnavigatie"
+        >
+
+            <!-- DIENSTEN DROPDOWN -->
+            <div class="navigatie-dropdown">
+
+                <button
+                    class="navigatie-dropdown-knop"
+                    type="button"
+                    aria-expanded="false"
+                >
+                    Diensten
+
+                    <span
+                        class="navigatie-dropdown-pijl"
+                        aria-hidden="true"
+                    >
+                        ↓
+                    </span>
+                </button>
+
+
+                <div class="navigatie-dropdown-menu">
+
+                    <a
+                        href="/beeld"
+                        class="navigatie-dropdown-hoofdlink"
+                    >
+                        <span class="navigatie-dropdown-label">
+                            BEELD
+                        </span>
+
+                        <strong>
+                            Productfotografie &amp; beeldbewerking
+                        </strong>
+
+                        <span>
+                            Bekijk alle mogelijkheden →
+                        </span>
+                    </a>
+
+
+                    <div class="navigatie-dropdown-links">
+
+                        <a href="/productfotografie/kledingfotografie">
+                            <span>
+                                Kledingfotografie
+                            </span>
+
+                            <small>
+                                Bodyform, ghost mannequin en plat
+                            </small>
+                        </a>
+
+
+                        <a href="/productfotografie/packshotfotografie">
+                            <span>
+                                Packshotfotografie
+                            </span>
+
+                            <small>
+                                Schoenen, accessoires en producten
+                            </small>
+                        </a>
+
+
+                        <a href="/beeldbewerking">
+                            <span>
+                                Beeldbewerking
+                            </span>
+
+                            <small>
+                                Kleding, producten en automotive
+                            </small>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- OVERIGE NAVIGATIE -->
 
             <a href="#">
                 Werkwijze
@@ -48,15 +152,24 @@
         </nav>
 
 
-        <!-- Acties -->
+        <!-- =====================================================
+             ACTIES
+             ===================================================== -->
+
         <div class="header-acties">
 
-            <a href="#" class="mijn-wespi">
+            <a
+                href="#"
+                class="mijn-wespi"
+            >
                 Mijn Wespi
             </a>
 
-            <a href="#contact" class="kennismaken-knop">
-                Kennismaken
+            <a
+                href="/offerte"
+                class="kennismaken-knop"
+            >
+                Offerte aanvragen
             </a>
 
         </div>

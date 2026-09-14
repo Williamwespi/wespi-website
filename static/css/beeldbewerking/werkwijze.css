@@ -1,0 +1,179 @@
+/* ========================================
+   BEELDBEWERKING PAGINA - WERKWIJZE
+======================================== */
+
+.beeldbewerking-pagina-werkwijze {
+    padding: 90px 0 96px;
+
+    background: #f3f4f5;
+}
+
+
+/* ========================================
+   KOP
+======================================== */
+
+.beeldbewerking-pagina-werkwijze__kop {
+    max-width: 720px;
+
+    margin-bottom: 48px;
+}
+
+.beeldbewerking-pagina-werkwijze__bovenkop {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--wespi-goud);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.beeldbewerking-pagina-werkwijze__kop h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(38px, 4vw, 50px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1.7px;
+}
+
+.beeldbewerking-pagina-werkwijze__kop p {
+    max-width: 580px;
+
+    margin: 16px 0 0;
+
+    color: #666a6d;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   STAPPEN
+======================================== */
+
+.beeldbewerking-pagina-werkwijze__stappen {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+.beeldbewerking-pagina-werkwijze__stappen::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    left: 30px;
+    right: 30px;
+
+    height: 1px;
+
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.beeldbewerking-pagina-werkwijze__stap {
+    position: relative;
+
+    padding-top: 52px;
+}
+
+.beeldbewerking-pagina-werkwijze__nummer {
+    position: absolute;
+    z-index: 2;
+
+    top: 0;
+    left: 0;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(181, 145, 34, 0.3);
+    border-radius: 50%;
+
+    background: #f3f4f5;
+
+    color: var(--wespi-goud);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.beeldbewerking-pagina-werkwijze__stap h3 {
+    margin: 0 0 9px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.beeldbewerking-pagina-werkwijze__stap p {
+    margin: 0;
+
+    color: #696d70;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .beeldbewerking-pagina-werkwijze__stappen {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 40px 28px;
+    }
+
+    .beeldbewerking-pagina-werkwijze__stappen::before {
+        display: none;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 700px) {
+
+    .beeldbewerking-pagina-werkwijze {
+        padding: 62px 0 68px;
+    }
+
+    .beeldbewerking-pagina-werkwijze__kop {
+        margin-bottom: 34px;
+    }
+
+    .beeldbewerking-pagina-werkwijze__stappen {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .beeldbewerking-pagina-werkwijze__stap {
+        padding-top: 48px;
+    }
+
+}

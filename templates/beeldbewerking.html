@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+Beeldbewerking & fotobewerking uitbesteden | Wespi
+{% endblock %}
+
+{% block meta_description %}
+Professionele beeldbewerking en fotobewerking voor kleding, producten en automotive. Van enkele foto's tot grotere aantallen beelden.
+{% endblock %}
+
+{% block canonical %}
+<link
+    rel="canonical"
+    href="https://www.wespi.nl/beeldbewerking"
+>
+{% endblock %}
+
+{% block content %}
+
+{% include "onderdelen/beeldbewerking/hero.html" %}
+
+{% include "onderdelen/beeldbewerking/diensten.html" %}
+
+{% include "onderdelen/beeldbewerking/mogelijkheden.html" %}
+
+{% include "onderdelen/beeldbewerking/volume.html" %}
+
+{% include "onderdelen/beeldbewerking/werkwijze.html" %}
+
+{% include "onderdelen/beeldbewerking/cta.html" %}
+
+{% endblock %}

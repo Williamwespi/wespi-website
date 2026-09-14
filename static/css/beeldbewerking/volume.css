@@ -1,0 +1,243 @@
+/* ========================================
+   BEELDBEWERKING PAGINA - VOLUME
+======================================== */
+
+.beeldbewerking-pagina-volume {
+    padding: 30px 0 92px;
+
+    background: #ffffff;
+}
+
+.beeldbewerking-pagina-volume__kaart {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(320px, 0.9fr);
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #f1f2f3;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.beeldbewerking-pagina-volume__content {
+    padding: 62px 64px;
+}
+
+.beeldbewerking-pagina-volume__bovenkop {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: var(--wespi-goud);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.beeldbewerking-pagina-volume__content h2 {
+    max-width: 600px;
+
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(36px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -1.6px;
+}
+
+.beeldbewerking-pagina-volume__content p {
+    max-width: 620px;
+
+    margin: 18px 0 0;
+
+    color: #65696c;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PLUSPUNTEN
+======================================== */
+
+.beeldbewerking-pagina-volume__punten {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-top: 35px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.beeldbewerking-pagina-volume__punt strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.beeldbewerking-pagina-volume__punt span {
+    display: block;
+
+    color: #727579;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.beeldbewerking-pagina-volume__visual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 55px;
+
+    background: #ffffff;
+
+    border:
+        18px solid #f1f2f3;
+    border-radius: 32px;
+}
+
+.beeldbewerking-pagina-volume__visual-bovenkop {
+    margin-bottom: 10px;
+
+    color: #8a8d90;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.beeldbewerking-pagina-volume__getal {
+    color: var(--wespi-goud);
+
+    font-size: clamp(44px, 5vw, 64px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.beeldbewerking-pagina-volume__visual-tekst {
+    margin-top: 7px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   PROCES
+======================================== */
+
+.beeldbewerking-pagina-volume__proces {
+    display: grid;
+
+    gap: 0;
+
+    margin-top: 36px;
+}
+
+.beeldbewerking-pagina-volume__proces span {
+    position: relative;
+
+    padding: 11px 0 11px 20px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+
+    color: #666a6d;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.beeldbewerking-pagina-volume__proces span::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 6px;
+    height: 6px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: var(--wespi-goud);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .beeldbewerking-pagina-volume__kaart {
+        grid-template-columns: 1fr;
+    }
+
+    .beeldbewerking-pagina-volume__visual {
+        margin: 0 40px 40px;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 700px) {
+
+    .beeldbewerking-pagina-volume {
+        padding: 20px 0 62px;
+    }
+
+    .beeldbewerking-pagina-volume__content {
+        padding: 40px 25px;
+    }
+
+    .beeldbewerking-pagina-volume__punten {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .beeldbewerking-pagina-volume__visual {
+        margin: 0 20px 20px;
+        padding: 35px 28px;
+
+        border-width: 10px;
+        border-radius: 22px;
+    }
+
+}

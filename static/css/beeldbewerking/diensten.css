@@ -1,0 +1,326 @@
+/* ========================================
+   BEELDBEWERKING - DIENSTEN
+======================================== */
+
+.beeldbewerking-diensten {
+    padding: 84px 0 90px;
+    background: #f3f4f5;
+}
+
+
+/* ========================================
+   KOP
+======================================== */
+
+.beeldbewerking-diensten__kop {
+    max-width: 760px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.beeldbewerking-diensten__bovenkop {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--wespi-goud);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.beeldbewerking-diensten__kop h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -1.6px;
+}
+
+.beeldbewerking-diensten__kop p {
+    max-width: 650px;
+
+    margin: 16px auto 0;
+
+    color: #65686c;
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.beeldbewerking-diensten__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* ========================================
+   KAART
+======================================== */
+
+.beeldbewerking-dienstkaart {
+    overflow: hidden;
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 26px rgba(0, 0, 0, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.beeldbewerking-dienstkaart:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.beeldbewerking-dienstkaart__visual {
+    position: relative;
+
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.beeldbewerking-dienstkaart__visual--kleding {
+    background: #f4f1ec;
+}
+
+.beeldbewerking-dienstkaart__visual--producten {
+    background: #f1f3f4;
+}
+
+.beeldbewerking-dienstkaart__visual--automotive {
+    background: #edf0f2;
+}
+
+.beeldbewerking-dienstkaart__label {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 7px 9px;
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #62666a;
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.beeldbewerking-dienstkaart__placeholder {
+    width: 72%;
+    height: 64%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: #96999c;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.beeldbewerking-dienstkaart__content {
+    padding: 27px 26px 30px;
+}
+
+.beeldbewerking-dienstkaart__content h3 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.beeldbewerking-dienstkaart__content p {
+    margin: 12px 0 17px;
+
+    color: #686b6f;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   LIJST
+======================================== */
+
+.beeldbewerking-dienstkaart__content ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin: 0 0 22px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.beeldbewerking-dienstkaart__content li {
+    position: relative;
+
+    padding-left: 17px;
+
+    color: #55595c;
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.beeldbewerking-dienstkaart__content li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--wespi-goud);
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   LINK
+======================================== */
+
+.beeldbewerking-dienstkaart__link {
+    color: var(--wespi-zwart);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.beeldbewerking-dienstkaart__link:hover {
+    color: var(--wespi-goud);
+}
+
+.beeldbewerking-dienstkaart__link--inactief {
+    color: #999c9f;
+}
+
+
+/* ========================================
+   AUTOMOTIVE
+======================================== */
+
+.beeldbewerking-dienstkaart--automotive {
+    border-color: rgba(181, 145, 34, 0.18);
+}
+
+.beeldbewerking-dienstkaart__specialisme {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--wespi-goud);
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .beeldbewerking-diensten__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .beeldbewerking-dienstkaart--automotive {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 700px) {
+
+    .beeldbewerking-diensten {
+        padding: 58px 0 62px;
+    }
+
+    .beeldbewerking-diensten__kop {
+        margin-bottom: 30px;
+
+        text-align: left;
+    }
+
+    .beeldbewerking-diensten__kop p {
+        margin-left: 0;
+    }
+
+    .beeldbewerking-diensten__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beeldbewerking-dienstkaart--automotive {
+        grid-column: auto;
+    }
+
+    .beeldbewerking-dienstkaart__visual {
+        height: 200px;
+    }
+
+}

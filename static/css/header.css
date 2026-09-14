@@ -4,53 +4,31 @@
 
 .site-header {
     position: fixed;
-
     top: 0;
     left: 0;
     right: 0;
-
     z-index: 99999;
-
     width: 100%;
-
     background: var(--wespi-goud);
-
-    border-bottom:
-        1px solid rgba(74, 52, 0, 0.16);
-
-    box-shadow:
-        0 3px 14px rgba(0, 0, 0, 0.04);
-
+    border-bottom: 1px solid rgba(74, 52, 0, 0.16);
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04);
     transition:
-        box-shadow 0.25s ease;
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
-
-
-/* Omdat de header fixed staat,
-   reserveren we bovenaan ruimte */
 
 body {
     padding-top: 72px;
 }
 
-
-/* ========================================
-   ONDERRAND
-======================================== */
-
 .site-header::after {
     content: "";
-
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: 0;
-
     height: 2px;
-
     background: var(--wespi-goud-donker);
-
     pointer-events: none;
 }
 
@@ -60,31 +38,12 @@ body {
 ======================================== */
 
 .header-inhoud {
+    position: relative;
     min-height: 72px;
-
     display: flex;
     align-items: center;
-
-    gap: 26px;
-
-    transition:
-        min-height 0.25s ease;
-}
-
-
-/* ========================================
-   LOGO + PAY-OFF
-======================================== */
-
-.logo-blok {
-    display: flex;
-    align-items: center;
-
-    gap: 15px;
-
-    flex-shrink: 0;
-
-    margin-right: auto;
+    gap: 24px;
+    transition: min-height 0.25s ease;
 }
 
 
@@ -92,61 +51,43 @@ body {
    LOGO
 ======================================== */
 
-.logo-afbeelding {
-    width: 137px;
-    height: auto;
-
-    display: block;
-
-    transition:
-        width 0.25s ease;
+.logo-blok {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    margin-right: auto;
+    text-decoration: none;
 }
 
-
-/* ========================================
-   PAY-OFF
-======================================== */
+.logo-afbeelding {
+    display: block;
+    width: 137px;
+    height: auto;
+    transition: width 0.25s ease;
+}
 
 .logo-payoff {
     position: relative;
-
     max-width: 185px;
-
     padding-left: 16px;
-
     color: #17140c;
-
     font-size: 13px;
     font-weight: 800;
-
     line-height: 1.15;
-
     letter-spacing: -0.2px;
-
-    white-space: normal;
-
-    transition:
-        font-size 0.25s ease;
 }
 
 .logo-payoff::before {
     content: "";
-
     position: absolute;
-
     left: 0;
     top: 50%;
-
     width: 2px;
     height: 30px;
-
     border-radius: 2px;
-
-    background:
-        rgba(52, 38, 0, 0.32);
-
-    transform:
-        translateY(-50%);
+    background: rgba(52, 38, 0, 0.32);
+    transform: translateY(-50%);
 }
 
 
@@ -157,97 +98,248 @@ body {
 .hoofdnavigatie {
     display: flex;
     align-items: center;
-
-    gap: 23px;
+    gap: 22px;
 }
 
-.hoofdnavigatie a {
+.hoofdnavigatie > a,
+.navigatie-dropdown-knop {
     position: relative;
-
-    padding: 26px 0;
-
-    color:
-        rgba(20, 16, 6, 0.78);
-
+    display: inline-flex;
+    align-items: center;
+    min-height: 72px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: rgba(20, 16, 6, 0.78);
+    font-family: inherit;
     font-size: 13px;
     font-weight: 650;
-
+    line-height: 1;
+    text-decoration: none;
     white-space: nowrap;
-
+    cursor: pointer;
     transition:
         color 0.2s ease,
-        padding 0.25s ease;
+        min-height 0.25s ease,
+        font-size 0.25s ease;
 }
 
-.hoofdnavigatie a:hover {
+.hoofdnavigatie > a:hover,
+.navigatie-dropdown-knop:hover {
     color: #000000;
 }
 
-.hoofdnavigatie a::after {
+.hoofdnavigatie > a::after,
+.navigatie-dropdown-knop::after {
     content: "";
-
     position: absolute;
-
     left: 0;
     right: 100%;
-    bottom: 17px;
-
+    bottom: 16px;
     height: 2px;
-
     background: #17140c;
-
     transition:
         right 0.2s ease,
         bottom 0.25s ease;
 }
 
-.hoofdnavigatie a:hover::after {
+.hoofdnavigatie > a:hover::after,
+.navigatie-dropdown:hover .navigatie-dropdown-knop::after,
+.navigatie-dropdown.is-open .navigatie-dropdown-knop::after {
     right: 0;
 }
 
 
 /* ========================================
-   ACTIES
+   DIENSTEN DROPDOWN
+======================================== */
+
+.navigatie-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navigatie-dropdown-knop {
+    gap: 6px;
+}
+
+.navigatie-dropdown-pijl {
+    display: inline-block;
+    font-size: 10px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.navigatie-dropdown:hover .navigatie-dropdown-pijl,
+.navigatie-dropdown.is-open .navigatie-dropdown-pijl {
+    transform: rotate(180deg);
+}
+
+
+/* Dropdown standaard VERBORGEN */
+
+.navigatie-dropdown-menu {
+    position: absolute;
+    z-index: 100000;
+    top: calc(100% - 1px);
+    left: 50%;
+
+    display: block;
+    width: 420px;
+    box-sizing: border-box;
+    padding: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translate(-50%, 10px);
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    background: #ffffff;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.15);
+
+    transition:
+        opacity 0.18s ease,
+        visibility 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* Dropdown openen */
+
+.navigatie-dropdown:hover .navigatie-dropdown-menu,
+.navigatie-dropdown.is-open .navigatie-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+
+/* ========================================
+   DROPDOWN - BEELD OVERZICHT
+======================================== */
+
+.navigatie-dropdown-hoofdlink {
+    display: block;
+    padding: 17px 18px;
+    border-radius: 10px;
+    background: #f2f3f3;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.navigatie-dropdown-hoofdlink:hover {
+    background: #eceeef;
+}
+
+.navigatie-dropdown-hoofdlink::after {
+    display: none !important;
+}
+
+.navigatie-dropdown-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--wespi-goud);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.navigatie-dropdown-hoofdlink strong {
+    display: block;
+    color: var(--wespi-zwart);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.navigatie-dropdown-hoofdlink > span:last-child {
+    display: block;
+    margin-top: 7px;
+    color: #6d7073;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   DROPDOWN - SUBPAGINA'S
+======================================== */
+
+.navigatie-dropdown-links {
+    display: grid;
+    margin-top: 6px;
+}
+
+.navigatie-dropdown-links a {
+    position: relative;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition:
+        background 0.18s ease,
+        transform 0.18s ease;
+}
+
+.navigatie-dropdown-links a::after {
+    display: none !important;
+}
+
+.navigatie-dropdown-links a:hover {
+    background: #f5f6f6;
+    transform: translateX(2px);
+}
+
+.navigatie-dropdown-links a span {
+    display: block;
+    color: var(--wespi-zwart);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.navigatie-dropdown-links a small {
+    display: block;
+    margin-top: 3px;
+    color: #777a7d;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   HEADER ACTIES
 ======================================== */
 
 .header-acties {
     display: flex;
     align-items: center;
-
     gap: 10px;
-
     flex-shrink: 0;
 }
 
-
-/* ========================================
-   MIJN WESPI
-======================================== */
-
 .mijn-wespi {
     min-height: 40px;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 0 15px;
-
-    border:
-        1px solid rgba(0, 0, 0, 0.12);
-
+    border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 5px;
-
     background: #ffffff;
-
     color: var(--wespi-zwart);
-
     font-size: 12px;
     font-weight: 700;
-
-    box-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.06);
-
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
     transition:
         min-height 0.25s ease,
         border-color 0.2s ease,
@@ -256,43 +348,25 @@ body {
 }
 
 .mijn-wespi:hover {
-    border-color:
-        rgba(0, 0, 0, 0.25);
-
+    border-color: rgba(0, 0, 0, 0.25);
     background: #fafafa;
-
-    transform:
-        translateY(-1px);
+    transform: translateY(-1px);
 }
-
-
-/* ========================================
-   KENNISMAKEN
-======================================== */
 
 .kennismaken-knop {
     min-height: 40px;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 0 18px;
-
     border-radius: 5px;
-
     background: #1d1b17;
-
     color: #ffffff;
-
     font-size: 12px;
     font-weight: 800;
-
+    text-decoration: none;
     white-space: nowrap;
-
-    box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.14);
-
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
     transition:
         min-height 0.25s ease,
         transform 0.2s ease,
@@ -300,10 +374,52 @@ body {
 }
 
 .kennismaken-knop:hover {
-    transform:
-        translateY(-1px);
-
     background: #000000;
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   MOBIELE MENUKNOP
+======================================== */
+
+.mobiel-menu-knop {
+    display: none;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+}
+
+.mobiel-menu-knop span {
+    display: block;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background: #17140c;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.mobiel-menu-knop.is-open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobiel-menu-knop.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobiel-menu-knop.is-open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 
@@ -312,10 +428,7 @@ body {
 ======================================== */
 
 .site-header.is-scrolled {
-    background: var(--wespi-goud);
-
-    box-shadow:
-        0 5px 18px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.11);
 }
 
 .site-header.is-scrolled .header-inhoud {
@@ -328,7 +441,6 @@ body {
 
 .site-header.is-scrolled .logo-payoff {
     max-width: 155px;
-
     font-size: 10px;
 }
 
@@ -336,24 +448,141 @@ body {
     height: 22px;
 }
 
-.site-header.is-scrolled .hoofdnavigatie a {
-    padding: 15px 0;
-
+.site-header.is-scrolled .hoofdnavigatie > a,
+.site-header.is-scrolled .navigatie-dropdown-knop {
+    min-height: 50px;
     font-size: 12px;
 }
 
-.site-header.is-scrolled .hoofdnavigatie a::after {
+.site-header.is-scrolled .hoofdnavigatie > a::after,
+.site-header.is-scrolled .navigatie-dropdown-knop::after {
     bottom: 8px;
 }
 
 .site-header.is-scrolled .mijn-wespi,
 .site-header.is-scrolled .kennismaken-knop {
     min-height: 32px;
-
     padding-left: 13px;
     padding-right: 13px;
-
     font-size: 11px;
+}
+
+
+/* ========================================
+   TABLET / MOBIEL MENU
+======================================== */
+
+@media (max-width: 950px) {
+
+    .header-inhoud {
+        position: relative;
+    }
+
+    .mobiel-menu-knop {
+        display: flex;
+    }
+
+    .hoofdnavigatie {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+
+        padding: 14px 18px 20px;
+
+        background: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, 0.07);
+
+        box-shadow:
+            0 16px 30px rgba(0, 0, 0, 0.14);
+    }
+
+    .hoofdnavigatie.is-open {
+        display: block;
+    }
+
+
+    /* Diensten staat mobiel altijd volledig open */
+
+    .navigatie-dropdown {
+        display: block;
+    }
+
+    .navigatie-dropdown-knop {
+        display: none;
+    }
+
+    .navigatie-dropdown-menu,
+    .navigatie-dropdown:hover .navigatie-dropdown-menu,
+    .navigatie-dropdown.is-open .navigatie-dropdown-menu {
+        position: static;
+
+        width: 100%;
+        padding: 0 0 10px;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: none;
+
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .navigatie-dropdown-hoofdlink {
+        padding: 15px 16px;
+    }
+
+    .navigatie-dropdown-links {
+        margin-top: 5px;
+    }
+
+    .navigatie-dropdown-links a {
+        padding: 13px 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 0;
+    }
+
+    .navigatie-dropdown-links a:hover {
+        transform: none;
+    }
+
+
+    /* Overige navigatie */
+
+    .hoofdnavigatie > a {
+        display: flex;
+        align-items: center;
+
+        min-height: auto;
+        padding: 14px 4px;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+        color: var(--wespi-zwart);
+        font-size: 13px;
+    }
+
+    .hoofdnavigatie > a::after {
+        display: none;
+    }
+
+
+    /* Scrollheader mag mobiel menu niet beïnvloeden */
+
+    .site-header.is-scrolled .hoofdnavigatie > a {
+        min-height: auto;
+        padding: 14px 4px;
+        font-size: 13px;
+    }
 }
 
 
@@ -361,39 +590,20 @@ body {
    TABLET
 ======================================== */
 
-@media (max-width: 1120px) {
+@media (max-width: 1120px) and (min-width: 951px) {
 
     .logo-payoff {
         display: none;
     }
 
     .hoofdnavigatie {
-        gap: 17px;
+        gap: 16px;
     }
 
-    .hoofdnavigatie a {
+    .hoofdnavigatie > a,
+    .navigatie-dropdown-knop {
         font-size: 12px;
     }
-
-}
-
-
-/* ========================================
-   KLEINERE SCHERMEN
-======================================== */
-
-@media (max-width: 950px) {
-
-    .hoofdnavigatie {
-        display: none;
-    }
-
-    .logo-payoff {
-        display: block;
-
-        max-width: 175px;
-    }
-
 }
 
 
@@ -410,49 +620,30 @@ body {
     .header-inhoud {
         width: 100%;
         max-width: 100%;
-
         min-height: 64px;
-
         box-sizing: border-box;
-
         padding-left: 12px;
         padding-right: 12px;
-
-        display: flex;
-        align-items: center;
-
         gap: 8px;
     }
 
     .logo-blok {
         min-width: 0;
-
         gap: 9px;
-
         margin-right: auto;
     }
 
     .logo-afbeelding {
         width: 92px;
-
         flex-shrink: 0;
     }
 
     .logo-payoff {
         display: block;
-
         max-width: 92px;
-
         padding-left: 10px;
-
-        color: #17140c;
-
         font-size: 9px;
-        font-weight: 800;
-
         line-height: 1.12;
-
-        letter-spacing: -0.1px;
     }
 
     .logo-payoff::before {
@@ -460,19 +651,9 @@ body {
         height: 25px;
     }
 
-    .hoofdnavigatie {
-        display: none;
-    }
-
     .header-acties {
-        display: flex;
-        align-items: center;
-
         gap: 6px;
-
-        flex-shrink: 0;
-
-        margin-left: auto;
+        margin-left: 0;
     }
 
     .mijn-wespi {
@@ -481,16 +662,23 @@ body {
 
     .kennismaken-knop {
         min-height: 36px;
-
         padding: 0 10px;
-
         font-size: 10px;
+    }
 
-        white-space: nowrap;
+    .mobiel-menu-knop {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hoofdnavigatie {
+        max-height: calc(100vh - 64px);
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
 
-    /* Mobiel niet kleiner maken bij scrollen */
+    /* Geen shrink op mobiel */
 
     .site-header.is-scrolled .header-inhoud {
         min-height: 64px;
@@ -502,9 +690,7 @@ body {
 
     .site-header.is-scrolled .logo-payoff {
         display: block;
-
         max-width: 92px;
-
         font-size: 9px;
     }
 
@@ -514,13 +700,10 @@ body {
 
     .site-header.is-scrolled .kennismaken-knop {
         min-height: 36px;
-
         padding-left: 10px;
         padding-right: 10px;
-
         font-size: 10px;
     }
-
 }
 
 
@@ -533,7 +716,6 @@ body {
     .header-inhoud {
         padding-left: 9px;
         padding-right: 9px;
-
         gap: 5px;
     }
 
@@ -542,19 +724,18 @@ body {
     }
 
     .logo-payoff {
-        max-width: 72px;
+        display: none;
+    }
 
-        padding-left: 8px;
-
-        font-size: 8px;
+    .mobiel-menu-knop {
+        width: 34px;
+        height: 34px;
     }
 
     .kennismaken-knop {
         min-height: 34px;
-
         padding-left: 8px;
         padding-right: 8px;
-
         font-size: 9px;
     }
 
@@ -563,18 +744,13 @@ body {
     }
 
     .site-header.is-scrolled .logo-payoff {
-        max-width: 72px;
-
-        font-size: 8px;
+        display: none;
     }
 
     .site-header.is-scrolled .kennismaken-knop {
         min-height: 34px;
-
         padding-left: 8px;
         padding-right: 8px;
-
         font-size: 9px;
     }
-
 }
