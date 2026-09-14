@@ -1,5 +1,6 @@
 /* =========================================================
-   BEELD - AFSLUITEND BLOK
+   WAAROM BEELD
+   Compacte afsluiting van de pagina Beeld
    ========================================================= */
 
 .waarom-beeld {
@@ -7,13 +8,12 @@
 
     overflow: hidden;
 
-    padding: 120px 0;
+    padding: 55px 0 75px;
 
     background:
         linear-gradient(
             180deg,
-            #f0f1f1 0%,
-            #f6f6f5 38%,
+            #f6f5f2 0%,
             #ffffff 100%
         );
 }
@@ -26,15 +26,17 @@
 .waarom-beeld-inhoud {
     position: relative;
 
+    z-index: 2;
+
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(360px, 0.95fr);
+        minmax(0, 1fr)
+        auto;
+
+    gap: 50px;
 
     align-items: center;
-
-    gap: 90px;
 }
 
 
@@ -43,22 +45,25 @@
    ========================================================= */
 
 .waarom-beeld-tekst {
-    max-width: 690px;
+    max-width: 680px;
+
+    margin: 0;
 }
 
 
 .waarom-beeld-bovenkop {
     display: block;
 
-    margin-bottom: 16px;
+    margin: 0 0 7px;
 
-    color: #66686a;
+    color: #747779;
 
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 800;
+
     line-height: 1.2;
 
-    letter-spacing: 2.3px;
+    letter-spacing: 2.2px;
 }
 
 
@@ -67,234 +72,116 @@
 
     color: #17191b;
 
-    font-size: clamp(44px, 4.5vw, 62px);
-    font-weight: 800;
-    line-height: 0.98;
+    font-size:
+        clamp(
+            30px,
+            3vw,
+            42px
+        );
 
-    letter-spacing: -2.6px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -1.8px;
 }
 
 
 .waarom-beeld h2 span {
-    display: block;
-
-    margin-top: 6px;
-
-    color: var(--wespi-goud);
+    color: #c79517;
 }
 
 
-.waarom-beeld-intro {
-    max-width: 610px;
+.waarom-beeld-tekst p {
+    max-width: 620px;
 
-    margin: 28px 0 0;
+    margin: 10px 0 0;
 
     color: #5d6062;
 
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
-    line-height: 1.75;
+
+    line-height: 1.55;
 }
 
 
 /* =========================================================
-   PUNTEN
+   KERNPUNTEN
    ========================================================= */
 
 .waarom-beeld-punten {
-    margin-top: 42px;
+    display: flex;
 
-    border-top: 1px solid rgba(23, 25, 27, 0.13);
-}
+    flex-wrap: wrap;
 
+    justify-content: flex-end;
 
-.waarom-beeld-punt {
-    display: grid;
+    gap: 7px;
 
-    grid-template-columns: 190px 1fr;
+    max-width: 430px;
 
-    gap: 28px;
-
-    padding: 20px 0;
-
-    border-bottom: 1px solid rgba(23, 25, 27, 0.13);
-}
-
-
-.waarom-beeld-punt strong {
-    color: #17191b;
-
-    font-size: 14px;
-    font-weight: 800;
-}
-
-
-.waarom-beeld-punt p {
     margin: 0;
-
-    color: #686b6d;
-
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.65;
 }
 
 
-/* =========================================================
-   LINK
-   ========================================================= */
-
-.waarom-beeld-link {
+.waarom-beeld-punten span {
     display: inline-flex;
+
     align-items: center;
 
-    gap: 18px;
+    min-height: 29px;
 
-    margin-top: 34px;
+    padding: 5px 10px;
 
-    color: #17191b;
+    border:
+        1px solid
+        rgba(28, 30, 31, 0.12);
 
-    font-size: 14px;
-    font-weight: 800;
+    border-radius: 100px;
 
-    text-decoration: none;
-}
+    background:
+        rgba(255, 255, 255, 0.78);
 
+    color: #44484a;
 
-.waarom-beeld-link span {
-    width: 38px;
-    height: 38px;
+    font-size: 9px;
+    font-weight: 700;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    line-height: 1;
 
-    border-radius: 50%;
+    letter-spacing: 0.2px;
 
-    background: #17191b;
-
-    color: #ffffff;
-
-    font-size: 17px;
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        color 0.25s ease;
-}
-
-
-.waarom-beeld-link:hover span {
-    transform: translateX(6px);
-
-    background: var(--wespi-goud);
-
-    color: #17191b;
+    white-space: nowrap;
 }
 
 
 /* =========================================================
-   VISUAL
+   SUBTIEL GEEL ACCENT
    ========================================================= */
 
-.waarom-beeld-visual {
-    position: relative;
-
-    min-height: 520px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.waarom-beeld-visual::before {
-    content: "";
-
+.waarom-beeld-accent {
     position: absolute;
 
-    width: 520px;
-    height: 520px;
+    z-index: 0;
+
+    width: 210px;
+    height: 210px;
+
+    top: -120px;
+    right: -75px;
 
     border-radius: 50%;
 
     background:
         radial-gradient(
             circle,
-            rgba(190, 155, 79, 0.22) 0%,
-            rgba(190, 155, 79, 0.09) 42%,
-            rgba(190, 155, 79, 0) 70%
-        );
-}
-
-
-.waarom-beeld-visual-vlak {
-    position: relative;
-    z-index: 2;
-
-    width: min(100%, 420px);
-    min-height: 430px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 58px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #242628 0%,
-            #151719 100%
+            rgba(213, 171, 54, 0.12) 0%,
+            rgba(213, 171, 54, 0.04) 42%,
+            rgba(213, 171, 54, 0) 72%
         );
 
-    box-shadow:
-        0 30px 70px rgba(23, 25, 27, 0.14);
-}
-
-
-.waarom-beeld-visual-klein {
-    color: rgba(255, 255, 255, 0.48);
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 2.3px;
-}
-
-
-.waarom-beeld-visual-vlak strong {
-    display: block;
-
-    margin: 10px 0;
-
-    color: #ffffff;
-
-    font-size: clamp(50px, 5vw, 72px);
-    font-weight: 800;
-    line-height: 0.9;
-
-    letter-spacing: -3px;
-}
-
-
-.waarom-beeld-visual-vlak strong:last-of-type {
-    color: var(--wespi-goud);
-}
-
-
-.waarom-beeld-lijn {
-    width: 100%;
-    height: 1px;
-
-    margin: 24px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--wespi-goud),
-            rgba(190, 155, 79, 0)
-        );
+    pointer-events: none;
 }
 
 
@@ -302,19 +189,19 @@
    TABLET
    ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 950px) {
 
     .waarom-beeld-inhoud {
-        grid-template-columns:
-            minmax(0, 1.1fr)
-            minmax(300px, 0.9fr);
+        grid-template-columns: 1fr;
 
-        gap: 55px;
+        gap: 15px;
     }
 
 
-    .waarom-beeld-visual-vlak {
-        padding: 42px;
+    .waarom-beeld-punten {
+        justify-content: flex-start;
+
+        max-width: none;
     }
 
 }
@@ -327,47 +214,54 @@
 @media (max-width: 760px) {
 
     .waarom-beeld {
-        padding: 80px 0;
+        padding: 26px 0 32px;
     }
 
 
     .waarom-beeld-inhoud {
-        display: block;
+        gap: 14px;
     }
 
 
     .waarom-beeld h2 {
-        font-size: clamp(40px, 11vw, 54px);
-
-        letter-spacing: -2px;
+        font-size:
+            clamp(
+                29px,
+                8.5vw,
+                38px
+            );
     }
 
 
-    .waarom-beeld-punt {
-        grid-template-columns: 1fr;
+    .waarom-beeld-tekst p {
+        margin-top: 9px;
 
-        gap: 7px;
+        font-size: 12px;
+
+        line-height: 1.55;
     }
 
 
-    .waarom-beeld-visual {
-        min-height: auto;
-
-        margin-top: 60px;
+    .waarom-beeld-punten {
+        gap: 6px;
     }
 
 
-    .waarom-beeld-visual::before {
-        width: 390px;
-        height: 390px;
+    .waarom-beeld-punten span {
+        min-height: 28px;
+
+        padding: 5px 9px;
+
+        font-size: 9px;
     }
 
 
-    .waarom-beeld-visual-vlak {
-        width: 100%;
-        min-height: 360px;
+    .waarom-beeld-accent {
+        width: 180px;
+        height: 180px;
 
-        padding: 40px;
+        top: -105px;
+        right: -100px;
     }
 
 }
