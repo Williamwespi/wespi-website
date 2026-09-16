@@ -78,6 +78,20 @@ def beeldbewerking(request: Request):
 
 
 @router.get(
+    "/data/productdata",
+    response_class=HTMLResponse,
+)
+def productdata(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="productdata.html",
+        context={
+            "actieve_pagina": "data",
+        },
+    )
+
+
+@router.get(
     "/offerte",
     response_class=HTMLResponse,
 )

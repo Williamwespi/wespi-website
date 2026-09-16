@@ -1,0 +1,721 @@
+/* =========================================================
+   PRODUCTDATA - SERVICE
+   ========================================================= */
+
+.productdata-service {
+    position: relative;
+    overflow: hidden;
+
+    padding: 100px 0 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ecebe7 0%,
+            #f3f1ec 55%,
+            #e8e5dd 100%
+        );
+}
+
+
+/* =========================================================
+   HOOFDGRID
+   ========================================================= */
+
+.productdata-service-container {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, 0.9fr);
+
+    gap: 85px;
+
+    align-items: center;
+
+    padding-bottom: 90px;
+}
+
+
+/* =========================================================
+   TEKST
+   ========================================================= */
+
+.productdata-service-tekst {
+    max-width: 680px;
+}
+
+.productdata-service-bovenkop {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.productdata-service-tekst h2 {
+    margin: 0 0 24px;
+
+    color: var(--wespi-zwart);
+
+    font-size:
+        clamp(40px, 4.3vw, 58px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1.6px;
+
+    font-weight: 700;
+}
+
+.productdata-service-tekst h2 span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--wespi-goud);
+}
+
+.productdata-service-lead {
+    max-width: 620px;
+
+    margin: 0 0 17px;
+
+    color: #555555;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+}
+
+.productdata-service-tekstregel {
+    max-width: 620px;
+
+    margin: 0;
+
+    color: #626262;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+.productdata-service-tekstregel strong {
+    color: var(--wespi-zwart);
+}
+
+
+/* =========================================================
+   BELOFTE
+   ========================================================= */
+
+.productdata-service-belofte {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    max-width: 620px;
+
+    margin-top: 30px;
+
+    padding: 20px 22px;
+
+    background:
+        rgba(255, 255, 255, 0.76);
+
+    border-left:
+        3px solid var(--wespi-goud);
+}
+
+.productdata-service-belofte-icoon {
+    flex: 0 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    background:
+        var(--wespi-goud);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+.productdata-service-belofte > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.productdata-service-belofte strong {
+    color:
+        var(--wespi-zwart);
+
+    font-size: 14px;
+}
+
+.productdata-service-belofte div span {
+    color: #666666;
+
+    font-size: 12.5px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PRIJS + CTA
+   ========================================================= */
+
+.productdata-service-actie {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.productdata-service-prijs {
+    flex: 0 0 auto;
+}
+
+.productdata-service-prijs > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #777777;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.productdata-service-prijs > div {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 5px;
+}
+
+.productdata-service-prijs strong {
+    color:
+        var(--wespi-goud);
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.productdata-service-prijs small {
+    color: #666666;
+
+    font-size: 11px;
+}
+
+
+/* KNOP */
+
+.productdata-service-knop {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    min-height: 52px;
+
+    padding:
+        0 24px;
+
+    background:
+        var(--wespi-goud);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12.5px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.productdata-service-knop:hover {
+    transform:
+        translateY(-2px);
+
+    opacity: 0.92;
+}
+
+.productdata-service-knop span {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   VISUAL
+   ========================================================= */
+
+.productdata-service-visual {
+    position: relative;
+}
+
+.productdata-service-visual::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 470px;
+    height: 470px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(184, 146, 67, 0.10);
+}
+
+
+/* =========================================================
+   SERVICE KAART
+   ========================================================= */
+
+.productdata-service-kaart {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin-left: auto;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #dedbd3;
+
+    box-shadow:
+        0 25px 70px rgba(20, 20, 20, 0.10);
+}
+
+
+/* HEADER */
+
+.productdata-service-kaartkop {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid #e8e6e0;
+}
+
+.productdata-service-kaartkop > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.productdata-service-kaartkop div > span {
+    color:
+        var(--wespi-goud);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+}
+
+.productdata-service-kaartkop strong {
+    color:
+        var(--wespi-zwart);
+
+    font-size: 19px;
+}
+
+.productdata-service-status {
+    padding:
+        7px 10px;
+
+    background:
+        var(--wespi-zwart);
+
+    color: #ffffff;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================================
+   MAAND
+   ========================================================= */
+
+.productdata-service-maand {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 18px;
+
+    padding:
+        15px 17px;
+
+    background: #f4f2ed;
+}
+
+.productdata-service-maand > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.productdata-service-maand div span {
+    color: #888888;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.productdata-service-maand strong {
+    color:
+        var(--wespi-zwart);
+
+    font-size: 14px;
+}
+
+.productdata-service-actief {
+    color:
+        var(--wespi-goud);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================================
+   FLOW
+   ========================================================= */
+
+.productdata-service-flow {
+    margin-top: 20px;
+}
+
+.productdata-service-flowstap {
+    display: grid;
+
+    grid-template-columns:
+        38px minmax(0, 1fr);
+
+    gap: 13px;
+
+    align-items: center;
+}
+
+.productdata-service-flownummer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    background: #efede7;
+
+    color:
+        var(--wespi-zwart);
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+.productdata-service-flowstap-wespi
+.productdata-service-flownummer {
+    background:
+        var(--wespi-goud);
+
+    color: #ffffff;
+}
+
+.productdata-service-flowstap > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.productdata-service-flowstap strong {
+    color:
+        var(--wespi-zwart);
+
+    font-size: 13px;
+}
+
+.productdata-service-flowstap div span {
+    color: #777777;
+
+    font-size: 10.5px;
+}
+
+.productdata-service-lijn {
+    height: 24px;
+
+    margin-left: 17px;
+}
+
+.productdata-service-lijn span {
+    display: block;
+
+    width: 1px;
+    height: 100%;
+
+    background:
+        #d8d5ce;
+}
+
+
+/* =========================================================
+   VOORDELEN
+   ========================================================= */
+
+.productdata-service-voordelen {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 7px;
+
+    margin-top: 22px;
+}
+
+.productdata-service-voordelen > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    padding:
+        13px 10px;
+
+    background:
+        #f6f5f2;
+}
+
+.productdata-service-voordelen span {
+    color:
+        var(--wespi-goud);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.productdata-service-voordelen strong {
+    color:
+        var(--wespi-zwart);
+
+    font-size: 9.5px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   KAART FOOTER
+   ========================================================= */
+
+.productdata-service-kaartfooter {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-top: 16px;
+
+    padding:
+        15px 17px;
+
+    background:
+        var(--wespi-zwart);
+}
+
+.productdata-service-kaartfooter span {
+    color:
+        var(--wespi-goud);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+.productdata-service-kaartfooter strong {
+    color: #ffffff;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .productdata-service-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(350px, 0.8fr);
+
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .productdata-service {
+        padding-top: 70px;
+    }
+
+    .productdata-service-container {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        padding-bottom: 60px;
+    }
+
+    .productdata-service-tekst {
+        max-width: none;
+    }
+
+    .productdata-service-kaart {
+        max-width: 560px;
+
+        margin:
+            0 auto;
+    }
+
+    .productdata-service-beeld {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .productdata-service {
+        padding-top: 60px;
+    }
+
+    .productdata-service-tekst h2 {
+        font-size:
+            clamp(34px, 9vw, 44px);
+    }
+
+    .productdata-service-actie {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .productdata-service-knop {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    .productdata-service-kaart {
+        padding: 20px;
+    }
+
+    .productdata-service-voordelen {
+        grid-template-columns: 1fr;
+    }
+
+    .productdata-service-beeldtekst {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+}

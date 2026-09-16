@@ -1,0 +1,270 @@
+/* =========================================================
+   PRODUCTDATA - USP BALK
+   ========================================================= */
+
+.productdata-usp-balk {
+    position: relative;
+    z-index: 5;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeeb;
+    border-bottom: 1px solid #e7e5df;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.productdata-usp-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   USP ITEM
+   ========================================================= */
+
+.productdata-usp-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 0;
+
+    padding: 28px 22px;
+}
+
+
+/* verticale scheidingslijn */
+
+.productdata-usp-item:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 25%;
+    right: 0;
+
+    width: 1px;
+    height: 50%;
+
+    background: #e5e3dd;
+}
+
+
+/* =========================================================
+   ICOON
+   ========================================================= */
+
+.productdata-usp-icoon {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background:
+        var(--wespi-goud);
+
+    color: #ffffff;
+
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TEKST
+   ========================================================= */
+
+.productdata-usp-tekst {
+    min-width: 0;
+}
+
+
+/* kleine bovenkop */
+
+.productdata-usp-tekst > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #777777;
+
+    font-size: 9px;
+    line-height: 1.2;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+/* hoofdregel */
+
+.productdata-usp-tekst strong {
+    display: block;
+
+    color:
+        var(--wespi-zwart);
+
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+
+/* kleine toelichting */
+
+.productdata-usp-tekst small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #777777;
+
+    font-size: 11px;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   PRODUCTDATA SERVICE
+   Subtiel extra accent
+   ========================================================= */
+
+.productdata-usp-item-service {
+    background:
+        rgba(190, 153, 74, 0.055);
+}
+
+.productdata-usp-item-service
+.productdata-usp-tekst strong {
+    color:
+        var(--wespi-goud);
+}
+
+
+/* =========================================================
+   KLEINERE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .productdata-usp-item {
+        gap: 11px;
+
+        padding:
+            25px 14px;
+    }
+
+    .productdata-usp-icoon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    .productdata-usp-tekst strong {
+        font-size: 13px;
+    }
+
+    .productdata-usp-tekst small {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .productdata-usp-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .productdata-usp-item {
+        padding:
+            22px 18px;
+
+        border-bottom:
+            1px solid #e7e5df;
+    }
+
+    .productdata-usp-item::after {
+        display: none;
+    }
+
+    .productdata-usp-item:nth-child(odd) {
+        border-right:
+            1px solid #e7e5df;
+    }
+
+    .productdata-usp-item:last-child {
+        grid-column:
+            1 / -1;
+
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBIEL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .productdata-usp-container {
+        grid-template-columns: 1fr;
+    }
+
+    .productdata-usp-item {
+        min-height: 0;
+
+        padding:
+            18px 4px;
+
+        border-right: 0 !important;
+        border-bottom:
+            1px solid #e7e5df;
+    }
+
+    .productdata-usp-item:last-child {
+        grid-column: auto;
+
+        border-bottom: 0;
+    }
+
+    .productdata-usp-icoon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .productdata-usp-tekst strong {
+        font-size: 14px;
+    }
+
+}

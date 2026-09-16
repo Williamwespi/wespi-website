@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Productdata voor webshops en grote assortimenten | Wespi
+{% endblock %}
+
+
+{% block meta_description %}
+Wespi verzamelt, structureert, verrijkt en verwerkt productdata voor webshops en bedrijven met grote assortimenten. Van leveranciersdata tot complete productinformatie.
+{% endblock %}
+
+
+{% block canonical %}
+<link
+    rel="canonical"
+    href="https://www.wespi.nl/data/productdata"
+>
+{% endblock %}
+
+
+{% block content %}
+
+    {% include "onderdelen/productdata/hero.html" %}
+
+    {% include "onderdelen/productdata/usp-balk.html" %}
+
+    {% include "onderdelen/productdata/intro.html" %}
+
+    {% include "onderdelen/productdata/werkwijze.html" %}
+
+    {% include "onderdelen/productdata/volume.html" %}
+
+    {% include "onderdelen/productdata/prijzen.html" %}
+
+    {% include "onderdelen/productdata/service.html" %}
+
+   {% endblock %}

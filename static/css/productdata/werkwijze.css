@@ -1,0 +1,395 @@
+/* =========================================================
+   PRODUCTDATA - WERKWIJZE
+   ========================================================= */
+
+.productdata-werkwijze {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 670px;
+
+    background: #f5f4f1;
+}
+
+
+/* =========================================================
+   ACHTERGRONDBEELD LINKS
+   ========================================================= */
+
+.productdata-werkwijze-afbeelding {
+    position: absolute;
+    z-index: 0;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 58%;
+
+    overflow: hidden;
+}
+
+.productdata-werkwijze-afbeelding img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0.82;
+}
+
+
+/* =========================================================
+   VERLOOP VAN BEELD NAAR ACHTERGROND
+   ========================================================= */
+
+.productdata-werkwijze-verloop {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245, 244, 241, 0.12) 0%,
+            rgba(245, 244, 241, 0.18) 35%,
+            rgba(245, 244, 241, 0.48) 58%,
+            rgba(245, 244, 241, 0.88) 78%,
+            #f5f4f1 100%
+        );
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.productdata-werkwijze-container {
+    position: relative;
+    z-index: 2;
+
+    min-height: 670px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* =========================================================
+   INHOUD
+   ========================================================= */
+
+.productdata-werkwijze-inhoud {
+    width: 64%;
+    max-width: 800px;
+
+    padding: 65px 0;
+}
+
+
+/* =========================================================
+   BOVENKOP
+   Exact gelijk aan productdata-intro-bovenkop
+   ========================================================= */
+
+.productdata-werkwijze-bovenkop {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color:
+        var(--wespi-zwart);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   TITEL
+   ========================================================= */
+
+.productdata-werkwijze-inhoud h2 {
+    max-width: 760px;
+
+    margin: 0 0 20px;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.06;
+    letter-spacing: -1.5px;
+    font-weight: 700;
+}
+
+.productdata-werkwijze-inhoud h2 span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--wespi-goud);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.productdata-werkwijze-intro {
+    max-width: 650px;
+
+    margin: 0 0 26px;
+
+    color: #555555;
+
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   STAPPEN
+   ========================================================= */
+
+.productdata-werkwijze-stappen {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    max-width: 760px;
+}
+
+
+/* =========================================================
+   STAP
+   ========================================================= */
+
+.productdata-werkwijze-stap {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+
+    gap: 12px;
+
+    min-height: 98px;
+
+    padding: 16px 18px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(224, 221, 214, 0.9);
+
+    box-shadow:
+        0 8px 26px rgba(20, 20, 20, 0.045);
+}
+
+
+/* vijfde stap over volle breedte */
+
+.productdata-werkwijze-stap-laatste {
+    grid-column: 1 / -1;
+
+    min-height: auto;
+}
+
+
+/* =========================================================
+   NUMMER
+   ========================================================= */
+
+.productdata-werkwijze-nummer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    background: var(--wespi-goud);
+
+    color: #ffffff;
+
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   STAPTEKST
+   ========================================================= */
+
+.productdata-werkwijze-stap h3 {
+    margin: 0 0 4px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.productdata-werkwijze-stap p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BELOFTE
+   ========================================================= */
+
+.productdata-werkwijze-belofte {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    max-width: 760px;
+
+    margin-top: 14px;
+    padding: 14px 17px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-left: 3px solid var(--wespi-goud);
+}
+
+.productdata-werkwijze-belofte > span {
+    flex: 0 0 auto;
+
+    color: var(--wespi-goud);
+
+    font-size: 19px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.productdata-werkwijze-belofte p {
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.productdata-werkwijze-belofte strong {
+    color: var(--wespi-zwart);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .productdata-werkwijze-afbeelding {
+        width: 55%;
+    }
+
+    .productdata-werkwijze-inhoud {
+        width: 70%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBIEL
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .productdata-werkwijze {
+        min-height: 0;
+    }
+
+    .productdata-werkwijze-container {
+        min-height: 0;
+
+        display: block;
+    }
+
+    .productdata-werkwijze-inhoud {
+        width: 100%;
+        max-width: none;
+
+        padding: 60px 0 45px;
+    }
+
+    .productdata-werkwijze-stappen {
+        grid-template-columns: 1fr;
+    }
+
+    .productdata-werkwijze-stap-laatste {
+        grid-column: auto;
+    }
+
+
+    /* beeld onder de inhoud */
+
+    .productdata-werkwijze-afbeelding {
+        position: relative;
+
+        width: 100%;
+        height: 330px;
+    }
+
+    .productdata-werkwijze-afbeelding img {
+        opacity: 1;
+    }
+
+    .productdata-werkwijze-verloop {
+        background:
+            linear-gradient(
+                180deg,
+                #f5f4f1 0%,
+                rgba(245, 244, 241, 0.70) 14%,
+                rgba(245, 244, 241, 0.12) 38%,
+                rgba(245, 244, 241, 0) 55%
+            );
+    }
+
+}
+
+
+/* =========================================================
+   KLEINE MOBIEL
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .productdata-werkwijze-inhoud {
+        padding-top: 52px;
+    }
+
+    .productdata-werkwijze-inhoud h2 {
+        font-size: clamp(34px, 9vw, 44px);
+    }
+
+    .productdata-werkwijze-intro {
+        font-size: 15.5px;
+    }
+
+    .productdata-werkwijze-stap {
+        min-height: 0;
+
+        padding: 15px;
+    }
+
+    .productdata-werkwijze-afbeelding {
+        height: 280px;
+    }
+
+}
