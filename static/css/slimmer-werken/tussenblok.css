@@ -1,0 +1,119 @@
+/* ========================================
+   SLIMMER WERKEN - TUSSENBLOK
+======================================== */
+
+.slimmer-tussenblok {
+    position: relative;
+
+    padding: 75px 0 80px;
+
+    background: #f3f1ed;
+}
+
+.slimmer-tussenblok__inner {
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   BOVENKOP
+======================================== */
+
+.slimmer-tussenblok__bovenkop {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 17px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.slimmer-tussenblok__bovenkop::before,
+.slimmer-tussenblok__bovenkop::after {
+    content: "";
+
+    width: 45px;
+    height: 2px;
+
+    background: var(--wespi-goud);
+}
+
+
+/* ========================================
+   TITEL
+======================================== */
+
+.slimmer-tussenblok h2 {
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   TEKST
+======================================== */
+
+.slimmer-tussenblok p {
+    max-width: 620px;
+
+    margin: 18px auto 0;
+
+    color: #5f5f5f;
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 600px) {
+
+    .slimmer-tussenblok {
+        padding: 58px 0 62px;
+    }
+
+    .slimmer-tussenblok__inner {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .slimmer-tussenblok__bovenkop {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .slimmer-tussenblok__bovenkop::before,
+    .slimmer-tussenblok__bovenkop::after {
+        width: 25px;
+    }
+
+    .slimmer-tussenblok h2 {
+        font-size: 34px;
+    }
+
+    .slimmer-tussenblok p {
+        font-size: 14px;
+    }
+
+}

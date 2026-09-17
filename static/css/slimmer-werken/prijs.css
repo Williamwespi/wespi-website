@@ -1,0 +1,375 @@
+﻿/* ========================================
+   SLIMMER WERKEN - PRIJZEN
+======================================== */
+
+.slimmer-prijs {
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+}
+
+
+/* ========================================
+   VISUAL LINKS
+======================================== */
+
+.slimmer-prijs__visual {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 55%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+.slimmer-prijs__visual img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.04);
+}
+
+
+/* ========================================
+   OVERGANG NAAR WIT
+======================================== */
+
+.slimmer-prijs__visual::after {
+    content: "";
+
+    position: absolute;
+    z-index: 2;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            270deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0.98) 8%,
+            rgba(255, 255, 255, 0.91) 17%,
+            rgba(255, 255, 255, 0.70) 28%,
+            rgba(255, 255, 255, 0.35) 39%,
+            rgba(255, 255, 255, 0.10) 50%,
+            rgba(255, 255, 255, 0) 62%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   INHOUD
+======================================== */
+
+.slimmer-prijs__inner {
+    position: relative;
+    z-index: 5;
+
+    width: min(1180px, calc(100% - 48px));
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 0 auto;
+
+    padding: 85px 0;
+}
+
+.slimmer-prijs__content {
+    width: 58%;
+    max-width: 690px;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.slimmer-prijs__bovenkop {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 15px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.slimmer-prijs__bovenkop::after {
+    content: "";
+
+    width: 65px;
+    height: 2px;
+
+    background: var(--wespi-goud);
+}
+
+.slimmer-prijs h2 {
+    max-width: 610px;
+
+    margin: 0;
+
+    color: var(--wespi-zwart);
+
+    font-size: clamp(38px, 4vw, 54px);
+    line-height: 1.03;
+
+    letter-spacing: -2px;
+
+    font-weight: 800;
+}
+
+.slimmer-prijs__intro {
+    max-width: 600px;
+
+    margin: 20px 0 0;
+
+    color: #565656;
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   PRIJZEN
+======================================== */
+
+.slimmer-prijs__kaarten {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: 32px;
+}
+
+.slimmer-prijskaart {
+    position: relative;
+
+    min-height: 315px;
+
+    padding: 28px 25px;
+
+    border: 1px solid #dedbd5;
+
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+.slimmer-prijskaart--accent {
+    border-color:
+        rgba(185, 147, 72, 0.55);
+
+    background:
+        rgba(242, 234, 217, 0.96);
+}
+
+.slimmer-prijskaart__label {
+    display: block;
+
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.slimmer-prijskaart__prijs {
+    margin-top: 20px;
+}
+
+.slimmer-prijskaart__prijs span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #777777;
+
+    font-size: 11px;
+}
+
+.slimmer-prijskaart__prijs strong {
+    display: block;
+
+    color: var(--wespi-zwart);
+
+    font-size: 48px;
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.slimmer-prijskaart--accent
+.slimmer-prijskaart__prijs strong {
+    color: var(--wespi-goud);
+}
+
+.slimmer-prijskaart p {
+    min-height: 42px;
+
+    margin: 18px 0 0;
+
+    color: #555555;
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.slimmer-prijskaart ul {
+    margin: 20px 0 0;
+    padding: 17px 0 0;
+
+    list-style: none;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.09);
+}
+
+.slimmer-prijskaart li {
+    position: relative;
+
+    margin-top: 8px;
+    padding-left: 20px;
+
+    color: #444444;
+
+    font-size: 11px;
+}
+
+.slimmer-prijskaart li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--wespi-goud);
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   EXTRA REGEL
+======================================== */
+
+.slimmer-prijs__maatwerk {
+    margin: 18px 0 0;
+
+    color: #6b6b6b;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.slimmer-prijs__maatwerk strong {
+    color: var(--wespi-zwart);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .slimmer-prijs__visual {
+        width: 48%;
+    }
+
+    .slimmer-prijs__content {
+        width: 65%;
+    }
+
+}
+
+
+/* ========================================
+   MOBIEL
+======================================== */
+
+@media (max-width: 760px) {
+
+    .slimmer-prijs {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slimmer-prijs__inner {
+        order: 1;
+
+        width: min(100% - 32px, 1180px);
+
+        padding: 65px 0 45px;
+    }
+
+    .slimmer-prijs__content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .slimmer-prijs__visual {
+        position: relative;
+
+        order: 2;
+
+        width: 100%;
+        height: 330px;
+    }
+
+    .slimmer-prijs__visual::after {
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0.75) 12%,
+                rgba(255, 255, 255, 0.20) 30%,
+                rgba(255, 255, 255, 0) 45%
+            );
+    }
+
+    .slimmer-prijs__kaarten {
+        grid-template-columns: 1fr;
+    }
+
+    .slimmer-prijskaart {
+        min-height: auto;
+    }
+
+    .slimmer-prijs h2 {
+        font-size: 39px;
+    }
+
+}

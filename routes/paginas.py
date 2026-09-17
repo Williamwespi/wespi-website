@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Request
+﻿from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
@@ -91,6 +91,21 @@ def productdata(request: Request):
     )
 
 
+
+
+@router.get(
+    "/slimmer-werken",
+    response_class=HTMLResponse,
+)
+def slimmer_werken(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="slimmer-werken.html",
+        context={
+            "actieve_pagina": "slimmer-werken",
+        },
+    )
+
 @router.get(
     "/offerte",
     response_class=HTMLResponse,
@@ -121,5 +136,20 @@ def offerte(
             "diensten": diensten,
             "dienst_code": dienst or "",
             "geselecteerde_dienst": geselecteerde_dienst,
+        },
+    )
+
+
+@router.get(
+    "/over-wespi",
+    response_class=HTMLResponse,
+)
+def over_wespi(request: Request):
+
+    return templates.TemplateResponse(
+        request=request,
+        name="over-wespi.html",
+        context={
+            "actieve_pagina": "over-wespi",
         },
     )

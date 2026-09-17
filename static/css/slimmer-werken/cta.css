@@ -1,0 +1,104 @@
+﻿/* =========================================
+   SLIMMER WERKEN - CTA
+========================================= */
+
+.slimmer-cta {
+    padding: 115px 0;
+
+    background: #30302e;
+}
+
+
+.slimmer-cta__inner {
+    width: min(820px, calc(100% - 48px));
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.slimmer-cta__bovenkop {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+
+    color: #c5a15a;
+}
+
+
+.slimmer-cta h2 {
+    margin: 0 0 22px;
+
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+
+    color: #ffffff;
+}
+
+
+.slimmer-cta p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #d2cfca;
+}
+
+
+.slimmer-cta__knop {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+
+    margin-top: 34px;
+    padding: 0 28px;
+
+    border-radius: 4px;
+
+    background: #c5a15a;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.slimmer-cta__knop:hover {
+    transform: translateY(-2px);
+
+    background: #b6914d;
+}
+
+
+@media (max-width: 600px) {
+
+    .slimmer-cta {
+        padding: 80px 0;
+    }
+
+    .slimmer-cta__inner {
+        width: calc(100% - 36px);
+    }
+
+    .slimmer-cta__knop {
+        width: 100%;
+    }
+
+}
