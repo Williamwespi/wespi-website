@@ -660,7 +660,13 @@
     }
 
     .productdata-service-tekst {
+        order: 2;
+
         max-width: none;
+    }
+
+    .productdata-service-visual {
+        order: 1;
     }
 
     .productdata-service-kaart {

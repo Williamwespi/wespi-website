@@ -320,7 +320,7 @@
     }
 
     .hero-inhoud {
-        order: 1;
+        order: 2;
 
         min-height: auto;
     }
@@ -334,7 +334,7 @@
     .hero-foto {
         position: relative;
 
-        order: 2;
+        order: 1;
 
         width: 100%;
         height: 380px;
@@ -344,9 +344,9 @@
         background:
             linear-gradient(
                 180deg,
-                #ffffff 0%,
-                rgba(255, 255, 255, 0.6) 12%,
-                rgba(255, 255, 255, 0) 35%
+                rgba(255, 255, 255, 0) 58%,
+                rgba(255, 255, 255, 0.65) 82%,
+                #ffffff 100%
             );
     }
 

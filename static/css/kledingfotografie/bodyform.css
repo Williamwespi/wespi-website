@@ -695,9 +695,14 @@
 
 
     .kleding-bodyform-tekst {
+        order: 2;
+
         width: 100%;
     }
 
+    .kleding-bodyform-showcase {
+        order: 1;
+    }
 
     .kleding-bodyform h2 {
         font-size: clamp(39px, 10.5vw, 51px);

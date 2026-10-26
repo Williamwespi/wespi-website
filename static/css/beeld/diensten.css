@@ -850,33 +850,27 @@
     }
 
 
-    /* KLEDING:
-       eerst tekst, daarna visual
-    */
+    /* Dienstblokken tonen de visual boven de bijbehorende tekst. */
 
     .beeld-dienst
     .beeld-dienst-tekst {
-        order: 1;
+        order: 2;
     }
 
     .beeld-dienst
     .beeld-dienst-visual {
-        order: 2;
+        order: 1;
     }
 
 
-    /* PACKSHOT:
-       ook eerst tekst, daarna visual
-    */
-
     .beeld-dienst-packshot
     .beeld-dienst-tekst {
-        order: 1;
+        order: 2;
     }
 
     .beeld-dienst-packshot
     .beeld-dienst-visual {
-        order: 2;
+        order: 1;
     }
 
 
@@ -884,12 +878,12 @@
 
     #beeldbewerking
     .beeld-dienst-tekst {
-        order: 1;
+        order: 2;
     }
 
     #beeldbewerking
     .beeld-dienst-visual {
-        order: 2;
+        order: 1;
     }
 
 

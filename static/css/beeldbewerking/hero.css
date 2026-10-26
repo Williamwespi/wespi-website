@@ -261,6 +261,8 @@
     }
 
     .beeldbewerking-hero__content {
+        order: 2;
+
         width: 100%;
 
         padding: 52px 0 40px;
@@ -298,12 +300,23 @@
     }
 
     .beeldbewerking-hero__visual {
+        order: 1;
+
         width: 100%;
         height: 370px;
     }
 
     .beeldbewerking-hero__beeld::before {
-        display: none;
+        inset: 0;
+        width: auto;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 58%,
+                rgba(255, 255, 255, 0.65) 82%,
+                #ffffff 100%
+            );
     }
 
 }

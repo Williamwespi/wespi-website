@@ -672,20 +672,24 @@
 
 
     .productdata-intro-container {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
 
     .productdata-intro-tekst {
+        order: 2;
+
         max-width: 650px;
     }
 
 
     .productdata-intro-visual {
+        order: 1;
+
         max-width: 520px;
 
-        margin:
-            65px auto 0;
+        margin: 0 auto 55px;
     }
 
 }
@@ -720,7 +724,7 @@
 
 
     .productdata-intro-visual {
-        margin-top: 50px;
+        margin-bottom: 45px;
     }
 
 

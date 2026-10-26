@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact | Wespi – Samen aan de slag?
+{% endblock %}
+
+{% block meta_description %}
+Neem contact op met Wespi over productfotografie, productdata of slimmer werken. We denken graag met je mee.
+{% endblock %}
+
+{% block canonical %}
+<link rel="canonical" href="https://www.wespi.nl/contact">
+{% endblock %}
+
+{% block extra_head %}
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', path='css/contact.css') }}?v=1.0"
+>
+{% endblock %}
+
+{% block content %}
+<section class="hero contact-hero">
+    <div class="hero-foto">
+        <img
+            src="{{ url_for('static', path='images/contact/contact-hero.png') }}"
+            alt="Kledingstudio met een model en fotografieapparatuur"
+        >
+    </div>
+
+    <div class="container hero-inhoud">
+        <div class="hero-tekst">
+            <span class="hero-bovenkop">
+                WESPI / CONTACT
+            </span>
+
+            <h1>
+                Samen
+                <span>
+                    aan de slag?
+                </span>
+            </h1>
+
+            <p>
+                Heb je een vraag over onze diensten of wil je bespreken wat Wespi
+                voor jouw bedrijf kan betekenen? Neem gerust contact op. We denken
+                graag met je mee.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" aria-labelledby="contact-section-title">
+    <div class="container contact-layout">
+        <div class="contact-details">
+            <p class="contact-eyebrow">WE HELPEN JE GRAAG VERDER</p>
+            <h2 id="contact-section-title">Contactgegevens</h2>
+            <p class="contact-details__intro">
+                Liever direct contact? Je bereikt ons op werkdagen telefonisch
+                of per e-mail.
+            </p>
+
+            <dl class="contact-details__list">
+                <div>
+                    <dt>E-mail</dt>
+                    <dd><a href="mailto:info@wespi.nl">info@wespi.nl</a></dd>
+                </div>
+                <div>
+                    <dt>Telefoon</dt>
+                    <dd><a href="tel:+31858001024">085 800 1024</a></dd>
+                </div>
+                <div>
+                    <dt>Adres</dt>
+                    <dd>Broekstraat 34<br>7122 LC Aalten</dd>
+                </div>
+                <div>
+                    <dt>Openingstijden</dt>
+                    <dd>Maandag t/m vrijdag<br>08:00–17:30</dd>
+                </div>
+                <div>
+                    <dt>Bedrijfsgegevens</dt>
+                    <dd>KvK 91406161<br>Btw NL004888651B56</dd>
+                </div>
+            </dl>
+        </div>
+
+        <div class="contact-form-panel">
+            <p class="contact-eyebrow">STUUR ONS EEN BERICHT</p>
+            <h2>Waar kunnen we je mee helpen?</h2>
+
+            {% if form_status %}
+            <div
+                class="contact-form__notice{% if form_success %} contact-form__notice--success{% endif %}"
+                role="{% if form_success %}status{% else %}alert{% endif %}"
+                aria-live="polite"
+            >
+                {{ form_status }}
+            </div>
+            {% endif %}
+
+            <form class="contact-form" action="/contact" method="post">
+                <div class="contact-form__field">
+                    <label for="contact-naam">Naam <span aria-hidden="true">*</span></label>
+                    <input
+                        id="contact-naam"
+                        name="naam"
+                        type="text"
+                        autocomplete="name"
+                        maxlength="120"
+                        value="{{ form_data.get('naam', '') }}"
+                        {% if 'naam' in form_errors %}aria-invalid="true" aria-describedby="contact-naam-error"{% endif %}
+                        required
+                    >
+                    {% if 'naam' in form_errors %}
+                    <p class="contact-form__error" id="contact-naam-error">{{ form_errors['naam'] }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="contact-bedrijf">Bedrijfsnaam</label>
+                    <input
+                        id="contact-bedrijf"
+                        name="bedrijfsnaam"
+                        type="text"
+                        autocomplete="organization"
+                        maxlength="160"
+                        value="{{ form_data.get('bedrijfsnaam', '') }}"
+                        {% if 'bedrijfsnaam' in form_errors %}aria-invalid="true" aria-describedby="contact-bedrijfsnaam-error"{% endif %}
+                    >
+                    {% if 'bedrijfsnaam' in form_errors %}
+                    <p class="contact-form__error" id="contact-bedrijfsnaam-error">{{ form_errors['bedrijfsnaam'] }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="contact-form__row">
+                    <div class="contact-form__field">
+                        <label for="contact-email">E-mailadres <span aria-hidden="true">*</span></label>
+                        <input
+                            id="contact-email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            maxlength="254"
+                            value="{{ form_data.get('email', '') }}"
+                            {% if 'email' in form_errors %}aria-invalid="true" aria-describedby="contact-email-error"{% endif %}
+                            required
+                        >
+                        {% if 'email' in form_errors %}
+                        <p class="contact-form__error" id="contact-email-error">{{ form_errors['email'] }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="contact-form__field">
+                        <label for="contact-telefoon">Telefoonnummer</label>
+                        <input
+                            id="contact-telefoon"
+                            name="telefoonnummer"
+                            type="tel"
+                            autocomplete="tel"
+                            maxlength="40"
+                            value="{{ form_data.get('telefoonnummer', '') }}"
+                            {% if 'telefoonnummer' in form_errors %}aria-invalid="true" aria-describedby="contact-telefoon-error"{% endif %}
+                        >
+                        {% if 'telefoonnummer' in form_errors %}
+                        <p class="contact-form__error" id="contact-telefoon-error">{{ form_errors['telefoonnummer'] }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="contact-onderwerp">Onderwerp <span aria-hidden="true">*</span></label>
+                    <input
+                        id="contact-onderwerp"
+                        name="onderwerp"
+                        type="text"
+                        maxlength="180"
+                        value="{{ form_data.get('onderwerp', '') }}"
+                        {% if 'onderwerp' in form_errors %}aria-invalid="true" aria-describedby="contact-onderwerp-error"{% endif %}
+                        required
+                    >
+                    {% if 'onderwerp' in form_errors %}
+                    <p class="contact-form__error" id="contact-onderwerp-error">{{ form_errors['onderwerp'] }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="contact-bericht">Bericht <span aria-hidden="true">*</span></label>
+                    <textarea
+                        id="contact-bericht"
+                        name="bericht"
+                        rows="5"
+                        maxlength="5000"
+                        {% if 'bericht' in form_errors %}aria-invalid="true" aria-describedby="contact-bericht-error"{% endif %}
+                        required
+                    >{{ form_data.get('bericht', '') }}</textarea>
+                    {% if 'bericht' in form_errors %}
+                    <p class="contact-form__error" id="contact-bericht-error">{{ form_errors['bericht'] }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="contact-form__honeypot" aria-hidden="true">
+                    <label for="contact-website">Laat dit veld leeg</label>
+                    <input
+                        id="contact-website"
+                        name="website"
+                        type="text"
+                        tabindex="-1"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="contact-form__consent">
+                    <input
+                        id="contact-privacy"
+                        name="privacy_toestemming"
+                        type="checkbox"
+                        value="accepted"
+                        {% if privacy_accepted %}checked{% endif %}
+                        {% if 'privacy_toestemming' in form_errors %}aria-invalid="true" aria-describedby="contact-privacy-error"{% endif %}
+                        required
+                    >
+                    <label for="contact-privacy">
+                        Ik geef toestemming om mijn gegevens te gebruiken om
+                        op mijn bericht te reageren. <span aria-hidden="true">*</span>
+                    </label>
+                </div>
+                {% if 'privacy_toestemming' in form_errors %}
+                <p class="contact-form__error" id="contact-privacy-error">{{ form_errors['privacy_toestemming'] }}</p>
+                {% endif %}
+
+                <button class="contact-form__submit" type="submit">
+                    Verstuur bericht <span aria-hidden="true">→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -223,7 +223,13 @@
     }
 
     .beeldbewerking-pagina-volume__content {
+        order: 2;
+
         padding: 40px 25px;
+    }
+
+    .beeldbewerking-pagina-volume__visual {
+        order: 1;
     }
 
     .beeldbewerking-pagina-volume__punten {

@@ -502,10 +502,14 @@
     }
 
     .productdata-volume-inhoud {
+        order: 2;
+
         max-width: none;
     }
 
     .productdata-volume-visual {
+        order: 1;
+
         max-width: 560px;
 
         justify-self: start;

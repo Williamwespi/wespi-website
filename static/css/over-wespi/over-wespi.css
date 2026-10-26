@@ -1052,9 +1052,9 @@
         background:
             linear-gradient(
                 180deg,
-                #f4f2ee 0%,
-                rgba(244,242,238,.65) 12%,
-                transparent 40%
+                rgba(244, 242, 238, 0) 58%,
+                rgba(244, 242, 238, .65) 82%,
+                #f4f2ee 100%
             );
     }
 
@@ -1069,7 +1069,13 @@
 
     /* MERK */
 
+    .over-oorsprong__content {
+        order: 2;
+    }
+
     .over-merk {
+        order: 1;
+
         padding: 25px;
     }
 

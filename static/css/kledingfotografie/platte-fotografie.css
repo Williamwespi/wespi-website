@@ -470,6 +470,14 @@
         padding: 60px 0 68px;
     }
 
+    .kledingfotografie-plat-tekst {
+        order: 2;
+    }
+
+    .kledingfotografie-plat-beelden {
+        order: 1;
+    }
+
     .kledingfotografie-plat h2 {
         font-size: 42px;
 
