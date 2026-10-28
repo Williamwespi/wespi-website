@@ -201,7 +201,7 @@
 @media (max-width: 620px) {
 
     .kledingfotografie-usps {
-        padding: 25px 0 38px;
+        display: none;
     }
 
     .kledingfotografie-usps-grid {

@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+{% block title %}
+Slimmer werken | Praktische procesautomatisering | Wespi
+{% endblock %}
+
+{% block meta_description %}
+Wespi helpt bedrijven dagelijkse werkprocessen slimmer en efficiënter in te richten met praktische automatisering voor gegevens, bestanden en terugkerende werkzaamheden.
+{% endblock %}
+
+{% block canonical %}
+<meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block extra_head %}
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', path='css/slimmer-werken/v2.css') }}?v=1.0"
+>
+{% endblock %}
+
+{% block content %}
+
+<section class="slimmer-v2-hero">
+
+    <div class="slimmer-v2-hero__visual">
+        <img
+            src="{{ url_for('static', path='images/slimmer-werken/slimmer-werken-hero.png') }}"
+            alt="Producten en dozen in een magazijn"
+        >
+    </div>
+
+    <div class="container slimmer-v2-hero__container">
+        <div class="slimmer-v2-hero__content">
+            <span class="slimmer-v2-eyebrow">SLIMMER WERKEN</span>
+
+            <h1>
+                Slimmer werken begint
+                <span>bij een slimmer proces.</span>
+            </h1>
+
+            <p class="slimmer-v2-hero__intro">
+                Veel werkzaamheden kosten onnodig tijd doordat informatie
+                handmatig wordt verwerkt, systemen niet goed samenwerken
+                of dezelfde handelingen telkens terugkomen. Wespi helpt
+                deze processen te vereenvoudigen met praktische
+                automatisering en slimme digitale oplossingen.
+            </p>
+
+            <div class="slimmer-v2-actions">
+                <a class="slimmer-v2-button slimmer-v2-button--primary" href="#toepassingen">
+                    Bekijk de toepassingen <span aria-hidden="true">→</span>
+                </a>
+                <a class="slimmer-v2-button slimmer-v2-button--secondary" href="/offerte?dienst=slimmer-werken">
+                    Bespreek je proces
+                </a>
+            </div>
+
+            <ul class="slimmer-v2-highlights" aria-label="Uitgangspunten">
+                <li>Klein en praktisch beginnen</li>
+                <li>Aansluiten op je bestaande werkwijze</li>
+                <li>Gericht op dagelijks werk</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slimmer-v2-applications" id="toepassingen">
+    <div class="slimmer-v2-container">
+        <header class="slimmer-v2-section-heading">
+            <span class="slimmer-v2-eyebrow">BESTAANDE PROCESSEN VERBETEREN</span>
+            <h2>Waar kan automatisering werk uit handen nemen?</h2>
+            <p>
+                We beginnen bij de manier waarop het werk nu wordt gedaan.
+                Daarna kijken we welke praktische verbetering past bij de
+                informatie, bestanden en systemen die je al gebruikt.
+            </p>
+        </header>
+
+        <div class="slimmer-v2-card-grid">
+            <article class="slimmer-v2-card">
+                <span class="slimmer-v2-card__number">01</span>
+                <span class="slimmer-v2-card__label">GEGEVENSVERWERKING</span>
+                <h3>Gegevens automatisch verwerken</h3>
+                <p>
+                    Breng gegevens uit leveranciersbestanden, prijslijsten
+                    en artikelbestanden samen, zet ze om en maak ze klaar
+                    voor de volgende stap.
+                </p>
+            </article>
+
+            <article class="slimmer-v2-card">
+                <span class="slimmer-v2-card__number">02</span>
+                <span class="slimmer-v2-card__label">CONTROLE &amp; KWALITEIT</span>
+                <h3>Ontbrekende gegevens en fouten signaleren</h3>
+                <p>
+                    Laat ontbrekende informatie, afwijkingen en fouten
+                    automatisch opvallen. Zo hoeft niet ieder gegeven
+                    handmatig nagelopen te worden.
+                </p>
+            </article>
+
+            <article class="slimmer-v2-card">
+                <span class="slimmer-v2-card__number">03</span>
+                <span class="slimmer-v2-card__label">BEELD &amp; BESTANDEN</span>
+                <h3>Bestanden slim verwerken en ordenen</h3>
+                <p>
+                    Verwerk en structureer grote aantallen afbeeldingen
+                    en andere bestanden, en maak ze klaar voor verder
+                    gebruik.
+                </p>
+            </article>
+
+            <article class="slimmer-v2-card">
+                <span class="slimmer-v2-card__number">04</span>
+                <span class="slimmer-v2-card__label">SYSTEMEN &amp; INFORMATIE</span>
+                <h3>Informatie laten samenwerken</h3>
+                <p>
+                    Waar bestaande systemen het toelaten, helpen we
+                    informatie uitwisselen tussen systemen en werkstappen.
+                    Dat voorkomt onnodig opnieuw invoeren.
+                </p>
+                <p class="slimmer-v2-card__note">
+                    We bekijken per situatie wat technisch en praktisch
+                    haalbaar is.
+                </p>
+            </article>
+
+            <article class="slimmer-v2-card">
+                <span class="slimmer-v2-card__number">05</span>
+                <span class="slimmer-v2-card__label">TERUGKEREND WERK</span>
+                <h3>Dagelijkse handelingen vereenvoudigen</h3>
+                <p>
+                    Maak herhaalde stappen in dagelijkse processen
+                    eenvoudiger of automatisch. Zo houden medewerkers
+                    tijd over voor ander werk.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="slimmer-v2-approach">
+    <div class="slimmer-v2-container slimmer-v2-approach__grid">
+        <div>
+            <span class="slimmer-v2-eyebrow">PRAKTISCH EN DOORDACHT</span>
+            <h2>Een verbetering die past bij hoe je werkt.</h2>
+        </div>
+        <div class="slimmer-v2-approach__copy">
+            <p>
+                We beginnen bij de bestaande werkwijze, bijvoorbeeld een
+                Excel-overzicht, Access-database of terugkerende verwerking
+                van bestanden. Samen brengen we de stappen in beeld en
+                kiezen we een afgebakende verbetering.
+            </p>
+            <p>
+                Naast het verbeteren van processen kunnen op termijn ook
+                eigen, herbruikbare digitale toepassingen beschikbaar komen.
+                Die bieden we pas aan wanneer ze klaar zijn. Productinformatie
+                verwerken als dienst valt onder Data.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% include "onderdelen/slimmer-werken-v2/applicaties.html" %}
+
+<section class="slimmer-v2-contact">
+    <div class="slimmer-v2-contact__inner">
+        <span class="slimmer-v2-eyebrow">SAMEN KIJKEN WAT BETER KAN?</span>
+        <h2>Welk proces kost onnodig veel tijd?</h2>
+        <p>
+            Vertel waar je tegenaan loopt. We denken mee over een praktische
+            eerste stap en bespreken wat bij je werkwijze past.
+        </p>
+        <a class="slimmer-v2-button slimmer-v2-button--primary" href="/offerte?dienst=slimmer-werken">
+            Vraag een offerte aan <span aria-hidden="true">→</span>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

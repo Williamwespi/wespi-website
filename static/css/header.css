@@ -472,7 +472,17 @@ body {
    TABLET / MOBIEL MENU
 ======================================== */
 
+@media (min-width: 951px) {
+    .hoofdnavigatie .navigatie-mobiel {
+        display: none;
+    }
+}
+
 @media (max-width: 950px) {
+
+    .hoofdnavigatie .navigatie-desktop {
+        display: none;
+    }
 
     .header-inhoud {
         position: relative;

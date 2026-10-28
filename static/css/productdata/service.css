@@ -25,15 +25,13 @@
 .productdata-service-container {
     display: grid;
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(420px, 0.9fr);
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
 
-    gap: 85px;
+    gap: clamp(36px, 5vw, 70px);
 
-    align-items: center;
+    align-items: start;
 
-    padding-bottom: 90px;
+    padding-bottom: 70px;
 }
 
 
@@ -42,7 +40,7 @@
    ========================================================= */
 
 .productdata-service-tekst {
-    max-width: 680px;
+    max-width: none;
 }
 
 .productdata-service-bovenkop {
@@ -629,17 +627,165 @@
 
 
 /* =========================================================
+   ABONNEMENTEN
+   ========================================================= */
+
+.productdata-service-abonnementen {
+    grid-column: 2;
+    grid-row: 1;
+
+    width: 100%;
+    max-width: 1120px;
+
+    margin: 0 auto;
+}
+
+.productdata-service-abonnementen-kop {
+    max-width: 680px;
+
+    margin: 0 auto 28px;
+
+    text-align: center;
+}
+
+.productdata-service-abonnementen-kop > span {
+    color: var(--wespi-goud);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.productdata-service-abonnementen-kop h3,
+.productdata-service-inbegrepen-blok h3 {
+    margin: 8px 0 10px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 25px;
+
+    line-height: 1.2;
+}
+
+.productdata-service-abonnementen-kop p {
+    margin: 0;
+
+    color: #626262;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.productdata-service-abonnementen-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.productdata-service-abonnement {
+    align-self: stretch;
+
+    min-height: 0;
+
+    padding: 25px 22px;
+}
+
+.productdata-service-abonnement-meta {
+    min-width: 0;
+}
+
+.productdata-service-abonnement h3 {
+    min-height: 0;
+}
+
+.productdata-service-abonnement .productdata-prijs {
+    margin-top: 12px;
+}
+
+.productdata-service-abonnement .productdata-prijs strong {
+    font-size: 32px;
+}
+
+.productdata-service-abonnement-limiet {
+    margin: 17px 0 8px;
+
+    color: var(--wespi-zwart);
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+.productdata-service-abonnement > p:last-child {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.productdata-service-inbegrepen-blok {
+    margin-top: 30px;
+
+    padding: 18px 22px;
+
+    background: rgba(255, 255, 255, 0.76);
+}
+
+.productdata-service-inbegrepen {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px 24px;
+
+    margin: 0;
+
+    padding-left: 18px;
+
+    color: #555555;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.productdata-service-voorwaarden {
+    display: grid;
+
+    gap: 7px;
+
+    margin: 18px 0 0;
+
+    padding: 16px 0 0 18px;
+
+    border-top: 1px solid #e5e3dd;
+
+    color: #626262;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 
 @media (max-width: 1000px) {
 
     .productdata-service-container {
-        grid-template-columns:
-            minmax(0, 1fr)
-            minmax(350px, 0.8fr);
+        grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
 
-        gap: 45px;
+        gap: 36px;
     }
 
 }
@@ -654,19 +800,24 @@
     .productdata-service-container {
         grid-template-columns: 1fr;
 
-        gap: 55px;
+        gap: 36px;
 
         padding-bottom: 60px;
     }
 
     .productdata-service-tekst {
-        order: 2;
-
         max-width: none;
     }
 
     .productdata-service-visual {
         order: 1;
+    }
+
+    .productdata-service-abonnementen {
+        grid-column: 1;
+        grid-row: auto;
+
+        order: 3;
     }
 
     .productdata-service-kaart {
@@ -682,6 +833,10 @@
         flex-direction: column;
 
         gap: 20px;
+    }
+
+    .productdata-service-abonnementen-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
 }
@@ -719,6 +874,69 @@
     }
 
     .productdata-service-beeldtekst {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .productdata-service-abonnementen-grid,
+    .productdata-service-inbegrepen {
+        grid-template-columns: 1fr;
+    }
+
+    .productdata-service-abonnement {
+        padding: 18px 17px;
+    }
+
+    .productdata-service-abonnement-meta {
+        display: grid;
+
+        grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1fr);
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .productdata-service-abonnement-meta .productdata-prijs {
+        margin: 0;
+
+        padding: 0;
+
+        border: 0;
+    }
+
+    .productdata-service-abonnement-meta .productdata-prijs strong {
+        font-size: 29px;
+    }
+
+    .productdata-service-abonnement-meta .productdata-prijs span {
+        margin-top: 4px;
+    }
+
+    .productdata-service-abonnement-limiet {
+        margin: 0;
+    }
+
+    .productdata-service-abonnement > p:last-child {
+        margin-top: 9px;
+    }
+
+    .productdata-service-abonnementen-kop h3,
+    .productdata-service-inbegrepen-blok h3 {
+        font-size: 21px;
+    }
+
+    .productdata-service-inbegrepen-blok {
+        padding: 16px 18px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .productdata-service-abonnement-meta {
         grid-template-columns: 1fr;
 
         gap: 8px;

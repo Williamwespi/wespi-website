@@ -10,7 +10,7 @@
 .contact-section {
     position: relative;
     padding: 36px 0 108px;
-    background: #f6f6f5;
+    background: var(--lichtgrijs);
 }
 
 .contact-layout {
@@ -21,7 +21,13 @@
 }
 
 .contact-details {
-    padding-top: 14px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: var(--wit);
+}
+
+.contact-details .contact-eyebrow {
+    margin: 0 0 8px;
 }
 
 .contact-details h2,
@@ -36,15 +42,15 @@
 
 .contact-details__intro {
     max-width: 440px;
-    margin: 18px 0 30px;
+    margin: 8px 0 10px;
     color: #625e57;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .contact-details__list {
     display: grid;
-    gap: 21px;
+    gap: 8px;
     margin: 0;
 }
 
@@ -52,14 +58,29 @@
     display: grid;
     grid-template-columns: minmax(118px, 0.7fr) 1.3fr;
     gap: 12px;
-    padding-bottom: 17px;
+    padding-bottom: 7px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .contact-details__list dt {
+    position: relative;
+    padding-left: 22px;
     color: #746d62;
     font-size: 12px;
     font-weight: 750;
+}
+
+.contact-details__icon {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: var(--wespi-goud-donker);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .contact-details__list dd {
@@ -80,7 +101,8 @@
     padding: clamp(26px, 4vw, 44px);
     border: 1px solid rgba(0, 0, 0, 0.04);
     border-radius: 14px;
-    background: #eeefed;
+    background: var(--wit);
+    box-shadow: inset 0 3px 0 var(--wespi-goud);
 }
 
 .contact-form-panel .contact-eyebrow {
@@ -225,9 +247,9 @@
 }
 
 .contact-form__submit:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     background: var(--wespi-goud-licht);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form__submit:hover span {
@@ -264,12 +286,8 @@
         gap: 38px;
     }
 
-    .contact-details {
-        padding-top: 0;
-    }
-
     .contact-details__list > div {
-        grid-template-columns: minmax(110px, 0.65fr) 1.35fr;
+        grid-template-columns: minmax(128px, 0.65fr) 1.35fr;
     }
 }
 

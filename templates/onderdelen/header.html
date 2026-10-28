@@ -50,7 +50,6 @@
             id="hoofdnavigatie"
         >
 
-
             <!-- =================================================
                  DIENSTEN
             ================================================== -->
@@ -62,7 +61,7 @@
                     type="button"
                     aria-expanded="false"
                 >
-                    Diensten
+                    Beeld
 
                     <span
                         class="navigatie-dropdown-pijl"
@@ -91,7 +90,8 @@
                         </span>
 
                         <strong>
-                            Productfotografie &amp; beeldbewerking
+                            <span class="navigatie-desktop">Productfotografie</span>
+                            <span class="navigatie-mobiel">Productfotografie &amp; beeldbewerking</span>
                         </strong>
 
                         <span>
@@ -153,7 +153,7 @@
 
                     <a
                         href="/data/productdata"
-                        class="navigatie-dropdown-hoofdlink"
+                        class="navigatie-dropdown-hoofdlink navigatie-mobiel"
                     >
 
                         <span class="navigatie-dropdown-label">
@@ -178,7 +178,7 @@
 
                     <a
                         href="/slimmer-werken"
-                        class="navigatie-dropdown-hoofdlink"
+                        class="navigatie-dropdown-hoofdlink navigatie-mobiel"
                     >
 
                         <span class="navigatie-dropdown-label">
@@ -200,13 +200,15 @@
 
             </div>
 
+            <a href="/data/productdata" class="navigatie-desktop">Data</a>
+            <a href="/slimmer-werken" class="navigatie-desktop">Slimmer werken</a>
 
 
             <!-- =================================================
                  OVERIGE NAVIGATIE
             ================================================== -->
 
-            <a href="/#praktijk">
+            <a href="/#praktijk" class="navigatie-mobiel">
                 In de praktijk
             </a>
 

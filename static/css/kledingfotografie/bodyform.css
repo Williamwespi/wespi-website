@@ -97,9 +97,9 @@
 .kleding-bodyform-prijs {
     max-width: 565px;
 
-    margin-top: 28px;
+    margin-top: 16px;
 
-    padding: 24px 0 19px;
+    padding: 16px 0;
 
     border-top: 1px solid #d3d2ce;
     border-bottom: 1px solid #d3d2ce;
@@ -112,7 +112,7 @@
     align-items: center;
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 16px;
 }
 
 
@@ -170,7 +170,7 @@
         1fr
         1fr;
 
-    margin-top: 18px;
+    margin-top: 12px;
 }
 
 
@@ -179,13 +179,11 @@
     flex-direction: column;
 
     gap: 4px;
-
-    min-height: 48px;
 }
 
 
 .kleding-bodyform-prijs-optie + .kleding-bodyform-prijs-optie {
-    padding-left: 24px;
+    padding-left: 16px;
 
     border-left:
         1px solid
@@ -217,9 +215,9 @@
     display: flex;
     flex-wrap: wrap;
 
-    gap: 12px 19px;
+    gap: 8px 16px;
 
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 
@@ -687,24 +685,27 @@
 
 
     .kleding-bodyform-inhoud {
-        display: flex;
-        flex-direction: column;
-
-        gap: 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
     }
 
 
     .kleding-bodyform-tekst {
-        order: 2;
-
-        width: 100%;
+        display: contents;
     }
 
     .kleding-bodyform-showcase {
-        order: 1;
+        grid-row: 3;
+    }
+
+    .kleding-bodyform-bovenkop {
+        grid-row: 1;
+        margin-bottom: 0;
     }
 
     .kleding-bodyform h2 {
+        grid-row: 2;
         font-size: clamp(39px, 10.5vw, 51px);
     }
 
@@ -712,12 +713,12 @@
     .kleding-bodyform-prijs-opties {
         grid-template-columns: 1fr;
 
-        gap: 14px;
+        gap: 10px;
     }
 
 
     .kleding-bodyform-prijs-optie + .kleding-bodyform-prijs-optie {
-        padding-top: 14px;
+        padding-top: 10px;
         padding-left: 0;
 
         border-top:

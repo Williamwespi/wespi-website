@@ -440,27 +440,11 @@
 
         width: 100%;
         height: 440px;
+        -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
     }
 
-    .werkwijze-visual::before {
-        top: 0;
-        right: 0;
-        bottom: auto;
-        left: 0;
-
-        width: 100%;
-        height: 34%;
-
-        background:
-            linear-gradient(
-                180deg,
-                #eee7da 0%,
-                rgba(238, 231, 218, 0.92) 20%,
-                rgba(238, 231, 218, 0.58) 54%,
-                rgba(238, 231, 218, 0) 100%
-            );
-    }
-
+    .werkwijze-visual::before,
     .werkwijze-visual::after {
         display: none;
     }

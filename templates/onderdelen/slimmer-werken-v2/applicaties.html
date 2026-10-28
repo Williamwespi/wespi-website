@@ -1,0 +1,34 @@
+<section
+    class="slimmer-v2-products"
+    {% if not applicaties %}hidden aria-hidden="true"{% endif %}
+>
+    <div class="slimmer-v2-container">
+        <span class="slimmer-v2-eyebrow">WESPI-APPLICATIES</span>
+        <h2>Digitale toepassingen voor terugkerend werk.</h2>
+        <p>
+            Bekijk eigen digitale toepassingen die beschikbaar zijn.
+        </p>
+
+        <div class="slimmer-v2-products__grid">
+            {% for applicatie in applicaties %}
+            <article class="slimmer-v2-product-card">
+                <img
+                    src="{{ url_for('static', path=applicatie.afbeelding) }}"
+                    alt="{{ applicatie.afbeelding_alt }}"
+                    loading="lazy"
+                >
+                <div class="slimmer-v2-product-card__content">
+                    <h3>{{ applicatie.naam }}</h3>
+                    <p>{{ applicatie.omschrijving }}</p>
+                    {% if applicatie.abonnementsprijs %}
+                    <p class="slimmer-v2-product-card__price">
+                        {{ applicatie.abonnementsprijs }}
+                    </p>
+                    {% endif %}
+                    <a href="{{ applicatie.url }}">Meer over {{ applicatie.naam }}</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

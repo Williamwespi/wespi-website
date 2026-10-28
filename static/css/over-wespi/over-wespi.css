@@ -1025,6 +1025,10 @@
 
 @media (max-width: 700px) {
 
+    .over-hero__container {
+        width: calc(100% - 48px);
+    }
+
     .over-hero {
         display: block;
 
@@ -1175,4 +1179,10 @@
         padding: 24px;
     }
 
+}
+
+@media (max-width: 600px) {
+    .over-hero__container {
+        width: calc(100% - 32px);
+    }
 }

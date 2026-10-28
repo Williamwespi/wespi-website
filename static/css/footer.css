@@ -70,11 +70,11 @@
         linear-gradient(
             90deg,
             rgba(255, 255, 255, 0.98) 0%,
-            rgba(255, 255, 255, 0.92) 20%,
-            rgba(255, 255, 255, 0.70) 38%,
-            rgba(255, 255, 255, 0.28) 55%,
-            rgba(255, 255, 255, 0.05) 70%,
-            rgba(255, 255, 255, 0) 82%
+            rgba(255, 255, 255, 0.96) 25%,
+            rgba(255, 255, 255, 0.90) 55%,
+            rgba(255, 255, 255, 0.62) 72%,
+            rgba(255, 255, 255, 0.20) 86%,
+            rgba(255, 255, 255, 0) 100%
         );
 
     pointer-events: none;
@@ -112,6 +112,15 @@
 
 .cta-tekst {
     max-width: 620px;
+
+    padding: 22px 26px;
+
+    border-left: 3px solid var(--wespi-goud);
+
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
 }
 
 .cta .sectie-bovenkop {
@@ -376,9 +385,9 @@
     display: grid;
 
     grid-template-columns:
-        1.5fr repeat(3, 1fr);
+        minmax(0, 1.3fr) repeat(4, minmax(0, 1fr));
 
-    gap: 55px;
+    gap: clamp(20px, 3vw, 40px);
 }
 
 
@@ -421,6 +430,9 @@
     align-items: flex-start;
 
     gap: 10px;
+
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .footer-kolom strong {
@@ -484,6 +496,7 @@
 
 .footer-onderkant > div {
     display: flex;
+    flex-wrap: wrap;
 
     gap: 22px;
 }
@@ -529,9 +542,14 @@
 
     .footer-grid {
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(2, minmax(0, 1fr));
 
-        gap: 42px;
+        gap: 32px;
+    }
+
+    .footer-merk {
+        grid-column: 1 / -1;
+        max-width: none;
     }
 
     .footer-golf {
@@ -568,11 +586,9 @@
             linear-gradient(
                 180deg,
                 rgba(255, 255, 255, 0.99) 0%,
-                rgba(255, 255, 255, 0.98) 38%,
-                rgba(255, 255, 255, 0.94) 58%,
-                rgba(255, 255, 255, 0.72) 72%,
-                rgba(255, 255, 255, 0.24) 88%,
-                rgba(255, 255, 255, 0.05) 100%
+                rgba(255, 255, 255, 0.99) 50%,
+                rgba(255, 255, 255, 0.96) 75%,
+                rgba(255, 255, 255, 0.88) 100%
             );
     }
 
@@ -638,9 +654,32 @@
 
 
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        gap: 32px;
+        gap: 24px 20px;
+    }
+
+    .footer-merk {
+        grid-column: 1;
+        min-width: 0;
+    }
+
+    .footer-logo img {
+        width: 110px;
+    }
+
+    .footer-merk p {
+        margin-top: 8px;
+        font-size: 13px;
+    }
+
+    .footer-contact {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .footer-kolom {
+        gap: 8px;
     }
 
 
@@ -650,7 +689,7 @@
 
         gap: 12px;
 
-        margin-top: 38px;
+        margin-top: 28px;
     }
 
 }

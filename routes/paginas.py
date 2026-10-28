@@ -404,6 +404,24 @@ async def contact_versturen(
     )
 
 
+@router.get("/privacyverklaring", response_class=HTMLResponse)
+def privacyverklaring(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="privacyverklaring.html",
+        context={"actieve_pagina": "privacyverklaring"},
+    )
+
+
+@router.get("/algemene-voorwaarden", response_class=HTMLResponse)
+def algemene_voorwaarden(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="algemene-voorwaarden.html",
+        context={"actieve_pagina": "algemene-voorwaarden"},
+    )
+
+
 @router.get(
     "/over-wespi",
     response_class=HTMLResponse,

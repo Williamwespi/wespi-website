@@ -237,6 +237,10 @@
 
 @media (max-width: 600px) {
 
+    .productdata-usp-balk {
+        display: none;
+    }
+
     .productdata-usp-container {
         grid-template-columns: 1fr;
     }

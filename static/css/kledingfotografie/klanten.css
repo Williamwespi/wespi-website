@@ -209,7 +209,8 @@
    HOVER
 ======================================== */
 
-.klant-logo:hover img {
+.klant-logo:hover img,
+.klant-logo:focus-visible img {
     filter: grayscale(0);
 
     opacity: 1;
@@ -263,7 +264,8 @@
     opacity: 0.68;
 }
 
-.klant-logo:hover img[src*="jubel-logo"] {
+.klant-logo:hover img[src*="jubel-logo"],
+.klant-logo:focus-visible img[src*="jubel-logo"] {
     filter: brightness(0);
 
     opacity: 1;
@@ -294,7 +296,8 @@
     opacity: 0.68;
 }
 
-.klant-logo:hover img[src*="levv-logo"] {
+.klant-logo:hover img[src*="levv-logo"],
+.klant-logo:focus-visible img[src*="levv-logo"] {
     filter: brightness(0);
 
     opacity: 1;
@@ -352,7 +355,13 @@
    PAUZE BIJ HOVER
 ======================================== */
 
-.klanten-slider:hover .klanten-track {
+.klant-logo:focus-visible {
+    outline: 2px solid var(--wespi-goud);
+    outline-offset: -4px;
+}
+
+.klanten-slider:hover .klanten-track,
+.klanten-slider:focus-within .klanten-track {
     animation-play-state: paused;
 }
 

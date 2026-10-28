@@ -678,18 +678,12 @@
 
 
     .productdata-intro-tekst {
-        order: 2;
-
         max-width: 650px;
     }
 
 
     .productdata-intro-visual {
-        order: 1;
-
-        max-width: 520px;
-
-        margin: 0 auto 55px;
+        display: none;
     }
 
 }
@@ -720,11 +714,6 @@
 
     .productdata-intro-belofte {
         padding: 18px;
-    }
-
-
-    .productdata-intro-visual {
-        margin-bottom: 45px;
     }
 
 

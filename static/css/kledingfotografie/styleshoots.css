@@ -417,25 +417,34 @@
 @media (max-width: 760px) {
 
     .kledingfotografie-styleshoots {
+        --styleshoots-inset: 24px;
         min-height: auto;
-
+        display: grid;
+        grid-template-columns: var(--styleshoots-inset) minmax(0, 1fr) var(--styleshoots-inset);
+        padding: 58px 0 35px;
         background: #ffffff;
     }
 
     .kledingfotografie-styleshoots-inhoud {
-        min-height: auto;
-
-        display: block;
+        display: contents;
     }
 
     .kledingfotografie-styleshoots-tekst {
-        width: 100%;
-        max-width: none;
+        display: contents;
+    }
 
-        padding: 58px 0 35px;
+    .kledingfotografie-styleshoots-tekst > * {
+        grid-column: 2;
+        min-width: 0;
+    }
+
+    .styleshoots-bovenkop {
+        grid-row: 1;
     }
 
     .kledingfotografie-styleshoots h2 {
+        grid-row: 2;
+        margin-bottom: 24px;
         font-size: 42px;
 
         letter-spacing: -1.8px;
@@ -443,34 +452,20 @@
 
     .styleshoots-achtergrond {
         position: relative;
-
+        grid-column: 1 / -1;
+        grid-row: 3;
         width: 100%;
-        height: 440px;
+        -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
     }
 
     .styleshoots-achtergrond img {
+        height: auto;
+        object-fit: contain;
         object-position: center center;
     }
 
-    .styleshoots-achtergrond::before {
-        top: 0;
-        right: 0;
-        bottom: auto;
-        left: 0;
-
-        width: 100%;
-        height: 32%;
-
-        background:
-            linear-gradient(
-                180deg,
-                #ffffff 0%,
-                rgba(255, 255, 255, 0.92) 22%,
-                rgba(255, 255, 255, 0.58) 52%,
-                rgba(255, 255, 255, 0) 100%
-            );
-    }
-
+    .styleshoots-achtergrond::before,
     .styleshoots-achtergrond::after {
         display: none;
     }
@@ -484,9 +479,11 @@
     }
 
     .styleshoots-studiolabel {
-        left: 20px;
-        right: auto;
-        bottom: 18px;
+        position: static;
+        grid-column: 2;
+        grid-row: 4;
+        margin: 0;
+        color: #666666;
     }
 
 }
@@ -528,8 +525,10 @@
         gap: 10px;
     }
 
-    .styleshoots-achtergrond {
-        height: 370px;
-    }
+}
 
+@media (max-width: 600px) {
+    .kledingfotografie-styleshoots {
+        --styleshoots-inset: 16px;
+    }
 }

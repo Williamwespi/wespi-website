@@ -3,7 +3,7 @@
 ======================================== */
 
 .diensten {
-    padding: 88px 0 98px;
+    padding: 76px 0 98px;
 
     background: #f3f4f5;
 }
@@ -295,6 +295,18 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .diensten .sectie-kop {
+        margin-left: 0;
+        margin-right: 0;
+
+        text-align: left;
+    }
+
+    .diensten .sectie-kop p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
 }
 
 
@@ -305,15 +317,7 @@
 @media (max-width: 620px) {
 
     .diensten {
-        padding: 68px 0 76px;
-    }
-
-    .sectie-kop {
-        text-align: left;
-    }
-
-    .sectie-kop p {
-        margin-left: 0;
+        padding: 48px 0 76px;
     }
 
     .diensten-grid {

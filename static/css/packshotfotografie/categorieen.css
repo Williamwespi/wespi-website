@@ -320,7 +320,12 @@
 @media (max-width: 620px) {
 
     .packshot-categorieen {
-        padding: 68px 0 76px;
+        padding: 0;
+        scroll-margin-top: 100px;
+    }
+
+    .packshot-categorieen > .container {
+        display: none;
     }
 
     .packshot-categorieen__kop {

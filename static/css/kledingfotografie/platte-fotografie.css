@@ -114,8 +114,8 @@
 
     max-width: 580px;
 
-    margin-top: 28px;
-    padding: 22px 0 18px;
+    margin-top: 16px;
+    padding: 16px 0;
 
     border-top:
         1px solid rgba(0, 0, 0, 0.13);
@@ -134,7 +134,7 @@
     align-items: flex-end;
     justify-content: space-between;
 
-    gap: 25px;
+    gap: 16px;
 }
 
 .platte-prijs-kop > span {
@@ -187,9 +187,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    gap: 24px;
+    gap: 16px;
 
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .platte-prijs-uitleg > div {
@@ -197,7 +197,7 @@
 }
 
 .platte-prijs-uitleg > div + div {
-    padding-left: 24px;
+    padding-left: 16px;
 
     border-left:
         1px solid rgba(0, 0, 0, 0.10);
@@ -236,7 +236,7 @@
 
     gap: 7px 13px;
 
-    margin-top: 20px;
+    margin-top: 12px;
 
     color: #5e6062;
 
@@ -471,14 +471,24 @@
     }
 
     .kledingfotografie-plat-tekst {
-        order: 2;
+        display: contents;
+    }
+
+    .kledingfotografie-plat-inhoud {
+        gap: 24px;
+    }
+
+    .platte-bovenkop {
+        grid-row: 1;
+        margin-bottom: 0;
     }
 
     .kledingfotografie-plat-beelden {
-        order: 1;
+        grid-row: 3;
     }
 
     .kledingfotografie-plat h2 {
+        grid-row: 2;
         font-size: 42px;
 
         letter-spacing: -1.8px;
@@ -488,7 +498,7 @@
         align-items: flex-start;
         flex-direction: column;
 
-        gap: 10px;
+        gap: 8px;
     }
 
     .platte-prijs-kop > strong {
@@ -498,11 +508,11 @@
     .platte-prijs-uitleg {
         grid-template-columns: 1fr;
 
-        gap: 14px;
+        gap: 10px;
     }
 
     .platte-prijs-uitleg > div + div {
-        padding-top: 14px;
+        padding-top: 10px;
         padding-left: 0;
 
         border-top:
