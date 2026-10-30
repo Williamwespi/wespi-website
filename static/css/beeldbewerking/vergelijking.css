@@ -1,0 +1,124 @@
+.beeldbewerking-vergelijking {
+    padding: 84px 0;
+    background: #ffffff;
+}
+
+.beeldbewerking-vergelijking__kop {
+    max-width: 720px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.beeldbewerking-vergelijking__kop h2 {
+    margin: 0;
+    color: var(--wespi-zwart);
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -1.6px;
+}
+
+.beeldbewerking-vergelijking__kop p {
+    margin: 16px 0 0;
+    color: #65686c;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.beeldvergelijker {
+    position: relative;
+    max-width: 1024px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    background: #f3f4f5;
+}
+
+.beeldvergelijker__beelden {
+    position: relative;
+    aspect-ratio: var(--vergelijking-verhouding, 4 / 3);
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.beeldvergelijker__afbeelding {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.beeldvergelijker__afbeelding--origineel {
+    clip-path: inset(0 calc(100% - var(--vergelijking-positie)) 0 0);
+}
+
+.beeldvergelijker__label {
+    position: absolute;
+    top: 18px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--wespi-zwart);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.beeldvergelijker__label--origineel { left: 18px; }
+.beeldvergelijker__label--bewerkt { right: 18px; }
+
+.beeldvergelijker__scheiding {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--vergelijking-positie);
+    width: 2px;
+    transform: translateX(-50%);
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+.beeldvergelijker__knop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: var(--wespi-goud);
+    color: var(--wespi-zwart);
+    font-size: 26px;
+    font-weight: 700;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.beeldvergelijker__slider {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    touch-action: pan-y;
+}
+
+.beeldvergelijker:focus-within {
+    outline: 3px solid var(--wespi-goud-donker);
+    outline-offset: 5px;
+}
+
+@media (max-width: 700px) {
+    .beeldbewerking-vergelijking { padding: 58px 0; }
+    .beeldbewerking-vergelijking__kop { text-align: left; }
+    .beeldvergelijker__label { top: 12px; padding: 7px 9px; font-size: 11px; }
+    .beeldvergelijker__label--origineel { left: 12px; }
+    .beeldvergelijker__label--bewerkt { right: 12px; }
+}

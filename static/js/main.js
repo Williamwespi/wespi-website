@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     menuIsOpen ? "true" : "false"
                 );
 
+                menuButton.setAttribute("aria-label", menuIsOpen ? "Menu sluiten" : "Menu openen");
+                if (window.innerWidth <= 950) {
+                    resetBeeldsubmenu();
+                    navigation.scrollTop = 0;
+                }
+
             }
         );
 
@@ -93,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             "aria-expanded",
                             "false"
                         );
+                        menuButton.setAttribute("aria-label", "Menu openen");
+                        resetBeeldsubmenu();
 
                     }
 
@@ -105,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ========================================
-       HEADER - DIENSTEN DROPDOWN DESKTOP
+       HEADER - BEELD DROPDOWN
     ======================================== */
 
     const dropdown =
@@ -116,6 +124,13 @@ document.addEventListener("DOMContentLoaded", function () {
             ".navigatie-dropdown-knop"
         );
 
+    function resetBeeldsubmenu() {
+        if (dropdown && dropdownButton) {
+            dropdown.classList.remove("is-open");
+            dropdownButton.setAttribute("aria-expanded", "false");
+        }
+    }
+
 
     if (
         dropdown &&
@@ -125,8 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdownButton.addEventListener(
             "click",
             function (event) {
-
-                if (window.innerWidth > 950) {
 
                     event.preventDefault();
 
@@ -141,8 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             ? "true"
                             : "false"
                     );
-
-                }
 
             }
         );
@@ -198,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "aria-expanded",
                     "false"
                 );
+                menuButton.setAttribute("aria-label", "Menu openen");
 
             }
 
@@ -234,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "aria-expanded",
                     "false"
                 );
+                menuButton.setAttribute("aria-label", "Menu openen");
 
             }
 

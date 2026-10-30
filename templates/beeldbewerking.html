@@ -21,6 +21,8 @@ Professionele beeldbewerking en fotobewerking voor kleding, producten en automot
 
 {% include "onderdelen/beeldbewerking/diensten.html" %}
 
+{% include "onderdelen/beeldbewerking/vergelijking.html" %}
+
 {% include "onderdelen/beeldbewerking/mogelijkheden.html" %}
 
 {% include "onderdelen/beeldbewerking/volume.html" %}
@@ -28,5 +30,7 @@ Professionele beeldbewerking en fotobewerking voor kleding, producten en automot
 {% include "onderdelen/beeldbewerking/werkwijze.html" %}
 
 {% include "onderdelen/beeldbewerking/cta.html" %}
+
+<script src="{{ url_for('static', path='js/beeldvergelijker.js') }}" defer></script>
 
 {% endblock %}

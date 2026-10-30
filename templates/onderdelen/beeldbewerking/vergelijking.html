@@ -1,0 +1,44 @@
+{% macro beeldvergelijker(origineel, bewerkt, alt_origineel, alt_bewerkt, breedte=1024, hoogte=768) %}
+<div class="beeldvergelijker" data-beeldvergelijker style="--vergelijking-positie: 50%; --vergelijking-verhouding: {{ breedte }} / {{ hoogte }};">
+    <div class="beeldvergelijker__beelden">
+        <img
+            class="beeldvergelijker__afbeelding"
+            src="{{ url_for('static', path=bewerkt) }}"
+            alt="{{ alt_bewerkt }}"
+            width="{{ breedte }}" height="{{ hoogte }}" loading="lazy"
+        >
+        <img
+            class="beeldvergelijker__afbeelding beeldvergelijker__afbeelding--origineel"
+            src="{{ url_for('static', path=origineel) }}"
+            alt="{{ alt_origineel }}"
+            width="{{ breedte }}" height="{{ hoogte }}" loading="lazy"
+        >
+        <span class="beeldvergelijker__label beeldvergelijker__label--origineel">Origineel</span>
+        <span class="beeldvergelijker__label beeldvergelijker__label--bewerkt">Bewerkt</span>
+        <span class="beeldvergelijker__scheiding" aria-hidden="true">
+            <span class="beeldvergelijker__knop">‹ ›</span>
+        </span>
+    </div>
+    <input
+        class="beeldvergelijker__slider"
+        type="range" min="0" max="100" step="1" value="50"
+        aria-label="Vergelijk origineel en bewerkt beeld"
+        aria-valuetext="50% origineel, 50% bewerkt"
+    >
+</div>
+{% endmacro %}
+
+<section class="beeldbewerking-vergelijking">
+    <div class="container">
+        <div class="beeldbewerking-vergelijking__kop">
+            <h2>Bekijk het verschil</h2>
+            <p>Van origineel beeld naar een professioneel eindresultaat. Verschuif de slider en ontdek wat goede beeldbewerking doet.</p>
+        </div>
+        {{ beeldvergelijker(
+            'images/beeldbewerking/beeldbewerking/automotive/bronbeelden/auto-wit-origineel.jpg',
+            'images/beeldbewerking/beeldbewerking/automotive/bronbeelden/auto-wit-bewerkt.jpg',
+            'Originele foto van een witte auto voor een garage',
+            'Bewerkte foto van dezelfde witte auto met een rustige showroomachtergrond'
+        ) }}
+    </div>
+</section>

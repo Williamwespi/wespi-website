@@ -111,7 +111,7 @@
 }
 
 .beeldbewerking-dienstkaart__visual--kleding {
-    background: #f4f1ec;
+    background: #FFFFFF;
 }
 
 .beeldbewerking-dienstkaart__visual--producten {
@@ -122,8 +122,17 @@
     background: #edf0f2;
 }
 
+.beeldbewerking-dienstkaart__afbeelding {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
 .beeldbewerking-dienstkaart__label {
     position: absolute;
+    z-index: 1;
 
     top: 18px;
     left: 18px;

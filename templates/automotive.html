@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Automotive beeldbewerking voor autobedrijven | Wespi{% endblock %}
+{% block meta_description %}Professionele automotive beeldbewerking voor autobedrijven. Achtergronden aanpassen, voertuigfoto's retoucheren en grotere beeldseries consistent opleveren.{% endblock %}
+{% block canonical %}
+<link rel="canonical" href="https://www.wespi.nl/beeldbewerking/automotive">
+{% endblock %}
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/beeldbewerking/automotive.css') }}?v=1.0">
+{% endblock %}
+
+{% block content %}
+<div class="automotive-pagina">
+    {% include "onderdelen/automotive/hero.html" %}
+    {% include "onderdelen/automotive/mogelijkheden.html" %}
+    {% include "onderdelen/automotive/achtergronden.html" %}
+    {% include "onderdelen/automotive/volume.html" %}
+    {% include "onderdelen/automotive/werkwijze.html" %}
+    {% include "onderdelen/automotive/contact.html" %}
+</div>
+{% endblock %}

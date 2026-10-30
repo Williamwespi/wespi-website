@@ -168,6 +168,30 @@ def beeldbewerking(request: Request):
 
 
 @router.get(
+    "/beeldbewerking/kleding",
+    response_class=HTMLResponse,
+)
+def kledingbeeldbewerking(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="kledingbeeldbewerking.html",
+        context={"actieve_pagina": "beeldbewerking"},
+    )
+
+
+@router.get(
+    "/beeldbewerking/automotive",
+    response_class=HTMLResponse,
+)
+def automotive(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="automotive.html",
+        context={"actieve_pagina": "beeldbewerking"},
+    )
+
+
+@router.get(
     "/data/productdata",
     response_class=HTMLResponse,
 )

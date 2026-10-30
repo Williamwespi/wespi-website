@@ -319,6 +319,63 @@ body {
    HEADER ACTIES
 ======================================== */
 
+/* Groepen binnen de diensten-dropdown, op desktop en mobiel. */
+.navigatie-dienstgroep + .navigatie-dienstgroep {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.navigatie-dienstgroep__kop {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: #66645e;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.navigatie-dienstgroep__items {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 14px;
+}
+
+.navigatie-dienstgroep__items a,
+.navigatie-dienstgroep__inactief {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.navigatie-dienstgroep__items a {
+    color: var(--wespi-zwart);
+}
+
+.navigatie-dienstgroep__inactief {
+    color: #777a7d;
+}
+
+.navigatie-dienstgroep__kop:hover,
+.navigatie-dienstgroep__items a:hover {
+    background: #f5f6f6;
+}
+
+.navigatie-dienstgroep a:focus-visible {
+    outline: 2px solid var(--wespi-goud-donker);
+    outline-offset: -2px;
+}
+
+@media (min-width: 951px) {
+    .navigatie-dropdown-menu {
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
+    }
+}
+
 .header-acties {
     display: flex;
     align-items: center;
@@ -517,20 +574,47 @@ body {
     }
 
 
-    /* Diensten staat mobiel altijd volledig open */
+    /* Beeld is mobiel een compacte hoofdregel met een ingeklapt submenu. */
 
     .navigatie-dropdown {
         display: block;
     }
 
-    .navigatie-dropdown-knop {
+    .navigatie-dropdown-knop,
+    .site-header.is-scrolled .navigatie-dropdown-knop {
+        display: flex;
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        color: var(--wespi-zwart);
+        font-size: 13px;
+        font-weight: 650;
+        line-height: 1.4;
+    }
+
+    .navigatie-dropdown-knop::after {
         display: none;
+    }
+
+    .navigatie-dropdown-pijl {
+        margin-left: auto;
+        transform: none;
+    }
+
+    .navigatie-dropdown:hover .navigatie-dropdown-pijl {
+        transform: none;
+    }
+
+    .navigatie-dropdown.is-open .navigatie-dropdown-pijl {
+        transform: rotate(180deg);
     }
 
     .navigatie-dropdown-menu,
     .navigatie-dropdown:hover .navigatie-dropdown-menu,
     .navigatie-dropdown.is-open .navigatie-dropdown-menu {
         position: static;
+        display: none;
 
         width: 100%;
         padding: 0 0 10px;
@@ -547,38 +631,42 @@ body {
         box-shadow: none;
     }
 
-    .navigatie-dropdown-hoofdlink {
-        padding: 15px 16px;
+    .navigatie-dropdown.is-open .navigatie-dropdown-menu {
+        display: block;
     }
 
-    .navigatie-dropdown-links {
-        margin-top: 5px;
+    .navigatie-dienstgroep {
+        padding-left: 12px;
     }
 
-    .navigatie-dropdown-links a {
-        padding: 13px 12px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 0;
+    .navigatie-dienstgroep__kop {
+        min-height: 44px;
+        padding: 12px 4px;
+        font-size: 12px;
     }
 
-    .navigatie-dropdown-links a:hover {
-        transform: none;
+    .navigatie-dienstgroep__items a,
+    .navigatie-dienstgroep__inactief {
+        min-height: 44px;
+        padding: 12px 8px;
     }
 
 
     /* Overige navigatie */
 
-    .hoofdnavigatie > a {
+    .hoofdnavigatie > a,
+    .site-header.is-scrolled .hoofdnavigatie > a {
         display: flex;
         align-items: center;
 
-        min-height: auto;
-        padding: 14px 4px;
+        min-height: 48px;
+        padding: 12px 4px;
 
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
         color: var(--wespi-zwart);
         font-size: 13px;
+        line-height: 1.4;
     }
 
     .hoofdnavigatie > a::after {
@@ -586,12 +674,16 @@ body {
     }
 
 
-    /* Scrollheader mag mobiel menu niet beïnvloeden */
-
-    .site-header.is-scrolled .hoofdnavigatie > a {
-        min-height: auto;
-        padding: 14px 4px;
-        font-size: 13px;
+    /* Hoofdregels en submenu zijn meteen zichtbaar, zonder inloopanimaties. */
+    .hoofdnavigatie,
+    .hoofdnavigatie *,
+    .hoofdnavigatie > a,
+    .hoofdnavigatie .navigatie-dropdown-knop,
+    .hoofdnavigatie .navigatie-dropdown-menu,
+    .hoofdnavigatie .navigatie-dropdown-pijl,
+    .hoofdnavigatie .navigatie-dienstgroep a {
+        animation: none;
+        transition: none;
     }
 }
 
@@ -639,6 +731,7 @@ body {
 
     .logo-blok {
         min-width: 0;
+        flex-shrink: 1;
         gap: 9px;
         margin-right: auto;
     }
@@ -650,6 +743,7 @@ body {
 
     .logo-payoff {
         display: block;
+        min-width: 0;
         max-width: 92px;
         padding-left: 10px;
         font-size: 9px;

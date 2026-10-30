@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block title %}Kledingbeeldbewerking voor webshops en merken | Wespi{% endblock %}
+{% block meta_description %}Laat bestaande kledingfoto's professioneel bewerken door Wespi. Vrijstaand maken, kleurcorrectie en retouche voor webshops, kledingmerken en retailers.{% endblock %}
+{% block canonical %}
+<link rel="canonical" href="https://www.wespi.nl/beeldbewerking/kleding">
+{% endblock %}
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/beeldbewerking/kleding.css') }}?v=2.1">
+{% endblock %}
+
+{% block content %}
+<div class="kledingbewerking">
+    <section class="hero kledingbewerking-hero" aria-labelledby="kleding-titel">
+        <div class="hero-foto">
+            <img src="{{ url_for('static', path='images/beeldbewerking/kleding/productfoto-kleding-1.jpg') }}"
+                 alt="Volledig blauwgeruit overhemd, vrijstaand op een witte achtergrond"
+                 width="2400" height="2400" fetchpriority="high">
+        </div>
+        <div class="container hero-inhoud">
+            <div class="hero-tekst">
+                <span class="hero-bovenkop">Kledingbeeldbewerking</span>
+                <h1 id="kleding-titel">Kledingfoto's <span>professioneel bewerkt</span></h1>
+                <p>Van aangeleverde foto tot een verzorgd en consistent productbeeld voor jouw webshop.</p>
+                <div class="hero-knoppen">
+                    <a href="/offerte?dienst=beeldbewerking" class="knop knop-geel">Offerte aanvragen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="voorbeelden" class="kledingbewerking-sectie kledingbewerking-voorbeelden" aria-labelledby="voorbeelden-titel">
+        <div class="container">
+            <div class="kledingbewerking-kop">
+                <span class="kledingbewerking-bovenkop">VOOR EN NA</span>
+                <h2 id="voorbeelden-titel">Het verschil zit in de afwerking.</h2>
+                <div class="kledingbewerking-kop__toelichting">
+                    <p>Van ruwe kledingfoto naar een professioneel eindresultaat. Schuif en ontdek het verschil.</p>
+                    <p class="kledingbewerking-schuifhint">Schuif om het resultaat te bekijken</p>
+                </div>
+            </div>
+            <div class="kledingbewerking-vergelijkingen">
+                {% for nummer, omschrijving in [
+                    ('01', 'Blauw gestreept overhemd'),
+                    ('02', 'Geel gebreid shirt'),
+                    ('03', 'Groene sweater met opdruk')
+                ] %}
+                <figure class="kledingbewerking-vergelijking" role="group" aria-label="{{ omschrijving }}: voor en na">
+                    <div class="beeldvergelijker is-volledig-voor" data-beeldvergelijker style="--vergelijking-positie: 100%; --vergelijking-verhouding: 2400 / 3600;">
+                        <div class="beeldvergelijker__beelden">
+                            <img class="beeldvergelijker__afbeelding"
+                                 src="{{ url_for('static', path='images/beeldbewerking/kleding/voor-na/kledingbewerking-' ~ nummer ~ '-na.jpg') }}"
+                                 alt="{{ omschrijving }} na beeldbewerking" width="2400" height="3600" loading="lazy">
+                            <img class="beeldvergelijker__afbeelding beeldvergelijker__afbeelding--origineel"
+                                 src="{{ url_for('static', path='images/beeldbewerking/kleding/voor-na/kledingbewerking-' ~ nummer ~ '-voor.jpg') }}"
+                                 alt="{{ omschrijving }} voor beeldbewerking" width="2400" height="3600" loading="lazy">
+                            <span class="beeldvergelijker__label beeldvergelijker__label--origineel">Voor</span>
+                            <span class="beeldvergelijker__label beeldvergelijker__label--bewerkt">Na</span>
+                            <span class="beeldvergelijker__scheiding" aria-hidden="true"><span class="beeldvergelijker__knop">‹ ›</span></span>
+                        </div>
+                        <input class="beeldvergelijker__slider" type="range" min="0" max="100" step="1" value="100" autocomplete="off"
+                               aria-label="{{ omschrijving }}: schuif om het resultaat te bekijken" aria-valuetext="100% origineel, 0% bewerkt">
+                    </div>
+                    <figcaption><span>{{ '%02d'|format(loop.index) }}</span>{{ omschrijving }}</figcaption>
+                </figure>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+    <section class="kledingbewerking-sectie kledingbewerking-service" aria-labelledby="mogelijkheden-titel">
+        <div class="container kledingbewerking-service__layout">
+            <div class="kledingbewerking-service__inhoud">
+            <div class="kledingbewerking-kop">
+                <span class="kledingbewerking-bovenkop">MOGELIJKHEDEN</span>
+                <h2 id="mogelijkheden-titel">Van ruwe foto naar verkoopklaar beeld</h2>
+                <p>Afgestemd op je beelden en de gewenste presentatie.</p>
+            </div>
+            <ul class="kledingbewerking-mogelijkheden">
+                <li>Achtergrond verwijderen of vervangen</li>
+                <li>Kreukels en oneffenheden retoucheren</li>
+                <li>Kleurcorrectie</li>
+                <li>Uitlijnen en positioneren</li>
+                <li>Uitsnede en formaat aanpassen</li>
+                <li>Consistente webshopbeelden</li>
+            </ul>
+
+            </div>
+            <aside class="kledingbewerking-tariefpaneel" aria-labelledby="tarieven-titel">
+            <h2 id="tarieven-titel" class="kledingbewerking-bovenkop">TARIEVEN</h2>
+            <dl class="kledingbewerking-tarieven">
+                <div><dt>Per foto</dt><dd>€ 1,99</dd></div>
+                <div><dt>Voor- en achterzijde</dt><dd>€ 3,49</dd></div>
+            </dl>
+            <p class="kledingbewerking-prijsvoorwaarden">Prijzen exclusief btw. Voor standaard beeldbewerking.</p>
+
+            </aside>
+        </div>
+    </section>
+
+    <section class="kledingbewerking-sectie kledingbewerking-werkwijze" aria-labelledby="werkwijze-titel">
+        <div class="container kledingbewerking-werkwijze__layout">
+            <figure class="kledingbewerking-procesbeeld">
+                <img src="{{ url_for('static', path='images/beeldbewerking/kleding/kledingbeeldbewerking-werkwijze.jpg') }}"
+                     alt="Lichtblauw gebreid shirt met V-hals, vrijstaand op een lichte achtergrond" width="2008" height="2008" loading="lazy">
+            </figure>
+            <div class="kledingbewerking-procesinhoud">
+            <div class="kledingbewerking-kop">
+                <span class="kledingbewerking-bovenkop">VOLUME EN WERKWIJZE</span>
+                <h2 id="werkwijze-titel">Van enkele foto's tot complete collecties</h2>
+                <p>Van enkele foto's tot een collectie, met vaste afspraken over afwerking, aanlevering en oplevering.</p>
+            </div>
+            <ol class="kledingbewerking-stappen">
+                <li><h3>Aanleveren</h3><p>Deel je foto's en vertel waar je ze gebruikt.</p></li>
+                <li><h3>Afstemmen</h3><p>We bepalen achtergrond, retouche, kleur en formaat.</p></li>
+                <li><h3>Bewerken en opleveren</h3><p>We controleren de afwerking en leveren de beelden klaar voor publicatie.</p></li>
+            </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="kledingbewerking-contact" aria-labelledby="contact-titel">
+        <div class="container">
+            <div class="kledingbewerking-contact__kaart">
+                <div class="kledingbewerking-contact__inhoud">
+                    <span class="kledingbewerking-bovenkop">CONTACT</span>
+                    <h2 id="contact-titel">Kledingfoto's laten bewerken?</h2>
+                    <p>Vertel ons welke beelden je wilt laten bewerken en welke afwerking je zoekt. We denken graag met je mee.</p>
+                </div>
+                <div class="kledingbewerking-contact__actie">
+                    <a href="/offerte?dienst=beeldbewerking" class="knop knop-geel">Offerte aanvragen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', path='js/kledingbeeldbewerking.js') }}?v=2.0" defer></script>
+{% endblock %}

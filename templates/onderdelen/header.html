@@ -60,6 +60,7 @@
                     class="navigatie-dropdown-knop"
                     type="button"
                     aria-expanded="false"
+                    aria-controls="diensten-dropdown"
                 >
                     Beeld
 
@@ -73,144 +74,38 @@
                 </button>
 
 
-                <div class="navigatie-dropdown-menu">
+                <div class="navigatie-dropdown-menu" id="diensten-dropdown">
 
 
-                    <!-- =========================
-                         BEELD
-                    ========================== -->
-
-                    <a
-                        href="/beeld"
-                        class="navigatie-dropdown-hoofdlink"
-                    >
-
-                        <span class="navigatie-dropdown-label">
-                            BEELD
-                        </span>
-
-                        <strong>
-                            <span class="navigatie-desktop">Productfotografie</span>
-                            <span class="navigatie-mobiel">Productfotografie &amp; beeldbewerking</span>
-                        </strong>
-
-                        <span>
-                            Bekijk alle mogelijkheden →
-                        </span>
-
-                    </a>
-
-
-                    <div class="navigatie-dropdown-links">
-
-
-                        <a href="/productfotografie/kledingfotografie">
-
-                            <span>
-                                Kledingfotografie
-                            </span>
-
-                            <small>
-                                Bodyform, ghost mannequin en plat
-                            </small>
-
-                        </a>
-
-
-                        <a href="/productfotografie/packshotfotografie">
-
-                            <span>
-                                Packshotfotografie
-                            </span>
-
-                            <small>
-                                Schoenen, accessoires en producten
-                            </small>
-
-                        </a>
-
-
-                        <a href="/beeldbewerking">
-
-                            <span>
-                                Beeldbewerking
-                            </span>
-
-                            <small>
-                                Kleding, producten en automotive
-                            </small>
-
-                        </a>
-
-
+                    <div class="navigatie-dienstgroep" role="group" aria-labelledby="menu-productfotografie">
+                        <a href="/beeld" class="navigatie-dienstgroep__kop" id="menu-productfotografie">Productfotografie</a>
+                        <ul class="navigatie-dienstgroep__items">
+                            <li><a href="/productfotografie/kledingfotografie">Kledingfotografie</a></li>
+                            <li><a href="/productfotografie/packshotfotografie">Packshotfotografie</a></li>
+                        </ul>
                     </div>
 
-
-
-                    <!-- =========================
-                         DATA
-                    ========================== -->
-
-                    <a
-                        href="/data/productdata"
-                        class="navigatie-dropdown-hoofdlink navigatie-mobiel"
-                    >
-
-                        <span class="navigatie-dropdown-label">
-                            DATA
-                        </span>
-
-                        <strong>
-                            Productdata
-                        </strong>
-
-                        <span>
-                            Verwerken, verrijken &amp; uitbesteden →
-                        </span>
-
-                    </a>
-
-
-
-                    <!-- =========================
-                         SLIMMER WERKEN
-                    ========================== -->
-
-                    <a
-                        href="/slimmer-werken"
-                        class="navigatie-dropdown-hoofdlink navigatie-mobiel"
-                    >
-
-                        <span class="navigatie-dropdown-label">
-                            SLIMMER WERKEN
-                        </span>
-
-                        <strong>
-                            Automatisering &amp; slimme processen
-                        </strong>
-
-                        <span>
-                            Minder handwerk, slimmer geregeld →
-                        </span>
-
-                    </a>
+                    <div class="navigatie-dienstgroep" role="group" aria-labelledby="menu-beeldbewerking">
+                        <a href="/beeldbewerking" class="navigatie-dienstgroep__kop" id="menu-beeldbewerking">Beeldbewerking</a>
+                        <ul class="navigatie-dienstgroep__items">
+                            <li><a href="/beeldbewerking/kleding">Kledingbeeldbewerking</a></li>
+                            <li><span class="navigatie-dienstgroep__inactief">Productbeeldbewerking</span></li>
+                            <li><a href="/beeldbewerking/automotive">Automotive beeldbewerking</a></li>
+                        </ul>
+                    </div>
 
 
                 </div>
 
             </div>
 
-            <a href="/data/productdata" class="navigatie-desktop">Data</a>
-            <a href="/slimmer-werken" class="navigatie-desktop">Slimmer werken</a>
+            <a href="/data/productdata">Data</a>
+            <a href="/slimmer-werken">Slimmer werken</a>
 
 
             <!-- =================================================
                  OVERIGE NAVIGATIE
             ================================================== -->
-
-            <a href="/#praktijk" class="navigatie-mobiel">
-                In de praktijk
-            </a>
 
             <a href="/over-wespi">
                 Over Wespi

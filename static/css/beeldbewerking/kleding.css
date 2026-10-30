@@ -1,0 +1,87 @@
+/* Kledingpagina: hero-typografie wordt rechtstreeks uit de homepage hergebruikt. */
+.kledingbewerking { --kleding-lijn: #dedfe1; --kleding-tekst: #60646a; --kleding-licht: #f3f4f5; }
+.kledingbewerking .kledingbewerking-hero { background: linear-gradient(100deg, #f0f1f2, #f6f7f8 48%, #fff 82%); }
+.kledingbewerking .hero-foto { width: 46%; padding: 34px 3% 34px 0; }
+.kledingbewerking .hero-foto img { object-fit: contain; mix-blend-mode: multiply; }
+.kledingbewerking .hero-foto::before { display: none; }
+.kledingbewerking .hero h1 { overflow-wrap: break-word; hyphens: auto; }
+.kledingbewerking-sectie { padding: 80px 0; scroll-margin-top: 100px; }
+.kledingbewerking h2 { margin: 0; font-size: clamp(32px, 3.5vw, 46px); font-weight: 800; line-height: 1.08; letter-spacing: -1.6px; }
+.kledingbewerking-bovenkop { display: block; margin-bottom: 16px; color: #252525; font-size: 11px; font-weight: 800; letter-spacing: 2px; }
+.kledingbewerking-kop { margin-bottom: 30px; }
+.kledingbewerking-kop p { margin: 18px 0 0; color: var(--kleding-tekst); font-size: 15px; line-height: 1.7; }
+
+/* Drie grote, gelijkwaardige beeldpanelen. */
+.kledingbewerking-voorbeelden .kledingbewerking-kop { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, .8fr); column-gap: 90px; align-items: end; margin-bottom: 36px; }
+.kledingbewerking-voorbeelden .kledingbewerking-bovenkop { grid-column: 1 / -1; }
+.kledingbewerking-kop__toelichting p:first-child { margin-top: 0; }
+.kledingbewerking-kop .kledingbewerking-schuifhint { margin-top: 12px; color: #252525; font-size: 12px; font-weight: 700; }
+.kledingbewerking-schuifhint::before { content: "\2194"; margin-right: 8px; color: var(--wespi-goud-donker); }
+.kledingbewerking-vergelijkingen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.kledingbewerking-vergelijking { min-width: 0; margin: 0; }
+.kledingbewerking-vergelijking .beeldvergelijker { border: 1px solid #ebebeb; border-radius: 10px; background: #fff; }
+.kledingbewerking-vergelijking .beeldvergelijker__label { top: 14px; padding: 6px 10px; border: 1px solid #ededed; border-radius: 20px; font-size: 10px; }
+.kledingbewerking-vergelijking .beeldvergelijker__label--origineel { left: 14px; }
+.kledingbewerking-vergelijking .beeldvergelijker__label--bewerkt { right: 14px; }
+.kledingbewerking-vergelijking figcaption { display: flex; align-items: baseline; gap: 12px; margin-top: 18px; font-size: 13px; font-weight: 700; line-height: 1.5; }
+.kledingbewerking-vergelijking figcaption span { color: #898c90; font-size: 11px; font-weight: 400; }
+.kledingbewerking .is-volledig-voor .beeldvergelijker__knop { transform: translate(-100%, -50%); }
+.kledingbewerking .is-volledig-na .beeldvergelijker__knop { transform: translate(0, -50%); }
+
+/* Mogelijkheden en tarieven vormen samen een compacte dienstpresentatie. */
+.kledingbewerking-service { background: var(--kleding-licht); }
+.kledingbewerking-service__layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .9fr); gap: 64px; align-items: start; }
+.kledingbewerking-service__inhoud .kledingbewerking-kop { max-width: 600px; }
+.kledingbewerking-mogelijkheden { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 26px; list-style: none; margin: 0; padding: 0; }
+.kledingbewerking-mogelijkheden li { position: relative; display: flex; align-items: center; min-width: 0; padding: 12px 0 12px 24px; border-top: 1px solid var(--kleding-lijn); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.kledingbewerking-mogelijkheden li::before { content: "\2713"; position: absolute; left: 0; color: var(--wespi-goud-donker); font-weight: 800; }
+.kledingbewerking-tariefpaneel { padding: 22px 24px; background: #fff; border-top: 3px solid var(--wespi-goud); }
+.kledingbewerking-tariefpaneel h2 { margin: 0 0 12px; color: #252525; font-size: 11px; line-height: 1.4; letter-spacing: 2px; }
+.kledingbewerking-tarieven { margin: 0; }
+.kledingbewerking-tarieven > div { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(--kleding-lijn); }
+.kledingbewerking-tarieven dt { font-size: 13px; line-height: 1.5; }
+.kledingbewerking-tarieven dd { margin: 0; color: #111; font-size: 24px; font-weight: 800; white-space: nowrap; letter-spacing: -.7px; }
+.kledingbewerking-prijsvoorwaarden { margin: 14px 0 0; color: var(--kleding-tekst); font-size: 12px; line-height: 1.6; }
+
+/* Proces: introductie links, vier compacte stappen rechts. */
+.kledingbewerking-werkwijze__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 72px; }
+.kledingbewerking-procesbeeld { margin: 0; min-width: 0; }
+.kledingbewerking-procesbeeld img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.kledingbewerking-procesinhoud { min-width: 0; }
+.kledingbewerking-werkwijze .kledingbewerking-kop { margin-bottom: 26px; }
+.kledingbewerking-stappen { display: grid; gap: 0; list-style: none; margin: 0; padding: 0; counter-reset: stap; }
+.kledingbewerking-stappen li { position: relative; counter-increment: stap; padding: 16px 0 16px 50px; border-top: 1px solid var(--kleding-lijn); }
+.kledingbewerking-stappen li::before { content: counter(stap, decimal-leading-zero); position: absolute; left: 0; top: 16px; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: #fcf5d8; color: #685513; font-size: 11px; font-weight: 800; }
+.kledingbewerking-stappen h3 { margin: 0; font-size: 17px; line-height: 1.3; }
+.kledingbewerking-stappen p { margin: 5px 0 0; color: var(--kleding-tekst); font-size: 14px; line-height: 1.6; }
+
+.kledingbewerking-contact { padding: 0 0 80px; }
+.kledingbewerking-contact__kaart { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 42px 48px; background: #111; color: #fff; border-radius: 12px; }
+.kledingbewerking-contact__inhoud { max-width: 730px; }
+.kledingbewerking-contact .kledingbewerking-bovenkop { color: var(--wespi-goud); }
+.kledingbewerking-contact h2 { font-size: clamp(30px, 3vw, 40px); }
+.kledingbewerking-contact p { max-width: 620px; margin: 14px 0 0; color: #c2c2c2; font-size: 14px; line-height: 1.7; }
+.kledingbewerking-contact__actie { flex-shrink: 0; }
+.kledingbewerking a:focus-visible { outline: 3px solid var(--wespi-goud-donker); outline-offset: 5px; }
+
+@media (max-width: 1050px) {
+    .kledingbewerking-service__layout { gap: 32px; grid-template-columns: minmax(0, 1.3fr) minmax(260px, .8fr); }
+    .kledingbewerking-werkwijze__layout { gap: 40px; }
+    .kledingbewerking-voorbeelden .kledingbewerking-kop { column-gap: 40px; }
+    .kledingbewerking-contact__kaart { padding: 36px; gap: 32px; }
+}
+@media (max-width: 760px) {
+    .kledingbewerking .kledingbewerking-hero { background: linear-gradient(180deg, #fff 0%, #f3f4f5 65%); }
+    .kledingbewerking .hero-foto { width: 100%; padding: 16px 0 0; }
+    .kledingbewerking-sectie { padding: 52px 0; }
+    .kledingbewerking-voorbeelden .kledingbewerking-kop { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .kledingbewerking-kop__toelichting { margin-top: 20px; max-width: 500px; }
+    .kledingbewerking-vergelijkingen { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+    .kledingbewerking-service__layout, .kledingbewerking-werkwijze__layout { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+    .kledingbewerking-contact { padding-bottom: 52px; }
+    .kledingbewerking-contact__kaart { flex-direction: column; align-items: flex-start; padding: 32px 26px; gap: 24px; }
+}
+@media (max-width: 480px) {
+    .kledingbewerking-mogelijkheden { grid-template-columns: minmax(0, 1fr); }
+    .kledingbewerking-contact__actie, .kledingbewerking-contact__actie .knop { width: 100%; }
+}
