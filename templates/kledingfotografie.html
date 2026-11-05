@@ -19,6 +19,10 @@ Professionele kledingfotografie voor webshops en merken. Bodyform, ghost mannequ
 {% endblock %}
 
 
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/kledingfotografie/ai-promotie.css') }}?v=20261105-fase2.1">
+{% endblock %}
+
 {% block content %}
 
     {% include "onderdelen/kledingfotografie/hero.html" %}
@@ -26,6 +30,7 @@ Professionele kledingfotografie voor webshops en merken. Bodyform, ghost mannequ
     {% include "onderdelen/kledingfotografie/bodyform.html" %}
     {% include "onderdelen/kledingfotografie/styleshoots.html" %}
     {% include "onderdelen/kledingfotografie/platte-fotografie.html" %}
+    {% include "onderdelen/kledingfotografie/ai-promotie.html" %}
     {% include "onderdelen/kledingfotografie/werkwijze.html" %}
     {% include "onderdelen/kledingfotografie/klanten.html" %}
        

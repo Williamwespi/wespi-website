@@ -26,6 +26,7 @@
             </p>
 
             <div class="platte-prijsblok">
+                <small class="prijs-btw">Alle prijzen exclusief btw.</small>
 
                 <div class="platte-prijs-kop">
 
@@ -104,10 +105,10 @@
             <figure class="plat-beeld plat-beeld-klein">
 
                 <img
-                    src="{{ url_for('static', path='images/kledingfotografie/platte-kledingfotografie-sokken.png') }}"
+                    src="{{ url_for('static', path=beeldpad('images/kledingfotografie/platte-kledingfotografie-sokken.png')) }}" {{ beeld_attributen('images/kledingfotografie/platte-kledingfotografie-sokken.png') }}
                     alt="Platte productfotografie van sokken voor e-commerce"
                     loading="lazy"
-                >
+                 decoding="async">
 
             </figure>
 

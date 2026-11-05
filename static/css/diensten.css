@@ -333,3 +333,10 @@
     }
 
 }
+
+/* Gerichte mobiele verfijning, fase 3. */
+
+@media (max-width: 620px) {
+    .dienst-inhoud { min-height: 0; }
+    .diensten { padding-bottom: 56px; }
+}

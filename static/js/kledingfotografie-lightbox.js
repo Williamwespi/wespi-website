@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         afbeelding.alt = alt;
 
         lightbox.classList.add("is-open");
+        lightbox.showModal();
 
         lightbox.setAttribute(
             "aria-hidden",
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function sluitLightbox() {
 
+        lightbox.close();
         lightbox.classList.remove("is-open");
 
         lightbox.setAttribute(
@@ -104,6 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "click",
         sluitLightbox
     );
+    lightbox.addEventListener("cancel", (event) => {
+        event.preventDefault();
+        sluitLightbox();
+    });
 
 
     /* =====================================================

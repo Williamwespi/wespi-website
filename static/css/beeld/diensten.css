@@ -45,7 +45,7 @@
 
     margin-bottom: 13px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 10px;
     font-weight: 800;
@@ -67,7 +67,7 @@
 .beeld-diensten-header h2 span {
     display: block;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 .beeld-diensten-header p {
@@ -120,7 +120,7 @@
 }
 
 .beeld-diensten-overzicht-nummer {
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 12px;
     font-weight: 800;
@@ -203,7 +203,7 @@
 
     margin-bottom: 15px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 10px;
     font-weight: 800;
@@ -227,7 +227,7 @@
 
     margin-top: 3px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 .beeld-dienst-tekst > p {
@@ -560,7 +560,7 @@
 
     margin-bottom: 3px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 7px;
     font-weight: 800;
@@ -626,7 +626,7 @@
 
     margin-bottom: 9px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 8px;
     font-weight: 800;

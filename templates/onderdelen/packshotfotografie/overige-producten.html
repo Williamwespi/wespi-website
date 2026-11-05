@@ -22,9 +22,9 @@
             <div class="packshot-gallery__klein">
 
                 <img
-                    src="{{ url_for('static', path='images/packshotfotografie/productfotografie-wandklok-wespi.png') }}"
+                    src="{{ url_for('static', path=beeldpad('images/packshotfotografie/productfotografie-wandklok-wespi.png')) }}" {{ beeld_attributen('images/packshotfotografie/productfotografie-wandklok-wespi.png') }}
                     alt="Professionele productfotografie van een wandklok door Wespi"
-                >
+                 loading="lazy" decoding="async">
 
             </div>
 
@@ -32,9 +32,9 @@
             <div class="packshot-gallery__klein">
 
                 <img
-                    src="{{ url_for('static', path='images/packshotfotografie/productfotografie-keramische-schaal-wespi.png') }}"
+                    src="{{ url_for('static', path=beeldpad('images/packshotfotografie/productfotografie-keramische-schaal-wespi.png')) }}" {{ beeld_attributen('images/packshotfotografie/productfotografie-keramische-schaal-wespi.png') }}
                     alt="Professionele productfotografie van een keramische schaal door Wespi"
-                >
+                 loading="lazy" decoding="async">
 
             </div>
 
@@ -59,6 +59,8 @@
                 en keukenartikelen.
             </p>
 
+
+            <small class="prijs-btw">Alle prijzen exclusief btw.</small>
 
             <div class="packshot-voorbeeld__prijs">
 

@@ -124,150 +124,107 @@ document.addEventListener("DOMContentLoaded", function () {
             ".navigatie-dropdown-knop"
         );
 
+    let dropdownCloseTimer;
+    let dropdownPinned = false;
+    let dropdownHovered = false;
+    const desktopNavigation = window.matchMedia("(min-width: 951px)");
+
+    function setBeeldsubmenu(open) {
+        if (!dropdown || !dropdownButton) return;
+        dropdown.classList.toggle("is-open", open);
+        dropdownButton.setAttribute("aria-expanded", String(open));
+    }
+
     function resetBeeldsubmenu() {
-        if (dropdown && dropdownButton) {
-            dropdown.classList.remove("is-open");
-            dropdownButton.setAttribute("aria-expanded", "false");
-        }
+        clearTimeout(dropdownCloseTimer);
+        dropdownPinned = false;
+        dropdownHovered = false;
+        setBeeldsubmenu(false);
     }
 
-
-    if (
-        dropdown &&
-        dropdownButton
-    ) {
-
-        dropdownButton.addEventListener(
-            "click",
-            function (event) {
-
-                    event.preventDefault();
-
-                    const dropdownIsOpen =
-                        dropdown.classList.toggle(
-                            "is-open"
-                        );
-
-                    dropdownButton.setAttribute(
-                        "aria-expanded",
-                        dropdownIsOpen
-                            ? "true"
-                            : "false"
-                    );
-
-            }
-        );
-
+    function closeMobileNavigation(returnFocus = false) {
+        if (!navigation || !menuButton) return;
+        navigation.classList.remove("is-open");
+        menuButton.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Menu openen");
+        resetBeeldsubmenu();
+        if (returnFocus) menuButton.focus({ preventScroll: true });
     }
 
-
-    /* ========================================
-       HEADER - KLIK BUITEN MENU
-    ======================================== */
-
-    document.addEventListener(
-        "click",
-        function (event) {
-
-            if (
-                dropdown &&
-                dropdownButton &&
-                !dropdown.contains(event.target)
-            ) {
-
-                dropdown.classList.remove(
-                    "is-open"
-                );
-
-                dropdownButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
+    if (dropdown && dropdownButton) {
+        dropdownButton.addEventListener("click", function () {
+            clearTimeout(dropdownCloseTimer);
+            if (dropdownPinned) {
+                resetBeeldsubmenu();
+            } else {
+                dropdownPinned = true;
+                setBeeldsubmenu(true);
             }
+        });
 
+        // E?n open/dicht-status voor muis, aanraking en toetsenbord.
+        dropdown.addEventListener("pointerenter", function (event) {
+            if (!desktopNavigation.matches || event.pointerType !== "mouse") return;
+            clearTimeout(dropdownCloseTimer);
+            dropdownHovered = true;
+            setBeeldsubmenu(true);
+        });
+        dropdown.addEventListener("pointerleave", function (event) {
+            if (!desktopNavigation.matches || event.pointerType !== "mouse") return;
+            dropdownHovered = false;
+            dropdownCloseTimer = setTimeout(function () {
+                if (!dropdownPinned && !dropdown.contains(document.activeElement)) {
+                    resetBeeldsubmenu();
+                }
+            }, 180);
+        });
+        dropdown.addEventListener("focusout", function () {
+            requestAnimationFrame(function () {
+                if (!dropdown.contains(document.activeElement)) {
+                    dropdownPinned = false;
+                    if (!dropdownHovered) resetBeeldsubmenu();
+                }
+            });
+        });
+        dropdownButton.addEventListener("keydown", function (event) {
+            if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+            event.preventDefault();
+            clearTimeout(dropdownCloseTimer);
+            dropdownPinned = true;
+            setBeeldsubmenu(true);
+            const links = dropdown.querySelectorAll(".navigatie-dropdown-menu a");
+            const link = event.key === "ArrowUp" ? links[links.length - 1] : links[0];
+            requestAnimationFrame(function () {
+                if (link && dropdown.classList.contains("is-open")) link.focus();
+            });
+        });
+    }
 
-            if (
-                header &&
-                navigation &&
-                menuButton &&
-                navigation.classList.contains(
-                    "is-open"
-                ) &&
-                !header.contains(event.target)
-            ) {
-
-                navigation.classList.remove(
-                    "is-open"
-                );
-
-                menuButton.classList.remove(
-                    "is-open"
-                );
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-                menuButton.setAttribute("aria-label", "Menu openen");
-
-            }
-
+    document.addEventListener("click", function (event) {
+        if (dropdown && !dropdown.contains(event.target)) resetBeeldsubmenu();
+        if (header && navigation && navigation.classList.contains("is-open") &&
+            !header.contains(event.target)) {
+            closeMobileNavigation();
         }
-    );
+    });
 
-
-    /* ========================================
-       HEADER - ESC
-    ======================================== */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (event.key !== "Escape") {
-                return;
-            }
-
-            if (
-                navigation &&
-                menuButton
-            ) {
-
-                navigation.classList.remove(
-                    "is-open"
-                );
-
-                menuButton.classList.remove(
-                    "is-open"
-                );
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-                menuButton.setAttribute("aria-label", "Menu openen");
-
-            }
-
-            if (
-                dropdown &&
-                dropdownButton
-            ) {
-
-                dropdown.classList.remove(
-                    "is-open"
-                );
-
-                dropdownButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-            }
-
+    document.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape") return;
+        if (dropdown && dropdown.classList.contains("is-open")) {
+            event.preventDefault();
+            const focusInDropdown = dropdown.contains(document.activeElement);
+            resetBeeldsubmenu();
+            if (focusInDropdown) dropdownButton.focus({ preventScroll: true });
+        } else if (navigation && navigation.classList.contains("is-open")) {
+            event.preventDefault();
+            closeMobileNavigation(true);
         }
-    );
+    });
+
+    desktopNavigation.addEventListener("change", function () {
+        closeMobileNavigation();
+    });
 
 
     /* ========================================
@@ -285,10 +242,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const lightbox =
-        document.createElement("div");
+        document.createElement("dialog");
 
     lightbox.className =
         "packshot-lightbox";
+    lightbox.setAttribute("aria-label", "Productfoto vergroten");
 
     lightbox.innerHTML = `
         <button
@@ -319,13 +277,19 @@ document.addEventListener("DOMContentLoaded", function () {
             ".packshot-lightbox__close"
         );
 
+    let lastImage;
+    let previousOverflow;
 
     function openLightbox(image) {
 
-        lightboxImage.src = image.src;
+        lastImage = image;
+        previousOverflow = document.body.style.overflow;
+        lightboxImage.src = image.dataset.lightboxSrc || image.currentSrc || image.src;
         lightboxImage.alt = image.alt || "";
 
         lightbox.classList.add("is-open");
+        lightbox.showModal();
+        closeButton.focus({ preventScroll: true });
 
         document.body.style.overflow =
             "hidden";
@@ -335,12 +299,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closeLightbox() {
 
+        lightbox.close();
         lightbox.classList.remove(
             "is-open"
         );
 
         document.body.style.overflow =
-            "";
+            previousOverflow;
+        lastImage?.focus({ preventScroll: true });
 
         setTimeout(function () {
 
@@ -360,6 +326,16 @@ document.addEventListener("DOMContentLoaded", function () {
     packshotImages.forEach(
         function (image) {
 
+            image.tabIndex = 0;
+            image.setAttribute("role", "button");
+            image.setAttribute("aria-haspopup", "dialog");
+            image.setAttribute("aria-label", "Vergroot: " + (image.alt || "productfoto"));
+            image.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openLightbox(image);
+                }
+            });
             image.addEventListener(
                 "click",
                 function () {
@@ -377,6 +353,10 @@ document.addEventListener("DOMContentLoaded", function () {
             closeLightbox();
         }
     );
+    lightbox.addEventListener("cancel", function (event) {
+        event.preventDefault();
+        closeLightbox();
+    });
 
 
     lightbox.addEventListener(

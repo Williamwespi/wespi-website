@@ -160,7 +160,7 @@
 
     margin-bottom: 14px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 11px;
     font-weight: 800;
@@ -207,7 +207,7 @@
 .packshot-voorbeeld__prijs > span {
     margin-bottom: 6px;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 12px;
     font-weight: 700;
@@ -226,7 +226,7 @@
 .packshot-voorbeeld__prijs small {
     margin-bottom: 4px;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 11px;
     line-height: 1.2;
@@ -309,7 +309,7 @@
 
     margin-bottom: 12px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 11px;
     font-weight: 800;
@@ -371,7 +371,7 @@
 }
 
 .packshot-proces__nummer {
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 11px;
     font-weight: 800;
@@ -445,7 +445,7 @@
 
     margin-bottom: 12px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 11px;
     font-weight: 800;
@@ -521,7 +521,7 @@
 .packshot-meer__label {
     margin-bottom: 18px;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 9px;
     font-weight: 800;
@@ -596,7 +596,7 @@
 
     margin-bottom: 12px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 11px;
     font-weight: 800;
@@ -766,6 +766,12 @@
 }
 
 .packshot-lightbox {
+    margin: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
     position: fixed;
     z-index: 99999;
 
@@ -836,4 +842,22 @@
     font-size: 30px;
 
     cursor: pointer;
+}
+
+/* Geen nieuwe galerij: uitsluitend de bestaande kop v??r de beelden. */
+@media (max-width: 700px) {
+    .packshot-voorbeeld__grid { row-gap: 0; }
+    .packshot-voorbeeld__content { display: contents; }
+    .packshot-voorbeeld__bovenkop { order: -3; }
+    .packshot-voorbeeld__content h2 { order: -2; }
+    .packshot-voorbeeld .packshot-gallery { order: -1; margin: 24px 0; width: 100%; }
+}
+
+/* Gerichte mobiele verfijning, fase 3. */
+
+@media (max-width: 700px) {
+    .packshot-voorbeeld__grid { padding-top: 24px; padding-bottom: 24px; }
+    .packshot-voorbeeld .packshot-gallery { margin-bottom: 0; }
+    .packshot-gallery__groot { min-height: 260px; padding: 14px; }
+    .packshot-gallery__klein { min-height: 135px; padding: 10px; }
 }

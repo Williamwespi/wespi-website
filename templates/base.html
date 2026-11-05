@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
+{% from 'onderdelen/beeldvarianten.html' import beeldpad, beeld_attributen with context %}
 
 <head>
 
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="{{ url_for('static', path='images/logo/wespi-logo.png') }}">
 
     <meta
         name="viewport"
@@ -26,6 +28,15 @@
     >
     {% endblock %}
 
+    {% if social_url %}
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Wespi">
+    <meta property="og:title" content="{{ ' '.join(self.title().striptags().split()) }}">
+    <meta property="og:description" content="{{ ' '.join(self.meta_description().striptags().split()) }}">
+    <meta property="og:url" content="{{ social_url }}">
+    <meta property="og:image" content="{{ social_image }}">
+    {% endif %}
 
     <!-- ========================================
          ALGEMENE STYLING
@@ -33,7 +44,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/basis.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/basis.css') }}?v=20261105-fase4.1"
     >
 
 
@@ -43,7 +54,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/header.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/header.css') }}?v=20261105-fase2.1"
     >
 
 
@@ -53,22 +64,22 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/hero.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/hero.css') }}?v=20261105-fase3.1"
     >
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/diensten.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/diensten.css') }}?v=20261105-fase3.1"
     >
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/voordelen.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/voordelen.css') }}?v=20261105-fase2.1"
     >
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/projecten.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/projecten.css') }}?v=20261105-fase3.1"
     >
 
 
@@ -78,7 +89,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/kledingfotografie.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/kledingfotografie.css') }}?v=20261105-fase4.1"
     >
 
 
@@ -88,7 +99,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/beeld.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/beeld.css') }}?v=20261105-fase3.1"
     >
 
 
@@ -98,7 +109,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/packshotfotografie/packshotfotografie.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/packshotfotografie/packshotfotografie.css') }}?v=20261105-fase4.1"
     >
 
 
@@ -119,43 +130,43 @@
     <!-- Hero -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/productdata/hero.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/productdata/hero.css') }}?v=20261105-fase3.1"
     >
 
     <!-- USP-balk -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/productdata/usp-balk.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/productdata/usp-balk.css') }}?v=20261105-fase3.1"
     >
 
     <!-- Intro -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/productdata/intro.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/productdata/intro.css') }}?v=20261105-fase3.1"
     >
 
     <!-- Werkwijze -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/productdata/werkwijze.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/productdata/werkwijze.css') }}?v=20261105-fase3.1"
     >
 
     <!-- Volume -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/productdata/volume.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/productdata/volume.css') }}?v=20261105-fase3.1"
     >
 
     <!-- Prijzen -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/productdata/prijzen.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/productdata/prijzen.css') }}?v=20261105-fase3.1"
     >
 
     <!-- Productdata Service -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/productdata/service.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/productdata/service.css') }}?v=20261105-fase3.1"
     >
 
 
@@ -166,19 +177,19 @@
     <!-- Hero -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/slimmer-werken/hero.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/slimmer-werken/hero.css') }}?v=20261105-fase3.1"
     >
 
     <!-- Mogelijkheden -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/slimmer-werken/mogelijkheden.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/slimmer-werken/mogelijkheden.css') }}?v=20261105-fase3.1"
     >
 
     <!-- Prijzen -->
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/slimmer-werken/prijs.css') }}?v=1.0"
+        href="{{ url_for('static', path='css/slimmer-werken/prijs.css') }}?v=20261105-fase3.1"
     >
 <!-- Tussenblok -->
 <link
@@ -191,7 +202,7 @@
 
 <link
     rel="stylesheet"
-    href="{{ url_for('static', path='css/over-wespi/over-wespi.css') }}?v=1.0"
+    href="{{ url_for('static', path='css/over-wespi/over-wespi.css') }}?v=20261105-fase3.1"
 >
 
     <!-- ========================================
@@ -200,7 +211,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/offerte.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/offerte.css') }}?v=20261105-fase3.1"
     >
 
 
@@ -210,7 +221,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='css/footer.css') }}?v=1.3"
+        href="{{ url_for('static', path='css/footer.css') }}?v=20261105-fase3.1"
     >
 
     {% block extra_head %}
@@ -221,10 +232,11 @@
 
 <body>
 
+    <a class="skiplink" href="#hoofdinhoud">Direct naar inhoud</a>
     {% include "onderdelen/header.html" %}
 
 
-    <main>
+    <main id="hoofdinhoud" tabindex="-1">
 
         {% block content %}
         {% endblock %}
@@ -236,7 +248,7 @@
 
 
     <script
-        src="{{ url_for('static', path='js/main.js') }}?v=1.3"
+        src="{{ url_for('static', path='js/main.js') }}?v=20261105-fase4.1"
     ></script>
 
 </body>

@@ -23,9 +23,9 @@ Neem contact op met Wespi over productfotografie, productdata of slimmer werken.
 <section class="hero contact-hero">
     <div class="hero-foto">
         <img
-            src="{{ url_for('static', path='images/contact/contact-hero.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/contact/contact-hero.png')) }}" {{ beeld_attributen('images/contact/contact-hero.png', responsive=false) }}
             alt="Kledingstudio met een model en fotografieapparatuur"
-        >
+         decoding="async">
     </div>
 
     <div class="container hero-inhoud">

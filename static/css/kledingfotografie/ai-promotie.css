@@ -1,0 +1,103 @@
+﻿/* Alleen geladen op Kledingfotografie; bestaande container en knop hergebruikt. */
+.kleding-ai-promotie {
+    padding: 40px 0;
+    border-top: 1px solid rgba(189, 148, 16, .18);
+    border-bottom: 1px solid rgba(189, 148, 16, .18);
+    background: #faf3d9;
+}
+.kleding-ai-promotie__inhoud {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(32px, 5vw, 72px);
+}
+.kleding-ai-promotie__tekst { max-width: 580px; }
+.kleding-ai-promotie__bovenkop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    color: #71602b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.kleding-ai-promotie__bovenkop::before {
+    content: "";
+    width: 28px;
+    height: 3px;
+    background: var(--wespi-goud);
+}
+.kleding-ai-promotie h2 { margin: 0; font-size: clamp(32px, 3.5vw, 46px); font-weight: 800; line-height: 1.06; letter-spacing: -1.6px; }
+.kleding-ai-promotie p { margin: 18px 0 0; color: #565044; font-size: 15px; line-height: 1.65; }
+/* Strakke uitsnede op gezicht en kleding, zonder overlays of vervaging. */
+.kleding-ai-promotie__beeld {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    border-bottom: 4px solid var(--wespi-goud);
+}
+.kleding-ai-promotie__beeld img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 8%;
+}
+.kleding-ai-promotie__prijs {
+    margin-top: 22px;
+    padding: 16px 20px;
+    border-left: 3px solid var(--wespi-goud);
+    border-radius: 0 5px 5px 0;
+    background: var(--wit);
+}
+.kleding-ai-promotie .kleding-ai-promotie__prijsregel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    margin: 0;
+    color: var(--wespi-zwart);
+    font-weight: 700;
+}
+.kleding-ai-promotie__prijsregel strong {
+    font-size: clamp(30px, 3vw, 38px);
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    white-space: nowrap;
+}
+.kleding-ai-promotie__prijs small {
+    display: block;
+    margin-top: 8px;
+    color: #625c50;
+    font-size: 11px;
+    line-height: 1.5;
+}
+.kleding-ai-promotie .kleding-bodyform-knop {
+    max-width: 100%;
+    min-height: 48px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--wespi-goud);
+    line-height: 1.4;
+}
+.kleding-ai-promotie .kleding-bodyform-knop span { color: inherit; }
+.kleding-ai-promotie .kleding-bodyform-knop:hover { background: var(--wespi-goud-licht); color: var(--wespi-zwart); }
+.kleding-ai-promotie a:focus-visible { outline: 3px solid var(--wespi-goud-donker); outline-offset: 5px; }
+@media (max-width: 760px) {
+    .kleding-ai-promotie { padding: 36px 0; }
+    .kleding-ai-promotie__inhoud { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .kleding-ai-promotie__tekst { max-width: 100%; }
+    .kleding-ai-promotie__beeld { height: clamp(260px, 60vw, 340px); }
+}
+
+/* Alleen de gestapelde weergave: titel boven het bestaande modelbeeld. */
+@media (max-width: 760px) {
+    .kleding-ai-promotie__inhoud { display: flex; flex-direction: column; gap: 0; align-items: stretch; }
+    .kleding-ai-promotie__tekst { display: contents; }
+    .kleding-ai-promotie__bovenkop { order: -3; }
+    .kleding-ai-promotie h2 { order: -2; }
+    .kleding-ai-promotie__beeld { order: -1; margin-top: 24px; }
+    .kleding-ai-promotie .kleding-bodyform-knop { align-self: flex-start; }
+}

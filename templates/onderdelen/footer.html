@@ -2,15 +2,16 @@
      CONTACT CTA
 ========================================= -->
 
+{% if request.url.path not in ['/contact', '/offerte', '/productfotografie/packshotfotografie', '/beeldbewerking/kleding', '/beeldbewerking/automotive'] %}
 <section class="cta" id="contact">
 
     <!-- ACHTERGRONDAFBEELDING -->
 
     <img
-        src="{{ url_for('static', path='images/home/cta-techniek.png') }}"
+        src="{{ url_for('static', path=beeldpad('images/home/cta-techniek.png')) }}" {{ beeld_attributen('images/home/cta-techniek.png') }}
         alt="Technische producten, productdata en digitale verwerking"
         class="cta-achtergrond"
-    >
+     loading="lazy" decoding="async">
 
 
     <!-- LICHTE OVERGANG VOOR TEKST -->
@@ -91,6 +92,7 @@
     </div>
 
 </section>
+{% endif %}
 
 
 
@@ -202,20 +204,12 @@
                 Wespi
             </strong>
 
-            <a href="#praktijk">
+            <a href="/#praktijk">
                 In de praktijk
             </a>
 
-            <a href="#">
-                Werkwijze
-            </a>
-
-            <a href="#">
+            <a href="/over-wespi">
                 Over Wespi
-            </a>
-
-            <a href="#">
-                Kennis
             </a>
 
         </div>
@@ -240,8 +234,8 @@
                 Offerte aanvragen
             </a>
 
-            <a href="#">
-                Mijn Wespi
+            <a href="/contact">
+                Contact opnemen
             </a>
 
         </div>

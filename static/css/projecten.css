@@ -653,3 +653,10 @@
     }
 
 }
+
+/* Gerichte mobiele verfijning, fase 3. */
+
+@media (max-width: 600px) {
+    .projecten-grid { grid-auto-rows: auto; }
+    .project { min-height: 360px; }
+}

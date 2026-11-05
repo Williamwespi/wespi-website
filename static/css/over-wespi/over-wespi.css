@@ -1186,3 +1186,20 @@
         width: calc(100% - 32px);
     }
 }
+
+/* De twee bestaande visuals komen in de gestapelde layout na hun eigen titel. */
+@media (max-width: 1050px) {
+    .over-oorsprong__grid, .over-doen__grid { row-gap: 0; }
+    .over-oorsprong__content, .over-doen__content { display: contents; }
+    .over-oorsprong__content > .over-bovenkop, .over-doen__content > .over-bovenkop { order: -3; }
+    .over-oorsprong__content > h2, .over-doen__content > h2 { order: -2; }
+    .over-oorsprong .over-merk, .over-doen__visual { order: -1; margin-top: 24px; }
+}
+
+/* Alleen onvoldoende contrasterende tekst, met behoud van warme merkaccenten. */
+.over-hero h1 span, .over-merk__formule .over-merk__goud strong,
+.over-doen__nummer,
+.over-kernwaarde > strong, .over-missie span { color: #755b0a; }
+.over-merk__label, .over-doen__visual-label, .over-doen__label { color: #62594b; }
+.over-kernwaarde p { color: #51493d; }
+.over-persoon__ervaring strong, .over-persoon__ervaring span { color: #17140c; }

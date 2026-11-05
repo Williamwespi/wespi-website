@@ -26,7 +26,7 @@
 
     margin-bottom: 8px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 10px;
     font-weight: 800;
@@ -137,7 +137,7 @@
 
     margin-bottom: 3px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 8px;
     font-weight: 800;
@@ -206,7 +206,7 @@
 
     margin-bottom: 6px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 9px;
     font-weight: 800;
@@ -293,7 +293,7 @@
 }
 
 .packshot-bewerking__extra a:hover {
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 

@@ -708,3 +708,7 @@
 .site-footer a:hover {
     color: var(--wespi-goud);
 }
+
+/* Leesbare tekst; bestaande merkvlakken blijven ongewijzigd. */
+.cta h2 span { color: #755b0a; }
+.site-footer a:hover { color: #fff; text-decoration: underline; }

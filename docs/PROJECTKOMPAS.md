@@ -1,5 +1,13 @@
 # Projectkompas Wespi
 
+**Statusaanvulling fase 4, 5 november 2026:** de lokale SEO- en technische eindcontrole is afgerond met sitemap/robots, Open Graph, veilige foutafhandeling, responseheaders/cache/compressie en gerichte toegankelijkheidsverbeteringen. 34 regressietests slagen; de browsercontrole omvat 1440/768/430/375px. Geen deployment of echte mail. Productiebesluiten en voorwaarden staan in [LIVEGANG_FASE_4.md](./LIVEGANG_FASE_4.md), met afzonderlijke [migratie](./LIVEGANG_MIGRATIE.md) en [deployment-/rollbackchecklist](./LIVEGANG_DEPLOYMENT.md). Eerdere faseverslagen zijn historische momentopnamen; hun volgende-fase-wachtstatus is door de latere expliciete opdracht opgevolgd.
+
+**Statusaanvulling fase 3, 5 november 2026:** beeldbestanden zijn geoptimaliseerd met behoud van bronbestanden en detailvergrotingen. Tekstcontrast, gerichte mobiele compactheid, dubbele contactuitnodigingen en bevestigde btw-vermeldingen zijn verbeterd. Fase 1 en 2 zijn behouden en regressietests slagen. Zie [LIVEGANG_FASE_3.md](./LIVEGANG_FASE_3.md) voor bestanden, metingen en productieaandachtspunten. Fase 4 wacht op akkoord.
+
+**Statusaanvulling fase 2, 5 november 2026:** het Beeld-menu heeft een links uitgelijnde dropdown met consistente muis-/toetsenbordbediening en een zelfstandige AI-modelfotografielink. De mobiele beeld-tekstvolgorde uit audit B1 is gecorrigeerd op de bestaande omslagpunten; desktopindelingen en hero's zijn behouden. Zie [LIVEGANG_FASE_2.md](./LIVEGANG_FASE_2.md) voor uitvoering en verificatie. Fase 3 wacht op akkoord.
+
+**Statusaanvulling 5 november 2026:** de oorspronkelijke broninventarisatie hieronder beschrijft een eerdere situatie. Offerte en Contact gebruiken inmiddels server-side SMTP-verwerking; de bevestigde oude automotive- en juridische routes hebben 301-redirects. Footer- en fragmentlinks zijn gericht hersteld en er zijn gesimuleerde regressietests toegevoegd. Zie [LIVEGANG_FASE_1.md](./LIVEGANG_FASE_1.md) voor de actuele uitvoering, testresultaten, SMTP-instellingen en nog te beoordelen oude URL's. Echte e-mailaflevering en productiehosting zijn nog niet geverifieerd; fase 2 vereist akkoord.
+
 ## Identiteit en positionering
 
 Wespi richt zich primair op retail en e-commerce en presenteert zich als specialist met drie actieve hoofddiensten:

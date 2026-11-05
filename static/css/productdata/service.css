@@ -77,7 +77,7 @@
 
     margin-top: 7px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 .productdata-service-lead {
@@ -201,7 +201,7 @@
 
     margin-bottom: 5px;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 8px;
 
@@ -219,8 +219,7 @@
 }
 
 .productdata-service-prijs strong {
-    color:
-        var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 34px;
 
@@ -364,8 +363,7 @@
 }
 
 .productdata-service-kaartkop div > span {
-    color:
-        var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 8px;
 
@@ -518,7 +516,7 @@
 }
 
 .productdata-service-flowstap div span {
-    color: #777777;
+    color: #626262;
 
     font-size: 10.5px;
 }
@@ -570,8 +568,7 @@
 }
 
 .productdata-service-voordelen span {
-    color:
-        var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 13px;
 
@@ -649,7 +646,7 @@
 }
 
 .productdata-service-abonnementen-kop > span {
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 10px;
 
@@ -942,4 +939,14 @@
         gap: 8px;
     }
 
+}
+
+.productdata-service-knop, .productdata-service-flowstap-wespi .productdata-service-flownummer { color: #1d1b17; }
+.productdata-service-maand div span { color: #626262; }
+
+/* Gerichte mobiele verfijning, fase 3. */
+
+@media (max-width: 560px) {
+    .productdata-service { padding-top: 48px; }
+    .productdata-service-container { gap: 24px; padding-bottom: 40px; }
 }

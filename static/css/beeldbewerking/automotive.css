@@ -1,44 +1,165 @@
-/* Alleen van toepassing op de automotive-pagina. */
-.automotive-pagina .automotive-sectie { padding: 88px 0; scroll-margin-top: 110px; }
-.automotive-pagina .automotive-sectie--licht { background: #f3f4f5; }
-.automotive-pagina .automotive-tweekoloms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: center; }
-.automotive-pagina .automotive-bovenkop { display: block; margin-bottom: 14px; color: var(--wespi-goud); font-size: 11px; font-weight: 800; letter-spacing: 2px; }
-.automotive-pagina h1 { margin: 0; font-size: clamp(38px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -2px; overflow-wrap: break-word; }
-.automotive-pagina h1 span { color: var(--wespi-goud); }
-.automotive-pagina h2 { margin: 0; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; letter-spacing: -1.4px; }
-.automotive-pagina h3 { margin: 0 0 12px; font-size: 20px; line-height: 1.25; }
-.automotive-pagina p, .automotive-pagina li { color: #5f6266; font-size: 15px; line-height: 1.75; }
-.automotive-pagina p { margin: 18px 0 0; }
-.automotive-pagina .automotive-terug { display: inline-block; margin-bottom: 28px; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
-.automotive-pagina .automotive-hero img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; border-radius: 18px; }
-.automotive-pagina .automotive-acties { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 28px; }
-.automotive-pagina .automotive-kop { max-width: 720px; margin-bottom: 36px; }
-.automotive-pagina .automotive-kaarten { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
-.automotive-pagina .automotive-kaart { padding: 28px; border: 1px solid #e5e5e5; border-radius: 14px; background: var(--wit); }
-.automotive-pagina .automotive-kaart p { margin: 0; }
-.automotive-pagina .automotive-kaart ul { padding-left: 20px; margin: 0; }
-.automotive-pagina .automotive-achtergronden { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
-.automotive-pagina figure { margin: 0; overflow: hidden; border-radius: 14px; background: var(--wit); }
-.automotive-pagina figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; }
-.automotive-pagina figcaption { padding: 18px 24px; font-size: 14px; font-weight: 700; }
-.automotive-pagina .automotive-stappen { list-style: none; padding: 0; margin: 0; counter-reset: stap; }
-.automotive-pagina .automotive-stappen > li { counter-increment: stap; }
-.automotive-pagina .automotive-stappen > li::before { content: counter(stap, decimal-leading-zero); display: block; margin-bottom: 18px; color: var(--wespi-goud-donker); font-size: 14px; font-weight: 800; }
-.automotive-pagina .automotive-contact { padding: 56px; border-radius: 18px; background: var(--wespi-zwart); color: var(--wit); }
-.automotive-pagina .automotive-contact p { max-width: 650px; color: #c7c7c7; }
-.automotive-pagina .automotive-tekstlink { text-decoration: underline; text-underline-offset: 4px; }
+/* Uitsluitend de pagina Autobeeldbewerking; gedeelde hero, knoppen en vergelijker blijven intact. */
+.automotive-pagina { --auto-tekst: #60646a; --auto-licht: #f3f4f5; }
+.automotive-pagina .automotive-sectie { padding: 72px 0; scroll-margin-top: 110px; }
+.automotive-pagina .automotive-sectie--licht { background: var(--auto-licht); }
+.automotive-pagina .automotive-tweekoloms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center; }
+.automotive-pagina .automotive-bovenkop { display: block; margin-bottom: 16px; color: #625329; font-size: 11px; font-weight: 800; line-height: 1.5; letter-spacing: 2px; }
+.automotive-pagina h2 { margin: 0; font-size: clamp(32px, 3.5vw, 46px); font-weight: 800; line-height: 1.08; letter-spacing: -1.6px; }
+.automotive-pagina h3 { margin: 0; font-size: 19px; line-height: 1.25; letter-spacing: -.4px; }
+.automotive-pagina p { margin: 18px 0 0; color: var(--auto-tekst); font-size: 15px; line-height: 1.7; }
+.automotive-pagina figure { min-width: 0; margin: 0; }
 .automotive-pagina a:focus-visible { outline: 3px solid var(--wespi-goud-donker); outline-offset: 5px; }
-@media (max-width: 1000px) {
-    .automotive-pagina .automotive-kaarten { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .automotive-pagina .automotive-tweekoloms { gap: 30px; }
+.automotive-pagina .automotive-link { display: inline-flex; align-items: center; gap: 10px; color: #232323; font-size: 13px; font-weight: 800; line-height: 1.5; }
+.automotive-pagina .automotive-link span { color: #81630a; }
+.automotive-pagina .automotive-link:hover { color: #81630a; }
+.automotive-pagina .knop { gap: 14px; }
+
+/* Hero op dezelfde hoogte en tekstlijn als de homepage. */
+.automotive-pagina .automotive-hero .hero-foto { width: 62%; }
+.automotive-pagina .automotive-hero .hero-foto img { object-position: 63% center; }
+.automotive-pagina .automotive-hero .hero-tekst { width: 52%; max-width: 620px; }
+.automotive-pagina .automotive-hero h1 { font-size: clamp(48px, 4.6vw, 66px); }
+.automotive-pagina .automotive-hero p { max-width: 485px; margin-top: 25px; color: #353535; font-size: 17px; line-height: 1.65; }
+.automotive-pagina .automotive-hero-punten { display: flex; flex-wrap: wrap; gap: 10px 20px; list-style: none; margin: 26px 0 0; padding: 0; }
+.automotive-pagina .automotive-hero-punten li { color: #545454; font-size: 11px; font-weight: 700; }
+.automotive-pagina .automotive-hero-punten li::before { content: ""; display: inline-block; width: 5px; height: 5px; margin: 0 7px 2px 0; border-radius: 50%; background: var(--wespi-goud); }
+
+/* De bestaande toegankelijke voor-en-na-vergelijker gebruikt de originele beeldverhouding. */
+.automotive-pagina .automotive-vergelijking { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 56px; }
+.automotive-pagina .automotive-schuifhint { display: block; margin: 24px 0 18px; font-size: 12px; font-weight: 700; }
+.automotive-pagina .automotive-schuifhint span { margin-right: 8px; color: #81630a; font-size: 20px; }
+.automotive-pagina .beeldvergelijker { border-radius: 8px; }
+.automotive-pagina .automotive-vergelijking figcaption { margin-top: 12px; color: #6a6a6a; font-size: 11px; line-height: 1.5; }
+.automotive-pagina .automotive-kop { margin-bottom: 34px; }
+.automotive-pagina .automotive-kop--verdeeld { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 64px; align-items: end; }
+.automotive-pagina .automotive-kop--verdeeld > p { margin: 0; }
+.automotive-pagina .automotive-service-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 42px; align-items: center; }
+.automotive-pagina .automotive-diensten { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.automotive-pagina .automotive-dienst { padding: 16px; border-top: 3px solid var(--wespi-goud); border-radius: 0 0 6px 6px; background: var(--wit); }
+.automotive-pagina .automotive-dienst h3 { font-size: 17px; }
+.automotive-pagina .automotive-dienst p { margin-top: 8px; font-size: 14px; line-height: 1.55; }
+.automotive-pagina #mogelijkheden, .automotive-pagina #achtergronden, .automotive-pagina #werkwijze { padding: 52px 0; }
+.automotive-pagina #mogelijkheden .automotive-kop, .automotive-pagina #werkwijze .automotive-kop { align-items: center; margin-bottom: 26px; }
+.automotive-pagina .automotive-service-foto { overflow: hidden; border-radius: 6px; }
+.automotive-pagina .automotive-service-foto img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.automotive-pagina #werkwijze .automotive-kop { display: block; }
+.automotive-pagina #werkwijze .automotive-kop > div { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 0 64px; align-items: end; }
+.automotive-pagina #werkwijze .automotive-bovenkop { grid-column: 1 / -1; }
+.automotive-pagina #werkwijze .automotive-kop p { margin: 0; }
+.automotive-pagina .automotive-maatwerk { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-top: 24px; font-size: 13px; }
+
+/* Beperkte selectie, zonder beelden uit te rekken of de auto's af te snijden. */
+.automotive-pagina .automotive-voorbeelden { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.automotive-pagina .automotive-voorbeelden figure { overflow: hidden; border: 1px solid #e6e7e8; border-radius: 8px; }
+.automotive-pagina .automotive-voorbeelden img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; background: #fff; }
+.automotive-pagina .automotive-voorbeelden figcaption { padding: 14px 16px; }
+.automotive-pagina .automotive-voorbeelden h3 { font-size: 18px; }
+.automotive-pagina .automotive-voorbeelden p { margin-top: 8px; font-size: 13px; }
+.automotive-pagina .automotive-achtergrondkeuze { margin-top: 24px; font-size: 13px; }
+.automotive-pagina .automotive-achtergrondkeuze .automotive-link { margin-left: 6px; }
+
+/* Reguliere tarieven, zonder abonnementsprijzen. */
+.automotive-pagina .automotive-prijsoverzicht { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid #e2e2de; border-radius: 8px; overflow: hidden; }
+.automotive-pagina .automotive-prijsbasis, .automotive-pagina .automotive-prijsextras { padding: 30px; }
+.automotive-pagina .automotive-prijsbasis { background: var(--warm-wit); border-top: 3px solid var(--wespi-goud); }
+.automotive-pagina .automotive-prijsextras { border-top: 3px solid #e2e2de; }
+.automotive-pagina .automotive-hoofdprijs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; color: #222; }
+.automotive-pagina .automotive-hoofdprijs strong { font-size: 46px; font-weight: 800; letter-spacing: -2px; line-height: 1.1; }
+.automotive-pagina .automotive-prijsbasis > p:not(.automotive-hoofdprijs), .automotive-pagina .automotive-prijsextras > p { font-size: 14px; }
+.automotive-pagina .automotive-staffels { width: 100%; margin-top: 24px; border-collapse: collapse; font-size: 14px; }
+.automotive-pagina .automotive-staffels caption { margin-bottom: 12px; text-align: left; font-size: 13px; font-weight: 800; }
+.automotive-pagina .automotive-staffels th, .automotive-pagina .automotive-staffels td { padding: 10px 0; border-bottom: 1px solid #e0ded7; text-align: left; }
+.automotive-pagina .automotive-staffels thead th { color: #646057; font-size: 11px; font-weight: 700; }
+.automotive-pagina .automotive-staffels tbody th { font-weight: 400; }
+.automotive-pagina .automotive-staffels td, .automotive-pagina .automotive-staffels thead th:last-child { text-align: right; }
+.automotive-pagina .automotive-staffels td { font-weight: 800; white-space: nowrap; }
+.automotive-pagina .automotive-toeslagen { margin: 24px 0; }
+.automotive-pagina .automotive-toeslagen > div { display: flex; justify-content: space-between; gap: 12px; padding: 17px 0; border-bottom: 1px solid #e5e5e5; }
+.automotive-pagina .automotive-toeslagen dt { font-size: 14px; font-weight: 700; line-height: 1.4; }
+.automotive-pagina .automotive-toeslagen small { display: block; margin-top: 4px; color: #646057; font-size: 11px; font-weight: 400; }
+.automotive-pagina .automotive-toeslagen dd { margin: 0; font-size: 18px; font-weight: 800; white-space: nowrap; }
+.automotive-pagina .automotive-prijsvoorwaarden { margin-top: 16px; font-size: 12px; }
+
+.automotive-pagina .automotive-stappen { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin: 0; padding: 0; list-style: none; counter-reset: auto-stap; }
+.automotive-pagina .automotive-stappen li { counter-increment: auto-stap; border-top: 1px solid #d5d6d8; padding-top: 20px; }
+.automotive-pagina .automotive-stappen li::before { content: counter(auto-stap, decimal-leading-zero); display: block; margin-bottom: 20px; color: #8b6d10; font-size: 26px; font-weight: 800; letter-spacing: -1px; }
+.automotive-pagina .automotive-stappen h3 { font-size: 17px; }
+.automotive-pagina .automotive-stappen p { margin-top: 12px; font-size: 14px; }
+.automotive-pagina .automotive-doorlooptijd { margin-top: 30px; padding-top: 22px; border-top: 1px solid #d5d6d8; font-size: 13px; }
+.automotive-pagina .automotive-doorlooptijd strong { color: #262626; }
+.automotive-pagina .automotive-volume { padding: 48px 0 72px; background: #e9eaec; }
+.automotive-pagina .automotive-volume-inhoud { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 64px; }
+.automotive-pagina .automotive-volume-beeld { padding: 0; }
+.automotive-pagina .automotive-volume-beeld img { width: 100%; height: 370px; object-fit: contain; object-position: center; mix-blend-mode: multiply; }
+.automotive-pagina .automotive-volume-tekst { padding: 12px 0; }
+.automotive-pagina .automotive-volume-tekst .automotive-bovenkop { display: flex; align-items: center; gap: 12px; color: #252525; }
+.automotive-pagina .automotive-volume-tekst .automotive-bovenkop::before { content: ""; width: 30px; height: 3px; background: var(--wespi-goud); }
+.automotive-pagina .automotive-volume-tekst p { color: var(--auto-tekst); }
+.automotive-pagina .automotive-volume-tekst .knop { margin-top: 24px; }
+.automotive-pagina .automotive-volume-tekst .automotive-volume-punten { gap: 10px; margin-top: 20px; color: #45484d; }
+@media (max-width: 760px) {
+    .automotive-pagina .automotive-volume { padding: 32px 0 60px; }
+    .automotive-pagina .automotive-volume-inhoud { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    .automotive-pagina .automotive-volume-beeld img { height: 260px; }
+    .automotive-pagina .automotive-volume-tekst { padding: 0; }
+}
+.automotive-pagina .automotive-identiteit-foto img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; border-radius: 6px; }
+.automotive-pagina .automotive-identiteit-foto figcaption { margin-top: 10px; color: #625329; font-size: 12px; line-height: 1.5; }
+.automotive-pagina .automotive-volume-punten { display: grid; gap: 12px; margin: 24px 0 0; padding-left: 19px; color: #555044; font-size: 14px; line-height: 1.5; }
+.automotive-pagina .automotive-volume-punten li::marker { color: #8b6d10; }
+.automotive-pagina .automotive-offerte { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 32px; margin-top: 32px; padding: 28px 32px; border-left: 3px solid var(--wespi-goud); border-radius: 0 8px 8px 0; background: #fff; }
+.automotive-pagina .automotive-offerte h2 { font-size: clamp(26px, 2.4vw, 32px); letter-spacing: -1px; }
+.automotive-pagina .automotive-offerte p { margin-top: 12px; font-size: 14px; }
+.automotive-pagina .automotive-offerte .knop { margin-top: 0; }
+.automotive-pagina .automotive-offerte .automotive-link { display: flex; width: fit-content; margin-top: 18px; }
+
+@media (max-width: 1050px) {
+    .automotive-pagina .automotive-service-layout { gap: 26px; }
+    .automotive-pagina .automotive-tweekoloms, .automotive-pagina .automotive-kop--verdeeld { gap: 34px; }
+    .automotive-pagina .automotive-hero .hero-tekst { width: 58%; }
+    .automotive-pagina .automotive-hero .hero-foto { width: 58%; }
+    .automotive-pagina .automotive-dienst { padding: 16px; }
+    .automotive-pagina .automotive-stappen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
-    .automotive-pagina .automotive-sectie { padding: 56px 0; }
-    .automotive-pagina .automotive-tweekoloms { grid-template-columns: 1fr; }
-    .automotive-pagina .automotive-contact { padding: 36px 24px; }
+    .automotive-pagina .automotive-service-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .automotive-pagina .automotive-service-foto { max-width: 540px; margin: 0 auto; }
+    .automotive-pagina #werkwijze .automotive-kop > div { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .automotive-pagina #werkwijze .automotive-kop p { margin-top: 18px; }
+    .automotive-pagina .automotive-offerte { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 24px; }
+    .automotive-pagina .automotive-sectie { padding: 50px 0; }
+    .automotive-pagina .automotive-tweekoloms, .automotive-pagina .automotive-kop--verdeeld { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+    .automotive-pagina .automotive-hero .hero-foto { width: 100%; height: clamp(240px, 60vw, 380px); }
+    .automotive-pagina .automotive-hero .hero-foto img { object-position: center; }
+    .automotive-pagina .automotive-hero .hero-tekst { width: 100%; max-width: none; padding: 20px 0 45px; }
+    .automotive-pagina .automotive-hero h1 { font-size: clamp(40px, 7vw, 52px); letter-spacing: -2px; }
+    .automotive-pagina .automotive-hero p { max-width: 580px; font-size: 16px; }
+    .automotive-pagina .automotive-diensten { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .automotive-pagina .automotive-voorbeelden { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .automotive-pagina .automotive-voorbeelden figcaption { padding: 16px; }
+    .automotive-pagina .automotive-voorbeelden h3 { font-size: 16px; }
+    .automotive-pagina .automotive-prijsoverzicht { grid-template-columns: minmax(0, 1fr); }
+    .automotive-pagina #mogelijkheden, .automotive-pagina #achtergronden, .automotive-pagina #werkwijze { padding: 38px 0; }
 }
-@media (max-width: 540px) {
-    .automotive-pagina .automotive-kaarten, .automotive-pagina .automotive-achtergronden { grid-template-columns: 1fr; }
-    .automotive-pagina .automotive-acties { align-items: stretch; flex-direction: column; }
-    .automotive-pagina .knop { text-align: center; }
+@media (max-width: 480px) {
+    .automotive-pagina .automotive-diensten, .automotive-pagina .automotive-stappen { grid-template-columns: minmax(0, 1fr); }
+    .automotive-pagina .automotive-dienst { padding: 14px 16px; }
+    .automotive-pagina .automotive-voorbeelden figcaption { padding: 12px; }
+    .automotive-pagina .automotive-voorbeelden h3 { font-size: 15px; overflow-wrap: anywhere; }
+    .automotive-pagina .automotive-voorbeelden p { font-size: 12px; line-height: 1.5; }
+    .automotive-pagina .automotive-prijsbasis, .automotive-pagina .automotive-prijsextras { padding: 24px 20px; }
+    .automotive-pagina .automotive-offerte { padding: 26px 22px; }
+    .automotive-pagina .hero-knoppen .knop { width: 100%; }
+    .automotive-pagina .automotive-stappen li { position: relative; padding: 20px 0 0 48px; }
+    .automotive-pagina .automotive-stappen li::before { position: absolute; left: 0; top: 17px; }
+}
+
+/* Alleen mobiel: volumetitel v??r de bestaande bestelbus. */
+@media (max-width: 760px) {
+    .automotive-pagina .automotive-volume-inhoud { row-gap: 0; }
+    .automotive-pagina .automotive-volume-tekst { display: contents; }
+    .automotive-pagina .automotive-volume-tekst .automotive-bovenkop { order: -3; }
+    .automotive-pagina .automotive-volume-tekst h2 { order: -2; }
+    .automotive-pagina .automotive-volume-beeld { order: -1; margin-top: 20px; }
+    .automotive-pagina .automotive-volume-tekst .knop { justify-self: start; }
 }

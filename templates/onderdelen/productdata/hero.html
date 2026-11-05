@@ -9,9 +9,9 @@
         aria-hidden="true"
     >
         <img
-            src="{{ url_for('static', path='images/productdata/productdata-hero.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/productdata/productdata-hero.png')) }}" {{ beeld_attributen('images/productdata/productdata-hero.png', responsive=false) }}
             alt=""
-        >
+         decoding="async">
 
         <div class="productdata-hero-verloop"></div>
     </div>

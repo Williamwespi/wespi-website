@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Pagina niet gevonden | Wespi{% endblock %}
+{% block meta_description %}Deze pagina is niet gevonden. Ga naar de homepage van Wespi of neem contact op.{% endblock %}
+{% block canonical %}<meta name="robots" content="noindex, follow">{% endblock %}
+{% block content %}
+<section class="foutpagina container">
+    <p>404</p>
+    <h1>Deze pagina is niet gevonden.</h1>
+    <p>De link is mogelijk verouderd of het adres is niet juist.</p>
+    <p><a href="/">Naar de homepage</a> · <a href="/contact">Neem contact op</a></p>
+</section>
+{% endblock %}

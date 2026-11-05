@@ -80,7 +80,7 @@
 
     margin-top: 7px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 .offerte-hero p {
@@ -186,7 +186,7 @@
 }
 
 .offerte-dienst-melding strong {
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 17px;
 }
@@ -201,6 +201,41 @@
     flex-direction: column;
 
     gap: 24px;
+}
+
+#offerte-formulier {
+    scroll-margin-top: 110px;
+}
+
+.offerte-spamval {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.offerte-melding {
+    padding: 16px 20px;
+    border-left: 3px solid #963b29;
+    background: #fff;
+    color: #763020;
+    line-height: 1.6;
+}
+
+.offerte-melding--succes {
+    border-color: #527343;
+    color: #36522a;
+}
+
+.offerte-fout {
+    margin: 0;
+    color: #963b29;
+    font-size: 13px;
+}
+
+.offerte-veld [aria-invalid="true"] {
+    border-color: #963b29;
 }
 
 .offerte-rij {

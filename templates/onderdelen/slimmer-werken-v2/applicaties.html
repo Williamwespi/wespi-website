@@ -13,10 +13,10 @@
             {% for applicatie in applicaties %}
             <article class="slimmer-v2-product-card">
                 <img
-                    src="{{ url_for('static', path=applicatie.afbeelding) }}"
+                    src="{{ url_for('static', path=beeldpad(applicatie.afbeelding)) }}" {{ beeld_attributen(applicatie.afbeelding) }}
                     alt="{{ applicatie.afbeelding_alt }}"
                     loading="lazy"
-                >
+                 decoding="async">
                 <div class="slimmer-v2-product-card__content">
                     <h3>{{ applicatie.naam }}</h3>
                     <p>{{ applicatie.omschrijving }}</p>

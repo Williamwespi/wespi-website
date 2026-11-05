@@ -83,7 +83,7 @@
 
     margin-top: 6px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 
@@ -151,7 +151,7 @@
 .platte-prijs-kop > strong {
     position: relative;
 
-    color: #b58a16;
+    color: #755b0a;
 
     font-size: 40px;
     font-weight: 900;

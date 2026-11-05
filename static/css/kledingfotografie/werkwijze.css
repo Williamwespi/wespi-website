@@ -180,7 +180,7 @@
 
     margin-top: 6px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 
@@ -500,4 +500,17 @@
         height: 350px;
     }
 
+}
+
+/* De bestaande tekstcontainers delen mobiel ??n grid met de visual. */
+@media (max-width: 760px) {
+    .kledingfotografie-werkwijze { display: grid; grid-template-columns: 16px minmax(0, 1fr) 16px; padding: 58px 0 40px; }
+    .kledingfotografie-werkwijze-inhoud, .werkwijze-tekst { display: contents; }
+    .werkwijze-tekst > * { grid-column: 2; }
+    .werkwijze-bovenkop { order: -3; }
+    .werkwijze-tekst h2 { order: -2; }
+    .kledingfotografie-werkwijze .werkwijze-visual { grid-column: 1 / -1; order: -1; margin-top: 24px; }
+}
+@media (max-width: 500px) {
+    .kledingfotografie-werkwijze { padding-top: 52px; }
 }

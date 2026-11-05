@@ -2,12 +2,12 @@
 
     <div class="beeldbewerking-hero__visual">
         <img
-            src="{{ url_for('static', path='images/beeldbewerking/beeldbewerking-hero.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/beeldbewerking/beeldbewerking-hero.png')) }}" {{ beeld_attributen('images/beeldbewerking/beeldbewerking-hero.png', responsive=false) }}
             alt="Werkplek voor beeldbewerking met een kledingfoto voor en na bewerking op het scherm"
             width="1536"
             height="1024"
             fetchpriority="high"
-        >
+         decoding="async">
     </div>
 
     <div class="container beeldbewerking-hero__container">

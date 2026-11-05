@@ -628,3 +628,17 @@
     }
 
 }
+
+/* Mobiele leesvolgorde: kop, beeld, toelichting en voordelen. */
+@media (max-width: 800px) {
+    .voordelen-blok { display: flex; flex-direction: column; padding: 30px 0 65px; }
+    .voordelen-inhoud, .voordelen-kop { display: contents; }
+    .voordelen-kop .sectie-bovenkop { order: -4; }
+    .voordelen-kop h2 { order: -3; }
+    .voordelen-visual { order: -2; margin-top: 24px; }
+    .voordelen-kop p { order: -1; margin-bottom: 34px; }
+}
+@media (max-width: 600px) {
+    .voordelen-blok { padding-bottom: 52px; }
+    .voordelen-kop p { margin-bottom: 30px; }
+}

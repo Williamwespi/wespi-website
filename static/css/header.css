@@ -171,7 +171,6 @@ body {
     transition: transform 0.2s ease;
 }
 
-.navigatie-dropdown:hover .navigatie-dropdown-pijl,
 .navigatie-dropdown.is-open .navigatie-dropdown-pijl {
     transform: rotate(180deg);
 }
@@ -183,10 +182,11 @@ body {
     position: absolute;
     z-index: 100000;
     top: calc(100% - 1px);
-    left: 50%;
+    left: 0;
 
     display: block;
-    width: 420px;
+    width: 320px;
+    max-width: calc(100vw - 32px);
     box-sizing: border-box;
     padding: 10px;
 
@@ -194,7 +194,7 @@ body {
     visibility: hidden;
     pointer-events: none;
 
-    transform: translate(-50%, 10px);
+    transform: translateY(4px);
 
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 14px;
@@ -212,12 +212,13 @@ body {
 
 /* Dropdown openen */
 
-.navigatie-dropdown:hover .navigatie-dropdown-menu,
 .navigatie-dropdown.is-open .navigatie-dropdown-menu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translate(-50%, 0);
+    transform: translateY(0);
+    /* Zichtbaarheid is direct nodig om toetsenbordfocus te kunnen plaatsen. */
+    transition-property: opacity, transform;
 }
 
 
@@ -557,7 +558,9 @@ body {
 
         display: none;
 
-        max-height: calc(100vh - 72px);
+        /* Trek de werkelijke hoogte van de headercontainer af, ook op korte schermen. */
+        max-height: calc(100vh - 100%);
+        max-height: calc(100dvh - 100%);
         overflow-y: auto;
 
         padding: 14px 18px 20px;
@@ -776,7 +779,6 @@ body {
     }
 
     .hoofdnavigatie {
-        max-height: calc(100vh - 64px);
         padding-left: 12px;
         padding-right: 12px;
     }

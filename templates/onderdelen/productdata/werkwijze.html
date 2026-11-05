@@ -3,10 +3,10 @@
     <!-- ACHTERGRONDBEELD LINKS -->
     <div class="productdata-werkwijze-afbeelding" aria-hidden="true">
         <img
-            src="{{ url_for('static', path='images/productdata/productdata-werkwijze.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/productdata/productdata-werkwijze.png')) }}" {{ beeld_attributen('images/productdata/productdata-werkwijze.png') }}
             alt=""
             loading="lazy"
-        >
+         decoding="async">
         <div class="productdata-werkwijze-verloop"></div>
     </div>
 

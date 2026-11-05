@@ -27,9 +27,9 @@ Maak kennis met Wespi. Ruim 15 jaar ervaring met productinformatie, beeld, marke
 
     <div class="over-hero__beeld">
         <img
-            src="{{ url_for('static', path='images/over-wespi/wespi-vlag.jpg') }}"
+            src="{{ url_for('static', path=beeldpad('images/over-wespi/wespi-vlag.jpg')) }}" {{ beeld_attributen('images/over-wespi/wespi-vlag.jpg') }}
             alt="Wespi vlag in Aalten"
-        >
+         loading="eager" fetchpriority="high" decoding="async">
     </div>
 
     <div class="container over-hero__container">

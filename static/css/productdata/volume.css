@@ -117,7 +117,7 @@
 
     margin-top: 6px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 
@@ -260,7 +260,7 @@
     border-bottom:
         1px solid #e5e2db;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 10px;
     line-height: 1;
@@ -322,7 +322,7 @@
 }
 
 .productdata-volume-niveau > div > span {
-    color: #777777;
+    color: #626262;
 
     font-size: 12px;
     line-height: 1.3;
@@ -398,7 +398,7 @@
    ========================================================= */
 
 .productdata-volume-niveau-groot strong {
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 21px;
 }
@@ -431,7 +431,7 @@
 
     margin-bottom: 6px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 10px;
     font-weight: 800;

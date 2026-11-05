@@ -3,10 +3,10 @@
     <!-- VISUAL RECHTS -->
     <div class="productdata-prijzen-afbeelding" aria-hidden="true">
         <img
-            src="{{ url_for('static', path='images/productdata/productdata-prijzen.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/productdata/productdata-prijzen.png')) }}" {{ beeld_attributen('images/productdata/productdata-prijzen.png') }}
             alt=""
             loading="lazy"
-        >
+         decoding="async">
         <div class="productdata-prijzen-verloop"></div>
     </div>
 
@@ -37,6 +37,8 @@
 
 
             <!-- PRIJSKAARTEN -->
+            <small class="prijs-btw">Alle genoemde bedragen exclusief btw.</small>
+
             <div class="productdata-prijzen-kaarten">
 
 

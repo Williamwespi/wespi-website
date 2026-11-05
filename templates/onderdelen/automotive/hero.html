@@ -1,16 +1,20 @@
-<section class="automotive-sectie automotive-hero" aria-labelledby="automotive-titel">
-    <div class="container automotive-tweekoloms">
-        <div>
-            <a class="automotive-terug" href="/beeldbewerking">Beeldbewerking →</a>
-            <span class="automotive-bovenkop">BEELD · AUTOMOTIVE</span>
-            <h1 id="automotive-titel">Automotive beeldbewerking.<br><span>Verzorgd in beeld.</span></h1>
-            <p>Professionele voertuigfoto's voor autobedrijven. We stemmen achtergrond, afwerking en beeldformaat af op jouw presentatie.</p>
-            <div class="automotive-acties">
-                <a class="knop knop-geel" href="#mogelijkheden">Bekijk de mogelijkheden</a>
-                <a class="knop knop-licht" href="#contact">Neem contact op</a>
+<section class="hero automotive-hero" aria-labelledby="automotive-titel">
+    <div class="hero-foto">
+        <img src="{{ url_for('static', path=beeldpad('images/beeldbewerking/beeldbewerking/automotive/achtergronden/auto-geel-extra-achtergrond-3.jpg')) }}" {{ beeld_attributen('images/beeldbewerking/beeldbewerking/automotive/achtergronden/auto-geel-extra-achtergrond-3.jpg', responsive=false) }}
+             alt="Gele Peugeot op een lichte digitale showroomachtergrond" width="1536" height="1024" fetchpriority="high" decoding="async">
+    </div>
+    <div class="container hero-inhoud">
+        <div class="hero-tekst">
+            <span class="hero-bovenkop">AUTOBEELDBEWERKING</span>
+            <h1 id="automotive-titel">Elke auto in beeld.<span>Eén herkenbare showroom.</span></h1>
+            <p>Laat je autofoto's professioneel bewerken. Van een nieuwe achtergrond tot je eigen logo: een verzorgde, consistente presentatie voor je website en online advertenties.</p>
+            <div class="hero-knoppen">
+                <a class="knop knop-geel" href="/offerte?dienst=beeldbewerking">Offerte aanvragen <span aria-hidden="true">→</span></a>
+                <a class="knop knop-licht" href="#voor-na">Bekijk het verschil</a>
             </div>
+            <ul class="automotive-hero-punten" aria-label="Voordelen">
+                <li>Je eigen uitstraling</li><li>Ook voor grote volumes</li><li>Persoonlijk afgestemd</li>
+            </ul>
         </div>
-        <img src="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/automotive/voorbeelden/auto-voorbeeld-showroom.jpg') }}"
-             alt="Zwarte SUV op een verzorgde showroomachtergrond" fetchpriority="high">
     </div>
 </section>

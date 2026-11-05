@@ -738,3 +738,19 @@
     }
 
 }
+
+.slimmer-flow__kop, .slimmer-beeld__kop, .slimmer-beeld__voorbeeld small { color: #5c5c5c; }
+
+/* Gerichte mobiele verfijning, fase 3. */
+
+@media (max-width: 600px) {
+    .slimmer-mogelijkheden { padding: 52px 0 56px; }
+    .slimmer-flow { grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr); gap: 6px; }
+    .slimmer-flow__pijl { height: auto; transform: none; }
+    .slimmer-flow__blok { min-height: 0; padding: 12px 10px; }
+    .slimmer-flow__kop, .slimmer-beeld__kop { font-size: 10px; letter-spacing: 1px; }
+    .slimmer-flow__regel, .slimmer-flow__bestand { font-size: 11px; }
+    .slimmer-beeld__demo { grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 7px; }
+    .slimmer-beeld__pijl { height: auto; transform: none; }
+    .slimmer-beeld__voorbeeld small { font-size: 11px; }
+}

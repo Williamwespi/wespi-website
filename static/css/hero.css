@@ -129,7 +129,7 @@
 
     margin-top: 8px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 .hero p {
@@ -274,7 +274,7 @@
 .hero-pluspunt div > span {
     display: block;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 10px;
 }

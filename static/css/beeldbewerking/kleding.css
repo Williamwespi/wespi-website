@@ -42,6 +42,9 @@
 .kledingbewerking-tarieven dt { font-size: 13px; line-height: 1.5; }
 .kledingbewerking-tarieven dd { margin: 0; color: #111; font-size: 24px; font-weight: 800; white-space: nowrap; letter-spacing: -.7px; }
 .kledingbewerking-prijsvoorwaarden { margin: 14px 0 0; color: var(--kleding-tekst); font-size: 12px; line-height: 1.6; }
+.kledingbewerking-ai-verwijzing { margin: 20px 0 0; color: var(--kleding-tekst); font-size: 14px; line-height: 1.7; }
+.kledingbewerking-ai-verwijzing a { color: var(--wespi-zwart); font-weight: 700; text-decoration: none; transition: color .2s ease; }
+.kledingbewerking-ai-verwijzing a:hover { color: var(--wespi-goud-donker); }
 
 /* Proces: introductie links, vier compacte stappen rechts. */
 .kledingbewerking-werkwijze__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 72px; }
@@ -84,4 +87,14 @@
 @media (max-width: 480px) {
     .kledingbewerking-mogelijkheden { grid-template-columns: minmax(0, 1fr); }
     .kledingbewerking-contact__actie, .kledingbewerking-contact__actie .knop { width: 100%; }
+}
+
+/* Volume en werkwijze: kop, trui, introductie en stappen. */
+@media (max-width: 760px) {
+    .kledingbewerking-werkwijze__layout { row-gap: 0; }
+    .kledingbewerking-procesinhoud, .kledingbewerking-procesinhoud > .kledingbewerking-kop { display: contents; }
+    .kledingbewerking-procesinhoud .kledingbewerking-bovenkop { order: -3; }
+    .kledingbewerking-procesinhoud h2 { order: -2; }
+    .kledingbewerking-procesbeeld { order: -1; margin-top: 24px; }
+    .kledingbewerking-werkwijze .kledingbewerking-stappen { margin-top: 30px; }
 }

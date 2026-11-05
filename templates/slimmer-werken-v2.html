@@ -25,9 +25,9 @@ Wespi helpt bedrijven dagelijkse werkprocessen slimmer en efficiënter in te ric
 
     <div class="slimmer-v2-hero__visual">
         <img
-            src="{{ url_for('static', path='images/slimmer-werken/slimmer-werken-hero.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/slimmer-werken/slimmer-werken-hero.png')) }}" {{ beeld_attributen('images/slimmer-werken/slimmer-werken-hero.png', responsive=false) }}
             alt="Producten en dozen in een magazijn"
-        >
+         decoding="async">
     </div>
 
     <div class="container slimmer-v2-hero__container">

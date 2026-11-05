@@ -159,3 +159,38 @@ select {
     }
 
 }
+
+/* Bevestigde btw-basis direct bij de bestaande prijsblokken. */
+.prijs-btw { display: block; margin-top: 10px; color: #555; font-size: 12px; line-height: 1.5; }
+
+/* Alleen zichtbaar tijdens toetsenbordbediening. */
+.skiplink {
+    position: fixed;
+    top: 8px;
+    left: 16px;
+    z-index: 100001;
+    padding: 12px 18px;
+    background: #fff;
+    color: #1d1b17;
+    transform: translateY(-200%);
+}
+.skiplink:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid #755b0a; outline-offset: 4px; }
+main:focus { outline: none; }
+.packshot-lightbox :focus-visible,
+.bodyform-lightbox :focus-visible { outline-color: #fff; }
+.packshot-lightbox::backdrop,
+.bodyform-lightbox::backdrop { background: transparent; }
+.foutpagina { padding-top: 200px; padding-bottom: 80px; }
+.foutpagina h1 { max-width: 800px; font-size: clamp(30px, 5vw, 54px); line-height: 1.15; }
+.foutpagina p { margin-top: 24px; }
+.foutpagina a { color: #755b0a; text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

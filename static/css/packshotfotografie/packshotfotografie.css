@@ -2,10 +2,10 @@
    PACKSHOTFOTOGRAFIE
 ======================================== */
 
-@import url("hero.css");
+@import url("hero.css?v=20261105-fase3.1");
 @import url("categorieen.css");
-@import url("inhoud.css");
-@import url("schoenen.css");
-@import url("accessoires.css");
-@import url("overige-producten.css");
-@import url("werkwijze.css");
+@import url("inhoud.css?v=20261105-fase4.1");
+@import url("schoenen.css?v=20261105-fase3.1");
+@import url("accessoires.css?v=20261105-fase3.1");
+@import url("overige-producten.css?v=20261105-fase3.1");
+@import url("werkwijze.css?v=20261105-fase3.1");

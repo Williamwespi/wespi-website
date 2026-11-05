@@ -52,10 +52,10 @@
     <div class="beeld-hero-visual">
 
         <img
-            src="{{ url_for('static', path='images/beeld/hero-beeld-productfotografie-wespi.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/beeld/hero-beeld-productfotografie-wespi.png')) }}" {{ beeld_attributen('images/beeld/hero-beeld-productfotografie-wespi.png', responsive=false) }}
             alt="Producten en kleding als visual voor productfotografie en beeldbewerking"
             fetchpriority="high"
-        >
+         decoding="async">
 
         <div class="beeld-hero-visual-fade"></div>
 

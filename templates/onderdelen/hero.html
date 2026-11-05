@@ -4,9 +4,9 @@
     <div class="hero-foto">
 
         <img
-            src="{{ url_for('static', path='images/home/hero-kleding.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/home/hero-kleding.png')) }}" {{ beeld_attributen('images/home/hero-kleding.png', responsive=false) }}
             alt="Professionele productfotografie door Wespi"
-        >
+         decoding="async">
 
     </div>
 

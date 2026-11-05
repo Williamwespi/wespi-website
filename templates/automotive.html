@@ -1,21 +1,19 @@
 {% extends "base.html" %}
-
-{% block title %}Automotive beeldbewerking voor autobedrijven | Wespi{% endblock %}
-{% block meta_description %}Professionele automotive beeldbewerking voor autobedrijven. Achtergronden aanpassen, voertuigfoto's retoucheren en grotere beeldseries consistent opleveren.{% endblock %}
-{% block canonical %}
-<link rel="canonical" href="https://www.wespi.nl/beeldbewerking/automotive">
-{% endblock %}
+{% block title %}Autobeeldbewerking voor autobedrijven | Digitale showroom | Wespi{% endblock %}
+{% block meta_description %}Laat autofoto's professioneel bewerken door Wespi. Achtergrond verwijderen of vervangen, digitale showroom, kentekenplaten en logo's. Vraag een offerte aan.{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://www.wespi.nl/beeldbewerking/automotive">{% endblock %}
 {% block extra_head %}
-<link rel="stylesheet" href="{{ url_for('static', path='css/beeldbewerking/automotive.css') }}?v=1.0">
+<link rel="stylesheet" href="{{ url_for('static', path='css/beeldbewerking/automotive.css') }}?v=20261105-fase2.1">
 {% endblock %}
-
 {% block content %}
 <div class="automotive-pagina">
     {% include "onderdelen/automotive/hero.html" %}
+    {% include "onderdelen/automotive/vergelijking.html" %}
     {% include "onderdelen/automotive/mogelijkheden.html" %}
     {% include "onderdelen/automotive/achtergronden.html" %}
-    {% include "onderdelen/automotive/volume.html" %}
     {% include "onderdelen/automotive/werkwijze.html" %}
-    {% include "onderdelen/automotive/contact.html" %}
+    {% include "onderdelen/automotive/tarieven.html" %}
+    {% include "onderdelen/automotive/volume.html" %}
 </div>
+<script src="{{ url_for('static', path='js/beeldvergelijker.js') }}" defer></script>
 {% endblock %}

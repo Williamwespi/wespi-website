@@ -31,7 +31,7 @@
 
     margin-bottom: 14px;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 10px;
     font-weight: 800;
@@ -53,7 +53,7 @@
 }
 
 .kledingfotografie-klanten h2 span {
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 .kledingfotografie-klanten p {
@@ -458,4 +458,10 @@
         animation: none;
     }
 
+}
+
+/* Gerichte mobiele verfijning, fase 3. */
+
+@media (max-width: 600px) {
+    .kledingfotografie-klanten { padding-top: 48px; padding-bottom: 48px; }
 }

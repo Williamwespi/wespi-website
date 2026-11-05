@@ -18,6 +18,14 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
 
 {% block content %}
 
+{% macro veld_attributen(naam, limiet) -%}
+maxlength="{{ limiet }}"
+{% if naam in form_errors %}aria-invalid="true" aria-describedby="offerte-fout-{{ naam|replace(' ', '-') }}"{% endif %}
+{%- endmacro %}
+{% macro veld_fout(naam) -%}
+{% if naam in form_errors %}<p class="offerte-fout" id="offerte-fout-{{ naam|replace(' ', '-') }}">{{ form_errors[naam] }}</p>{% endif %}
+{%- endmacro %}
+
 <section class="offerte-hero">
 
     <div class="container offerte-hero-inhoud">
@@ -85,10 +93,20 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
 
         <form
             class="offerte-formulier"
-            action="mailto:info@wespi.nl"
+            action="/offerte#offerte-formulier"
             method="post"
-            enctype="text/plain"
+            id="offerte-formulier"
         >
+
+            {% if form_status %}
+            <div class="offerte-melding{% if form_success %} offerte-melding--succes{% endif %}" role="{% if form_success %}status{% else %}alert{% endif %}">
+                {{ form_status }}
+            </div>
+            {% endif %}
+            <div class="offerte-spamval" aria-hidden="true">
+                <label for="offerte-website">Laat dit veld leeg</label>
+                <input id="offerte-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
 
             <div class="offerte-veld">
 
@@ -100,8 +118,12 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                     type="text"
                     id="naam"
                     name="Naam"
+                    value="{{ form_data.get('Naam', '') }}"
+                    autocomplete="name"
+                    {{ veld_attributen('Naam', 120) }}
                     required
                 >
+                {{ veld_fout('Naam') }}
 
             </div>
 
@@ -116,7 +138,11 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                     type="text"
                     id="bedrijf"
                     name="Bedrijfsnaam"
+                    value="{{ form_data.get('Bedrijfsnaam', '') }}"
+                    autocomplete="organization"
+                    {{ veld_attributen('Bedrijfsnaam', 160) }}
                 >
+                {{ veld_fout('Bedrijfsnaam') }}
 
             </div>
 
@@ -133,8 +159,12 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                         type="email"
                         id="email"
                         name="E-mail"
+                        value="{{ form_data.get('E-mail', '') }}"
+                        autocomplete="email"
+                        {{ veld_attributen('E-mail', 254) }}
                         required
                     >
+                    {{ veld_fout('E-mail') }}
 
                 </div>
 
@@ -149,7 +179,11 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                         type="tel"
                         id="telefoon"
                         name="Telefoon"
+                        value="{{ form_data.get('Telefoon', '') }}"
+                        autocomplete="tel"
+                        {{ veld_attributen('Telefoon', 40) }}
                     >
+                    {{ veld_fout('Telefoon') }}
 
                 </div>
 
@@ -165,12 +199,13 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                 <select
                     id="dienst"
                     name="Dienst"
+                    {% if 'Dienst' in form_errors %}aria-invalid="true" aria-describedby="offerte-fout-Dienst"{% endif %}
                     required
                 >
 
                     <option
                         value=""
-                        {% if not dienst_code %}selected{% endif %}
+                        {% if not geselecteerde_dienst %}selected{% endif %}
                     >
                         Kies een dienst
                     </option>
@@ -179,7 +214,7 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
 
                         <option
                             value="{{ naam }}"
-                            {% if code == dienst_code %}selected{% endif %}
+                            {% if naam == geselecteerde_dienst %}selected{% endif %}
                         >
                             {{ naam }}
                         </option>
@@ -187,6 +222,7 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                     {% endfor %}
 
                 </select>
+                {{ veld_fout('Dienst') }}
 
             </div>
 
@@ -206,8 +242,12 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                         type="text"
                         id="aantal-artikelen"
                         name="Aantal artikelen"
+                        value="{{ form_data.get('Aantal artikelen', '') }}"
+                        {{ veld_attributen('Aantal artikelen', 120) }}
                         placeholder="Bijvoorbeeld 50"
                     >
+
+                    {{ veld_fout('Aantal artikelen') }}
 
                 </div>
 
@@ -221,25 +261,27 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                     <select
                         id="fotografie"
                         name="Type kledingfotografie"
+                        {% if 'Type kledingfotografie' in form_errors %}aria-invalid="true" aria-describedby="offerte-fout-Type-kledingfotografie"{% endif %}
                     >
 
-                        <option value="">
+                        <option value="" {% if not form_data.get('Type kledingfotografie') %}selected{% endif %}>
                             Nog niet zeker
                         </option>
 
-                        <option value="Bodyform">
+                        <option value="Bodyform" {% if form_data.get('Type kledingfotografie') == 'Bodyform' %}selected{% endif %}>
                             Bodyform / ghost mannequin
                         </option>
 
-                        <option value="Platte fotografie">
+                        <option value="Platte fotografie" {% if form_data.get('Type kledingfotografie') == 'Platte fotografie' %}selected{% endif %}>
                             Platte fotografie
                         </option>
 
-                        <option value="Combinatie">
+                        <option value="Combinatie" {% if form_data.get('Type kledingfotografie') == 'Combinatie' %}selected{% endif %}>
                             Combinatie
                         </option>
 
                     </select>
+                    {{ veld_fout('Type kledingfotografie') }}
 
                 </div>
 
@@ -255,10 +297,12 @@ Vraag vrijblijvend een offerte aan bij Wespi voor kledingfotografie, productfoto
                 <textarea
                     id="toelichting"
                     name="Toelichting"
+                    {{ veld_attributen('Toelichting', 5000) }}
                     rows="7"
                     placeholder="Wat wil je laten doen, hoeveel gaat het ongeveer om en wanneer heb je het nodig?"
                     required
-                ></textarea>
+                >{{ form_data.get('Toelichting', '') }}</textarea>
+                {{ veld_fout('Toelichting') }}
 
             </div>
 

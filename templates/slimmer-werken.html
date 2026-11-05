@@ -31,9 +31,9 @@ Minder handmatig digitaal werk. Wespi maakt praktische oplossingen voor teksten,
     <div class="slimmer-hero__visual">
 
         <img
-            src="{{ url_for('static', path='images/slimmer-werken/slimmer-werken-hero.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/slimmer-werken/slimmer-werken-hero.png')) }}" {{ beeld_attributen('images/slimmer-werken/slimmer-werken-hero.png', responsive=false) }}
             alt="Grote hoeveelheden producten en dozen in een magazijn"
-        >
+         decoding="async">
 
     </div>
 
@@ -117,7 +117,7 @@ Minder handmatig digitaal werk. Wespi maakt praktische oplossingen voor teksten,
 
                     <div>
                         <strong>Betaalbaar</strong>
-                        <span>Vanaf € 249</span>
+                        <span>Vanaf € 249 excl. btw</span>
                     </div>
 
                 </div>
@@ -634,10 +634,10 @@ Minder handmatig digitaal werk. Wespi maakt praktische oplossingen voor teksten,
     <div class="slimmer-prijs__visual">
 
         <img
-            src="{{ url_for('static', path='images/slimmer-werken/slimmer-werken-prijzen-magazijn.png') }}"
+            src="{{ url_for('static', path=beeldpad('images/slimmer-werken/slimmer-werken-prijzen-magazijn.png')) }}" {{ beeld_attributen('images/slimmer-werken/slimmer-werken-prijzen-magazijn.png') }}
             alt="Dozen met verschillende producten in een magazijn"
             loading="lazy"
-        >
+         decoding="async">
 
     </div>
 
@@ -666,6 +666,8 @@ Minder handmatig digitaal werk. Wespi maakt praktische oplossingen voor teksten,
             </p>
 
 
+
+            <small class="prijs-btw">Alle tarieven exclusief btw.</small>
 
             <div class="slimmer-prijs__kaarten">
 

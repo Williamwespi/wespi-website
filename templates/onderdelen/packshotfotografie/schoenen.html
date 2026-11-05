@@ -10,27 +10,27 @@
             <div class="packshot-gallery__groot">
 
                 <img
-                    src="{{ url_for('static', path='images/packshotfotografie/packshot-schoenen-hoofdfoto.png') }}"
+                    src="{{ url_for('static', path=beeldpad('images/packshotfotografie/packshot-schoenen-hoofdfoto.png')) }}" {{ beeld_attributen('images/packshotfotografie/packshot-schoenen-hoofdfoto.png') }}
                     alt="Professionele packshotfotografie van bruine schoen door Wespi"
-                >
+                 loading="lazy" decoding="async">
 
             </div>
 
             <div class="packshot-gallery__klein">
 
                 <img
-                    src="{{ url_for('static', path='images/packshotfotografie/packshot-schoenen-sneaker.png') }}"
+                    src="{{ url_for('static', path=beeldpad('images/packshotfotografie/packshot-schoenen-sneaker.png')) }}" {{ beeld_attributen('images/packshotfotografie/packshot-schoenen-sneaker.png') }}
                     alt="Packshotfotografie van sneaker door Wespi"
-                >
+                 loading="lazy" decoding="async">
 
             </div>
 
             <div class="packshot-gallery__klein">
 
                 <img
-                    src="{{ url_for('static', path='images/packshotfotografie/packshot-schoenen-slipper.png') }}"
+                    src="{{ url_for('static', path=beeldpad('images/packshotfotografie/packshot-schoenen-slipper.png')) }}" {{ beeld_attributen('images/packshotfotografie/packshot-schoenen-slipper.png') }}
                     alt="Packshotfotografie van slipper door Wespi"
-                >
+                 loading="lazy" decoding="async">
 
             </div>
 
@@ -53,6 +53,8 @@
                 materiaal en kleur, klaar voor gebruik in je webshop
                 of catalogus.
             </p>
+
+            <small class="prijs-btw">Alle prijzen exclusief btw.</small>
 
             <div class="packshot-voorbeeld__prijs">
 

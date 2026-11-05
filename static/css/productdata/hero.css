@@ -147,8 +147,7 @@
 
     margin-top: 8px;
 
-    color:
-        var(--wespi-goud);
+    color: #755b0a;
 }
 
 
@@ -327,7 +326,7 @@
 
 
 .productdata-hero-pluspunten p {
-    color: #777777;
+    color: #626262;
 
     font-size: 10px;
     line-height: 1.45;

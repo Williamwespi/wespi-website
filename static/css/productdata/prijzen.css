@@ -140,7 +140,7 @@
 
     margin-top: 5px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 .productdata-prijzen-kop p {
@@ -257,7 +257,7 @@
 
     margin-bottom: 8px;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 9px;
 
@@ -297,7 +297,7 @@
 .productdata-prijs strong {
     display: block;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 35px;
 
@@ -313,7 +313,7 @@
 
     margin-top: 7px;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 11px;
 }
@@ -514,7 +514,7 @@
 }
 
 .productdata-prijzen-info span {
-    color: #777777;
+    color: #626262;
 
     font-size: 9.5px;
 
@@ -773,4 +773,31 @@
         gap: 8px;
     }
 
+}
+
+/* De bestaande tariefintro blijft onder het beeld; bedragen en kaarten blijven intact. */
+@media (max-width: 900px) {
+    .productdata-prijzen { display: grid; grid-template-columns: 24px minmax(0, 1fr) 24px; padding: 70px 0 50px; }
+    .productdata-prijzen-container, .productdata-prijzen-inhoud, .productdata-prijzen-kop { display: contents; }
+    .productdata-prijzen-inhoud > *, .productdata-prijzen-kop > * { grid-column: 2; }
+    .productdata-prijzen-bovenkop { order: -3; }
+    .productdata-prijzen-kop h2 { order: -2; }
+    .productdata-prijzen-afbeelding { grid-column: 1 / -1; order: -1; }
+    .productdata-prijzen-kop p { margin-bottom: 38px; }
+}
+@media (max-width: 650px) {
+    .productdata-prijzen { padding: 60px 0 42px; }
+    .productdata-prijzen-kop p { margin-bottom: 35px; }
+}
+@media (max-width: 600px) {
+    .productdata-prijzen { grid-template-columns: 16px minmax(0, 1fr) 16px; }
+}
+
+.productdata-prijskaart-badge, .productdata-prijzen-knop { color: #1d1b17; }
+
+/* Gerichte mobiele verfijning, fase 3. */
+
+@media (max-width: 650px) {
+    .productdata-prijzen { padding-top: 48px; padding-bottom: 36px; }
+    .productdata-prijzen-kop p { margin-bottom: 26px; }
 }

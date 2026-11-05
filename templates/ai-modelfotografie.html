@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}AI-modelfotografie voor kleding | Wespi{% endblock %}
+{% block meta_description %}Breid je kledingfotografie bij Wespi uit met AI-modelbeelden, lifestylefoto's en video's. Van professionele productfoto tot een complete collectiepresentatie.{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://www.wespi.nl/productfotografie/kledingfotografie/ai-modelfotografie">{% endblock %}
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/kledingfotografie/ai-modelfotografie.css') }}?v=20261105-fase2.1">
+{% endblock %}
+{% block content %}
+<div class="ai-modelfotografie">
+    <section class="kledingfotografie-hero">
+        <div class="kledingfotografie-hero-foto">
+            <img src="{{ url_for('static', path=beeldpad((hero or 'images/kledingfotografie/ai-modelfotografie/placeholder.svg'))) }}" {{ beeld_attributen(hero or 'images/kledingfotografie/ai-modelfotografie/placeholder.svg', responsive=false) }} alt="{{ 'AI-modelbeeld van kleding in een lifestyleomgeving' if hero else 'Tijdelijke illustratie van een kledingstuk; het AI-sfeerbeeld volgt' }}" fetchpriority="high" decoding="async">
+        </div>
+        <div class="container kledingfotografie-hero-inhoud">
+            <div class="kledingfotografie-hero-tekst">
+                <span class="kledingfotografie-hero-bovenkop">AI-MODELFOTOGRAFIE</span>
+                <h1>Van kledingfoto <span>naar modelbeeld.</span></h1>
+                <p>Breid je kledingfotografie uit met professionele AI-modelbeelden, lifestylefoto's en video's. Wespi verzorgt het complete proces: van productfotografie tot een aantrekkelijke presentatie voor je webshop.</p>
+                <div class="kledingfotografie-hero-knoppen">
+                    <a href="#ai-tarieven" class="knop knop-geel">Bekijk de tarieven <span aria-hidden="true">→</span></a>
+                    <a href="/contact" class="knop knop-licht">Bespreek je beelden <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-sectie">
+        <div class="container ai-intro">
+            <span class="kledingfotografie-hero-bovenkop">KLEDINGFOTOGRAFIE EN AI. SAMEN VERZORGD.</span>
+            <h2>Meer uit je kledingfotografie.</h2>
+            <p>Professionele <a href="/productfotografie/kledingfotografie">kledingfotografie</a> vormt de basis van je collectiepresentatie. AI-modelfotografie vult die productfoto's aan met beelden waarop een model je kleding draagt of het artikel in een passende omgeving wordt gepresenteerd. Je hoeft zelf geen AI-software te gebruiken: Wespi verzorgt de uitvoering en controleert de resultaten.</p>
+            <p><em>Heb je al professionele kledingfoto's? Dan kunnen we deze uiteraard ook gebruiken.</em></p>
+        </div>
+    </section>
+
+    <section class="ai-sectie ai-achtergrond" aria-labelledby="ai-voorbeelden">
+        <div class="container">
+            <h2 id="ai-voorbeelden">Van stilstaand beeld tot beweging.</h2>
+            <p class="ai-inleiding">Bekijk de modelbeelden van voor- en achterkant en ontdek de video. Klik op een beeld om het te vergroten.</p>
+            <div class="ai-galerij">
+                {% for voorbeeld in voorbeelden if voorbeeld.video or voorbeeld.fotos | select | list %}
+                <article class="ai-modelkaart" aria-labelledby="ai-model-{{ voorbeeld.nummer }}">
+                    <h3 id="ai-model-{{ voorbeeld.nummer }}">Model {{ voorbeeld.nummer }}</h3>
+                    {% if voorbeeld.video %}
+                    <a class="ai-media ai-video-preview" href="{{ url_for('static', path=voorbeeld.video) }}" data-ai-type="video" data-ai-label="Video van Model {{ voorbeeld.nummer }}" aria-label="Vergroot video van Model {{ voorbeeld.nummer }}">
+                        <video preload="none" playsinline muted tabindex="-1" aria-hidden="true" poster="{{ url_for('static', path=voorbeeld.poster or voorbeeld.fotos[0] or 'images/kledingfotografie/ai-modelfotografie/placeholder.svg') }}">
+                            <source src="{{ url_for('static', path=voorbeeld.video) }}" type="video/mp4">
+                        </video>
+                        <span class="ai-afspelen" aria-hidden="true"></span>
+                    </a>
+                    {% endif %}
+                    <div class="ai-model-fotos">
+                        {% for foto in voorbeeld.fotos %}
+                        {% if foto %}
+                        <a class="ai-media" href="{{ url_for('static', path=foto) }}" data-ai-type="image" data-ai-label="Model {{ voorbeeld.nummer }} - {{ 'voorkant' if loop.index == 1 else 'achterkant' }}" aria-label="Vergroot Model {{ voorbeeld.nummer }} - {{ 'voorkant' if loop.index == 1 else 'achterkant' }}">
+                            <img src="{{ url_for('static', path=beeldpad(foto)) }}" {{ beeld_attributen(foto) }} alt="AI-model {{ voorbeeld.nummer }} met kleding, {{ 'voorkant' if loop.index == 1 else 'achterkant' }}" loading="lazy" decoding="async" width="600" height="900">
+                        </a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-sectie ai-tarieven-blok" id="ai-tarieven">
+        <div class="ai-inhoudsbeeld">
+            <img src="{{ url_for('static', path=beeldpad('images/kledingfotografie/ai-modelfotografie/ai-model-01-voor.jpg')) }}" {{ beeld_attributen('images/kledingfotografie/ai-modelfotografie/ai-model-01-voor.jpg') }} alt="AI-model met kleding van voren als aanvulling op productfotografie" loading="lazy" decoding="async">
+        </div>
+        <div class="container ai-tarieven-inhoud">
+            <h2>Professioneel beeld. Scherpe tarieven.</h2>
+            <p class="ai-inleiding">Tarieven AI-modelfotografie, exclusief btw. Eventuele kledingfotografie wordt afzonderlijk berekend. We stemmen de mogelijkheden en de opdracht vooraf met je af.</p>
+            <div class="ai-tarieven">
+                {% for tarief in tarieven %}
+                <article class="slimmer-prijskaart{% if loop.last %} slimmer-prijskaart--accent{% endif %}">
+                    <h3>{{ tarief.titel }}</h3>
+                    <div class="slimmer-prijskaart__prijs"><strong>€ {{ tarief.prijs }}</strong></div>
+                    <p>{{ tarief.omschrijving }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-sectie ai-achtergrond">
+        <div class="container">
+            <h2>In vier stappen geregeld.</h2>
+            <ol class="ai-stappen">
+                <li><h3>Kleding fotograferen</h3><p>Laat je kleding fotograferen bij Wespi of gebruik bestaande professionele productfoto's.</p></li>
+                <li><h3>Modelbeelden samenstellen</h3><p>We bepalen welke modelbeelden, lifestylefoto's of video's gewenst zijn.</p></li>
+                <li><h3>Beelden laten maken</h3><p>Wespi verzorgt de AI-bewerking en controleert de resultaten.</p></li>
+                <li><h3>Klaar voor gebruik</h3><p>Je ontvangt de beelden voor gebruik in je webshop, campagnes of social media.</p></li>
+            </ol>
+        </div>
+    </section>
+
+    <dialog class="ai-lightbox" aria-labelledby="ai-lightbox-titel">
+        <div class="ai-lightbox-kop">
+            <h2 id="ai-lightbox-titel">Modelbeeld</h2>
+            <button type="button" class="ai-lightbox-sluiten" aria-label="Sluit vergroting" autofocus>Sluiten &times;</button>
+        </div>
+        <div class="ai-lightbox-media"></div>
+    </dialog>
+</div>
+<script src="{{ url_for('static', path='js/ai-modelfotografie.js') }}" defer></script>
+{% endblock %}

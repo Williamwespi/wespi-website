@@ -132,7 +132,7 @@
 
     margin-top: 6px;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 
@@ -267,7 +267,7 @@
 .productdata-werkwijze-belofte > span {
     flex: 0 0 auto;
 
-    color: var(--wespi-goud);
+    color: #755b0a;
 
     font-size: 19px;
     line-height: 1;
@@ -391,4 +391,28 @@
         height: 280px;
     }
 
+}
+
+/* Kop, bestaand sfeerbeeld, introductie en stappen op het bestaande omslagpunt. */
+@media (max-width: 800px) {
+    .productdata-werkwijze { display: grid; grid-template-columns: 24px minmax(0, 1fr) 24px; padding: 60px 0 45px; }
+    .productdata-werkwijze-container, .productdata-werkwijze-inhoud { display: contents; }
+    .productdata-werkwijze-inhoud > * { grid-column: 2; }
+    .productdata-werkwijze-bovenkop { order: -3; }
+    .productdata-werkwijze-inhoud h2 { order: -2; }
+    .productdata-werkwijze-afbeelding { grid-column: 1 / -1; order: -1; }
+}
+@media (max-width: 600px) {
+    .productdata-werkwijze { grid-template-columns: 16px minmax(0, 1fr) 16px; }
+}
+@media (max-width: 520px) {
+    .productdata-werkwijze { padding-top: 52px; }
+}
+
+.productdata-werkwijze-nummer { color: #1d1b17; }
+
+/* Gerichte mobiele verfijning, fase 3. */
+
+@media (max-width: 520px) {
+    .productdata-werkwijze { padding-top: 48px; padding-bottom: 36px; }
 }

@@ -1,0 +1,28 @@
+<section id="voor-na" class="automotive-sectie" aria-labelledby="vergelijking-titel">
+    <div class="container automotive-tweekoloms automotive-vergelijking">
+        <div>
+            <span class="automotive-bovenkop">DEZELFDE AUTO. EEN ANDERE UITSTRALING.</span>
+            <h2 id="vergelijking-titel">Van losse autofoto naar digitale showroom.</h2>
+            <p>De auto verdient de aandacht. Een drukke achtergrond leidt af en maakt je aanbod onrustig. Met professionele autobeeldbewerking geef je occasions en nieuwe voorraadauto's een herkenbare presentatie.</p>
+            <p>We verwijderen de bestaande achtergrond en plaatsen de auto in een passende omgeving. Zo vormen foto's van verschillende locaties één geheel op je website, occasionwebsite en in online advertenties.</p>
+            <span class="automotive-schuifhint"><span aria-hidden="true">↔</span> Schuif en ontdek het verschil</span>
+            <a class="automotive-link" href="/beeldbewerking">Bekijk ook onze andere beeldbewerking <span aria-hidden="true">→</span></a>
+        </div>
+        <figure>
+            <div class="beeldvergelijker" data-beeldvergelijker style="--vergelijking-positie: 50%; --vergelijking-verhouding: 4 / 3;">
+                <div class="beeldvergelijker__beelden">
+                    <img class="beeldvergelijker__afbeelding" src="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/automotive/bronbeelden/auto-wit-bewerkt.jpg') }}"
+                         alt="Witte Mercedes na bewerking, met showroomachtergrond en Wespi-logo" width="1024" height="768" loading="lazy">
+                    <img class="beeldvergelijker__afbeelding beeldvergelijker__afbeelding--origineel" src="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/automotive/bronbeelden/auto-wit-origineel.jpg') }}"
+                         alt="Dezelfde witte Mercedes voor bewerking, voor een garage met bestrating" width="1024" height="768" loading="lazy">
+                    <span class="beeldvergelijker__label beeldvergelijker__label--origineel">Voor</span>
+                    <span class="beeldvergelijker__label beeldvergelijker__label--bewerkt">Na</span>
+                    <span class="beeldvergelijker__scheiding" aria-hidden="true"><span class="beeldvergelijker__knop">‹ ›</span></span>
+                </div>
+                <input class="beeldvergelijker__slider" type="range" min="0" max="100" step="1" value="50"
+                       aria-label="Vergelijk de Mercedes voor en na autobeeldbewerking" aria-valuetext="50% origineel, 50% bewerkt">
+            </div>
+            <figcaption>Echte voor-en-na-bewerking: dezelfde auto, dezelfde opname.</figcaption>
+        </figure>
+    </div>
+</section>

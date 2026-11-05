@@ -82,3 +82,5 @@
 .packshot-gallery__klein:nth-child(3):hover img {
     transform: scale(1.07);
 }
+
+.packshot-voorbeeld--producten .packshot-voorbeeld__bovenkop { color: #4b626e; }

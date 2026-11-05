@@ -1,0 +1,148 @@
+/* Alleen geladen door de zelfstandige pagina AI-modelfotografie.
+   Hero, fonts, containers, knoppen en prijskaarten komen uit de bestaande CSS. */
+.ai-modelfotografie .kledingfotografie-hero-foto img {
+    object-fit: cover;
+    object-position: 60% top;
+    transform: none;
+}
+.ai-modelfotografie .ai-galerij {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+.ai-modelfotografie .ai-modelkaart { min-width: 0; }
+.ai-modelfotografie .ai-modelkaart h3 { margin: 0 0 12px; font-size: 14px; font-weight: 700; }
+.ai-modelfotografie .ai-media {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #dedbd5;
+    border-radius: 5px;
+    background: var(--warm-licht);
+}
+.ai-modelfotografie .ai-media img,
+.ai-modelfotografie .ai-media video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
+}
+.ai-modelfotografie .ai-video-preview video { pointer-events: none; }
+.ai-modelfotografie .ai-afspelen {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--wespi-goud);
+    color: var(--wespi-zwart);
+}
+.ai-modelfotografie .ai-model-fotos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+.ai-modelfotografie .ai-afspelen::before {
+    content: "";
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 14px solid currentColor;
+    margin-left: 4px;
+}
+.ai-modelfotografie .ai-lightbox {
+    width: min(1000px, calc(100% - 32px));
+    max-width: none;
+    max-height: calc(100dvh - 32px);
+    padding: 16px;
+    border: 1px solid #dedbd5;
+    border-radius: 7px;
+    background: var(--warm-wit);
+    color: var(--wespi-zwart);
+}
+.ai-modelfotografie .ai-lightbox::backdrop { background: rgba(0, 0, 0, .8); }
+.ai-modelfotografie .ai-lightbox-kop { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.ai-modelfotografie .ai-lightbox-kop h2 { margin: 0; font-size: 16px; }
+.ai-modelfotografie .ai-lightbox-sluiten { flex-shrink: 0; min-height: 44px; padding: 8px 14px; border: 0; border-radius: 4px; background: var(--wespi-goud); color: var(--wespi-zwart); font: inherit; cursor: pointer; }
+.ai-modelfotografie .ai-lightbox-media img,
+.ai-modelfotografie .ai-lightbox-media video { display: block; width: 100%; height: min(75dvh, 850px); object-fit: contain; }
+.ai-modelfotografie .ai-sectie { padding: 50px 0; scroll-margin-top: 100px; }
+.ai-modelfotografie .ai-achtergrond { background: var(--warm-wit); }
+.ai-modelfotografie .ai-tarieven-blok { position: relative; overflow: hidden; }
+.ai-modelfotografie .ai-intro h2,
+.ai-modelfotografie .ai-intro p { max-width: 850px; }
+.ai-modelfotografie .ai-tarieven-blok { background: var(--wit); }
+.ai-modelfotografie .ai-tarieven-inhoud { position: relative; z-index: 1; padding-left: 40%; }
+.ai-modelfotografie .ai-inhoudsbeeld { position: absolute; inset: 0 auto 0 0; width: 48%; }
+.ai-modelfotografie .ai-inhoudsbeeld img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.ai-modelfotografie .ai-inhoudsbeeld::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, var(--wit) 0%, transparent 12%, transparent 88%, var(--wit) 100%),
+        linear-gradient(90deg, transparent 35%, var(--wit) 100%);
+    pointer-events: none;
+}
+.ai-modelfotografie .ai-sectie h2 {
+    max-width: 800px;
+    margin: 0 0 18px;
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1.03;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+.ai-modelfotografie .ai-sectie p { color: #565656; line-height: 1.65; }
+.ai-modelfotografie .ai-inleiding { max-width: 720px; margin-bottom: 22px; }
+.ai-modelfotografie .ai-intro a {
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: var(--warm-licht);
+    color: var(--wespi-zwart);
+    font-weight: 700;
+    text-decoration: none;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    transition: background-color .2s ease;
+}
+.ai-modelfotografie .ai-intro a:hover { background: var(--wespi-goud-licht); }
+.ai-modelfotografie .ai-tarieven { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.ai-modelfotografie .ai-tarieven .slimmer-prijskaart { min-height: 0; padding: 22px; }
+.ai-modelfotografie .ai-tarieven .slimmer-prijskaart p { min-height: 0; margin-top: 14px; }
+.ai-modelfotografie .ai-tarieven .slimmer-prijskaart__prijs { margin-top: 16px; }
+.ai-modelfotografie .ai-tarieven h3 { margin: 0; font-size: 17px; }
+.ai-modelfotografie .ai-tarieven .slimmer-prijskaart__prijs strong { font-size: clamp(32px, 3.4vw, 46px); letter-spacing: -2px; white-space: nowrap; }
+.ai-modelfotografie .ai-stappen { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; padding-left: 24px; margin-bottom: 0; }
+.ai-modelfotografie .ai-stappen h3 { margin: 0 0 10px; font-size: 17px; }
+.ai-modelfotografie .ai-stappen p { margin: 0; }
+.ai-modelfotografie .ai-stappen li { padding-left: 8px; }
+.ai-modelfotografie .ai-stappen li::marker { color: var(--wespi-goud-donker); font-weight: 800; }
+.ai-modelfotografie a:focus-visible,
+.ai-modelfotografie button:focus-visible,
+.ai-modelfotografie video:focus-visible { outline: 3px solid var(--wespi-goud-donker); outline-offset: 5px; }
+@media (max-width: 1000px) {
+    .ai-modelfotografie .ai-stappen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ai-modelfotografie .ai-galerij { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .ai-modelfotografie .ai-tarieven { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+    .ai-modelfotografie .kledingfotografie-hero-foto img { object-position: 55% top; }
+    .ai-modelfotografie .ai-galerij { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .ai-modelfotografie .ai-sectie { padding: 36px 0; }
+    .ai-modelfotografie .ai-tarieven-inhoud { padding-left: 0; }
+    .ai-modelfotografie .ai-inhoudsbeeld { position: relative; inset: auto; width: 100%; height: 180px; margin-bottom: 16px; }
+    .ai-modelfotografie .ai-inhoudsbeeld::after { background: linear-gradient(180deg, var(--wit) 0%, transparent 20%, transparent 60%, var(--wit) 100%); }
+    .ai-modelfotografie .ai-stappen { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (max-width: 420px) {
+    .ai-modelfotografie .ai-galerij { grid-template-columns: minmax(0, 1fr); max-width: 280px; }
+    .ai-modelfotografie .ai-tarieven { grid-template-columns: 1fr; }
+}
+
+/* Mobiel blijft de bestaande tarieftitel v??r het sfeerbeeld staan. */
+@media (max-width: 760px) {
+    .ai-modelfotografie .ai-tarieven-blok { display: grid; grid-template-columns: 16px minmax(0, 1fr) 16px; }
+    .ai-modelfotografie .ai-tarieven-inhoud { display: contents; }
+    .ai-modelfotografie .ai-tarieven-inhoud > * { grid-column: 2; }
+    .ai-modelfotografie .ai-tarieven-inhoud > h2 { order: -2; }
+    .ai-modelfotografie .ai-inhoudsbeeld { grid-column: 1 / -1; order: -1; }
+}

@@ -1,22 +1,25 @@
-<section id="achtergronden" class="automotive-sectie automotive-sectie--licht" aria-labelledby="achtergronden-titel">
+<section id="achtergronden" class="automotive-sectie" aria-labelledby="achtergronden-titel">
     <div class="container">
-        <div class="automotive-kop">
-            <span class="automotive-bovenkop">ACHTERGRONDEN</span>
-            <h2 id="achtergronden-titel">Een achtergrond die bij je bedrijf past.</h2>
-            <p>Een rustige basis of een herkenbare omgeving: met een vaste achtergrond vormen je voertuigfoto's één geheel.</p>
+        <div class="automotive-kop automotive-kop--verdeeld">
+            <div><span class="automotive-bovenkop">DEZELFDE AUTO, EEN ANDERE ACHTERGROND</span><h2 id="achtergronden-titel">Welke achtergrond<br>past bij jouw bedrijf?</h2></div>
+            <p>Dezelfde gele Peugeot, zes verschillende achtergronden. Kies de uitstraling die bij jouw bedrijf past.</p>
         </div>
-        <!-- Statisch voorbeeldenblok. Hier kan later een interactieve galerij komen. -->
-        <div class="automotive-achtergronden">
+        <div class="automotive-voorbeelden">
+            {% for bestand, titel, alt, breedte, hoogte in [
+                ('voorbeelden/auto-geel-vrijstaand-wit.jpg', 'Vrijstaand op wit', 'Gele Peugeot vrijstaand op een witte achtergrond', 1536, 864),
+                ('achtergronden/auto-geel-extra-achtergrond-7.jpg', 'Moderne showroom', 'Gele Peugeot op een lichte showroomachtergrond met grote ramen', 1536, 1024),
+                ('achtergronden/auto-geel-extra-achtergrond-4.jpg', 'Lichte studio', 'Gele Peugeot in een lichte studio met neutrale wand en tegelvloer', 1536, 1024),
+                ('achtergronden/auto-geel-extra-achtergrond-2.jpg', 'Industrieel', 'Gele Peugeot voor een industriële achtergrond met baksteen en grote ramen', 1536, 1024),
+                ('achtergronden/auto-geel-achtergrond-8.jpg', 'Lichte parkeergarage', 'Gele Peugeot in een lichte parkeergarage met betonnen kolommen', 1536, 1024),
+                ('voorbeelden/auto-achtergrond-gepersonaliseerde-showroom.jpg', 'Eigen huisstijl', 'Gele Peugeot in een gepersonaliseerde showroom met het logo van KroezEN autobedrijf', 1536, 1024)
+            ] %}
             <figure>
-                <img src="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/automotive/voorbeelden/auto-geel-vrijstaand-wit.jpg') }}"
-                     alt="Geel voertuig vrijstaand op een witte achtergrond" loading="lazy">
-                <figcaption>Vrijstaand op wit</figcaption>
+                <img src="{{ url_for('static', path=beeldpad('images/beeldbewerking/beeldbewerking/automotive/' ~ bestand)) }}" {{ beeld_attributen('images/beeldbewerking/beeldbewerking/automotive/' ~ bestand) }}
+                     alt="{{ alt }}" width="{{ breedte }}" height="{{ hoogte }}" loading="lazy" decoding="async">
+                <figcaption><h3>{{ titel }}</h3></figcaption>
             </figure>
-            <figure>
-                <img src="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/automotive/achtergronden/auto-geel-achtergrond-1.jpg') }}"
-                     alt="Het gele voertuig op een alternatieve achtergrond" loading="lazy">
-                <figcaption>Een andere omgeving</figcaption>
-            </figure>
+            {% endfor %}
         </div>
+        <p class="automotive-achtergrondkeuze">Een selectie uit de mogelijkheden. <a class="automotive-link" href="/contact">Bespreek jouw achtergrond <span aria-hidden="true">→</span></a></p>
     </div>
 </section>

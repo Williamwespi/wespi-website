@@ -197,7 +197,7 @@
 .slimmer-prijskaart__label {
     display: block;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 9px;
     font-weight: 800;
@@ -213,7 +213,7 @@
 
     margin-bottom: 2px;
 
-    color: #777777;
+    color: #626262;
 
     font-size: 11px;
 }
@@ -231,7 +231,7 @@
 
 .slimmer-prijskaart--accent
 .slimmer-prijskaart__prijs strong {
-    color: var(--wespi-goud);
+    color: #755b0a;
 }
 
 .slimmer-prijskaart p {
@@ -367,4 +367,14 @@
         font-size: 39px;
     }
 
+}
+
+/* Titel, magazijnbeeld en de ongewijzigde prijsinhoud op mobiel. */
+@media (max-width: 760px) {
+    .slimmer-prijs { display: grid; grid-template-columns: 16px minmax(0, 1fr) 16px; padding: 65px 0 45px; }
+    .slimmer-prijs__inner, .slimmer-prijs__content { display: contents; }
+    .slimmer-prijs__content > * { grid-column: 2; }
+    .slimmer-prijs__bovenkop { order: -3; }
+    .slimmer-prijs__content h2 { order: -2; }
+    .slimmer-prijs .slimmer-prijs__visual { grid-column: 1 / -1; order: -1; margin-top: 24px; }
 }

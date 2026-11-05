@@ -2,17 +2,63 @@ import logging
 import os
 import re
 import smtplib
+import ssl
 from dataclasses import dataclass
 from email.message import EmailMessage
+from pathlib import Path
 
 from fastapi import APIRouter, Form, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 
 
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 logger = logging.getLogger(__name__)
+
+# Voorlopige verkoopprijzen, exclusief btw; uitsluitend voor AI-modelfotografie.
+AI_MODELFOTOGRAFIE_TARIEVEN = (
+    {"titel": "1 AI-modelfoto", "prijs": "9,99", "omschrijving": "Eén modelbeeld van jouw kledingartikel."},
+    {"titel": "3 AI-modelfoto’s", "prijs": "24,99", "omschrijving": "Drie beelden van hetzelfde kledingartikel."},
+    {"titel": "AI-video", "prijs": "19,99", "omschrijving": "Een video van circa 10 seconden."},
+    {"titel": "Combinatiepakket", "prijs": "39,99", "omschrijving": "3 foto's en 1 video van hetzelfde kledingartikel."},
+)
+
+
+def _ai_media_path(filename: str) -> str | None:
+    relative = Path("images/kledingfotografie/ai-modelfotografie") / filename
+    if (Path(__file__).resolve().parent.parent / "static" / relative).is_file():
+        return relative.as_posix()
+    return None
+
+
+@router.get(
+    "/productfotografie/kledingfotografie/ai-modelfotografie",
+    response_class=HTMLResponse,
+)
+def ai_modelfotografie(request: Request):
+    voorbeelden = [
+        {
+            "nummer": f"{nummer:02d}",
+            "video": _ai_media_path(f"ai-model-{nummer:02d}-video.mp4"),
+            "poster": _ai_media_path(f"ai-model-{nummer:02d}-poster.jpg"),
+            "fotos": [
+                _ai_media_path(f"ai-model-{nummer:02d}-{foto}.jpg")
+                for foto in ("voor", "achter")
+            ],
+        }
+        for nummer in range(1, 6)
+    ]
+    return templates.TemplateResponse(
+        request=request,
+        name="ai-modelfotografie.html",
+        context={
+            "actieve_pagina": "kledingfotografie",
+            "hero": _ai_media_path("ai-modelfotografie-hero.jpg"),
+            "voorbeelden": voorbeelden,
+            "tarieven": AI_MODELFOTOGRAFIE_TARIEVEN,
+        },
+    )
 
 
 @dataclass(frozen=True)
@@ -32,7 +78,7 @@ def _smtp_configuration() -> SMTPConfiguration | None:
 
     if not host or not sender or bool(username) != bool(password):
         logger.error(
-            "Contactformulier kan niet verzenden: SMTP_HOST en SMTP_FROM "
+            "Formulier kan niet verzenden: SMTP_HOST en SMTP_FROM "
             "zijn vereist en SMTP_USERNAME/SMTP_PASSWORD moeten samen zijn ingesteld."
         )
         return None
@@ -40,11 +86,11 @@ def _smtp_configuration() -> SMTPConfiguration | None:
     try:
         port = int(os.getenv("SMTP_PORT", "587"))
     except ValueError:
-        logger.error("Contactformulier kan niet verzenden: SMTP_PORT is ongeldig.")
+        logger.error("Formulier kan niet verzenden: SMTP_PORT is ongeldig.")
         return None
 
     if not 1 <= port <= 65535:
-        logger.error("Contactformulier kan niet verzenden: SMTP_PORT is ongeldig.")
+        logger.error("Formulier kan niet verzenden: SMTP_PORT is ongeldig.")
         return None
 
     return SMTPConfiguration(
@@ -82,13 +128,17 @@ def _send_contact_email(
         )
     )
 
+    _send_email(message, configuration)
+
+
+def _send_email(message: EmailMessage, configuration: SMTPConfiguration) -> None:
     with smtplib.SMTP(
         configuration.host,
         configuration.port,
         timeout=15,
     ) as server:
         server.ehlo()
-        server.starttls()
+        server.starttls(context=ssl.create_default_context())
         server.ehlo()
         if configuration.username:
             server.login(configuration.username, configuration.password)
@@ -244,29 +294,151 @@ def offerte(
     request: Request,
     dienst: str | None = None,
 ):
-    diensten = {
-        "kledingfotografie": "Kledingfotografie",
-        "packshotfotografie": "Packshotfotografie",
-        "beeldbewerking": "Beeldbewerking",
-        "data": "Productdata",
-        "slimmer-werken": "Slimmer werken",
-    }
+    return _offerte_response(request, {"Dienst": OFFERTE_DIENSTEN.get(dienst, "")})
 
-    geselecteerde_dienst = diensten.get(
-        dienst,
-        "",
-    )
 
+OFFERTE_DIENSTEN = {
+    "kledingfotografie": "Kledingfotografie",
+    "packshotfotografie": "Packshotfotografie",
+    "beeldbewerking": "Beeldbewerking",
+    "data": "Productdata",
+    "slimmer-werken": "Slimmer werken",
+}
+OFFERTE_FOTOGRAFIE = ("", "Bodyform", "Platte fotografie", "Combinatie")
+
+
+def _offerte_response(
+    request: Request,
+    form_data: dict[str, str],
+    errors: dict[str, str] | None = None,
+    status: str = "",
+    success: bool = False,
+    code: int = 200,
+):
     return templates.TemplateResponse(
         request=request,
         name="oferte.html",
         context={
             "actieve_pagina": "offerte",
-            "diensten": diensten,
-            "dienst_code": dienst or "",
-            "geselecteerde_dienst": geselecteerde_dienst,
+            "diensten": OFFERTE_DIENSTEN,
+            "geselecteerde_dienst": form_data.get("Dienst", ""),
+            "form_data": form_data,
+            "form_errors": errors or {},
+            "form_status": status,
+            "form_success": success,
         },
+        status_code=code,
     )
+
+
+def _send_offerte_email(
+    form_data: dict[str, str], configuration: SMTPConfiguration,
+) -> None:
+    message = EmailMessage()
+    message["Subject"] = "Nieuwe offerteaanvraag via Wespi"
+    message["From"] = configuration.sender
+    message["To"] = "info@wespi.nl"
+    message["Reply-To"] = form_data["E-mail"]
+    message.set_content("\n".join(
+        f"{field}: {value or '-'}" for field, value in form_data.items()
+    ))
+    _send_email(message, configuration)
+
+
+@router.post("/offerte", response_class=HTMLResponse)
+def offerte_versturen(
+    request: Request,
+    naam: str = Form(default="", alias="Naam"),
+    bedrijf: str = Form(default="", alias="Bedrijfsnaam"),
+    email: str = Form(default="", alias="E-mail"),
+    telefoon: str = Form(default="", alias="Telefoon"),
+    dienst: str = Form(default="", alias="Dienst"),
+    aantal: str = Form(default="", alias="Aantal artikelen"),
+    fotografie: str = Form(default="", alias="Type kledingfotografie"),
+    toelichting: str = Form(default="", alias="Toelichting"),
+    website: str = Form(default=""),
+):
+    form_data = {
+        "Naam": naam.strip(),
+        "Bedrijfsnaam": bedrijf.strip(),
+        "E-mail": email.strip(),
+        "Telefoon": telefoon.strip(),
+        "Dienst": dienst.strip(),
+        "Aantal artikelen": aantal.strip(),
+        "Type kledingfotografie": fotografie.strip(),
+        "Toelichting": toelichting.strip(),
+    }
+    if website.strip():
+        return _offerte_response(
+            request, {}, code=400,
+            status="De aanvraag kon niet worden verwerkt. Probeer het later opnieuw.",
+        )
+
+    errors = {}
+    for field in ("Naam", "E-mail", "Dienst", "Toelichting"):
+        if not form_data[field]:
+            errors[field] = "Vul dit verplichte veld in."
+    limits = {
+        "Naam": 120, "Bedrijfsnaam": 160, "E-mail": 254, "Telefoon": 40,
+        "Dienst": 80, "Aantal artikelen": 120, "Type kledingfotografie": 80,
+        "Toelichting": 5000,
+    }
+    for field, value in form_data.items():
+        if len(value) > limits[field]:
+            errors[field] = "Deze invoer is te lang."
+        if field != "Toelichting" and any(
+            ord(char) < 32 or ord(char) == 127 for char in value
+        ):
+            errors[field] = "Gebruik geen regeleinden of controletekens."
+    if form_data["E-mail"] and not re.fullmatch(
+        r"[^@\s]+@[^@\s]+\.[^@\s]+", form_data["E-mail"],
+    ):
+        errors["E-mail"] = "Vul een geldig e-mailadres in."
+    if form_data["Dienst"] not in OFFERTE_DIENSTEN.values():
+        errors["Dienst"] = "Kies een dienst uit de lijst."
+    if form_data["Type kledingfotografie"] not in OFFERTE_FOTOGRAFIE:
+        errors["Type kledingfotografie"] = "Kies een fotografietype uit de lijst."
+    if errors:
+        return _offerte_response(
+            request, form_data, errors, "Controleer de gemarkeerde velden.", code=422,
+        )
+
+    configuration = _smtp_configuration()
+    if configuration is None:
+        return _offerte_response(
+            request, form_data, code=503,
+            status=("Het offerteformulier is op dit moment niet beschikbaar. "
+                    "Neem rechtstreeks contact op via info@wespi.nl."),
+        )
+    try:
+        _send_offerte_email(form_data, configuration)
+    except (OSError, ValueError, smtplib.SMTPException):
+        logger.error("Verzenden van de offerteaanvraag is mislukt.")
+        return _offerte_response(
+            request, form_data, code=503,
+            status=("De aanvraag is niet verzonden. Probeer het later opnieuw "
+                    "of neem rechtstreeks contact op via info@wespi.nl."),
+        )
+    return _offerte_response(
+        request, {}, success=True,
+        status=("Bedankt! Je offerteaanvraag is verzonden. "
+                "We nemen zo snel mogelijk contact met je op."),
+    )
+
+
+@router.get("/beeldbewerking/auto", include_in_schema=False)
+def oude_auto_route():
+    return RedirectResponse("/beeldbewerking/automotive", status_code=301)
+
+
+@router.get("/terms", include_in_schema=False)
+def oude_voorwaarden_route():
+    return RedirectResponse("/algemene-voorwaarden", status_code=301)
+
+
+@router.get("/privacystatement", include_in_schema=False)
+def oude_privacy_route():
+    return RedirectResponse("/privacyverklaring", status_code=301)
 
 
 @router.get(
@@ -290,7 +462,7 @@ def contact(request: Request):
     "/contact",
     response_class=HTMLResponse,
 )
-async def contact_versturen(
+def contact_versturen(
     request: Request,
     naam: str = Form(default=""),
     bedrijfsnaam: str = Form(default=""),
@@ -392,6 +564,7 @@ async def contact_versturen(
                     "Het contactformulier is op dit moment niet beschikbaar. "
                     "Neem rechtstreeks contact op via info@wespi.nl."
                 ),
+                "privacy_accepted": privacy_toestemming == "accepted",
             },
             status_code=503,
         )
@@ -399,7 +572,7 @@ async def contact_versturen(
     try:
         _send_contact_email(form_data, configuration)
     except (OSError, ValueError, smtplib.SMTPException):
-        logger.exception("Verzenden van het contactformulier is mislukt.")
+        logger.error("Verzenden van het contactformulier is mislukt.")
         return templates.TemplateResponse(
             request=request,
             name="contact.html",
@@ -411,6 +584,7 @@ async def contact_versturen(
                     "Het bericht is niet verzonden. Probeer het later opnieuw "
                     "of neem rechtstreeks contact op via info@wespi.nl."
                 ),
+                "privacy_accepted": privacy_toestemming == "accepted",
             },
             status_code=503,
         )
