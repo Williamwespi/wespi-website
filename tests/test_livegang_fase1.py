@@ -6,6 +6,7 @@ import asyncio
 import importlib
 import os
 import smtplib
+import ssl
 import unittest
 from html.parser import HTMLParser
 from unittest.mock import patch
@@ -117,6 +118,76 @@ class Fase1Tests(unittest.TestCase):
             if key != "privacy_toestemming":
                 self.assertIn(value, message.get_content())
         self.assertIn("Privacytoestemming: gegeven", message.get_content())
+
+    def test_ssl_465_sends_both_forms_with_verified_tls(self):
+        for path, data in (("/contact", self.contact), ("/offerte", self.quote)):
+            with self.subTest(path=path), patch.dict(os.environ, {"SMTP_PORT": "465"}), \
+                    patch.object(smtplib, "SMTP_SSL") as smtp_ssl:
+                server = smtp_ssl.return_value.__enter__.return_value
+                server.send_message.return_value = {}
+                self.assertEqual(self.fetch(path, data)[0], 200)
+                args, kwargs = smtp_ssl.call_args
+                self.assertEqual(args, ("smtp.example.invalid", 465))
+                self.assertEqual(kwargs["timeout"], 15)
+                self.assertTrue(kwargs["context"].check_hostname)
+                self.assertEqual(kwargs["context"].verify_mode, ssl.CERT_REQUIRED)
+                server.starttls.assert_not_called()
+                server.ehlo.assert_called_once()
+                server.login.assert_called_once_with("test-user", "dummy-test-only")
+                server.send_message.assert_called_once()
+                message = server.send_message.call_args.args[0]
+                self.assertEqual(message["To"], "info@wespi.nl")
+                self.assertEqual(message["From"], "website@example.invalid")
+                self.assertEqual(message["Reply-To"], data.get("email", data.get("E-mail")))
+        self.smtp.assert_not_called()
+
+    def test_starttls_587_does_not_use_ssl_connection(self):
+        with patch.object(smtplib, "SMTP_SSL") as smtp_ssl:
+            self.assertEqual(self.fetch("/contact", self.contact)[0], 200)
+            smtp_ssl.assert_not_called()
+        self.smtp.assert_called_once_with("smtp.example.invalid", 587, timeout=15)
+        self.server.starttls.assert_called_once()
+        self.assertEqual(self.server.ehlo.call_count, 2)
+        context = self.server.starttls.call_args.kwargs["context"]
+        self.assertTrue(context.check_hostname)
+        self.assertEqual(context.verify_mode, ssl.CERT_REQUIRED)
+
+    def test_ssl_failures_preserve_form_data_without_fallback(self):
+        for step in ("connect", "login", "send", "refused"):
+            for path, data in (("/contact", self.contact), ("/offerte", self.quote)):
+                with self.subTest(step=step, path=path), \
+                        patch.dict(os.environ, {"SMTP_PORT": "465"}), \
+                        patch.object(smtplib, "SMTP_SSL") as smtp_ssl:
+                    server = smtp_ssl.return_value.__enter__.return_value
+                    server.send_message.return_value = {}
+                    if step == "connect":
+                        smtp_ssl.side_effect = ssl.SSLError("GEHEIME_TESTWAARDE")
+                    elif step == "login":
+                        server.login.side_effect = smtplib.SMTPAuthenticationError(535, b"GEHEIME_TESTWAARDE")
+                    elif step == "send":
+                        server.send_message.side_effect = OSError("GEHEIME_TESTWAARDE")
+                    else:
+                        server.send_message.return_value = {"info@wespi.nl": (550, b"refused")}
+                    with self.assertLogs("routes.paginas", level="ERROR") as logs:
+                        status, _, text = self.fetch(path, data)
+                    self.assertEqual(status, 503)
+                    self.assert_values_retained(text, data)
+                    self.assertNotIn("GEHEIME_TESTWAARDE", text + "\n".join(logs.output))
+                    if step == "login":
+                        server.send_message.assert_not_called()
+                    server.starttls.assert_not_called()
+        self.smtp.assert_not_called()
+
+    def test_ssl_configuration_and_form_validation_before_connection(self):
+        with patch.dict(os.environ, {"SMTP_PORT": "465"}), \
+                patch.object(smtplib, "SMTP_SSL") as smtp_ssl:
+            for path, data in (("/contact", self.contact), ("/offerte", self.quote)):
+                self.assertEqual(self.fetch(path, {})[0], 422)
+                with patch.dict(os.environ, {"SMTP_PASSWORD": ""}), \
+                        self.assertLogs("routes.paginas", level="ERROR"):
+                    self.assertEqual(self.fetch(path, data)[0], 503)
+            smtp_ssl.assert_not_called()
+        self.smtp.assert_not_called()
 
     def test_missing_required_fields(self):
         for path, data, fields in (

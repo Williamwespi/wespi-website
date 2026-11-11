@@ -125,14 +125,18 @@ def _send_contact_email(
 
 
 def _send_email(message: EmailMessage, configuration: SMTPConfiguration) -> None:
-    with smtplib.SMTP(
-        configuration.host,
-        configuration.port,
-        timeout=15,
-    ) as server:
+    tls_context = ssl.create_default_context()
+    implicit_tls = configuration.port == 465
+    connection = (
+        smtplib.SMTP_SSL(configuration.host, configuration.port, timeout=15, context=tls_context)
+        if implicit_tls else
+        smtplib.SMTP(configuration.host, configuration.port, timeout=15)
+    )
+    with connection as server:
         server.ehlo()
-        server.starttls(context=ssl.create_default_context())
-        server.ehlo()
+        if not implicit_tls:
+            server.starttls(context=tls_context)
+            server.ehlo()
         if configuration.username:
             server.login(configuration.username, configuration.password)
         refused_recipients = server.send_message(message)

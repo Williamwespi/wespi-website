@@ -47,7 +47,7 @@ Geen `--reload`; debug en publieke API-documentatie staan uit. De projectroot mo
 |---|---|
 | `WESPI_ENV` | `development` (standaard), `staging` of `production`. Andere waarden weigeren de start. Alleen na akkoord `production` instellen |
 | `SMTP_HOST` | Mailserver van de provider; verplicht voor verzenden |
-| `SMTP_PORT` | STARTTLS-poort; standaard 587 |
+| `SMTP_PORT` | `465`: SSL/TLS vanaf de verbinding via SMTP_SSL. Andere poorten: verplicht STARTTLS; standaard `587` |
 | `SMTP_FROM` | Vast toegestaan afzenderadres; verplicht |
 | `SMTP_USERNAME` | Providergebruiker indien authenticatie nodig is |
 | `SMTP_PASSWORD` | Bijbehorend geheim; samen met gebruikersnaam ingesteld of beide leeg |

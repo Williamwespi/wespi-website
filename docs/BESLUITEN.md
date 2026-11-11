@@ -1,5 +1,11 @@
 # Besluiten
 
+## SMTP — SSL/TLS op poort 465, 11 november 2026
+
+- De verbindingswijze wordt bepaald door `SMTP_PORT`: `465` gebruikt `smtplib.SMTP_SSL`; `587` en overige eerder ondersteunde poorten blijven verplicht STARTTLS gebruiken. Geen terugval naar onbeveiligde verzending. Beide gebruiken certificaat- en hostnaamcontrole.
+- Voor Yourhosting zijn `SMTP_HOST=mail.yourhosting.nl` en `SMTP_PORT=465` opgegeven. Afzender en inloggegevens blijven uitsluitend omgevingsvariabelen; geen geheimen in broncode. Formulieren, validatie en foutafhandeling blijven behouden.
+- Alleen lokaal voorbereid; geen echte mail, commit, push, deployment of wijzigingen aan Railway-instellingen.
+
 ## SEO-migratie — definitieve voorbereiding, 11 november 2026
 
 - De acht inhoudelijke 301-voorstellen uit [SEO_MIGRATIE_WESPI.md](./SEO_MIGRATIE_WESPI.md) zijn expliciet goedgekeurd en lokaal geïmplementeerd, inclusief directe slashvarianten. De drie bestaande redirects behouden hun bestemming en krijgen eveneens directe slashvarianten.
