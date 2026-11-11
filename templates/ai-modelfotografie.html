@@ -3,7 +3,7 @@
 {% block meta_description %}Breid je kledingfotografie bij Wespi uit met AI-modelbeelden, lifestylefoto's en video's. Van professionele productfoto tot een complete collectiepresentatie.{% endblock %}
 {% block canonical %}<link rel="canonical" href="https://www.wespi.nl/productfotografie/kledingfotografie/ai-modelfotografie">{% endblock %}
 {% block extra_head %}
-<link rel="stylesheet" href="{{ url_for('static', path='css/kledingfotografie/ai-modelfotografie.css') }}?v=20261105-fase2.1">
+<link rel="stylesheet" href="{{ url_for('static', path='css/kledingfotografie/ai-modelfotografie.css') }}?v=20261111-visueel">
 {% endblock %}
 {% block content %}
 <div class="ai-modelfotografie">
@@ -36,37 +36,45 @@
     <section class="ai-sectie ai-achtergrond" aria-labelledby="ai-voorbeelden">
         <div class="container">
             <h2 id="ai-voorbeelden">Van stilstaand beeld tot beweging.</h2>
-            <p class="ai-inleiding">Bekijk de modelbeelden van voor- en achterkant en ontdek de video. Klik op een beeld om het te vergroten.</p>
+            <p class="ai-inleiding">Vijf modellen, van productfoto tot modelbeeld en video. Bekijk alle beelden en de oorspronkelijke productfoto's per model.</p>
             <div class="ai-galerij">
-                {% for voorbeeld in voorbeelden if voorbeeld.video or voorbeeld.fotos | select | list %}
-                <article class="ai-modelkaart" aria-labelledby="ai-model-{{ voorbeeld.nummer }}">
-                    <h3 id="ai-model-{{ voorbeeld.nummer }}">Model {{ voorbeeld.nummer }}</h3>
-                    {% if voorbeeld.video %}
-                    <a class="ai-media ai-video-preview" href="{{ url_for('static', path=voorbeeld.video) }}" data-ai-type="video" data-ai-label="Video van Model {{ voorbeeld.nummer }}" aria-label="Vergroot video van Model {{ voorbeeld.nummer }}">
-                        <video preload="none" playsinline muted tabindex="-1" aria-hidden="true" poster="{{ url_for('static', path=voorbeeld.poster or voorbeeld.fotos[0] or 'images/kledingfotografie/ai-modelfotografie/placeholder.svg') }}">
-                            <source src="{{ url_for('static', path=voorbeeld.video) }}" type="video/mp4">
-                        </video>
-                        <span class="ai-afspelen" aria-hidden="true"></span>
-                    </a>
-                    {% endif %}
-                    <div class="ai-model-fotos">
-                        {% for foto in voorbeeld.fotos %}
-                        {% if foto %}
-                        <a class="ai-media" href="{{ url_for('static', path=foto) }}" data-ai-type="image" data-ai-label="Model {{ voorbeeld.nummer }} - {{ 'voorkant' if loop.index == 1 else 'achterkant' }}" aria-label="Vergroot Model {{ voorbeeld.nummer }} - {{ 'voorkant' if loop.index == 1 else 'achterkant' }}">
-                            <img src="{{ url_for('static', path=beeldpad(foto)) }}" {{ beeld_attributen(foto) }} alt="AI-model {{ voorbeeld.nummer }} met kleding, {{ 'voorkant' if loop.index == 1 else 'achterkant' }}" loading="lazy" decoding="async" width="600" height="900">
+                {% for voorbeeld in voorbeelden %}
+                <article class="ai-modelkaart" aria-labelledby="ai-model-{{ voorbeeld.id }}">
+                    <div class="ai-video-vlak">
+                        <a class="ai-media ai-video-preview" href="{{ url_for('static', path=voorbeeld.video.src) }}" data-ai-video="{{ voorbeeld.id }}" aria-label="Speel video van {{ voorbeeld.naam }}">
+                            <img src="{{ url_for('static', path=voorbeeld.video.poster) }}" alt="{{ voorbeeld.video.alt }}" loading="lazy" decoding="async" width="432" height="768">
+                            <span class="ai-afspelen" aria-hidden="true"></span>
                         </a>
-                        {% endif %}
+                    </div>
+                    <div class="ai-model-fotos">
+                        {% set product = voorbeeld.originelen | selectattr('src', 'equalto', voorbeeld.overzicht_product) | first %}
+                        {% for foto in [product, voorbeeld.fotos[0]] %}
+                        <a class="ai-media" href="{{ url_for('static', path=foto.src) }}" data-ai-model="{{ voorbeeld.id }}" aria-label="Bekijk alle beelden van {{ voorbeeld.naam }}: {{ foto.alt }}">
+                            <img src="{{ url_for('static', path=foto.presentatie.src) }}" alt="{{ foto.alt }}" loading="lazy" decoding="async" width="{{ foto.presentatie.width }}" height="{{ foto.presentatie.height }}">
+                        </a>
                         {% endfor %}
                     </div>
+                    <h3 id="ai-model-{{ voorbeeld.id }}">{{ voorbeeld.naam }}</h3>
+                    <button type="button" class="ai-alles" data-ai-model="{{ voorbeeld.id }}">Bekijk alle beelden <span aria-hidden="true">→</span></button>
                 </article>
                 {% endfor %}
             </div>
         </div>
     </section>
 
+    <section class="ai-sectie ai-vakwerk" aria-labelledby="ai-vakwerk-titel">
+        <div class="container">
+            <h2 id="ai-vakwerk-titel">AI waar het kan. Handmatig waar het moet.</h2>
+            <div class="ai-vakwerk-tekst">
+                <p>Een overtuigend AI-modelbeeld ontstaat niet met één druk op de knop. We combineren AI-technologie met professionele beeldbewerking in Photoshop en handmatige controles.</p>
+                <p>Daarbij letten we op de uitstraling van het model, de details van het kledingstuk en een natuurlijk eindresultaat. Zo maken we van bestaande productfoto's professionele modelbeelden en video's die geschikt zijn voor jouw webshop.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="ai-sectie ai-tarieven-blok" id="ai-tarieven">
         <div class="ai-inhoudsbeeld">
-            <img src="{{ url_for('static', path=beeldpad('images/kledingfotografie/ai-modelfotografie/ai-model-01-voor.jpg')) }}" {{ beeld_attributen('images/kledingfotografie/ai-modelfotografie/ai-model-01-voor.jpg') }} alt="AI-model met kleding van voren als aanvulling op productfotografie" loading="lazy" decoding="async">
+            <img src="{{ url_for('static', path=voorbeelden[0].fotos[0].src) }}" width="{{ voorbeelden[0].fotos[0].width }}" height="{{ voorbeelden[0].fotos[0].height }}" alt="AI-model met kleding van voren als aanvulling op productfotografie" loading="lazy" decoding="async">
         </div>
         <div class="container ai-tarieven-inhoud">
             <h2>Professioneel beeld. Scherpe tarieven.</h2>
@@ -98,10 +106,15 @@
     <dialog class="ai-lightbox" aria-labelledby="ai-lightbox-titel">
         <div class="ai-lightbox-kop">
             <h2 id="ai-lightbox-titel">Modelbeeld</h2>
-            <button type="button" class="ai-lightbox-sluiten" aria-label="Sluit vergroting" autofocus>Sluiten &times;</button>
+            <button type="button" class="ai-lightbox-sluiten" aria-label="Sluit galerij" autofocus>Sluiten &times;</button>
         </div>
         <div class="ai-lightbox-media"></div>
     </dialog>
+    <dialog class="ai-lightbox ai-detail" aria-label="Vergrote foto">
+        <div class="ai-lightbox-kop"><button type="button" class="ai-detail-sluiten" autofocus>Terug naar alle beelden &times;</button></div>
+        <div class="ai-detail-media"></div>
+    </dialog>
+    <script type="application/json" id="ai-modelgegevens">{{ voorbeelden | tojson }}</script>
 </div>
-<script src="{{ url_for('static', path='js/ai-modelfotografie.js') }}" defer></script>
+<script src="{{ url_for('static', path='js/ai-modelfotografie.js') }}?v=20261109-uniform5" defer></script>
 {% endblock %}

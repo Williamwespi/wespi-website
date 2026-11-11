@@ -6,17 +6,18 @@
         const slider = vergelijker.querySelector('.beeldvergelijker__slider');
         if (!slider || vergelijker.dataset.geinitialiseerd) return;
         vergelijker.dataset.geinitialiseerd = 'true';
-        slider.defaultValue = '100';
+        slider.defaultValue = '50';
 
         function bijwerken() {
             const percentage = Math.max(0, Math.min(100, Number(slider.value)));
+            const origineel = vergelijker.hasAttribute('data-voor-links') ? percentage : 100 - percentage;
             vergelijker.style.setProperty('--vergelijking-positie', percentage + '%');
-            slider.setAttribute('aria-valuetext', percentage + '% origineel, ' + (100 - percentage) + '% bewerkt');
-            vergelijker.classList.toggle('is-volledig-voor', percentage >= 97);
-            vergelijker.classList.toggle('is-volledig-na', percentage <= 3);
+            slider.setAttribute('aria-valuetext', origineel + '% origineel, ' + (100 - origineel) + '% bewerkt');
+            vergelijker.classList.toggle('is-volledig-voor', origineel >= 97);
+            vergelijker.classList.toggle('is-volledig-na', origineel <= 3);
         }
         function herstellen() {
-            slider.value = '100';
+            slider.value = '50';
             bijwerken();
         }
         function verplaatsen(event) {
@@ -45,7 +46,7 @@
         vergelijkers.push({ slider: slider, herstellen: herstellen });
         herstellen();
     });
-    // Ook terugkeren via de browsergeschiedenis begint volledig bij het origineel.
+    // Ook terugkeren via de browsergeschiedenis begint bij de helft voor/na.
     window.addEventListener('pageshow', function () {
         vergelijkers.forEach(function (item) { item.herstellen(); });
     });

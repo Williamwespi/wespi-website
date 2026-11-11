@@ -5,30 +5,86 @@
     object-position: 60% top;
     transform: none;
 }
+/* Een kaart deelt vier rasterrijen met de kaarten ernaast:
+   video, fotopaar, titel en galerijlink. Ook meerregelige titels blijven uitgelijnd. */
+.ai-modelfotografie { --ai-foto-verhouding: 2 / 3; }
 .ai-modelfotografie .ai-galerij {
+    --ai-afstand: 8px;
+    --ai-afronding: 5px;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 18px;
+    gap: var(--ai-afstand) 16px;
 }
-.ai-modelfotografie .ai-modelkaart { min-width: 0; }
-.ai-modelfotografie .ai-modelkaart h3 { margin: 0 0 12px; font-size: 14px; font-weight: 700; }
-.ai-modelfotografie .ai-media {
-    display: block;
+.ai-modelfotografie .ai-modelkaart {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    min-width: 0;
+    gap: var(--ai-afstand);
+    align-items: start;
+}
+.ai-modelfotografie .ai-modelkaart h3 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+.ai-modelfotografie .ai-video-vlak,
+.ai-modelfotografie .ai-model-fotos .ai-media {
     position: relative;
     overflow: hidden;
-    border: 1px solid #dedbd5;
-    border-radius: 5px;
-    background: var(--warm-licht);
+    border: 0;
+    border-radius: var(--ai-afronding);
+    background: #fff;
 }
-.ai-modelfotografie .ai-media img,
-.ai-modelfotografie .ai-media video {
+.ai-modelfotografie .ai-video-vlak { aspect-ratio: 9 / 16; }
+.ai-modelfotografie .ai-video-vlak > *,
+.ai-modelfotografie .ai-video-preview img,
+.ai-modelfotografie .ai-model-fotos img {
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 2 / 3;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
     object-fit: contain;
+    object-position: center;
 }
-.ai-modelfotografie .ai-video-preview video { pointer-events: none; }
+.ai-modelfotografie .ai-model-fotos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--ai-afstand);
+    margin: 0;
+}
+.ai-modelfotografie .ai-model-fotos .ai-media {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: var(--ai-foto-verhouding);
+    box-sizing: border-box;
+}
+.ai-modelfotografie .ai-alles {
+    align-self: start;
+    justify-self: start;
+    min-height: 44px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--wespi-zwart);
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+}
+.ai-modelfotografie .ai-alles:hover { text-decoration: underline; text-underline-offset: 3px; }
 .ai-modelfotografie .ai-afspelen {
     position: absolute;
     inset: 50% auto auto 50%;
@@ -41,7 +97,6 @@
     background: var(--wespi-goud);
     color: var(--wespi-zwart);
 }
-.ai-modelfotografie .ai-model-fotos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
 .ai-modelfotografie .ai-afspelen::before {
     content: "";
     border-top: 9px solid transparent;
@@ -50,21 +105,22 @@
     margin-left: 4px;
 }
 .ai-modelfotografie .ai-lightbox {
-    width: min(1000px, calc(100% - 32px));
+    width: min(1180px, calc(100% - 24px));
     max-width: none;
-    max-height: calc(100dvh - 32px);
-    padding: 16px;
-    border: 1px solid #dedbd5;
-    border-radius: 7px;
-    background: var(--warm-wit);
-    color: var(--wespi-zwart);
+    max-height: calc(100dvh - 24px);
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
-.ai-modelfotografie .ai-lightbox::backdrop { background: rgba(0, 0, 0, .8); }
-.ai-modelfotografie .ai-lightbox-kop { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
-.ai-modelfotografie .ai-lightbox-kop h2 { margin: 0; font-size: 16px; }
-.ai-modelfotografie .ai-lightbox-sluiten { flex-shrink: 0; min-height: 44px; padding: 8px 14px; border: 0; border-radius: 4px; background: var(--wespi-goud); color: var(--wespi-zwart); font: inherit; cursor: pointer; }
-.ai-modelfotografie .ai-lightbox-media img,
-.ai-modelfotografie .ai-lightbox-media video { display: block; width: 100%; height: min(75dvh, 850px); object-fit: contain; }
+.ai-modelfotografie .ai-lightbox::backdrop { background: rgba(0, 0, 0, .9); }
+.ai-modelfotografie .ai-lightbox-kop { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; position: sticky; top: 0; z-index: 1; background: #151515; padding: 6px 10px; }
+.ai-modelfotografie .ai-lightbox-kop h2 { margin: 0; font-size: 16px; color: #fff; }
+.ai-modelfotografie .ai-lightbox button { min-width: 44px; min-height: 44px; padding: 8px 12px; border: 0; border-radius: 4px; background: rgba(255,255,255,.12); color: #fff; font: inherit; cursor: pointer; }
+.ai-modelfotografie .ai-lightbox button:hover { background: rgba(255,255,255,.25); }
 .ai-modelfotografie .ai-sectie { padding: 50px 0; scroll-margin-top: 100px; }
 .ai-modelfotografie .ai-achtergrond { background: var(--warm-wit); }
 .ai-modelfotografie .ai-tarieven-blok { position: relative; overflow: hidden; }
@@ -126,7 +182,11 @@
 }
 @media (max-width: 760px) {
     .ai-modelfotografie .kledingfotografie-hero-foto img { object-position: 55% top; }
-    .ai-modelfotografie .ai-galerij { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .ai-modelfotografie .ai-galerij {
+        grid-template-columns: minmax(0, 1fr);
+        width: min(100%, 320px);
+        margin-inline: auto;
+    }
     .ai-modelfotografie .ai-sectie { padding: 36px 0; }
     .ai-modelfotografie .ai-tarieven-inhoud { padding-left: 0; }
     .ai-modelfotografie .ai-inhoudsbeeld { position: relative; inset: auto; width: 100%; height: 180px; margin-bottom: 16px; }
@@ -134,7 +194,7 @@
     .ai-modelfotografie .ai-stappen { grid-template-columns: 1fr; gap: 20px; }
 }
 @media (max-width: 420px) {
-    .ai-modelfotografie .ai-galerij { grid-template-columns: minmax(0, 1fr); max-width: 280px; }
+
     .ai-modelfotografie .ai-tarieven { grid-template-columns: 1fr; }
 }
 
@@ -144,5 +204,30 @@
     .ai-modelfotografie .ai-tarieven-inhoud { display: contents; }
     .ai-modelfotografie .ai-tarieven-inhoud > * { grid-column: 2; }
     .ai-modelfotografie .ai-tarieven-inhoud > h2 { order: -2; }
-    .ai-modelfotografie .ai-inhoudsbeeld { grid-column: 1 / -1; order: -1; }
+    /* Portret en toelichting delen één rij; geen los beeldvlak boven de tarieven. */
+    .ai-modelfotografie .ai-inhoudsbeeld { grid-column: 2; grid-row: 2; order: 0; width: 116px; height: 220px; margin: 0; align-self: end; }
+    .ai-modelfotografie .ai-inhoudsbeeld img { object-fit: cover; object-position: center bottom; }
+    .ai-modelfotografie .ai-inhoudsbeeld::after { background: linear-gradient(180deg, #fff, #fff0 6%, #fff0 94%, #fff), linear-gradient(90deg, #fff, #fff0 12%, #fff0 75%, #fff); }
+    .ai-modelfotografie .ai-tarieven-inhoud > .ai-inleiding { grid-row: 2; padding-left: 132px; margin: 0 0 22px; min-height: 220px; align-content: center; }
+}
+
+/* Exact dezelfde achtergrond als .kleding-ai-promotie in ai-promotie.css. */
+.ai-modelfotografie .ai-vakwerk { background: #faf3d9; color: var(--wespi-zwart); }
+.ai-modelfotografie .ai-vakwerk p { color: var(--donkergrijs); }
+.ai-modelfotografie .ai-vakwerk h2 { font-size: clamp(26px, 3vw, 38px); letter-spacing: -1px; }
+.ai-modelfotografie .ai-vakwerk-tekst { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.ai-modelfotografie .ai-vakwerk-tekst p { margin: 0; }
+@media (max-width: 760px) {
+    .ai-modelfotografie .ai-vakwerk-tekst { grid-template-columns: 1fr; gap: 12px; }
+}
+
+.ai-modelfotografie .ai-lightbox-media { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding: 16px 4px; }
+.ai-modelfotografie .ai-lightbox-media a { display: grid; grid-template-rows: auto 1fr; align-content: start; min-width: 0; color: #fff; text-decoration: none; font-size: 12px; }
+.ai-modelfotografie .ai-galerij-fotovlak { display: block; position: relative; aspect-ratio: var(--ai-foto-verhouding); overflow: hidden; border-radius: 5px; }
+.ai-modelfotografie .ai-lightbox-media .ai-galerij-fotovlak img { display: block; position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; aspect-ratio: auto; object-fit: contain; object-position: center; background: transparent; }
+.ai-modelfotografie .ai-lightbox-media .ai-galerij-bijschrift { display: block; padding-top: 8px; overflow-wrap: anywhere; }
+.ai-modelfotografie .ai-detail-media img { display: block; width: 100%; height: calc(100dvh - 110px); object-fit: contain; }
+@media (max-width: 760px) {
+    .ai-modelfotografie .ai-lightbox-media { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 10px; }
+    .ai-modelfotografie .ai-alles { font-size: 12px; }
 }

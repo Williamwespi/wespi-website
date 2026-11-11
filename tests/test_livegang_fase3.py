@@ -63,8 +63,7 @@ class Fase3Tests(unittest.TestCase):
         self.assertEqual(template.render(), "images/toekomstige-foto.jpg")
 
     def test_contact_alternative_and_footer_remain(self):
-        hidden = {"/contact", "/offerte", "/productfotografie/packshotfotografie",
-                  "/beeldbewerking/kleding", "/beeldbewerking/automotive"}
+        hidden = {"/contact", "/offerte"}
         for path, (_, html) in self.pages.items():
             with self.subTest(path=path):
                 tags = Markup(html).tags
@@ -74,13 +73,12 @@ class Fase3Tests(unittest.TestCase):
                 self.assertIn('href="/contact"', html)
                 if path in {"/contact", "/offerte"}:
                     self.assertTrue(any(t == "form" and a.get("method") == "post" for t, a in tags))
-                elif path in hidden:
-                    self.assertTrue(any(t == "a" and a.get("href", "").startswith(("/offerte", "/contact")) for t, a in tags))
 
     def test_confirmed_vat_and_existing_price_amounts(self):
         prices = {
             "/productfotografie/kledingfotografie": ("15,99", "3,49", "10,99", "2,49"),
             "/productfotografie/packshotfotografie": ("9,99", "2,99"),
+            "/beeldbewerking/product": ("2,49",),
             "/slimmer-werken": ("249", "499"),
             "/data/productdata": ("0,49", "0,99", "1,99", "75", "99", "189", "299"),
         }

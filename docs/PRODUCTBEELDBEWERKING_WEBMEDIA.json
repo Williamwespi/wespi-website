@@ -1,0 +1,453 @@
+[
+  {
+    "name": "horloge-groen-voor",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/JWELLERY/Before/2559-2100072398543_1.jpg",
+    "source_sha256": "ba8dc9dd67da02cdf5c7782525201850930fcdc82c890a92e1c8989730a8c68f",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-horloge-groen-voor-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 26414
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-horloge-groen-voor-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 81624
+      }
+    ]
+  },
+  {
+    "name": "horloge-groen-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/JWELLERY/After/2559-2100072398543_1.jpg",
+    "source_sha256": "eeeb4b0473fe7cee4c6ecb0bb7a273be5519b8e7948ea1e2a635178ee2a6f0ef",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-horloge-groen-na-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 23414
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-horloge-groen-na-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 76406
+      }
+    ]
+  },
+  {
+    "name": "tas-rood-voor",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/BAG/Before/BG223706-RED.jpg",
+    "source_sha256": "2d64828c6b475bd25b7020745513de81ef132b2ceb87be64fb10bf679be87950",
+    "crop": [
+      0,
+      780,
+      1500,
+      1780
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-tas-rood-voor-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 9854
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-tas-rood-voor-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 48100
+      }
+    ]
+  },
+  {
+    "name": "tas-rood-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/BAG/After/BG223706-RED.jpg",
+    "source_sha256": "a3000eeccb3db9099bf1558fb7f7b6fa51a99d5b334e6ebefe73d4d5a40d2c28",
+    "crop": [
+      0,
+      780,
+      1500,
+      1780
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-tas-rood-na-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 9372
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-tas-rood-na-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 46830
+      }
+    ]
+  },
+  {
+    "name": "tas-rood-visual-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/BAG/After/BG223706-RED.jpg",
+    "source_sha256": "a3000eeccb3db9099bf1558fb7f7b6fa51a99d5b334e6ebefe73d4d5a40d2c28",
+    "crop": [
+      0,
+      650,
+      1500,
+      1850
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-tas-rood-visual-na-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 7714
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-tas-rood-visual-na-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 29420
+      }
+    ]
+  },
+  {
+    "name": "schoen-zwart-voor",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/SHOES/Before/GMHEBEN4_BLK01_PZ.jpg",
+    "source_sha256": "f266d65cff3e182b0468b6e5e7dbdc6f9d5c22287c80b8b80f4f0ac313e608ff",
+    "crop": [
+      0,
+      500,
+      3000,
+      2500
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-schoen-zwart-voor-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 11234
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-schoen-zwart-voor-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 33844
+      }
+    ]
+  },
+  {
+    "name": "schoen-zwart-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/SHOES/After/GMHEBEN4_BLK01_PZ.jpg",
+    "source_sha256": "ec606af55b3696721a813c917d73fb3f9eb3fca828fb3787811dc425dd40e0e6",
+    "crop": [
+      0,
+      500,
+      3000,
+      2500
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-schoen-zwart-na-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 11096
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-schoen-zwart-na-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 33702
+      }
+    ]
+  },
+  {
+    "name": "sandaal-bruin-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/SHOES/After/GWDISTA6_DBR01_PZ.jpg",
+    "source_sha256": "3dc76cf3b8825940dc51ccca16906a0d049ac752b5cc568ffd1f76bead7ad981",
+    "crop": [
+      0,
+      500,
+      3000,
+      2500
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-sandaal-bruin-na-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 10204
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-sandaal-bruin-na-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 34212
+      }
+    ]
+  },
+  {
+    "name": "bord-oranje-voor",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/CROCKERY/Before/2625-2100067702058_3.jpg",
+    "source_sha256": "921ef2a9594bafd25db8bb8de13a52b5ca10ba2e9e381f9ce4d6eeeac113c92a",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-bord-oranje-voor-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 10288
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-bord-oranje-voor-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 25778
+      }
+    ]
+  },
+  {
+    "name": "bord-oranje-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/CROCKERY/After/2625-2100067702058_3.jpg",
+    "source_sha256": "b67e85a0e1e487ff5f10340cb382b3a68c99a92fcf3499230007efba50b27b97",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-bord-oranje-na-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 8894
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-bord-oranje-na-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 21940
+      }
+    ]
+  },
+  {
+    "name": "pet-rood-voor",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/CAP/Before/2589-2100066166400_1.jpg",
+    "source_sha256": "48b3acd5e7035c45fbc51e98fccfc2a5b506c2b8ea5178372909bb9418df65e7",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-pet-rood-voor-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 22394
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-pet-rood-voor-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 79710
+      }
+    ]
+  },
+  {
+    "name": "pet-rood-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/CAP/After/2589-2100066166400_1.jpg",
+    "source_sha256": "9cf8ff2188d3bef1c0d7563500da09664224197257e57ea9fcb0f4243efbc841",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-pet-rood-na-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 33902
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-pet-rood-na-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 113958
+      }
+    ]
+  },
+  {
+    "name": "kleur-top-voor",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/CC/Before/3090-2100074884327_1.jpg",
+    "source_sha256": "c10f5f3f02cb19d16f5a982b3f30d35b531b8731aeb1b5a80d3147490feae5bd",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-kleur-top-voor-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 13734
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-kleur-top-voor-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 38296
+      }
+    ]
+  },
+  {
+    "name": "kleur-top-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/CC/After/3090-2100074884327_1.jpg",
+    "source_sha256": "79c84e2eac741dba90c0fea655882889ccda4e4837ef54b004ad3d22aa9f405e",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-kleur-top-na-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 14554
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-kleur-top-na-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 39716
+      }
+    ]
+  },
+  {
+    "name": "riem-bruin-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/BELT/After/2582-2100068985146_4.jpg",
+    "source_sha256": "1702e24212533584312355ec8baf315fca7cea70e7d4e4fb7b5524568746ad26",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-riem-bruin-na-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 18404
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-riem-bruin-na-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 63902
+      }
+    ]
+  },
+  {
+    "name": "skibril-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/SWIM WEAR/After/2622-2100072112798_1.jpg",
+    "source_sha256": "ecfcbb68e4c741850a8e4f242292f40186c0832bc76436c1dd91bef86072a8f6",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-skibril-na-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 7016
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-skibril-na-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 19788
+      }
+    ]
+  },
+  {
+    "name": "serie-tas-voorzijde-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/BAG/After/BG260905_LTR_SIENNA_F.jpg",
+    "source_sha256": "29ccd629b9bd6ed03c0138bf106999c11e9144cb9cdf0e7fc9ce9e68ab02dcdc",
+    "crop": [
+      0,
+      900,
+      2000,
+      2400
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-serie-tas-voorzijde-na-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 12800
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-serie-tas-voorzijde-na-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 55656
+      }
+    ]
+  },
+  {
+    "name": "serie-tas-achterzijde-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/BAG/After/BG260905_LTR_SIENNA_B.jpg",
+    "source_sha256": "30b10a19a86c2de5d02c006c805a0c77d19b4ddaa9c2d5123c774829cf73fe83",
+    "crop": [
+      0,
+      820,
+      1768,
+      2146
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-serie-tas-achterzijde-na-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 9922
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-serie-tas-achterzijde-na-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 30024
+      }
+    ]
+  },
+  {
+    "name": "serie-tas-detail-na",
+    "source": "bronmateriaal/productbeeldbewerking/AFTER Before Sample/BAG/After/BG260905_LTR_SIENNA_D.jpg",
+    "source_sha256": "fec3def76b5c6b4c60f9fa15853e4d778def53a9903383a61d539b22955e0303",
+    "crop": [
+      0,
+      320,
+      1768,
+      1646
+    ],
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-serie-tas-detail-na-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 20792
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-serie-tas-detail-na-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 72400
+      }
+    ]
+  },
+  {
+    "name": "sfeerbeeld",
+    "source": "static/images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld.png",
+    "source_sha256": "4702a5e6fc1d0b42e472d910776626eae6c29c9e2de00638c6657b702bcee1bb",
+    "crop": null,
+    "variants": [
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-640.webp",
+        "width": 640,
+        "height": 328,
+        "bytes": 21516
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-960.webp",
+        "width": 960,
+        "height": 492,
+        "bytes": 41238
+      },
+      {
+        "path": "static/images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-1752.webp",
+        "width": 1752,
+        "height": 897,
+        "bytes": 109764
+      }
+    ]
+  }
+]

@@ -15,22 +15,103 @@ Professionele beeldbewerking en fotobewerking voor kleding, producten en automot
 >
 {% endblock %}
 
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/beeldbewerking/overzicht.css') }}?v=20261111-1">
+{% endblock %}
+
 {% block content %}
 
 {% include "onderdelen/beeldbewerking/hero.html" %}
 
-{% include "onderdelen/beeldbewerking/diensten.html" %}
+<div class="bo-overzicht">
+    <section class="bo-intro" id="mogelijkheden" aria-labelledby="bo-intro-titel">
+        <div class="container">
+            <div class="bo-intro-kop">
+                <div><span class="bo-bovenkop">BEELDBEWERKING VOOR JOUW BRANCHE</span><h2 id="bo-intro-titel">Ander product.<br>Dezelfde aandacht.</h2></div>
+                <p>Een auto, een kledingcollectie of een compleet assortiment. Wij verzorgen de fotobewerking die past bij jouw beelden, met oog voor detail en een consistente presentatie.</p>
+            </div>
+            <nav class="bo-keuze" aria-label="Kies je beeldbewerkingsdienst">
+                <a href="#autobewerking"><span>01</span>Autobewerking<span aria-hidden="true">↘</span></a>
+                <a href="#kledingbeeldbewerking"><span>02</span>Kledingbeeldbewerking<span aria-hidden="true">↘</span></a>
+                <a href="#productbeeldbewerking"><span>03</span>Productbeeldbewerking<span aria-hidden="true">↘</span></a>
+            </nav>
+        </div>
+    </section>
 
-{% include "onderdelen/beeldbewerking/vergelijking.html" %}
+    <section class="bo-auto bo-dienst" id="autobewerking" aria-labelledby="bo-auto-titel">
+        <div class="bo-auto-beeld bo-dienstbeeld">
+            <img src="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/automotive/achtergronden/auto-geel-extra-achtergrond-3-1200.webp') }}"
+                 srcset="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/automotive/achtergronden/auto-geel-extra-achtergrond-3-600.webp') }} 600w, {{ url_for('static', path='images/beeldbewerking/beeldbewerking/automotive/achtergronden/auto-geel-extra-achtergrond-3-1200.webp') }} 1200w"
+                 sizes="(max-width: 900px) 100vw, 65vw" width="1200" height="800"
+                 alt="Gele Peugeot op een lichte digitale showroomachtergrond, een bestaand resultaat van autobewerking" loading="lazy" decoding="async">
+        </div>
+        <div class="container bo-auto-inhoud">
+            <div class="bo-diensttekst">
+                <span class="bo-bovenkop"><span class="bo-nummer">01</span> AUTOBEWERKING</span>
+                <h2 id="bo-auto-titel">Je voorraad.<br><span>Eén uitstraling.</span></h2>
+                <p>Professionele voertuigfoto's voor je website en advertenties. Van een rustige achtergrond tot je eigen digitale showroom: elke auto in dezelfde verzorgde lijn.</p>
+                <ul class="bo-kenmerken"><li>Achtergronden en digitale showrooms</li><li>Kentekenplaten en logo's</li><li>Ook voor terugkerende beeldstromen</li></ul>
+                <a class="bo-dienstlink" href="/beeldbewerking/automotive">Ontdek autobewerking <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </section>
 
-{% include "onderdelen/beeldbewerking/mogelijkheden.html" %}
+    <section class="bo-kleding bo-dienst" id="kledingbeeldbewerking" aria-labelledby="bo-kleding-titel">
+        <div class="container bo-kleding-inhoud">
+            <div class="bo-diensttekst">
+                <span class="bo-bovenkop"><span class="bo-nummer">02</span> KLEDINGBEELDBEWERKING</span>
+                <h2 id="bo-kleding-titel">Sterke collectie.<br><span>Tot in de vezel.</span></h2>
+                <p>Laat kleur, pasvorm en materiaal spreken. We corrigeren en retoucheren je kledingbeelden voor een professionele presentatie in webshop, catalogus en marketplace.</p>
+                <ul class="bo-kenmerken"><li>Vrijstaand maken en retoucheren</li><li>Kleurcorrectie met behoud van detail</li><li>Een consistente lijn in je collectie</li></ul>
+                <a class="bo-dienstlink" href="/beeldbewerking/kleding">Ontdek kledingbeeldbewerking <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="bo-kleding-beeld bo-dienstbeeld">
+                <figure class="bo-kleding-hoofd">
+                    <img src="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/kleding/tshirt-blauw-voorzijde-1200.webp') }}"
+                         srcset="{{ url_for('static', path='images/beeldbewerking/beeldbewerking/kleding/tshirt-blauw-voorzijde-600.webp') }} 600w, {{ url_for('static', path='images/beeldbewerking/beeldbewerking/kleding/tshirt-blauw-voorzijde-1200.webp') }} 1200w"
+                         sizes="(max-width: 900px) 62vw, 32vw" width="1200" height="1200"
+                         alt="Blauw T-shirt, vrijstaand en zorgvuldig afgewerkt met zichtbare stofstructuur" loading="lazy" decoding="async">
+                </figure>
+                <figure class="bo-kleding-detail">
+                    <img src="{{ url_for('static', path='images/beeldbewerking/kleding/kledingbeeldbewerking-werkwijze-600.webp') }}"
+                         width="600" height="600" alt="Lichtblauw gebreid shirt met V-hals en een opengewerkte materiaalstructuur" loading="lazy" decoding="async">
+                    <figcaption>Aandacht voor kleur en materiaal</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
 
-{% include "onderdelen/beeldbewerking/volume.html" %}
+    <section class="bo-product bo-dienst" id="productbeeldbewerking" aria-labelledby="bo-product-titel">
+        <div class="bo-product-beeld bo-dienstbeeld">
+            <img src="{{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-960.webp') }}"
+                 srcset="{{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-640.webp') }} 640w, {{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-960.webp') }} 960w, {{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-1752.webp') }} 1752w"
+                 sizes="(max-width: 900px) 100vw, 75vw" width="1752" height="897"
+                 alt="Goedgekeurd sfeerbeeld met sneaker, rugtas, horloge, zonnebril en koptelefoon" loading="lazy" decoding="async">
+        </div>
+        <div class="container bo-product-inhoud">
+            <div class="bo-diensttekst">
+                <span class="bo-bovenkop"><span class="bo-nummer">03</span> PRODUCTBEELDBEWERKING</span>
+                <h2 id="bo-product-titel">Elk product.<br><span>Op zijn sterkst.</span></h2>
+                <p>Van een enkel artikel tot een breed assortiment. We maken productfoto's vrijstaand, werken details af en zorgen voor een visueel consistente presentatie.</p>
+                <a class="bo-dienstlink" href="/beeldbewerking/product">Ontdek productbeeldbewerking <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </section>
 
-{% include "onderdelen/beeldbewerking/werkwijze.html" %}
-
-{% include "onderdelen/beeldbewerking/cta.html" %}
-
-<script src="{{ url_for('static', path='js/beeldvergelijker.js') }}" defer></script>
+    <section class="bo-volume" aria-labelledby="bo-volume-titel">
+        <div class="container">
+            <div class="bo-volume-kop">
+                <div><span class="bo-bovenkop">VAN LOSSE FOTO TOT COMPLETE BEELDSTROOM</span><h2 id="bo-volume-titel">Veel beelden.<br><span>Vaste kwaliteit.</span></h2></div>
+                <div><p>Ook bij grote aantallen wil je kunnen vertrouwen op de afwerking. Wespi heeft ervaring met duizenden beelden per maand. We maken heldere afspraken over bewerking, bestandsnamen, formaten en oplevering.</p><a class="bo-dienstlink" href="/offerte?dienst=beeldbewerking">Bespreek jouw opdracht <span aria-hidden="true">→</span></a></div>
+            </div>
+            <ol class="bo-werkwijze">
+                <li><span>01</span><div><h3>Afstemmen</h3><p>Jouw beelden en gewenste uitstraling vormen het uitgangspunt.</p></div></li>
+                <li><span>02</span><div><h3>Bewerken & controleren</h3><p>Een vaste afwerking, met aandacht voor elk afzonderlijk beeld.</p></div></li>
+                <li><span>03</span><div><h3>Klaar voor gebruik</h3><p>Je ontvangt de bestanden in het afgesproken formaat.</p></div></li>
+            </ol>
+            <a class="bo-terug" href="/beeld">Alle diensten binnen Beeld <span aria-hidden="true">→</span></a>
+        </div>
+    </section>
+</div>
 
 {% endblock %}

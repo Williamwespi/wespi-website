@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% macro foto(naam, alt, formaat='portret', sizes='(max-width: 760px) 90vw, 45vw', eager=false) -%}
+<img src="{{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-' ~ naam ~ '-480.webp') }}"
+     srcset="{{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-' ~ naam ~ '-480.webp') }} 480w, {{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-' ~ naam ~ '-960.webp') }} 960w"
+     sizes="{{ sizes }}" width="960" height="{{ 640 if formaat == 'breed' else 1200 }}" alt="{{ alt }}"
+     loading="{{ 'eager' if eager else 'lazy' }}"{% if eager %} fetchpriority="high"{% endif %} decoding="async">
+{%- endmacro %}
+{% macro vergelijker(naam, titel, voor_alt, na_alt) -%}
+<div class="beeldvergelijker" data-beeldvergelijker style="--vergelijking-positie: 50%; --vergelijking-verhouding: 4 / 5;">
+    <div class="beeldvergelijker__beelden">
+        <div class="beeldvergelijker__afbeelding">{{ foto(naam ~ '-na', na_alt) }}</div>
+        <div class="beeldvergelijker__afbeelding beeldvergelijker__afbeelding--origineel">{{ foto(naam ~ '-voor', voor_alt) }}</div>
+        <span class="beeldvergelijker__label beeldvergelijker__label--origineel">Voor</span>
+        <span class="beeldvergelijker__label beeldvergelijker__label--bewerkt">Na</span>
+        <span class="beeldvergelijker__scheiding" aria-hidden="true"><span class="beeldvergelijker__knop">‹ ›</span></span>
+    </div>
+    <input class="beeldvergelijker__slider" type="range" min="0" max="100" value="50" step="1" aria-label="{{ titel }}: vergelijk voor en na" aria-valuetext="50% origineel, 50% bewerkt">
+</div>
+<div class="pb-vergelijkknoppen" role="group" aria-label="{{ titel }}: volledig beeld tonen">
+    <button type="button" data-pb-stand="100" aria-pressed="false">Toon voor</button>
+    <span aria-hidden="true">Schuif en ontdek het verschil</span>
+    <button type="button" data-pb-stand="0" aria-pressed="false">Toon na</button>
+</div>
+{%- endmacro %}
+{% macro vast_paar(naam, voor_alt, na_alt, sizes='(max-width: 760px) 44vw, 23vw') -%}
+<div class="pb-paar">
+    <figure>{{ foto(naam ~ '-voor', voor_alt, sizes=sizes) }}<figcaption>Voor</figcaption></figure>
+    <figure>{{ foto(naam ~ '-na', na_alt, sizes=sizes) }}<figcaption>Na</figcaption></figure>
+</div>
+{%- endmacro %}
+{% block title %}Productbeeldbewerking voor webshops en e-commerce | Wespi{% endblock %}
+{% block meta_description %}Laat je productfoto’s professioneel bewerken door Wespi. Achtergronden, retouche, schaduwen en kleurafstemming voor een consistente webshop. Bekijk het verschil.{% endblock %}
+{% block canonical %}<link rel="canonical" href="https://www.wespi.nl/beeldbewerking/product">{% endblock %}
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/beeldbewerking/product.css') }}?v=20261111-1">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Productbeeldbewerking","serviceType":"Productfoto’s bewerken voor webshops en e-commerce","url":"https://www.wespi.nl/beeldbewerking/product","provider":{"@type":"Organization","name":"Wespi","url":"https://www.wespi.nl"}}</script>
+{% endblock %}
+{% block content %}
+<div class="pb-pagina">
+    <section class="hero pb-hero" aria-labelledby="pb-titel">
+        <div class="hero-foto pb-hero-beeld">
+            {{ foto('sandaal-bruin-na', 'Bruine suède sandaal met gesp en een natuurlijke contactschaduw op een lichte achtergrond', formaat='breed', sizes='(max-width: 900px) 100vw, 62vw', eager=true) }}
+        </div>
+        <div class="container hero-inhoud">
+            <div class="hero-tekst">
+                <span class="hero-bovenkop">PRODUCTBEELDBEWERKING</span>
+                <h1 id="pb-titel">Sterk product.<span>Verzorgd beeld.</span></h1>
+                <p>Haal meer uit je productfoto’s. Wespi verzorgt de achtergrond, retouche en afwerking voor een professionele presentatie in je webshop.</p>
+                <div class="hero-knoppen"><a class="knop knop-geel" href="/offerte?dienst=beeldbewerking">Vraag een offerte aan <span aria-hidden="true">→</span></a><a class="pb-tekstlink" href="#voorbeelden">Bekijk het verschil <span aria-hidden="true">↓</span></a></div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="container pb-inhoudsnav" aria-label="Op deze pagina">
+        <a href="#voorbeelden"><span aria-hidden="true">↔</span><strong>Voor en na</strong><span>Echte beelden, zichtbaar verschil</span></a>
+        <a href="#pb-kleur"><span aria-hidden="true">◐</span><strong>Kleurafstemming</strong><span>Aandacht voor tint en detail</span></a>
+        <a href="#pb-tarief-titel"><span aria-hidden="true">€</span><strong>€ 2,49 per foto</strong><span>Exclusief btw</span></a>
+    </nav>
+
+    <section class="pb-sectie pb-hoofdvoorbeeld" id="voorbeelden" aria-labelledby="pb-verschil">
+        <div class="container pb-verhaal-grid">
+            <div class="pb-verhaal-tekst">
+                <span class="pb-bovenkop">VAN OPNAME NAAR EINDRESULTAAT</span>
+                <h2 id="pb-verschil">Van foto<span>naar webshop.</span></h2>
+                <p>Een verzorgde presentatie laat het product spreken. Bekijk de oorspronkelijke opname naast het afgewerkte beeld: hetzelfde horloge, klaar voor de webshop.</p>
+                <p class="pb-beeldnoot">De oorspronkelijke opname en het resultaat, volledig naast elkaar.</p>
+            </div>
+            {{ vast_paar('horloge-groen', 'Groen horloge vóór bewerking, op een transparante houder tussen witte opnamesteunen', 'Hetzelfde groene horloge na bewerking, zonder houder en vrijstaand op een egale achtergrond', sizes='(max-width: 760px) 44vw, 38vw') }}
+        </div>
+    </section>
+
+    <section class="pb-sectie pb-retouche" aria-labelledby="pb-retouche">
+        <div class="container">
+            <div class="pb-sectiekop"><div><span class="pb-bovenkop">ZORGVULDIGE RETOUCHE</span><h2 id="pb-retouche">Wat afleidt, mag weg.</h2></div><p>Een hand, steun of paspop helpt bij de opname. Voor je webshop werken we die zorgvuldig weg.</p></div>
+            <div class="pb-retouche-grid">
+                <article class="pb-retouche-case pb-retouche-case--bord">
+                    {{ vast_paar('bord-oranje', 'Oranje bord vóór retouche, met hand, witte steun en een storende reflectie in het midden', 'Hetzelfde oranje bord na retouche, zonder hand en steun en met een bijgewerkt oppervlak') }}
+                    <h3>Een hand minder. Een beter beeld.</h3><p>Hand en steun verwijderd, het oppervlak bijgewerkt en het bord opnieuw gepositioneerd.</p>
+                </article>
+                <article class="pb-retouche-case pb-retouche-case--pet">
+                    {{ vast_paar('pet-rood', 'Rode stoffen pet vóór bewerking op een witte paspopkop', 'Dezelfde rode pet na verwijdering van de paspop, vrijstaand gepresenteerd') }}
+                    <h3>De paspop verdwijnt.</h3><p>De pet staat op zichzelf. De structuur van de stof en de vorm van de klep blijven zichtbaar.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-sfeer" aria-labelledby="pb-sfeer-titel">
+        <div class="pb-sfeer-beeld">
+            <img src="{{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-960.webp') }}"
+                 srcset="{{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-640.webp') }} 640w, {{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-960.webp') }} 960w, {{ url_for('static', path='images/beeldbewerking/product/productbeeldbewerking-sfeerbeeld-1752.webp') }} 1752w"
+                 sizes="(max-width: 900px) 100vw, 74vw" width="1752" height="897"
+                 alt="Compositie van een rugtas, sneaker, horloge, koptelefoon en zonnebril met een goudgele achtergrondlijn"
+                 loading="lazy" decoding="async">
+        </div>
+        <div class="container pb-sfeer-inhoud">
+            <div class="pb-sfeer-tekst">
+                <h2 id="pb-sfeer-titel">Elk product verdient een sterke presentatie</h2>
+                <p>Van kleine details tot de complete uitstraling. Met professionele beeldbewerking zorgen we dat jouw producten verzorgd, aantrekkelijk en consistent worden gepresenteerd.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-sectie pb-kleur" aria-labelledby="pb-kleur">
+        <div class="container pb-kleur-grid">
+            <div class="pb-verhaal-tekst"><span class="pb-bovenkop">GERICHTE KLEURAFSTEMMING</span><h2 id="pb-kleur">De juiste tint.<br>Dezelfde details.</h2><p>Van roze-perzik naar oranje: de kleur van deze sporttop is aangepast, terwijl plooien, stiksels en materiaalstructuur zichtbaar blijven.</p><p>We stemmen de kleur af op de aangeleverde referentie.</p><a class="pb-tekstlink" href="/beeldbewerking/kleding">Meer over kledingbeeldbewerking <span aria-hidden="true">→</span></a></div>
+            <div class="pb-vergelijking">
+                {{ vergelijker('kleur-top', 'Kleurafstemming sporttop', 'Sporttop op model vóór kleurafstemming, in een roze-perzikkleurige tint', 'Dezelfde sporttop op hetzelfde model na kleurafstemming, in een oranje tint') }}
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-sectie pb-details" aria-labelledby="pb-details">
+        <div class="container">
+            <div class="pb-sectiekop"><div><span class="pb-bovenkop">AFWERKING OP MAAT</span><h2 id="pb-details">Ook de kleine<br>details tellen.</h2></div><p>De juiste compositie, een nette contour en aandacht voor het materiaal geven je product een verzorgde presentatie.</p></div>
+            <div class="pb-detail-grid">
+                <article class="pb-detail pb-detail--riem">{{ foto('riem-bruin-na', 'Detail van een bruine leren riem met zilverkleurige gesp, na bewerking diagonaal gepositioneerd', sizes='(max-width: 760px) 42vw, 22vw') }}<div><span class="pb-bovenkop">COMPOSITIE</span><h3>Materiaal in beeld.</h3><p>Een bewuste uitsnede en positie laten het leer en de gesp spreken.</p></div></article>
+                <article class="pb-detail pb-detail--bril">{{ foto('skibril-na', 'Skibril met groen-geel spiegelend glas, na opschoning van de neuszone en afwerking van de contour', sizes='(max-width: 760px) 90vw, 45vw') }}<div><span class="pb-bovenkop">CONTOUREN</span><h3>Verzorgd tot aan de rand.</h3><p>Ook bij spiegelend glas en uitgesproken vormen verdient de afwerking aandacht.</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-tarief" aria-labelledby="pb-tarief-titel">
+        <div class="pb-tarief-beeld">{{ foto('tas-rood-visual-na', 'Afgewerkte rode leren handtas op een egale lichte achtergrond', formaat='breed', sizes='(max-width: 760px) 100vw, 55vw') }}</div>
+        <div class="container pb-tarief-inhoud">
+            <div class="pb-tarief-tekst"><span class="pb-bovenkop">PRODUCTBEELDBEWERKING</span><h2 id="pb-tarief-titel">Verzorgde beelden.<br>Een helder tarief.</h2><p>Laat je productfoto’s professioneel afwerken voor je webshop of online presentatie.</p><div class="pb-prijs"><strong>€ 2,49</strong><span>per foto</span></div><p class="prijs-btw">Prijzen zijn exclusief btw.</p><a class="knop knop-geel" href="/offerte?dienst=beeldbewerking">Vraag een offerte aan <span aria-hidden="true">→</span></a></div>
+        </div>
+    </section>
+
+    <section class="pb-sectie pb-proces" aria-labelledby="pb-proces">
+        <div class="container">
+            <div class="pb-sectiekop"><div><span class="pb-bovenkop">ZO WERKT HET</span><h2 id="pb-proces">Van jouw foto<br>naar een verzorgd resultaat.</h2></div><p>Je levert de productfoto’s aan. Wij stemmen de afwerking met je af en controleren de beelden voor oplevering.</p></div>
+            <ol class="pb-stappen">
+                <li><span aria-hidden="true">01</span><h3>Aanleveren</h3><p>Deel je foto’s en vertel waar je ze wilt gebruiken.</p></li>
+                <li><span aria-hidden="true">02</span><h3>Afstemmen</h3><p>We bespreken achtergrond, retouche, kleur en formaat.</p></li>
+                <li><span aria-hidden="true">03</span><h3>Bewerken</h3><p>We werken de beelden af en controleren de details.</p></li>
+                <li><span aria-hidden="true">04</span><h3>Opleveren</h3><p>Je ontvangt de beelden in het afgesproken formaat.</p></li>
+            </ol>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', path='js/beeldvergelijker.js') }}" defer></script>
+<script src="{{ url_for('static', path='js/productbeeldbewerking.js') }}?v=20261109-1" defer></script>
+{% endblock %}

@@ -240,7 +240,7 @@ class Fase1Tests(unittest.TestCase):
     def test_existing_routes_footer_and_navigation_links(self):
         paths = [r.path for r in paginas.router.routes if "GET" in getattr(r, "methods", ())
                  and getattr(r, "response_class", None) is paginas.HTMLResponse]
-        self.assertEqual(len(paths), 16)
+        self.assertEqual(len(paths), 17)
         cache = {path: self.fetch(path) for path in paths}
         for path, (status, _, text) in cache.items():
             with self.subTest(path=path):

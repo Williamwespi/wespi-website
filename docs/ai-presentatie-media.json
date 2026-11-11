@@ -1,0 +1,922 @@
+[
+  {
+    "source": "images/herenmodel/ai-modelfotografie-herenmodel-voorzijde.webp",
+    "output": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-voorzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1777,
+      2000
+    ],
+    "crop_box": [
+      222,
+      0,
+      1555,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "540a7b7c6e9b09e65d7bf1dd34a41e2baf09849a1cfd49cc9182d22db70be6f5"
+  },
+  {
+    "source": "images/herenmodel/ai-modelfotografie-herenmodel-achterzijde.webp",
+    "output": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-achterzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1777,
+      2000
+    ],
+    "crop_box": [
+      222,
+      0,
+      1555,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "2fd75a89bc6c0d44e39a58b45de73622b8f9a8f6e5393298a58c464237329a58"
+  },
+  {
+    "source": "images/herenmodel/ai-modelfotografie-herenmodel-lifestyle-01.webp",
+    "output": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-lifestyle-01-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1777,
+      2000
+    ],
+    "crop_box": [
+      222,
+      0,
+      1555,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "3eaf542a268e16efad84d78f80ce1121ed14298acacbece346a2914a147b0f40"
+  },
+  {
+    "source": "images/herenmodel/ai-modelfotografie-herenmodel-lifestyle-02.webp",
+    "output": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-lifestyle-02-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1777,
+      2000
+    ],
+    "crop_box": [
+      222,
+      0,
+      1555,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "5319332646e9441485cad40e9806dd5b54a177e42679eada4f8483db0cb75239"
+  },
+  {
+    "source": "images/herenmodel/ai-modelfotografie-herenmodel-origineel-13-zdetail-2400.webp",
+    "output": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-origineel-13-zdetail-2400-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      182,
+      103,
+      1818,
+      1884
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "5a8cb261f1e787aa3cee12021fa1e3dff87e7df15125ebf27c15e17140ac9434"
+  },
+  {
+    "source": "images/herenmodel/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400.webp",
+    "output": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      184,
+      112,
+      1811,
+      1884
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "de8c968cd005710878af2b160e7548fb8c1fb097852aca4128fa10f3f70128b0"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-voorzijde.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-voorzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "b4b391760dbedf8c7aa6838eed399075301c4dea725aab6b3effae6db32902c1"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-achterzijde.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-achterzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "cf2ddd3b25c696e3e348b3eb3cee597c626f0212371dfd4bac63836d1aaaa9f6"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-driekwart.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-driekwart-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "b64ca5f859fced27f5acee962af2f1abf2a2a96c33b95eb11d7f6fdf62bc985b"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-lifestyle-binnenplaats.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-lifestyle-binnenplaats-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "e0cdddcf484e3c8aaad666adafec5cf44e8759a7509f9857f8b838e64a1d6fb8"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-lifestyle-buiten.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-lifestyle-buiten-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "5fd8db3339319b30eb53e00ff6d848eee6d8b1251888fed28008819c42965167"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-zijaanzicht.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-zijaanzicht-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "846e720b84aa1fde0327600795642977212a5f706e42e1f6da23f87404848df6"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-front-2400-wit.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-20267822-front-2400-wit-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      638,
+      60,
+      1374,
+      1937
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "3c2792ba728e0e29fb490b3afa2b78ec3d4e6621f8e52ede65f77328a81799af"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400-wit.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400-wit-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      638,
+      60,
+      1374,
+      1937
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "a4add73e0b970067edee6ba4d421d54c2c8aabe7eea5cd9abbeccf5382f0c338"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-front-2400.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-front-2400-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      273,
+      132,
+      1711,
+      1870
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "e6cf6755992743cb721a46416e5dc7536f4ee892b4745f8d5876f9cc9d663702"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-zback-2400.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-zback-2400-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      348,
+      128,
+      1665,
+      1872
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "9cce4ba422a5463d7b78ed645d78a50cb6d3922b719faec718949479e43bceac"
+  },
+  {
+    "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-zdetail1-2400.webp",
+    "output": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-zdetail1-2400-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      0,
+      199,
+      1705,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "42ef9fd8f3c3b7d688ce694bae6083147b4322ca618d24c6ecb219421da702c4"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-voorzijde.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-voorzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1336,
+      2000
+    ],
+    "crop_box": [
+      1,
+      0,
+      1334,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "804a4e920e6023200de3d0ad729ab3118d5a73133bfde5c0cadc3fa09b6cd144"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-achterzijde.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-achterzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1336,
+      2000
+    ],
+    "crop_box": [
+      1,
+      0,
+      1334,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "c84b57bb83d32d6e0d5ed7b99cf050bdb3e504797940f8c69656581fc231253c"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-driekwart.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-driekwart-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1336,
+      2000
+    ],
+    "crop_box": [
+      1,
+      0,
+      1334,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "3513c0ddaa38428e21e333b7d71669dc67a9a23c22d37db485e6bf053ca91afa"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-lifestyle-bankje.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-lifestyle-bankje-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1336,
+      2000
+    ],
+    "crop_box": [
+      1,
+      0,
+      1334,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "fbe50922e1809c37f790f98890618327497cb3a79117ecf92108530ada0f7f1f"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-lifestyle-park.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-lifestyle-park-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1336,
+      2000
+    ],
+    "crop_box": [
+      1,
+      0,
+      1334,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "e3373705d4e34c73e8cd76fa94d6570f8bb14b627f9d7476c9c000e701631ae4"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-zijaanzicht.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-zijaanzicht-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1334,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "01da7e5257a1765540e813dd61c9a26f4eb480f11067b66c993a906e06619bd0"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236005-01.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236005-01-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      1500,
+      1500
+    ],
+    "crop_box": [
+      389,
+      40,
+      1112,
+      1464
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "691c08a0676bb29abc935340c5017e5018f941db62de44244b2de9c94a4124f4"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236005-02.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236005-02-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      1500,
+      1500
+    ],
+    "crop_box": [
+      390,
+      36,
+      1113,
+      1464
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "60e0a6271e9c6c55449e6d92a7a6dd789cae560ea5484f58444921f54f1f4937"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      1500,
+      1500
+    ],
+    "crop_box": [
+      87,
+      47,
+      1412,
+      1462
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "c0341c6c8919ba69cb655c02aa36e7c4eca5508a33d125770327fb1cdc7e7b16"
+  },
+  {
+    "source": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236022-02.webp",
+    "output": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236022-02-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      1500,
+      1500
+    ],
+    "crop_box": [
+      82,
+      43,
+      1416,
+      1462
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "d1c2caf51ee763e89d7d117c95ad7d496ee228d4d2f5ff78d26ef213894c7a79"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-voorzijde.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-voorzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "0e95514b153a8914e5256898d19f1fdb06abd2a6720f7c27978e524d7d2612ca"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-achterzijde.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-achterzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "c23b6c6d02e8b4fe93934ea44560d3011d791afee66750f4ab1f543fbf7a3498"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-driekwart.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-driekwart-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "d258f263b157cc3ff9bd99ae1d0df8e3244aa73ff726ca5c76606e34c3bebc57"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-lifestyle-basketbal.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-lifestyle-basketbal-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "ff99528c91f09026eaa8fe17220904ff7ab88062e221d72eeaef54c58c750eca"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-lifestyle-park.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-lifestyle-park-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "92f22c46a49e869b3720f01c06a63864e3d6d7b9fdc8da1fb562bd7b05fdca34"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-zijaanzicht.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-zijaanzicht-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "ce995b65fec7c7f642d3418c5c6caa34cbcc0f62df4f3e0b8fd768b731625c90"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-91600458-front.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-91600458-front-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      240,
+      71,
+      1766,
+      1936
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "16b3680a04592f261736d1ca1b962d51a517807120932df2a4af9b2b12b609e8"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-91600458-zback.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-91600458-zback-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      241,
+      63,
+      1759,
+      1936
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "dc18676c102fa9521acc1aac86bb357f58ff3bdd23024807e6b9383a64cf7486"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-front-wit.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-92200500-front-wit-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      505,
+      51,
+      1490,
+      1932
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "29a5728ccaae34c7d9d285e7418856bad531f8595527f86dd89ff92a991286f0"
+  },
+  {
+    "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-zback-wit.webp",
+    "output": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-92200500-zback-wit-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      504,
+      57,
+      1491,
+      1938
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "2701663dd2bc20a78b69910fa6b83a6064a92e2dab8b748855391b0451945fd1"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-voorzijde.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-voorzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "92cabdab853a93282d84ceeb8aa181891b8da6f48c0a140c9d65b135aec7bf7d"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-achterzijde.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-achterzijde-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "fc8d6f852de418ee2b60a87c8b909fa3ba27183c41616c2c04c86461064bf06f"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-handen-op-buik.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-handen-op-buik-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "16e8f12a193d39fe95001a38653fecc5bb284670ca63527f8e79a27a2c04c7ef"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-lifestyle-tuin.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-lifestyle-tuin-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "dfec52445a691b4662e21d4c9e27d976714bbc24dea89c056a392a785e504232"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-luxury-home.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-luxury-home-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "559f2d373f1e526e90686d05bbcbdd155e87f8bec1d45352061bfeaaf57fa5b9"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-zijaanzicht.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-zijaanzicht-2x3.webp",
+    "operation": "portrait-crop",
+    "source_size": [
+      1333,
+      2000
+    ],
+    "crop_box": [
+      0,
+      0,
+      1333,
+      2000
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "40d8a46d0d12088bca3881c66613bb287a992d3488f9a06e51742e171dc9d7b4"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      583,
+      64,
+      1424,
+      1940
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "6c61494720c38ef6bb1fa92dfe9c55fa5d04bdf30fcca1eb54ae3c320a49bfa2"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-2.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-2-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      580,
+      61,
+      1421,
+      1940
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "b5efab88f353e1580b6af17a807b87aeec5376602255059e2d08e2babc59692c"
+  },
+  {
+    "source": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-3.webp",
+    "output": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-3-2x3.webp",
+    "operation": "white-packshot",
+    "source_size": [
+      2000,
+      2000
+    ],
+    "crop_box": [
+      754,
+      67,
+      1292,
+      1936
+    ],
+    "output_size": [
+      800,
+      1200
+    ],
+    "source_sha256": "fa94304ed1b13a24f5ce904944241e1c71c37c479dc71bbe695898639d3cd1f7"
+  }
+]

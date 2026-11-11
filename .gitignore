@@ -1,0 +1,35 @@
+# Origineel aangeleverd bronmateriaal; uitsluitend lokaal gebruiken.
+/bronmateriaal/
+
+# Lokale Python-omgevingen en caches.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Lokale configuratie en geheimen.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Bronarchieven en lokale browserresultaten.
+*.zip
+/docs/*.png
+/docs/*.jpg
+/docs/*.jpeg
+playwright-report/
+test-results/
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

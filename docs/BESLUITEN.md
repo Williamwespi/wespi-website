@@ -1,5 +1,41 @@
 # Besluiten
 
+## SEO-migratie — definitieve voorbereiding, 11 november 2026
+
+- De acht inhoudelijke 301-voorstellen uit [SEO_MIGRATIE_WESPI.md](./SEO_MIGRATIE_WESPI.md) zijn expliciet goedgekeurd en lokaal geïmplementeerd, inclusief directe slashvarianten. De drie bestaande redirects behouden hun bestemming en krijgen eveneens directe slashvarianten.
+- Rendering/3D-beelden, Vriendenprijs en Vriendenprijsaanvraag, In ontwikkeling, webshop, afsprakenmodule en kalender vervallen definitief. Oude URL's blijven echte 404-antwoorden geven; geen automatische homepage-redirect of nieuwe commerciële claims. `/calendar` en `/appointment` krijgen dezelfde afhandeling.
+- `/beeldbewerking` hoort bij de 16 goedgekeurde publieke sitemapbestemmingen. De noindex-testpagina blijft uitgesloten. Teksten, ontwerpen en overige functionaliteit blijven behouden.
+- Alle 46 regressietests slagen. Productie-TLS, host-/protocolnormalisatie en publieke indexeerbaarheid moeten op de echte hosting nog worden gecontroleerd. Uitsluitend lokaal; geen DNS-/hostingwijzigingen, commit, push of deployment.
+
+## Kledingfotografie en AI-modelfotografie — visuele correcties, 11 november 2026
+
+- Op expliciete opdracht is het bodyform-raster op tablet flexibel gemaakt binnen de bestaande tweekolomscompositie. Alle vijf kledingbeelden passen op 768px binnen de viewport; desktop en de mobiele stapeling behouden hun indeling.
+- Het bestaande AI-promotiebeeld toont het volledige model, zonder beeldkader of gouden onderlijn en met zachte randen naar de zachtgouden achtergrond. Dit vervangt voor dit beeld de eerdere keuze voor een vaste uitsnede zonder vervaging. Tekst, prijs en CTA behouden.
+- Alleen op mobiel deelt het AI-tariefportret een rij met de bestaande toelichting. De tarieftitel en prijskaarten behouden hun volgorde; desktop blijft ongewijzigd.
+- Uitsluitend drie betrokken stylesheets, twee stylesheet-cacheversies en projectdocumentatie aangepast. Geen rasterbeelden, modelgegevens, video's, scripts, tarieven, hero's, navigatie, andere pagina's of gedeelde footer gewijzigd. Geen commit, push of deployment. Zie [AI_MODELLEN_UITBREIDING.md](./AI_MODELLEN_UITBREIDING.md).
+
+## Hoofdpagina Beeldbewerking — visueel dienstenoverzicht, 11 november 2026
+
+- Op expliciete opdracht is uitsluitend de inhoud onder de goedgekeurde hero op `/beeldbewerking` opnieuw ontworpen. De hero behoudt zijn bestaande template, teksten, beeld, beeldverloop, afmetingen en CTA's. Het anker `#mogelijkheden` blijft werken en opent het dienstenoverzicht.
+- Het oude auto-onderdeel ‘Bekijk het verschil’ vervalt op deze overzichtspagina. Drie open dienstpresentaties linken naar `/beeldbewerking/automotive`, `/beeldbewerking/kleding` en `/beeldbewerking/product`. De afzonderlijke dienstenpagina's en hun vergelijkingen blijven behouden.
+- Bestaand beeldmateriaal: de gele Peugeot in de digitale showroom, het afgewerkte blauwe T-shirt, het lichtblauwe gebreide shirt en het goedgekeurde productsfeerbeeld. Geen nieuwe rasterbeelden, placeholders of wijzigingen aan bronbeelden nodig. De presentatie gebruikt asymmetrische composities, zachte overgangen en subtiele goudaccenten.
+- Volume en werkwijze zijn samengebracht in een korte afsluiting. De gedeelde ‘Samen aan de slag’-sectie en footer blijven ongewijzigd. Paginaspecifieke CSS wordt alleen op het overzicht geladen; geen gedeelde CSS, routes, SEO-instellingen, navigatie of andere pagina's aangepast.
+- Uitsluitend lokaal; geen commit, push of deployment. Uitvoering, bestanden en controles: [BEELDBEWERKING_OVERZICHT_HERONTWERP.md](./BEELDBEWERKING_OVERZICHT_HERONTWERP.md).
+
+## Productbeeldbewerking ? definitieve visuele herziening, 11 november 2026
+
+- De expliciete vervolgopdracht vervangt de houdergerichte horlogetekst en de eerdere opeenvolging van achtergrondvlakken. Het authentieke horlogepaar blijft volledig zichtbaar naast een compacte introductie; retouche blijft afzonderlijk toegelicht bij bord en pet.
+- Het goedgekeurde `productbeeldbewerking-sfeerbeeld.png` staat tussen retouche en kleurafstemming, met tekst links, beeld rechts en uitsluitend een fade naar links. Mobiel eerst tekst, dan het volledige beeld. Drie proportionele WebP-varianten; PNG en alle eerdere bronnen behouden.
+- Open asymmetrische retouchecases, een gebogen terugliggend goudaccent bij kleurafstemming en grotere afwerkingsdetails sluiten aan op Home, Kledingfotografie, Kledingbeeldbewerking en Automotive. Geen extra inhoud behalve de goedgekeurde sfeerbeeldtekst.
+- Hero, horizontale sandaal-/tasverlopen, echte vergelijkingen, ? 2,49 exclusief btw, SEO, navigatie, CTA's en gedeelde footer behouden. Andere pagina's en gedeelde componenten niet gewijzigd. Uitsluitend lokaal; geen commit, push of deployment.
+
+## Productbeeldbewerking — compositie en beeldverlopen, 9 november 2026
+
+- Op expliciet verzoek zijn uitsluitend de eigen productpagina en afgeleide webpresentatie visueel herzien, met Home, Kledingfotografie, Kledingbeeldbewerking en Automotive als referentie. Grotere horlogebeelden, asymmetrische retouchecases, een ingesprongen goudvlak achter de kleurslider, verschillende detailschalen en een compacte witte tariefkaart vervangen de opeenvolging van volle rechthoekige vlakken.
+- De sandaal vervaagt uitsluitend naar links; de tas uitsluitend naar rechts. De eerdere verticale CSS-lagen en mobiele verticale overrides zijn verwijderd. Bronbeelden hadden geen vervaging. De egale bronkleur vult contain-ruimte; geen verticale fade of beeldfilter nodig.
+- Nieuwe afgeleide tasuitsnede geeft het hengsel meer ruimte. Twee nieuwe WebP's; oorspronkelijke en bestaande webbestanden blijven intact. Echte voor-/na-paren en hun resultaten worden niet aangepast.
+- € 2,49 exclusief btw per foto, alle bestaande teksten, SEO, functionaliteit, navigatie en gedeelde footer blijven behouden. Alleen korte ankerlabels zijn toegevoegd. Andere pagina's zijn niet gewijzigd. Lokaal gecontroleerd op vier gevraagde breedtes; geen commit, push of deployment. Zie [PRODUCTBEELDBEWERKING_UITVOERING.md](./PRODUCTBEELDBEWERKING_UITVOERING.md).
+
 ## Livegang fase 4 - 5 november 2026
 
 - De expliciet goedgekeurde fase 4 voegt uitsluitend afgebakende SEO-, veiligheids- en toegankelijkheidsverbeteringen toe, met behoud van fase 1–3 en het herstelde vlagbeeld.
@@ -105,3 +141,57 @@ De actieve verwijzingen naar Web als afzonderlijke dienst zijn uit de website ve
 ## Verschil met de aangetroffen website
 
 De bestaande pagina **Slimmer werken** toont in de broncode een prijs vanaf € 249 en een tweede bedrag vanaf € 499. Dit zijn de bestaande bedragen en ze blijven voorlopig ongewijzigd. De besproken € 495 is geen vastgestelde prijs. Web wordt niet actief aangeboden en blijft een mogelijk toekomstig idee.
+
+## AI-modelfotografie: vijf modellen — 7 november 2026
+
+- Op expliciet verzoek zijn de voorbeelden uitgebreid naar Herenmodel, Damesmodel, Jongensmodel (4 jaar), Meisjesmodel (10 jaar) en Zwangerschapsmodel, met de aangeleverde 28 modelbeelden, vijf video's en 18 oorspronkelijke productfoto's.
+- Per model staan één videovoorbeeld en twee foto's direct zichtbaar. De overige beelden en oorspronkelijke productfoto's staan in een donkere, transparante galerij met toetsenbordbediening, focusbeheer en mobiele navigatie. Video's downloaden niet vóór het openen en starten uitsluitend na een klik, gedempt.
+- De herenbeelden op de AI-pagina zijn vervangen, inclusief het beeld naast de tarieven. Oude media die elders gebruikt of in het gedeelde beeldregister vastgelegd zijn, blijven behouden.
+- De compacte toelichting ‘AI waar het kan. Handmatig waar het moet.’ benoemt AI, Photoshop en handmatige kwaliteitscontrole. Hero, SEO, tarieven inclusief het bestaande combinatiepakket, btw-vermeldingen, werkwijze en CTA's blijven behouden. Andere pagina's zijn niet aangepast.
+- Uitsluitend lokaal uitgevoerd; geen commit, push of deployment. Uitvoering en tests staan in [AI_MODELLEN_UITBREIDING.md](./AI_MODELLEN_UITBREIDING.md). Wacht op beoordeling door de eigenaar.
+
+## AI-modelfotografie: compact overzicht — 9 november 2026
+
+- Op expliciete opdracht vijf modelkaarten naast elkaar op desktop en twee per rij op mobiel; tablet mag drie kolommen gebruiken. Per model video boven een passend product-/AI-fotopaar, korte modelnaam en Bekijk alle beelden.
+- Dit vervangt het eerdere bladergedrag: alle foto's van één model staan tegelijk in een donker scrollbaar raster; afzonderlijke vergroting blijft mogelijk. Video's spelen na klik binnen de modelkaart en laden vooraf niet.
+- Media, hero, AI/handwerk-tekst, tarieven, werkwijze, SEO en overige pagina's blijven behouden. Uitsluitend lokaal; geen commit, push of deployment. Zie AI_MODELLEN_UITBREIDING.md voor uitvoering en controle.
+
+## AI-modelfotografie: uitlijning en media — 9 november 2026
+
+- Op expliciet verzoek vaste videovlakken van 9:16 en fotominiatuurvlakken van 2:3; vijf desktopkolommen en twee mobiele kolommen blijven behouden. Volledige kleding blijft zichtbaar via contain.
+- Herenvideo blijft de byte-identieke bron uit het huidige ZIP-bestand: geen ingebakken balken aangetroffen, dus correctie via vlakverhouding en een passende videoposter; geen destructieve videouitsnede.
+- Vier transparante product-WebP's krijgen aparte witte lossless varianten en previews, met behoud van bronnen en SEO-basisnamen. Andere beelden blijven behouden. Uitsluitend lokaal. Zie AI_MODELLEN_UITBREIDING.md.
+
+## AI-modelfotografie: gedeelde kaartstructuur — 9 november 2026
+
+- Op expliciete vervolgopdracht deelt iedere kaart vier CSS Grid-rijen (video, fotopaar, titel, galerijlink) via subgrid. Dit vervangt de losse kaartindeling; geen correcties per model. Witte voorbeeldvlakken, gelijke afstanden en afrondingen.
+- Alle videoposters volgen de native 9:16-verhouding met een frame uit de betreffende video. Hiermee vervallen de opvulstroken van de eerder afwijkende fotoposters, zonder beeldinhoud af te snijden of media te verwijderen. Vijf kolommen op desktop en twee op mobiel blijven behouden; overige paginaonderdelen blijven ongewijzigd.
+
+## AI-modelfotografie: mobiele enkele kolom en geel accent — 9 november 2026
+
+- De expliciete vervolgopdracht vervangt de eerdere twee mobiele kolommen door één compacte gecentreerde kaart per rij (maximaal 320px breed, omslagpunt 760px). Desktop vijf kolommen en tablet drie blijven behouden. Gedeelde voorbeeldvlakken worden 3:4, wit en volledig zichtbaar via contain.
+- Het bestaande AI/handwerk-blok krijgt de egale Wespi-goudkleur, aansluitend op het volumeblok op Kledingfotografie, met donkere tekst en behoud van inhoud.
+- Geen extra vaste uitsnede van de herenvideo: beweging tot aan beide beeldranden en camerazooms maken die niet mogelijk zonder relevant kleding-/lichaamsdetail te verliezen. Dit is gemeld; bronvideo en volledige proportionele weergave blijven behouden.
+
+## AI-modelfotografie: definitieve 2:3-fotobestanden — 9 november 2026
+
+- Op expliciete opdracht één uniforme staande fotoverhouding: 2:3, voor overzicht én galerijen, geleverd als nieuwe 800 × 1200-WebP's. Productbeelden worden op wit gecentreerd zonder kledingverlies; modelbeelden behouden de bronhoogte met alleen noodzakelijke laterale uitsneden. Bronnen en video's blijven behouden; individuele vergroting gebruikt de volledige oorspronkelijke verhouding.
+- Het bestaande AI/handwerk-informatieblok gebruikt exact #faf3d9 uit het AI-promotieblok op Kledingfotografie. Dit vervangt de eerdere keuze voor var(--wespi-goud). Andere pagina's blijven ongewijzigd.
+- De mobiele enkele kaart, tablet-/desktopindeling en bestaande functionaliteit blijven behouden. Uitvoering en bestandsmanifest staan in AI_MODELLEN_UITBREIDING.md en ai-presentatie-media.json. Uitsluitend lokaal; geen commit, push of deployment.
+
+## Productbeeldbewerking — 9 november 2026
+
+- Na expliciete goedkeuring van de inventarisatie en bouwopdracht is de zelfstandige dienstenpagina op `/beeldbewerking/product` lokaal gebouwd. De bestaande inactieve navigatievermelding wordt een link; dit vervangt de eerdere onafgeronde/inactieve status. Productbeeldbewerking blijft onder Beeld, met uitvoering en kwaliteitscontrole door Wespi.
+- Elf geselecteerde bronaanzichten worden met twee correct uitgelijnde sliders, vaste vergelijkingen en een productserie getoond. Alleen aangeleverd beeldmateriaal; originelen blijven behouden. 34 afgeleide WebP's in static, bronmateriaal blijft buiten Git en publieke routes.
+- Geen vaste productbeeldbewerkingstarieven vastgesteld: de pagina biedt een offerte op maat via de bestaande offertepagina. Geen nieuwe doorlooptijd, abonnementen of gratis-proefclaims.
+- Eigen title/description/canonical en Service-JSON-LD; de nieuwe pagina wordt opgenomen in de bestaande PUBLIC_PAGES-/sitemap-/OG-structuur. Dit is geen deployment: de bestaande omgeving-/crawlinstellingen blijven behouden.
+- Bestaande pagina's blijven behouden. Headerlink is geactiveerd; de algemene footer-CTA wordt alleen op de nieuwe route overgeslagen om duplicatie met de eigen CTA te voorkomen. 42 regressietests en zes browserbreedtes slagen. Uitvoering: PRODUCTBEELDBEWERKING_UITVOERING.md.
+
+## Productbeeldbewerking en gedeelde afsluiting — visuele herziening 9 november 2026
+
+- Op expliciet verzoek is **€ 2,49 per foto, exclusief btw** vastgesteld voor Productbeeldbewerking. Dit vervangt het eerdere besluit om uitsluitend een offerte zonder vast tarief te tonen. Geen extra prijzen of voorwaarden.
+- De hero gebruikt de bruine sandaal met schaduw uit het aangeleverde After-bestand en de bestaande witte Wespi-fade. Het eerste voorbeeldenblok toont de duidelijke verwijdering van de horlogehouder; bord en pet krijgen vaste vergelijkingen. Alleen de uitgelijnde kleurafstemming behoudt een slider. Acht echte bronaanzichten, twaalf foto's; geen verzonnen bewerkingen.
+- ‘Consistente productseries’ en ‘Praktisch’ verdwijnen volledig. De eigen afsluitende productpagina-CTA vervalt; de bestaande gedeelde ‘Samen aan de slag’-sectie verzorgt de afsluiting.
+- Het expliciete verzoek tot websitebreed herstel vervangt de eerdere dienstuitzonderingen in de footer. Packshotfotografie, Kledingbeeldbewerking, Automotive en Productbeeldbewerking gebruiken weer dezelfde gedeelde CTA. Alleen Contact/Offerte blijven uitgezonderd vanwege hun formulier. Andere pagina-inhoud en gedeelde styling blijven behouden.
+- Originelen blijven intact en buiten Git/publicatie. Alleen twee nieuwe WebP-varianten voor de hero zijn toegevoegd; eerdere webmedia blijven bewaard. Bestaande SEO, navigatie, functionaliteit en video's blijven behouden. Lokaal gecontroleerd; geen commit, push of deployment. Zie [PRODUCTBEELDBEWERKING_UITVOERING.md](./PRODUCTBEELDBEWERKING_UITVOERING.md).
+- Uitsluitend lokaal. Geen commit, push of deployment.

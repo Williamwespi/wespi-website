@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import re
@@ -10,6 +11,7 @@ from pathlib import Path
 from fastapi import APIRouter, Form, Request
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
+from siteconfig import SITE_URL
 
 
 router = APIRouter()
@@ -37,18 +39,9 @@ def _ai_media_path(filename: str) -> str | None:
     response_class=HTMLResponse,
 )
 def ai_modelfotografie(request: Request):
-    voorbeelden = [
-        {
-            "nummer": f"{nummer:02d}",
-            "video": _ai_media_path(f"ai-model-{nummer:02d}-video.mp4"),
-            "poster": _ai_media_path(f"ai-model-{nummer:02d}-poster.jpg"),
-            "fotos": [
-                _ai_media_path(f"ai-model-{nummer:02d}-{foto}.jpg")
-                for foto in ("voor", "achter")
-            ],
-        }
-        for nummer in range(1, 6)
-    ]
+    voorbeelden = json.loads(
+        Path(__file__).with_name("ai_modellen.json").read_text(encoding="utf-8")
+    )
     return templates.TemplateResponse(
         request=request,
         name="ai-modelfotografie.html",
@@ -214,6 +207,14 @@ def beeldbewerking(request: Request):
         context={
             "actieve_pagina": "beeldbewerking",
         },
+    )
+
+
+@router.get("/beeldbewerking/product", response_class=HTMLResponse)
+def productbeeldbewerking(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="productbeeldbewerking.html",
+        context={"actieve_pagina": "beeldbewerking"},
     )
 
 
@@ -426,16 +427,44 @@ def offerte_versturen(
     )
 
 
+SEO_MIGRATIE_REDIRECTS = {
+    "/productfotografie": "/beeld",
+    "/productfotografie/plattefotografie": "/productfotografie/kledingfotografie#platte-fotografie",
+    "/beeldbewerking/auto/voorbeelden": "/beeldbewerking/automotive#achtergronden",
+    "/overons": "/over-wespi",
+    "/contactus": "/contact",
+    "/diensten": "/#diensten",
+    "/diensten/contentbeheer": "/data/productdata",
+    "/studio": "/productfotografie/kledingfotografie",
+}
+
+
+def oude_odoo_route(request: Request):
+    destination = SITE_URL + SEO_MIGRATIE_REDIRECTS[request.url.path.rstrip("/")]
+    path, separator, fragment = destination.partition("#")
+    if request.url.query:
+        path += "?" + request.url.query
+    return RedirectResponse(path + (separator + fragment if separator else ""), status_code=301)
+
+
+for oud_pad in SEO_MIGRATIE_REDIRECTS:
+    for variant in (oud_pad, oud_pad + "/"):
+        router.add_api_route(variant, oude_odoo_route, methods=["GET", "HEAD"], include_in_schema=False)
+
+
+@router.get("/beeldbewerking/auto/", include_in_schema=False)
 @router.get("/beeldbewerking/auto", include_in_schema=False)
 def oude_auto_route():
     return RedirectResponse("/beeldbewerking/automotive", status_code=301)
 
 
+@router.get("/terms/", include_in_schema=False)
 @router.get("/terms", include_in_schema=False)
 def oude_voorwaarden_route():
     return RedirectResponse("/algemene-voorwaarden", status_code=301)
 
 
+@router.get("/privacystatement/", include_in_schema=False)
 @router.get("/privacystatement", include_in_schema=False)
 def oude_privacy_route():
     return RedirectResponse("/privacyverklaring", status_code=301)

@@ -24,7 +24,7 @@ async def fetch(application, path, accept='text/html', method='GET', encoding=No
         messages.append(message)
     try:
         await application({
-            'type': 'http', 'asgi': {'version': '3.0'}, 'http_version': '1.1',
+            'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1',
             'method': method, 'scheme': 'http', 'path': path, 'raw_path': path.encode(),
             'query_string': b'', 'root_path': '', 'server': ('testserver', 80),
             'client': ('127.0.0.1', 1234), 'headers': [(b'host', b'testserver'), (b'accept', accept.encode())] + ([(b'accept-encoding', encoding.encode())] if encoding else []),
@@ -83,7 +83,8 @@ class Fase4Tests(unittest.TestCase):
         self.assertEqual(len(locations), len(set(locations)))
         for url in locations:
             self.assertEqual(self.get(urlsplit(url).path)[0], 200)
-        self.assertNotIn(SITE_URL + '/beeldbewerking', locations)
+        self.assertIn(SITE_URL + '/beeldbewerking', locations)
+        self.assertEqual(len(locations), 16)
         self.assertNotIn(SITE_URL + '/slimmer-werken-v2', locations)
 
     def test_staging_and_production_robots(self):
@@ -141,6 +142,57 @@ class Fase4Tests(unittest.TestCase):
             self.assertEqual(headers[b'location'].decode(), new)
             self.assertEqual(self.get(new)[0], 200)
 
+    def test_seo_migration_redirects_and_slash_variants(self):
+        destinations = {
+            '/productfotografie': SITE_URL + '/beeld',
+            '/productfotografie/plattefotografie': SITE_URL + '/productfotografie/kledingfotografie#platte-fotografie',
+            '/beeldbewerking/auto/voorbeelden': SITE_URL + '/beeldbewerking/automotive#achtergronden',
+            '/overons': SITE_URL + '/over-wespi',
+            '/contactus': SITE_URL + '/contact',
+            '/diensten': SITE_URL + '/#diensten',
+            '/diensten/contentbeheer': SITE_URL + '/data/productdata',
+            '/studio': SITE_URL + '/productfotografie/kledingfotografie',
+            '/beeldbewerking/auto': '/beeldbewerking/automotive',
+            '/terms': '/algemene-voorwaarden',
+            '/privacystatement': '/privacyverklaring',
+        }
+        for old, destination in destinations.items():
+            for variant in (old, old + '/'):
+                with self.subTest(path=variant):
+                    status, headers, _ = self.get(variant)
+                    self.assertEqual(status, 301)
+                    self.assertEqual(headers[b'location'].decode(), destination)
+                    target = urlsplit(destination)
+                    status, headers, body = self.get(target.path)
+                    self.assertEqual(status, 200)
+                    self.assertNotIn(b'location', headers)
+                    if target.fragment:
+                        self.assertIn('id="' + target.fragment + '"', body.decode())
+
+    def test_retired_odoo_urls_are_not_redirected(self):
+        for path in ['/diensten/rendering', '/vriendenprijs', '/vriendenprijsaanvraag',
+                     '/inontwikkeling', '/shop', '/shop/cart', '/appointment', '/calendar']:
+            for variant in (path, path + '/'):
+                with self.subTest(path=variant):
+                    status, headers, _ = self.get(variant)
+                    self.assertEqual(status, 404)
+                    self.assertNotIn(b'location', headers)
+
+    def test_migration_keeps_existing_service_urls(self):
+        for path in ['/productfotografie/kledingfotografie', '/productfotografie/packshotfotografie',
+                     '/productfotografie/kledingfotografie/ai-modelfotografie', '/beeldbewerking',
+                     '/beeldbewerking/product', '/beeldbewerking/kleding', '/beeldbewerking/automotive']:
+            with self.subTest(path=path):
+                status, headers, _ = self.get(path)
+                self.assertEqual(status, 200)
+                self.assertNotIn(b'location', headers)
+
+    def test_migration_preserves_query_before_fragment(self):
+        status, headers, _ = asyncio.run(request('/productfotografie/plattefotografie/?utm_source=test'))
+        self.assertEqual(status, 301)
+        self.assertEqual(headers[b'location'].decode(), SITE_URL +
+                         '/productfotografie/kledingfotografie?utm_source=test#platte-fotografie')
+
     def test_important_heroes_are_not_lazy_loaded(self):
         for path in ['/over-wespi', '/beeldbewerking/kleding']:
             tags = Markup(self.get(path)[2].decode()).tags
@@ -175,7 +227,7 @@ class Fase4Tests(unittest.TestCase):
     def test_unfinished_and_test_routes_keep_existing_status(self):
         self.assertEqual(self.get('/beeldbewerking')[0], 200)
         self.assertNotIn(b'x-robots-tag', self.get('/beeldbewerking')[1])
-        self.assertEqual(self.get('/beeldbewerking/product')[0], 404)
+        self.assertEqual(self.get('/beeldbewerking/product')[0], 200)
         status, _, body = self.get('/slimmer-werken-v2')
         self.assertEqual(status, 200)
         self.assertIn(b'noindex, nofollow', body)

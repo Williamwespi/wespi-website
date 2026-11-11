@@ -2,7 +2,8 @@
      CONTACT CTA
 ========================================= -->
 
-{% if request.url.path not in ['/contact', '/offerte', '/productfotografie/packshotfotografie', '/beeldbewerking/kleding', '/beeldbewerking/automotive'] %}
+{# Alleen formulierpagina's hebben al een volledige contactafsluiting. #}
+{% if request.url.path not in ['/contact', '/offerte'] %}
 <section class="cta" id="contact">
 
     <!-- ACHTERGRONDAFBEELDING -->

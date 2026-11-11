@@ -7,9 +7,11 @@ SITE_URL = "https://www.wespi.nl"
 PUBLIC_PAGES = {
     "/": "images/home/hero-kleding.png",
     "/beeld": "images/beeld/hero-beeld-productfotografie-wespi.png",
+    "/beeldbewerking": "images/beeldbewerking/beeldbewerking-hero.png",
     "/productfotografie/kledingfotografie": "images/kledingfotografie/kledingfotografie-detail-gebreide-trui-wespi.jpg",
     "/productfotografie/kledingfotografie/ai-modelfotografie": "images/kledingfotografie/ai-modelfotografie/ai-modelfotografie-hero.jpg",
     "/productfotografie/packshotfotografie": "images/packshotfotografie/packshotfotografie-detail-accessoire.png",
+    "/beeldbewerking/product": "images/beeldbewerking/product/productbeeldbewerking-horloge-groen-na-960.webp",
     "/beeldbewerking/kleding": "images/beeldbewerking/kleding/productfoto-kleding-1.jpg",
     "/beeldbewerking/automotive": "images/beeldbewerking/beeldbewerking/automotive/achtergronden/auto-geel-extra-achtergrond-3.jpg",
     "/data/productdata": "images/productdata/productdata-hero.png",

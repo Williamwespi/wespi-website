@@ -5,7 +5,7 @@
 <link rel="canonical" href="https://www.wespi.nl/beeldbewerking/kleding">
 {% endblock %}
 {% block extra_head %}
-<link rel="stylesheet" href="{{ url_for('static', path='css/beeldbewerking/kleding.css') }}?v=20261105-fase2.1">
+<link rel="stylesheet" href="{{ url_for('static', path='css/beeldbewerking/kleding.css') }}?v=20261111-sliders-2">
 {% endblock %}
 
 {% block content %}
@@ -45,7 +45,7 @@
                     ('03', 'Groene sweater met opdruk')
                 ] %}
                 <figure class="kledingbewerking-vergelijking" role="group" aria-label="{{ omschrijving }}: voor en na">
-                    <div class="beeldvergelijker is-volledig-voor" data-beeldvergelijker style="--vergelijking-positie: 100%; --vergelijking-verhouding: 2400 / 3600;">
+                    <div class="beeldvergelijker" data-beeldvergelijker{% if nummer in ['01', '02'] %} data-voor-links{% endif %} style="--vergelijking-positie: 50%; --vergelijking-verhouding: 2400 / 3600;">
                         <div class="beeldvergelijker__beelden">
                             <img class="beeldvergelijker__afbeelding"
                                  src="{{ url_for('static', path=beeldpad('images/beeldbewerking/kleding/voor-na/kledingbewerking-' ~ nummer ~ '-na.jpg')) }}" {{ beeld_attributen('images/beeldbewerking/kleding/voor-na/kledingbewerking-' ~ nummer ~ '-na.jpg', responsive=false) }}
@@ -57,8 +57,8 @@
                             <span class="beeldvergelijker__label beeldvergelijker__label--bewerkt">Na</span>
                             <span class="beeldvergelijker__scheiding" aria-hidden="true"><span class="beeldvergelijker__knop">‹ ›</span></span>
                         </div>
-                        <input class="beeldvergelijker__slider" type="range" min="0" max="100" step="1" value="100" autocomplete="off"
-                               aria-label="{{ omschrijving }}: schuif om het resultaat te bekijken" aria-valuetext="100% origineel, 0% bewerkt">
+                        <input class="beeldvergelijker__slider" type="range" min="0" max="100" step="1" value="50" autocomplete="off"
+                               aria-label="{{ omschrijving }}: schuif om het resultaat te bekijken" aria-valuetext="50% origineel, 50% bewerkt">
                     </div>
                     <figcaption><span>{{ '%02d'|format(loop.index) }}</span>{{ omschrijving }}</figcaption>
                 </figure>
@@ -136,5 +136,5 @@
         </div>
     </section>
 </div>
-<script src="{{ url_for('static', path='js/kledingbeeldbewerking.js') }}?v=2.0" defer></script>
+<script src="{{ url_for('static', path='js/kledingbeeldbewerking.js') }}?v=20261111-sliders-2" defer></script>
 {% endblock %}

@@ -1,0 +1,1413 @@
+[
+  {
+    "id": "herenmodel",
+    "naam": "Herenmodel",
+    "fotos": [
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-voorzijde.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-voorzijde.webp",
+        "width": 1777,
+        "height": 2000,
+        "alt": "Herenmodel met een bruin jack en zwarte broek, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-achterzijde.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-achterzijde.webp",
+        "width": 1777,
+        "height": 2000,
+        "alt": "Herenmodel met een bruin jack en zwarte broek, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-lifestyle-01.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-lifestyle-01.webp",
+        "width": 1777,
+        "height": 2000,
+        "alt": "Herenmodel met een bruin jack en zwarte broek, bij een terras",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-lifestyle-01-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-lifestyle-02.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-lifestyle-02.webp",
+        "width": 1777,
+        "height": 2000,
+        "alt": "Herenmodel met een bruin jack en zwarte broek, lopend bij een terras",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-lifestyle-02-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "originelen": [
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-origineel-13-zdetail-2400.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-origineel-13-zdetail-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: bruin jack, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-origineel-13-zdetail-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: bruin jack, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "video": {
+      "src": "videos/herenmodel/ai-modelfotografie-herenmodel-modelvideo.mp4",
+      "poster": "images/herenmodel/preview/ai-modelfotografie-herenmodel-videoposter.webp",
+      "alt": "AI-modelvideo van herenmodel met een bruin jack en zwarte broek",
+      "type": "video"
+    },
+    "media": [
+      {
+        "src": "videos/herenmodel/ai-modelfotografie-herenmodel-modelvideo.mp4",
+        "poster": "images/herenmodel/preview/ai-modelfotografie-herenmodel-videoposter.webp",
+        "alt": "AI-modelvideo van herenmodel met een bruin jack en zwarte broek",
+        "type": "video"
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-voorzijde.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-voorzijde.webp",
+        "width": 1777,
+        "height": 2000,
+        "alt": "Herenmodel met een bruin jack en zwarte broek, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-achterzijde.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-achterzijde.webp",
+        "width": 1777,
+        "height": 2000,
+        "alt": "Herenmodel met een bruin jack en zwarte broek, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-lifestyle-01.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-lifestyle-01.webp",
+        "width": 1777,
+        "height": 2000,
+        "alt": "Herenmodel met een bruin jack en zwarte broek, bij een terras",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-lifestyle-01-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-lifestyle-02.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-lifestyle-02.webp",
+        "width": 1777,
+        "height": 2000,
+        "alt": "Herenmodel met een bruin jack en zwarte broek, lopend bij een terras",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-lifestyle-02-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-origineel-13-zdetail-2400.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-origineel-13-zdetail-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: bruin jack, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-origineel-13-zdetail-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/herenmodel/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400.webp",
+        "preview": "images/herenmodel/preview/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: bruin jack, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/herenmodel/presentatie/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "overzicht_product": "images/herenmodel/ai-modelfotografie-herenmodel-origineel-13-zdetail1-2400.webp"
+  },
+  {
+    "id": "damesmodel",
+    "naam": "Damesmodel",
+    "fotos": [
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-voorzijde.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-voorzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-achterzijde.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-achterzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-driekwart.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-driekwart.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, in driekwartaanzicht",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-driekwart-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-lifestyle-binnenplaats.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-lifestyle-binnenplaats.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, op een binnenplaats",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-lifestyle-binnenplaats-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-lifestyle-buiten.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-lifestyle-buiten.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, op straat",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-lifestyle-buiten-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-zijaanzicht.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-zijaanzicht.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, van opzij",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-zijaanzicht-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "originelen": [
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-front-2400-wit.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-20267822-front-2400-wit.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: donkere jeans, voorkant",
+        "type": "image",
+        "original": true,
+        "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-front-2400.webp",
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-20267822-front-2400-wit-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400-wit.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400-wit.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: donkere jeans, achterkant",
+        "type": "image",
+        "original": true,
+        "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400.webp",
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400-wit-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-front-2400.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-item4-front-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: lichtblauwe blouse, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-front-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-zback-2400.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-item4-zback-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: lichtblauwe blouse, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-zback-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-zdetail1-2400.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-item4-zdetail1-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: lichtblauwe blouse, detail van de kraag",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-zdetail1-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "video": {
+      "src": "videos/damesmodel/ai-modelfotografie-damesmodel-modelvideo.mp4",
+      "poster": "images/damesmodel/preview/ai-modelfotografie-damesmodel-videoposter.webp",
+      "alt": "AI-modelvideo van damesmodel met een lichtblauwe blouse en donkere jeans",
+      "type": "video"
+    },
+    "media": [
+      {
+        "src": "videos/damesmodel/ai-modelfotografie-damesmodel-modelvideo.mp4",
+        "poster": "images/damesmodel/preview/ai-modelfotografie-damesmodel-videoposter.webp",
+        "alt": "AI-modelvideo van damesmodel met een lichtblauwe blouse en donkere jeans",
+        "type": "video"
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-voorzijde.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-voorzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-achterzijde.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-achterzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-driekwart.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-driekwart.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, in driekwartaanzicht",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-driekwart-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-lifestyle-binnenplaats.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-lifestyle-binnenplaats.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, op een binnenplaats",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-lifestyle-binnenplaats-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-lifestyle-buiten.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-lifestyle-buiten.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, op straat",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-lifestyle-buiten-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-zijaanzicht.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-zijaanzicht.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Damesmodel met een lichtblauwe blouse en donkere jeans, van opzij",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-zijaanzicht-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-front-2400-wit.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-20267822-front-2400-wit.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: donkere jeans, voorkant",
+        "type": "image",
+        "original": true,
+        "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-front-2400.webp",
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-20267822-front-2400-wit-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400-wit.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400-wit.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: donkere jeans, achterkant",
+        "type": "image",
+        "original": true,
+        "source": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400.webp",
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-20267822-zback-2400-wit-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-front-2400.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-item4-front-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: lichtblauwe blouse, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-front-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-zback-2400.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-item4-zback-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: lichtblauwe blouse, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-zback-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-zdetail1-2400.webp",
+        "preview": "images/damesmodel/preview/ai-modelfotografie-damesmodel-origineel-item4-zdetail1-2400.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: lichtblauwe blouse, detail van de kraag",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/damesmodel/presentatie/ai-modelfotografie-damesmodel-origineel-item4-zdetail1-2400-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "overzicht_product": "images/damesmodel/ai-modelfotografie-damesmodel-origineel-item4-front-2400.webp"
+  },
+  {
+    "id": "jongensmodel",
+    "naam": "Jongensmodel (4 jaar)",
+    "fotos": [
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-voorzijde.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-voorzijde.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-achterzijde.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-achterzijde.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-driekwart.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-driekwart.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, in driekwartaanzicht",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-driekwart-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-lifestyle-bankje.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-lifestyle-bankje.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, op een bankje",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-lifestyle-bankje-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-lifestyle-park.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-lifestyle-park.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, in het park",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-lifestyle-park-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-zijaanzicht.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-zijaanzicht.webp",
+        "width": 1334,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, van opzij",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-zijaanzicht-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "originelen": [
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236005-01.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-origineel-flinq-236005-01.webp",
+        "width": 1500,
+        "height": 1500,
+        "alt": "Oorspronkelijke productfoto: bruine broek, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236005-01-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236005-02.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-origineel-flinq-236005-02.webp",
+        "width": 1500,
+        "height": 1500,
+        "alt": "Oorspronkelijke productfoto: bruine broek, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236005-02-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01.webp",
+        "width": 1500,
+        "height": 1500,
+        "alt": "Oorspronkelijke productfoto: groene sweater, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236022-02.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-origineel-flinq-236022-02.webp",
+        "width": 1500,
+        "height": 1500,
+        "alt": "Oorspronkelijke productfoto: groene sweater, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236022-02-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "video": {
+      "src": "videos/jongensmodel/ai-modelfotografie-jongensmodel-modelvideo.mp4",
+      "poster": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-videoposter.webp",
+      "alt": "AI-modelvideo van jongensmodel (4 jaar) met een groene sweater en bruine broek",
+      "type": "video"
+    },
+    "media": [
+      {
+        "src": "videos/jongensmodel/ai-modelfotografie-jongensmodel-modelvideo.mp4",
+        "poster": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-videoposter.webp",
+        "alt": "AI-modelvideo van jongensmodel (4 jaar) met een groene sweater en bruine broek",
+        "type": "video"
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-voorzijde.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-voorzijde.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-achterzijde.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-achterzijde.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-driekwart.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-driekwart.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, in driekwartaanzicht",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-driekwart-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-lifestyle-bankje.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-lifestyle-bankje.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, op een bankje",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-lifestyle-bankje-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-lifestyle-park.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-lifestyle-park.webp",
+        "width": 1336,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, in het park",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-lifestyle-park-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-zijaanzicht.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-zijaanzicht.webp",
+        "width": 1334,
+        "height": 2000,
+        "alt": "Jongensmodel (4 jaar) met een groene sweater en bruine broek, van opzij",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-zijaanzicht-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236005-01.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-origineel-flinq-236005-01.webp",
+        "width": 1500,
+        "height": 1500,
+        "alt": "Oorspronkelijke productfoto: bruine broek, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236005-01-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236005-02.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-origineel-flinq-236005-02.webp",
+        "width": 1500,
+        "height": 1500,
+        "alt": "Oorspronkelijke productfoto: bruine broek, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236005-02-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01.webp",
+        "width": 1500,
+        "height": 1500,
+        "alt": "Oorspronkelijke productfoto: groene sweater, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236022-02.webp",
+        "preview": "images/jongensmodel/preview/ai-modelfotografie-jongensmodel-origineel-flinq-236022-02.webp",
+        "width": 1500,
+        "height": 1500,
+        "alt": "Oorspronkelijke productfoto: groene sweater, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/jongensmodel/presentatie/ai-modelfotografie-jongensmodel-origineel-flinq-236022-02-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "overzicht_product": "images/jongensmodel/ai-modelfotografie-jongensmodel-origineel-flinq-236022-01.webp"
+  },
+  {
+    "id": "meisjesmodel",
+    "naam": "Meisjesmodel (10 jaar)",
+    "fotos": [
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-voorzijde.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-voorzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-achterzijde.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-achterzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-driekwart.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-driekwart.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, in driekwartaanzicht",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-driekwart-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-lifestyle-basketbal.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-lifestyle-basketbal.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, op een basketbalveld",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-lifestyle-basketbal-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-lifestyle-park.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-lifestyle-park.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, in het park",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-lifestyle-park-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-zijaanzicht.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-zijaanzicht.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, van opzij",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-zijaanzicht-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "originelen": [
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-91600458-front.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-origineel-91600458-front.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: paarse sweater, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-91600458-front-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-91600458-zback.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-origineel-91600458-zback.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: paarse sweater, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-91600458-zback-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-front-wit.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-origineel-92200500-front-wit.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: wijde jeans, voorkant",
+        "type": "image",
+        "original": true,
+        "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-front.webp",
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-92200500-front-wit-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-zback-wit.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-origineel-92200500-zback-wit.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: wijde jeans, achterkant",
+        "type": "image",
+        "original": true,
+        "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-zback.webp",
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-92200500-zback-wit-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "video": {
+      "src": "videos/meisjesmodel/ai-modelfotografie-meisjesmodel-modelvideo.mp4",
+      "poster": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-videoposter.webp",
+      "alt": "AI-modelvideo van meisjesmodel (10 jaar) met een paarse sweater en wijde jeans",
+      "type": "video"
+    },
+    "media": [
+      {
+        "src": "videos/meisjesmodel/ai-modelfotografie-meisjesmodel-modelvideo.mp4",
+        "poster": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-videoposter.webp",
+        "alt": "AI-modelvideo van meisjesmodel (10 jaar) met een paarse sweater en wijde jeans",
+        "type": "video"
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-voorzijde.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-voorzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-achterzijde.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-achterzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-driekwart.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-driekwart.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, in driekwartaanzicht",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-driekwart-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-lifestyle-basketbal.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-lifestyle-basketbal.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, op een basketbalveld",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-lifestyle-basketbal-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-lifestyle-park.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-lifestyle-park.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, in het park",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-lifestyle-park-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-zijaanzicht.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-zijaanzicht.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Meisjesmodel (10 jaar) met een paarse sweater en wijde jeans, van opzij",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-zijaanzicht-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-91600458-front.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-origineel-91600458-front.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: paarse sweater, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-91600458-front-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-91600458-zback.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-origineel-91600458-zback.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: paarse sweater, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-91600458-zback-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-front-wit.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-origineel-92200500-front-wit.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: wijde jeans, voorkant",
+        "type": "image",
+        "original": true,
+        "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-front.webp",
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-92200500-front-wit-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-zback-wit.webp",
+        "preview": "images/meisjesmodel/preview/ai-modelfotografie-meisjesmodel-origineel-92200500-zback-wit.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: wijde jeans, achterkant",
+        "type": "image",
+        "original": true,
+        "source": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-92200500-zback.webp",
+        "presentatie": {
+          "src": "images/meisjesmodel/presentatie/ai-modelfotografie-meisjesmodel-origineel-92200500-zback-wit-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "overzicht_product": "images/meisjesmodel/ai-modelfotografie-meisjesmodel-origineel-91600458-front.webp"
+  },
+  {
+    "id": "zwangerschapsmodel",
+    "naam": "Zwangerschapsmodel",
+    "fotos": [
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-voorzijde.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-voorzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-achterzijde.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-achterzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-handen-op-buik.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-handen-op-buik.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, met handen op de buik",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-handen-op-buik-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-lifestyle-tuin.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-lifestyle-tuin.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, in een tuin",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-lifestyle-tuin-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-luxury-home.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-luxury-home.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, in een licht interieur",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-luxury-home-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-zijaanzicht.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-zijaanzicht.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, van opzij",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-zijaanzicht-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "originelen": [
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: taupekleurige zwangerschapsjurk, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-2.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-2.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: taupekleurige zwangerschapsjurk, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-2-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-3.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-3.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: taupekleurige zwangerschapsjurk, zijaanzicht",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-3-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "video": {
+      "src": "videos/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-modelvideo.mp4",
+      "poster": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-videoposter.webp",
+      "alt": "AI-modelvideo van zwangerschapsmodel met een taupekleurige zwangerschapsjurk",
+      "type": "video"
+    },
+    "media": [
+      {
+        "src": "videos/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-modelvideo.mp4",
+        "poster": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-videoposter.webp",
+        "alt": "AI-modelvideo van zwangerschapsmodel met een taupekleurige zwangerschapsjurk",
+        "type": "video"
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-voorzijde.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-voorzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, van voren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-voorzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-achterzijde.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-achterzijde.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, van achteren",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-achterzijde-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-handen-op-buik.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-handen-op-buik.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, met handen op de buik",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-handen-op-buik-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-lifestyle-tuin.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-lifestyle-tuin.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, in een tuin",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-lifestyle-tuin-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-luxury-home.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-luxury-home.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, in een licht interieur",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-luxury-home-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-zijaanzicht.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-zijaanzicht.webp",
+        "width": 1333,
+        "height": 2000,
+        "alt": "Zwangerschapsmodel met een taupekleurige zwangerschapsjurk, van opzij",
+        "type": "image",
+        "original": false,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-zijaanzicht-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: taupekleurige zwangerschapsjurk, voorkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-2.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-2.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: taupekleurige zwangerschapsjurk, achterkant",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-2-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      },
+      {
+        "src": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-3.webp",
+        "preview": "images/zwangerschapsmodel/preview/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-3.webp",
+        "width": 2000,
+        "height": 2000,
+        "alt": "Oorspronkelijke productfoto: taupekleurige zwangerschapsjurk, zijaanzicht",
+        "type": "image",
+        "original": true,
+        "presentatie": {
+          "src": "images/zwangerschapsmodel/presentatie/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-3-2x3.webp",
+          "width": 800,
+          "height": 1200
+        }
+      }
+    ],
+    "overzicht_product": "images/zwangerschapsmodel/ai-modelfotografie-zwangerschapsmodel-origineel-b999063-050-1.webp"
+  }
+]
